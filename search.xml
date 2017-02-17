@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[测试一]]></title>
       <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%B8%80/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
@@ -15,14 +29,14 @@
       
         <categories>
             
-            <category> blog </category>
+            <category> 测试 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> 博客，文章 </tag>
+            <tag> 测试 </tag>
             
         </tags>
         

@@ -4,6 +4,215 @@
   
     
     <entry>
+      <title><![CDATA[使用Hexo+github建设个人博客教程]]></title>
+      <url>http://mutouspace.cn/2017/02/18/%E4%BD%BF%E7%94%A8Hexo-github%E5%BB%BA%E8%AE%BE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。</p>
+<p><strong>教程思路：</strong></p>
+<ol>
+<li>列出博客搭建环境+所需工具；</li>
+<li>环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；</li>
+<li>创建Hexo项目，并本地运行查看效果</li>
+<li>修改项目配置文件（根目录下的_config.yml文件）</li>
+<li>安装Hexo框架主题（推荐：Next或yelee主题，本人用的yelee），对主题进行配置，主要是修改theme目录下的_config.yml文件</li>
+<li>将本地设置好的Hexo项目发布到Github Pages上（包括绑定自己的域名）（这里会介绍如何写文章）</li>
+<li>总结</li>
+</ol>
+<a id="more"></a> 
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在搭建博客时，你需要做以下准备：</p>
+<ol>
+<li>确定自己的系统为Windows;(因为博主用的系统是Windows10，为了避免浪费您的时间，如果不是Windows系统就不要看了。)</li>
+<li>Git下载，node.js下载。</li>
+</ol>
+<p>本文所使用的环境：</p>
+<ul>
+<li>Windows 10</li>
+<li>Git  version 2.11.1.windows.1</li>
+<li>node.js v6.9.5 LTS</li>
+<li>hexo </li>
+</ul>
+<h1 id="开始搭建博客"><a href="#开始搭建博客" class="headerlink" title="开始搭建博客"></a>开始搭建博客</h1><p>##Git下载安装及简单实用##</p>
+<p>为什么要在电脑上安装Git呢？我相信大多计算机专业的同学对Git的应该不陌生了，Git可以说是现如今最好用的、最先进的分布式版本控制系统（没有之一）。Git在接下来的环境部署及部署博客到github Pages时都是需要的。大家如果有兴趣可以阅读我的博客（<a href="http://blog.csdn.net/tianqingdezhuanlan/article/details/51791318" target="_blank" rel="external">Git的简单使用</a>），对Git进行简单的了解。如果了解Git也没有关系，只要你按照教程一步一步来也可以。</p>
+<p><strong>下载Git</strong></p>
+<p>我们可以在<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git的官网</a>下载我们所需要的git，我选择的是最新版的Git Windows X64 版本。</p>
+<p><strong>安装Git</strong></p>
+<p>Git的安装也很简单，就像安装我们平时所需要的软件一样，教程参考：<a href="http://blog.csdn.net/tianqingdezhuanlan/article/details/51791368" target="_blank" rel="external">Git的安装</a>。</p>
+<p><strong>Git的简单实用</strong></p>
+<p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
+<p>添加文件到Git仓库，分两步：</p>
+<p>第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</p>
+<p>第二步，使用命令<code>git commit</code>，完成。</p>
+<p>我们在这里不太需要git的命令操作，一般只需要git的的shell窗口进行一些操作。</p>
+<p>##node.js的下载安装##</p>
+<p><strong>下载</strong></p>
+<p>打开 <a href="https://nodejs.org/en/" target="_blank" rel="external">Nodejs</a> 下载页面，选择合适你当前系统版本的安装包（建议使用 LTS 版本的）。</p>
+<p><strong>安装</strong></p>
+<p>双击安装文件 -&gt; 下一步 -&gt; 下一步…</p>
+<p>【具体操作请参考网上的一篇文章：<a href="http://www.jianshu.com/p/03a76b2e7e00" target="_blank" rel="external">Node.js安装及环境配置之Windows篇</a>】</p>
+<p>##Hexo框架的安装##</p>
+<p>首先我们可以看一下<a href="https://hexo.io/" target="_blank" rel="external">hexo</a>的官网，了解一下hexo。</p>
+<p><strong>Windows中的安装</strong></p>
+<ol>
+<li><p>打开命令行</p>
+<p>Win+R或者点击开始按钮–&gt;运行–&gt;输入“cmd”;</p>
+<p>用 <strong>Git Bash</strong></p>
+</li>
+<li><p>输入命令</p>
+<p><code>npm install hexo-cli -g</code></p>
+</li>
+</ol>
+<p>输入完命令后就开始了hexo的安装，这里可能需要等待一段时间，时间不确定，只要不报错就可以了。</p>
+<p>##创建Hexo本地博客##</p>
+<p> 接下来我们在一个本地盘自定义路径中创建一个文件夹作为我的项目文件，我在这里选择了在G盘下新建了一个名为TerryBlog的文件夹，作为我的项目文件，路径为【G:\TerryBlog】.在G盘下，点击鼠标右键–&gt;Git Bash，打开命令输入框。输入命令如下：</p>
+<p>   <code>hexo init TerryBlog        //hexo init +你的项目名称，如我的为TerryBlog</code></p>
+<p> 执行完上述命令后，我们就创建了TerryBlog文件夹，进入刚创建的TerryBlog项目目录，命令操作如下：</p>
+<p>  <code>cd TerryBlog      //进入TerryBlog目录</code></p>
+<p> 或者直接在TerryBlog文件夹下，再点击鼠标右键–&gt;Git Bash，打开命令输入框。再输入以下命令：</p>
+<p>  <code>npm install</code></p>
+<p> 安装完成之后，【G:\TerryBlog】目录结构是这样的：</p>
+<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/hexo1.jpg" alt=""></p>
+<p>  到此为止，一个博客就已经搭建好了，现在我们启动 hexo 本地服务，看下默认的博客是怎样的，命令如下：</p>
+<p>  <code>hexo s</code></p>
+<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/hexos.png" alt=""></p>
+<p>   <strong><em>在浏览器中输入：<a href="http://localhost:4000/进行访问，效果图如下：" target="_blank" rel="external">http://localhost:4000/进行访问，效果图如下：</a></em></strong></p>
+<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/hexo4040.png" alt=""></p>
+<pre><code>** 如果要停止 hexo 服务：在 Git Bash 下按 Ctrl + C即可**
+</code></pre><p>   到这里我们简单的hexo博客基本就完成一部分了！是不是很开心，如果不进行主题美化的话，我们马上就可以有一个自己的博客了。</p>
+<p>   ##修改项目配置文件##</p>
+<p>  在这里我们修改的是【G:\TerryBlog】路径下的 <code>_config.yml</code> <strong>站点主题配置</strong>文件，我的配置如下：</p>
+<p>  <strong>注意：修改之前最好备份一下。</strong></p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># Hexo Configuration</div><div class="line">## Docs: https://hexo.io/docs/configuration.html</div><div class="line">## Source: https://github.com/hexojs/hexo/</div><div class="line"></div><div class="line"># Site 这一块区域主要是设置博客的主要说明，需要注意的是：每个冒号后面都是有一个空格，然后再书写自己的内容的</div><div class="line"></div><div class="line"></div><div class="line">title: Terry_Tian Code #网站标题</div><div class="line">subtitle: 行是知之始   知是行之成  #网站副标题</div><div class="line">description: 在山的这边，海的那边，有一只程序猿。。。  #描述</div><div class="line">author: Terry Tian   #博主名字</div><div class="line">avatar: http://olg3gwtbm.bkt.clouddn.com/head.jpg  #博主头像</div><div class="line">email: 1015236187@qq.com   #邮箱</div><div class="line">language: zh-Hans          #语言</div><div class="line">timezone:   #网站时区。Hexo默认使用电脑时区</div><div class="line"></div><div class="line"># URL,这一块一般可以设置的是 url 这个参数，比如我要设置绑定域名的，这里就需要填写我的域名信息</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://mutouspace.cn/</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"> # Directory</div><div class="line">source_dir: source</div><div class="line">public_dir: public</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang</div><div class="line">skip_render:</div><div class="line"></div><div class="line"># Writing</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">external_link: true # Open external links in new tab</div><div class="line">filename_case: 0</div><div class="line">render_drafts: false</div><div class="line">post_asset_folder: false</div><div class="line">relative_link: false</div><div class="line">future: true</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  line_number: true</div><div class="line">  auto_detect: false</div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"># Category &amp; Tag</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"># Date / Time format</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line"> date_format: YYYY-MM-DD</div><div class="line"> time_format: HH:mm:ss</div><div class="line"></div><div class="line"> # Pagination</div><div class="line"> ## Set per_page to 0 to disable pagination</div><div class="line"> per_page: 10</div><div class="line"> pagination_dir: page</div><div class="line"></div><div class="line"> # Extensions</div><div class="line"> ## Plugins: https://hexo.io/plugins/</div><div class="line"> ## Themes: https://hexo.io/themes/</div><div class="line"> theme: yelee</div><div class="line"></div><div class="line"> # Deployment</div><div class="line"> ## Docs: https://hexo.io/docs/deployment.html</div><div class="line"> deploy:</div><div class="line">   type: git</div><div class="line">   repo: git@github.com:MuTouTQ/MuTouTQ.github.io.git</div><div class="line">   branch: master</div><div class="line">  </div><div class="line"> search:</div><div class="line">   path: search.xml</div><div class="line">   field: post</div></pre></td></tr></table></figure>
+</code></pre><p>   做完这一些之后再在Git Bash 命令框中，输入 hexo s 重新启动服务，在浏览器中输入：<a href="http://localhost:4000/进行访问,查看一下效果。" target="_blank" rel="external">http://localhost:4000/进行访问,查看一下效果。</a></p>
+<p>##安装Hexo框架主题##</p>
+<p>  在上一步完成后，你会发现虽然改了一部分配置，但页面还是很吃藕，接下来，咱们就要给咱们的博客美美容了。hexo的主题有很多，大家可以去这里选一下，hexo-theme：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a>.</p>
+<p>  我选择的是yelee主题：<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a></p>
+<p>  还是让 Git Bash 保持在【G:\TerryBlog】目录下，然后输入命令：</p>
+<p>  <code>git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</code></p>
+<p>  这样就在 【G:\TerryBlog\themes】目录下生成了一个 yelee 文件夹，里面有我们刚刚 clone 下来的主题内容。</p>
+<p>  我们现在要修改【G:\TerryBlog】目录下的项目配置文件：_config.yml，把对应的主题目录名改下，主要是将配置中的 theme: yelee修改。</p>
+<p>  <strong>注意：该配置文件中的键值之间一定要有空格，否则轻则没有作用，重则报错，无法启动。</strong></p>
+<p>  更改主题目录名后，我们还要重新生成主题静态内容，继续在 Git Bash 中输入命令输入如下命令：</p>
+<p>   <code>hexo g      //重新生成静态博客的所有内容</code></p>
+<p>   <code>hexo s        //重启 hexo 本地服务</code></p>
+<p>  重新访问：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，看一下效果.</p>
+<p>###修改Hexo框架主题###</p>
+<p>  上一步完成后，看到的是yelee的默认主题，这里我们可以再次配置一下，修改的是【G:\TerryBlog\themes\yelee】路径下的 <code>_config.yml</code>文件。这里我们可以跟着<a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee 主题使用说明</a>来修改。</p>
+<p>##发布到Github Pages上##    </p>
+<p>  <strong>创建Github Pages并SSH授权</strong></p>
+<p>  现在假设你已经有一个 Gtihub 账号，你还需要一个<strong>特别</strong>的仓库，特别在仓库名就是你的 Github 账号登录名，比如我的用户名是：MuouTQ，那我要创建的仓库名字完整滴填写是：MuouTQ.github.io，具体效果如下图：</p>
+<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/github1.png" alt=""></p>
+<p>  仔细的人可能看到，你的仓库名根本不和你的用户名一样，由于我之前已经创建了一个这样特别的仓库，再创建一个就会提示错误，为了演示方便，所以删了一个T。</p>
+<p>  创建好仓库之后，要本地生成 SSH 秘钥，方便电脑上的 git 软件好提交内容到 Github 上。</p>
+<p>  【具体可以参考网上的一篇文章：<a href="http://www.jianshu.com/p/a3b4f61d4747" target="_blank" rel="external">Git安装及SSH Key管理之Windows篇</a>】</p>
+<p>  现在用记事本打开公钥，复制文件中的所有内容。访问：<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>，</p>
+<p>  Title：自己随便取</p>
+<p>  Key：把刚刚复制的都粘贴进来</p>
+<p>###把本地的博客内容同步到 Github 上###</p>
+<p>   要把本地的静态博客同步到 Github，我们还需要先安装两个跟部署相关的 hexo 插件：</p>
+<p>   <code>cd G:\TerryBlog              //进入TerryBlog项目目录</code></p>
+<pre><code>上一步，我们可以到 G:\TerryBlog 路径下 Git Bash 一下；
+</code></pre><p>  <code>npm/cnpm install hexo-server --save         //创建</code></p>
+<p> <code>npm/cnpm install hexo-deployer-git --save    //安装自动部署发布工具</code></p>
+<p>  编辑TerryBlog的<strong>项目配置文件</strong>：_config.yml</p>
+<p>  官网对此配置的介绍：<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a></p>
+<p>  主要改这里（一般在最后面）：</p>
+<pre><code> # Deployment
+## 这里是重点，这里是修改发布地址，因为我们前面已经加了 SSH 密钥信息在 Github 设置里面了，所以只要我们电脑里面持有那两个密钥文件就可以无需密码地跟 Github 做同步。
+## 需要注意的是这里的 repo 采用的是 ssh 的地址，而不是 https 的。分支我们默认采用 master 分支，以后你翅膀硬了要换其他也无所谓。
+## Docs: https://hexo.io/docs/deployment.html
+  deploy:
+  type: git
+  repo: git@github.com:MuTouTQ/MuTouTQ.github.io.git
+  branch: master
+</code></pre><p>  编辑完项目配置文件后我们需要重新部署：</p>
+<pre><code>cd G:\TerryBlog              //进入TerryBlog项目目录
+
+上一步，我们可以到 G:\TerryBlog 路径下 Git Bash 一下；
+hexo clean//先清除掉已经生成的旧文件
+hexo g //再生成一次静态文件
+hexo s   //在本地预览下
+hexo d   //本地没问题之后，Ctrl + C 停掉本地预览，使用部署命令部署到 Github 上
+</code></pre><p>   <img src="http://olg3gwtbm.bkt.clouddn.com/github2.png" alt=""></p>
+<p>   访问服务器地址进行检查：<a href="http://MuTouTQ.github.io/，该访问地址是之前在github上的创建的仓库名称，输入你的github用户名" target="_blank" rel="external">http://MuTouTQ.github.io/，该访问地址是之前在github上的创建的仓库名称，输入你的github用户名</a> + .github.io</p>
+<p>##绑定域名##</p>
+<ul>
+<li><p><strong>创建CNAME文件</strong></p>
+<p>我们要一个 CNAME 文件（文件名叫 CNAME，文件没有后缀，里面的内容为你购买的域名，不要以http以及www等前缀，只需域名本身即可，如：mutouspace.cn。这个CNAME可以你先建一个txt文件，把后缀名去掉），把该文件放在 G:\TerryBlog 目录下。</p>
+</li>
+<li><p><strong>获取Github的ip地址</strong></p>
+<p>实际获取的是你github上博客项目的ip（即：MuTouTQ.github.io），打开命令窗口，输入【ping MuTouTQ.github.io】来查看ip地址，并记录下来</p>
+</li>
+<li><p><strong>添加DNS Service记录</strong></p>
+<p>我的域名是腾讯云上买的，用的腾讯云的域名解析，将ip地址和你买的域名绑定就好了，域名解析后需要等待几分钟才能被访问</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/yuming.png" alt=""></p>
+<p><strong>补充：</strong></p>
+<p>如果你做完域名解析后，还是没法用你的域名访问，可以这项修改下：</p>
+<p>打开你的Git Hub下的MuTouTQ.github.io仓库，找到Settings，点进去</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/gitset.png" alt=""></p>
+<p>点进去后，找到这里，填入你的域名：mutouspace.cn   点击：SAVE  等一会就可以访问了。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/gp.png" alt=""></p>
+<p>到此为止，我们的博客就成功配置完了！</p>
+</li>
+</ul>
+<p>##发表一篇文章##</p>
+<ol>
+<li>在G:\TerryBlog 路径下Git Bash执行命令： <code>hexo new &quot;my new post&quot;</code></li>
+<li><p>在G:\TerryBlog\source_post中打开my-new-post.md，打开方式使用记事本或notepad++（推荐：MarkdownPad）。</p>
+<p>hexo中写文章使用的是Markdown，没接触过的可以看下Markdown语法说明.</p>
+<p>  title: my new post #可以改成中文的，如“新文章”<br> date: 2015-04-08 22:56:29 #发表日期，一般不改动<br> categories: blog #文章文类</p>
+<h2 id="tags-博客，文章-文章标签，多于一项时用这种格式，只有一项时使用tags-blog"><a href="#tags-博客，文章-文章标签，多于一项时用这种格式，只有一项时使用tags-blog" class="headerlink" title=" tags: [博客，文章] #文章标签，多于一项时用这种格式，只有一项时使用tags: blog"></a> tags: [博客，文章] #文章标签，多于一项时用这种格式，只有一项时使用tags: blog</h2><p> #这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上<br> <!--more-->#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
+</li>
+<li><p>写完文章后，你可以使用1. hexo g生成静态文件。2. hexo s在本地预览效果。3.hexo d同步到github，然后使用<a href="mutouspace.cn">mutouspace.cn</a>进行访问。</p>
+</li>
+</ol>
+<p>##总结##</p>
+<p>###常用hexo命令###</p>
+<p>常见命令</p>
+<pre><code>hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成静态页面至public目录
+hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）
+hexo deploy #部署到GitHub
+hexo help  # 查看帮助
+hexo version  #查看Hexo的版本
+</code></pre><p>缩写：</p>
+<pre><code>hexo n == hexo new
+hexo g == hexo generate
+hexo s == hexo server
+hexo d == hexo deploy
+</code></pre><p>组合命令：</p>
+<pre><code>hexo s -g #生成并本地预览
+hexo d -g #生成并上传
+</code></pre><p>###最终效果###</p>
+<p>  可以访问我的git博客来查看效果： mutouspace.cn</p>
+<p>###参考###</p>
+<p>   <a href="http://www.jianshu.com/p/0a3cad3e8cdf" target="_blank" rel="external">基于Hexo+Github Pages的博客搭建</a></p>
+<p>   <a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a></p>
+<p>   <a href="http://blog.liuxianan.com/build-blog-website-by-hexo-github.html#qian-yan" target="_blank" rel="external">使用hexo+github搭建免费个人博客详细教程</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Git </tag>
+            
+            <tag> node </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[测试二]]></title>
       <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
       <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>

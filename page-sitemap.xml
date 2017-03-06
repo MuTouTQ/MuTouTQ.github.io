@@ -7,29 +7,29 @@
     </url>
     
     <url>
-        <loc>http://mutouspace.cn/about/</loc>
-        <lastmod>2017-02-19T06:29:49.162Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
         <loc>http://mutouspace.cn/guestbook/</loc>
-        <lastmod>2017-02-19T06:28:59.946Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://mutouspace.cn/categories/</loc>
-        <lastmod>2017-02-17T04:40:33.244Z</lastmod>
+        <lastmod>2017-03-06T12:43:43.913Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://mutouspace.cn/tags/</loc>
-        <lastmod>2016-07-25T07:05:40.000Z</lastmod>
+        <lastmod>2017-03-06T12:41:55.552Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://mutouspace.cn/about/</loc>
+        <lastmod>2017-03-06T12:41:20.124Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://mutouspace.cn/categories/</loc>
+        <lastmod>2017-03-06T12:41:07.314Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

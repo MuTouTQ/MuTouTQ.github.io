@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Terry_Tian&#39;s Code日志</title>
+  <subtitle>行是知之始，知是行之成。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://mutouspace.cn/"/>
+  <updated>2017-03-02T15:28:16.622Z</updated>
+  <id>http://mutouspace.cn/</id>
+  
+  <author>
+    <name>Terry Tian</name>
+    <email>1015236187@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件分享篇（Windows10）</title>
+    <link href="http://mutouspace.cn/2017/03/02/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E7%AF%87/"/>
+    <id>http://mutouspace.cn/2017/03/02/软件分享篇/</id>
+    <published>2017-03-02T13:34:01.081Z</published>
+    <updated>2017-03-02T15:28:16.622Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="分享" scheme="http://mutouspace.cn/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="分享" scheme="http://mutouspace.cn/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>胡歌为什么会有今天的高度？</title>
+    <link href="http://mutouspace.cn/2017/02/19/%E8%83%A1%E6%AD%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E4%BB%8A%E5%A4%A9%E7%9A%84%E9%AB%98%E5%BA%A6%EF%BC%9F/"/>
+    <id>http://mutouspace.cn/2017/02/19/胡歌为什么会有今天的高度？/</id>
+    <published>2017-02-19T04:31:07.000Z</published>
+    <updated>2017-02-19T04:32:16.015Z</updated>
+    
+    <summary type="html">
+    
+      &lt;style type=&quot;text/css&quot;&gt;
+    strong a {
+        color: #747474;
+    }
+    .player {
+        text-align: center;
+        margin: .5em auto 0;
+        width: 100%;
+        max-width: 22em;
+    }
+    .player br {
+        display: none;
+    }
+    .sign {
+        text-align: right;
+        font-style: italic;
+    }
+    #ds-recent-visitors {
+        margin: 0;
+        padding: 0;
+    }
+    #ds-recent-visitors div img {
+        display: inline-block !important;
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        padding: 2px;
+        box-shadow: 1px 1px 1px rgba(0,0,0, .15);
+    }
+    .article-entry img:first-child {
+        display: block;
+    }
+    .article-entry span {
+        font-family: Arial;
+    }
+    #ds-hot-posts {
+        display: none;
+    }
+&lt;/style&gt;
+
+&lt;Excerpt in index | 首页摘要&gt;
+
+&lt;p&gt;&lt;strong&gt;本文转载于微信公众号：小林分享&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;藏书如山积，读书如水流。山形有限度，水流无时休。&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;sign&quot;&gt;&lt;span&gt;——&lt;/span&gt; Terry_Tian, 2017年2月19日&lt;/p&gt;
+
+&lt;p&gt;在娱乐圈里，想通过大荧幕红透半边天的人有很多。&lt;/p&gt;
+&lt;p&gt;但能够沉下心，通过学习和阅读来提升自己的不多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;胡歌&lt;/strong&gt;算一个。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="美文" scheme="http://mutouspace.cn/categories/%E7%BE%8E%E6%96%87/"/>
+    
+    
+      <category term="美文" scheme="http://mutouspace.cn/tags/%E7%BE%8E%E6%96%87/"/>
+    
+      <category term="杂记" scheme="http://mutouspace.cn/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="转载" scheme="http://mutouspace.cn/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Hexo+github建设个人博客教程</title>
+    <link href="http://mutouspace.cn/2017/02/18/%E4%BD%BF%E7%94%A8Hexo-github%E5%BB%BA%E8%AE%BE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+    <id>http://mutouspace.cn/2017/02/18/使用Hexo-github建设个人博客教程/</id>
+    <published>2017-02-18T07:46:58.000Z</published>
+    <updated>2017-02-19T03:21:32.577Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;/p&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;教程思路：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;列出博客搭建环境+所需工具；&lt;/li&gt;
+&lt;li&gt;环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；&lt;/li&gt;
+&lt;li&gt;创建Hexo项目，并本地运行查看效果&lt;/li&gt;
+&lt;li&gt;修改项目配置文件（根目录下的_config.yml文件）&lt;/li&gt;
+&lt;li&gt;安装Hexo框架主题（推荐：Next或yelee主题，本人用的yelee），对主题进行配置，主要是修改theme目录下的_config.yml文件&lt;/li&gt;
+&lt;li&gt;将本地设置好的Hexo项目发布到Github Pages上（包括绑定自己的域名）（这里会介绍如何写文章）&lt;/li&gt;
+&lt;li&gt;总结&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://mutouspace.cn/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
+    
+      <category term="Git" scheme="http://mutouspace.cn/tags/Git/"/>
+    
+      <category term="node" scheme="http://mutouspace.cn/tags/node/"/>
+    
+      <category term="github" scheme="http://mutouspace.cn/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试二</title>
+    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
+    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
+    <published>2017-02-17T11:51:30.000Z</published>
+    <updated>2017-02-17T13:18:19.296Z</updated>
+    
+    <summary type="html">
+    
+      Welcome to Hexo! This is your very first post.
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试一</title>
+    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%B8%80/"/>
+    <id>http://mutouspace.cn/2017/02/17/测试一/</id>
+    <published>2017-02-17T11:44:07.000Z</published>
+    <updated>2017-02-18T05:29:46.604Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;/p&gt;
+&lt;p&gt;#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://mutouspace.cn/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://mutouspace.cn/2017/02/16/hello-world/"/>
+    <id>http://mutouspace.cn/2017/02/16/hello-world/</id>
+    <published>2017-02-16T11:55:38.309Z</published>
+    <updated>2017-02-16T11:55:38.309Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/03/21/JAVA学习之MySQL/">
+    
+    
+    <title>JAVA学习之MySQL | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,MySQL,数据库">
+    <meta name="description" content="本文主要记录MySQL数据库的简单使用。未完待续。。。。。
+转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA学习之MySQL">
+<meta property="og:url" content="http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="本文主要记录MySQL数据库的简单使用。未完待续。。。。。
+转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%872.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%873.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%874.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%875.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%876.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%877.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%878.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%879.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8710.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8711.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8712.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8713.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8714.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8715.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8716.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8717.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8718.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8719.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8720.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8721.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8722.png">
+<meta property="og:updated_time" content="2017-03-21T14:32:54.645Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA学习之MySQL">
+<meta name="twitter:description" content="本文主要记录MySQL数据库的简单使用。未完待续。。。。。
+转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!">
+<meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
+    
+        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JAVA学习之MySQL</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JAVA学习之MySQL</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-21T13:52:33.000Z" itemprop="datePublished" class="page-time">
+  2017-03-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据库/">数据库</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数据库概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">数据库概述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数据库的安装与配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">数据库的安装与配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装与配置"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">安装与配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#卸载与修改密码"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">卸载与修改密码</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#sql概述"><span class="post-toc-number">3.</span> <span class="post-toc-text">sql概述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Sql的分类"><span class="post-toc-number">4.</span> <span class="post-toc-text">Sql的分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DDL-操作数据库、表、列等"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">DDL:操作数据库、表、列等</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DML操作-重要"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">DML操作(重要)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入操作：INSERT"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">插入操作：INSERT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改操作-UPDATE"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">修改操作 UPDATE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除操作-DELETE"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">删除操作 DELETE</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DQL操作"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">DQL操作</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-JAVA学习之MySQL"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JAVA学习之MySQL</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月21日 21:52" datetime="2017-03-21T13:52:33.000Z"  itemprop="datePublished">2017-03-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据库/">数据库</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+<span>
+    <a href="/2017/03/21/JAVA学习之MySQL/#comments" class="ds-thread-count" data-thread-key="JAVA学习之MySQL" data-count-type="comments"></a>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<blockquote>
+<p>本文主要记录MySQL数据库的简单使用。<br>未完待续。。。。。</p>
+<p>转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p>
+</blockquote>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="数据库概述"><a href="#数据库概述" class="headerlink" title="数据库概述"></a>数据库概述</h1><p><strong>数据库（DataBase，DB）：</strong>指长期保存在计算机的存储设备上，按照一定规则组织起来，可以被各种用户或应用共享的数据集合。(文件系统)</p>
+<p><strong>数据库管理系统（DataBase Management System，DBMS）：</strong>指一种操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理系统访问数据库中的数据。</p>
+<p><em>数据库软件应该为数据库管理系统，数据库是通过数据库管理系统创建和操作的。</em></p>
+<blockquote>
+<p>数据库：存储、维护和管理数据的集合。</p>
+</blockquote>
+<h1 id="数据库的安装与配置"><a href="#数据库的安装与配置" class="headerlink" title="数据库的安装与配置"></a>数据库的安装与配置</h1><h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%872.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%873.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%874.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%875.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%876.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%877.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%878.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%879.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8710.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8711.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8712.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8713.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8714.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8715.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8716.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8717.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8718.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8719.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8720.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8721.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8722.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="卸载与修改密码"><a href="#卸载与修改密码" class="headerlink" title="卸载与修改密码"></a>卸载与修改密码</h2><p><strong>卸载：</strong></p>
+<ol>
+<li><p>停止mysql服务   net stop mysql       启动mysql服务  net start mysql</p>
+</li>
+<li><p>卸载mysql</p>
+</li>
+<li><p>找到mysql 安装目录下的 my.ini   datadir=”C:/ProgramData/MySQL/MySQL Server 5.5/Data/“</p>
+</li>
+</ol>
+<p><strong>修改密码</strong></p>
+<p>运行cmd</p>
+<p> 安装成功了打开cmd  –&gt; mysql -uroot -p你的密码</p>
+<p> 修改mysql root用户密码</p>
+<p>1) 停止mysql服务 运行输入services.msc 停止mysql服务</p>
+<pre><code>或者 cmd --&gt;  net stop mysql
+</code></pre><p>2) 在cmd下 输入 mysqld –skip-grant-tables 启动服务器 光标不动 （不要关闭该窗口）</p>
+<p>3) 新打开cmd 输入mysql -u root -p 不需要密码 </p>
+<pre><code>use mysql;
+
+update user set password=password(&apos;abc&apos;) WHERE User=&apos;root&apos;;
+</code></pre><p>4) 关闭两个cmd窗口 在任务管理器结束mysqld 进程 </p>
+<p>5) 在服务管理页面 重启mysql 服务</p>
+<p>密码修改完成</p>
+<h1 id="sql概述"><a href="#sql概述" class="headerlink" title="sql概述"></a>sql概述</h1><blockquote>
+<p>SQL：Structure Query Language。（结构化查询语言）</p>
+</blockquote>
+<h1 id="Sql的分类"><a href="#Sql的分类" class="headerlink" title="Sql的分类"></a>Sql的分类</h1><p><strong>DDL（Data Definition Language）：</strong>数据定义语言，用来定义数据库对象：库、表、列等；     CREATE、 ALTER、DROP</p>
+<p><strong>DML（Data Manipulation Language）：</strong>数据操作语言，用来定义数据库记录（数据）；        INSERT、 UPDATE、 DELETE</p>
+<p><strong>DCL（Data Control Language）：</strong>数据控制语言，用来定义访问权限和安全级别；</p>
+<p><strong>DQL（Data Query Language）：</strong>数据查询语言，用来查询记录（数据）。SELECT</p>
+<p><strong>注意：sql语句以;结尾</strong></p>
+<h2 id="DDL-操作数据库、表、列等"><a href="#DDL-操作数据库、表、列等" class="headerlink" title="DDL:操作数据库、表、列等"></a>DDL:操作数据库、表、列等</h2><blockquote>
+<p>使用的关键字：CREATE、 ALTER、 DROP</p>
+</blockquote>
+<p><strong>example:</strong></p>
+<pre><code>CREATE TABLE emp (
+id INT,
+NAME VARCHAR(50),
+gender VARCHAR(10),
+birthday DATE,
+entry_date DATE,
+job VARCHAR(100),
+salary DOUBLE,
+RESUME VARCHAR(200)
+);
+-- 查看表的字段信息
+DESC emp;
+-- 在emp TABLE中添加image列
+ALTER TABLE emp ADD image BLOB;
+-- 修改job列，使其长度为60。
+ALTER TABLE emp MODIFY job VARCHAR(60);
+-- 删除image列,一次只能删一列。
+ALTER TABLE emp DROP image;
+-- 表名改为USER。
+RENAME TABLE emp TO USER;
+-- 查看表格的创建细节
+SHOW CREATE TABLE USER;
+-- 修改表的字符集为gbk
+ALTER TABLE USER CHARACTER SET gbk;
+-- 列名NAME修改为username
+ALTER TABLE USER CHANGE NAME username VARCHAR(100);
+
+DESC USER;
+-- 删除表
+DROP TABLE USER ;
+</code></pre><h2 id="DML操作-重要"><a href="#DML操作-重要" class="headerlink" title="DML操作(重要)"></a>DML操作(重要)</h2><h3 id="插入操作：INSERT"><a href="#插入操作：INSERT" class="headerlink" title="插入操作：INSERT"></a>插入操作：INSERT</h3><p><strong>语法：</strong> INSERT INTO 表名（列名1，列名2 …）VALUES(列值1，列值2…);<br><strong>注意：</strong>列名与列值的类型、个数、顺序要一一对应。</p>
+<p>可以把列名当做java中的形参，把列值当做实参。</p>
+<p>值不要超出列定义的长度。</p>
+<p>如果插入空值，请使用null</p>
+<p>插入的日期和字符一样，都使用引号括起来。</p>
+<p><strong>练习 ：</strong></p>
+<pre><code>create table emp(
+id int,
+name varchar(100),
+gender varchar(10),
+birthday date,
+salary float(10,2),
+entry_date date,
+resume text
+);
+
+INSERT INTO emp(id,name,gender,birthday,salary,entry_date,resume)
+VALUES(1,&apos;zhangsan&apos;,&apos;female&apos;,&apos;1990-5-10&apos;,10000,&apos;2015-5-5-&apos;,&apos;good girl&apos;);
+
+INSERT INTO emp(id,name,gender,birthday,salary,entry_date,resume)
+VALUES(2,&apos;lisi&apos;,&apos;male&apos;,&apos;1995-5-10&apos;,10000,&apos;2015-5-5&apos;,&apos;good boy&apos;);
+
+INSERT INTO emp(id,name,gender,birthday,salary,entry_date,resume)
+VALUES(3,&apos;wangwu&apos;,&apos;male&apos;,&apos;1995-5-10&apos;,10000,&apos;2015-5-5&apos;,&apos;good boy&apos;);
+
+-- 批量插入：
+INSERT INTO emp VALUES
+(4,&apos;zs&apos;,&apos;m&apos;,&apos;2015-09-01&apos;,10000,&apos;2015-09-01&apos;,NULL),
+(5,&apos;li&apos;,&apos;m&apos;,&apos;2015-09-01&apos;,10000,&apos;2015-09-01&apos;,NULL),
+(6,&apos;ww&apos;,&apos;m&apos;,&apos;2015-09-01&apos;,10000,&apos;2015-09-01&apos;,NULL);
+</code></pre><h3 id="修改操作-UPDATE"><a href="#修改操作-UPDATE" class="headerlink" title="修改操作 UPDATE"></a>修改操作 UPDATE</h3><p><strong>语法：</strong>UPDATE 表名 SET 列名1=列值1，列名2=列值2 。。。 WHERE 列名=值</p>
+<p><strong>练习 ：</strong></p>
+<pre><code>-- 将所有员工薪水修改为5000元。
+UPDATE emp SET salary=5000 
+-- 将姓名为’tom’的员工薪水修改为3000元。
+UPDATE emp SET salary=3000 WHERE NAME=&apos;tom&apos;;
+-- 将姓名为’jerry’的员工薪水修改为4000元,gender改为female。
+ UPDATE emp SET salary=4000,gender=&apos;female&apos; WHERE NAME=&apos;jerry&apos;;
+-- 将蔡依林的薪水在原有基础上增加1000元。
+ UPDATE emp SET salary=salary+1000 WHERE NAME = &apos;蔡依林&apos;;
+</code></pre><h3 id="删除操作-DELETE"><a href="#删除操作-DELETE" class="headerlink" title="删除操作 DELETE"></a>删除操作 DELETE</h3><p><strong>语法 ：</strong> DELETE FROM 表名 【WHERE 列名=值】</p>
+<p><strong>练习 ：</strong></p>
+<pre><code>-- 删除表中名称为’zs’的记录。
+DELETE FROM emp WHERE NAME=‘tom’;
+-- 删除表中所有记录。
+DELETE FROM emp;
+-- 使用truncate删除表中记录。
+TRUNCATE TABLE emp;
+</code></pre><blockquote>
+<p>DELETE 删除表中的数据，表结构还在;删除后的数据可以找回<br> TRUNCATE 删除是把表直接DROP掉，然后再创建一个同样的新表。<br> 删除的数据不能找回。执行速度比DELETE快。</p>
+</blockquote>
+<h2 id="DQL操作"><a href="#DQL操作" class="headerlink" title="DQL操作"></a>DQL操作</h2><blockquote>
+<p>DQL数据查询语言 （重要）<br>数据库执行DQL语句不会对数据进行改变，而是让数据库发送结果集给客户端。<br>查询返回的结果集是一张虚拟表。</p>
+</blockquote>
+<p><strong>查询关键字：</strong>SELECT<br><strong>语法：</strong> SELECT 列名 FROM表名<br>【WHERE –&gt; GROUP BY –&gt;HAVING–&gt; ORDER BY】</p>
+<p><strong>语法：</strong></p>
+<pre><code>SELECT selection_list /*要查询的列名称*/
+FROM table_list /*要查询的表名称*/
+WHERE condition /*行条件*/
+GROUP BY grouping_columns /*对结果分组*/
+HAVING condition /*分组后的行条件*/
+ORDER BY sorting_columns /*对结果分组*/
+LIMIT offset_start, row_count /*结果限定*/
+</code></pre></the></excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-21T14:32:54.645Z" itemprop="dateUpdated">2017年3月21日 22:32</time>
+</span><br>
+
+
+        转载请注明出处：<a href="/2017/03/21/JAVA学习之MySQL/" target="_blank" rel="external">http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/</a>
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/&title=《JAVA学习之MySQL》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/&title=《JAVA学习之MySQL》 — Terry_Tian's Code日志&source=
+
+
+本文主要记录MySQL数据库的简单使用。未完待续。。。。。
+转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!
+" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之MySQL》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/09/Git学习笔记系列/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Git学习笔记系列</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="JAVA学习之MySQL" data-title="JAVA学习之MySQL" data-url="http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry_Tian's Code日志 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/&title=《JAVA学习之MySQL》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/&title=《JAVA学习之MySQL》 — Terry_Tian's Code日志&source=
+
+
+本文主要记录MySQL数据库的简单使用。未完待续。。。。。
+转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!
+" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之MySQL》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNUlEQVR42u3aS26EMBAFQO5/abKNNDK8bsMCu1hFGgKuidTp33HE13l5/b/n+v7fT0dvOd64MDAwPsvIjzh6cfWe3ntH92BgYOzDGEWw0T294JtHzvxsGBgYGNV7kuBYDcoYGBgYVUaeOI5414UrBgYGxkwRm7TGbkrNiS/osVocAwPjg4yZwvLtn1+Zb2BgYHyKcRavJKVLgnX1OTenwsDAWJqRB7h5TO9phfNgYGAszUgaW/nKV95ES9p2ZTAGBsZyjHyUmAfTvNLMv6ybwScGBsbSjGQBIlmYqKaGObIwwsTAwFiU0SsyewPLmXWNZhWOgYGxEKPXuM+HndXjNv9XYGBgbMnojSd7hXF5APBbi2NgYCzNqKZx1RK0l/AV0k0MDIwNGDMHLSRw02OAm3YbBgbGooxqOthbkugtZORtPgwMjN0Y1XFjMkjoLXA0ly0wMDCWZiSBNQ+FMysUM8tnGBgY6zGqw8inxp8zBWq0tIqBgbEQ4zpE9qjPFqvNvwkGBsYGjCR05kVptQ2Xp6rDbVwMDIylGTOF6OjT/NC9oSkGBsZujGp6N9OkyxPQ6JwYGBiLMs7iVQ3HvaQzf++Rf6MYGBifZcwsWFQfnYfm5OgPzGkxMDA+xSg3tuIB59G6emfAwMDYgZEvW1RTt/KBWkgMDAyMvCX31JpFmYqBgYERjySr6xp5kL15GgYGxgaMfJ2r2oDLW2zV8ScGBsY+jF7Iuz5oEihnfrfZ1MPAwPge4w/CerwqEkZSuAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.8');
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-03-21T14:32:54.645Z</updated>
+  <updated>2017-03-22T08:55:07.731Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -16,18 +16,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JAVA学习之MySQL</title>
+    <title>JAVA学习之MySQL（一）</title>
     <link href="http://mutouspace.cn/2017/03/21/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BMySQL/"/>
     <id>http://mutouspace.cn/2017/03/21/JAVA学习之MySQL/</id>
     <published>2017-03-21T13:52:33.000Z</published>
-    <updated>2017-03-21T14:32:54.645Z</updated>
+    <updated>2017-03-22T08:55:07.731Z</updated>
     
     <summary type="html">
     
       &lt;Excerpt in index | 首页摘要&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;本文主要记录MySQL数据库的简单使用。&lt;br&gt;未完待续。。。。。&lt;/p&gt;
+&lt;p&gt;本文主要记录MySQL数据库的简单使用。&lt;br&gt;本部分记录了MySQL的安装、卸载，SQL语句的基础。&lt;/p&gt;
 &lt;p&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;
 &lt;/blockquote&gt;
     
@@ -192,31 +192,13 @@
       <category term="Hexo" scheme="http://mutouspace.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
-    
       <category term="Git" scheme="http://mutouspace.cn/tags/Git/"/>
+    
+      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
     
       <category term="node" scheme="http://mutouspace.cn/tags/node/"/>
     
       <category term="github" scheme="http://mutouspace.cn/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试二</title>
-    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
-    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
-    <published>2017-02-17T11:51:30.000Z</published>
-    <updated>2017-02-17T13:18:19.296Z</updated>
-    
-    <summary type="html">
-    
-      Welcome to Hexo! This is your very first post.
-    
-    </summary>
-    
-    
-      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
@@ -235,6 +217,24 @@
     
     
       <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试二</title>
+    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
+    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
+    <published>2017-02-17T11:51:30.000Z</published>
+    <updated>2017-02-17T13:18:19.296Z</updated>
+    
+    <summary type="html">
+    
+      Welcome to Hexo! This is your very first post.
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

@@ -4,12 +4,12 @@
   
     
     <entry>
-      <title><![CDATA[JAVA学习之MySQL]]></title>
+      <title><![CDATA[JAVA学习之MySQL（一）]]></title>
       <url>http://mutouspace.cn/2017/03/21/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BMySQL/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <blockquote>
-<p>本文主要记录MySQL数据库的简单使用。<br>未完待续。。。。。</p>
+<p>本文主要记录MySQL数据库的简单使用。<br>本部分记录了MySQL的安装、卸载，SQL语句的基础。</p>
 <p>转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p>
 </blockquote>
 <a id="more"></a> 
@@ -303,6 +303,246 @@ GROUP BY grouping_columns /*对结果分组*/
 HAVING condition /*分组后的行条件*/
 ORDER BY sorting_columns /*对结果分组*/
 LIMIT offset_start, row_count /*结果限定*/
+</code></pre><p>开始之前让我们先建几个表并插入数据</p>
+<pre><code>CREATE TABLE stu (
+    sid    CHAR(6),
+    sname        VARCHAR(50),
+    age        INT,
+    gender    VARCHAR(50)
+);
+
+INSERT INTO stu VALUES(&apos;S_1001&apos;, &apos;liuYi&apos;, 35, &apos;male&apos;);
+INSERT INTO stu VALUES(&apos;S_1002&apos;, &apos;chenEr&apos;, 15, &apos;female&apos;);
+INSERT INTO stu VALUES(&apos;S_1003&apos;, &apos;zhangSan&apos;, 95, &apos;male&apos;);
+INSERT INTO stu VALUES(&apos;S_1004&apos;, &apos;liSi&apos;, 65, &apos;female&apos;);
+INSERT INTO stu VALUES(&apos;S_1005&apos;, &apos;wangWu&apos;, 55, &apos;male&apos;);
+INSERT INTO stu VALUES(&apos;S_1006&apos;, &apos;zhaoLiu&apos;, 75, &apos;female&apos;);
+INSERT INTO stu VALUES(&apos;S_1007&apos;, &apos;sunQi&apos;, 25, &apos;male&apos;);
+INSERT INTO stu VALUES(&apos;S_1008&apos;, &apos;zhouBa&apos;, 45, &apos;female&apos;);
+INSERT INTO stu VALUES(&apos;S_1009&apos;, &apos;wuJiu&apos;, 85, &apos;male&apos;);
+INSERT INTO stu VALUES(&apos;S_1010&apos;, &apos;zhengShi&apos;, 5, &apos;female&apos;);
+INSERT INTO stu VALUES(&apos;S_1011&apos;, &apos;xxx&apos;, NULL, NULL);
+
+
+CREATE TABLE emp(
+    empno        INT,
+    ename        VARCHAR(50),
+    job        VARCHAR(50),
+    mgr        INT,
+    hiredate    DATE,
+    sal        DECIMAL(7,2),
+    comm        DECIMAL(7,2),
+    deptno        INT
+) ;
+
+INSERT INTO emp VALUES(7369,&apos;SMITH&apos;,&apos;CLERK&apos;,7902,&apos;1980-12-17&apos;,800,NULL,20);
+INSERT INTO emp VALUES(7499,&apos;ALLEN&apos;,&apos;SALESMAN&apos;,7698,&apos;1981-02-20&apos;,1600,300,30);
+INSERT INTO emp VALUES(7521,&apos;WARD&apos;,&apos;SALESMAN&apos;,7698,&apos;1981-02-22&apos;,1250,500,30);
+INSERT INTO emp VALUES(7566,&apos;JONES&apos;,&apos;MANAGER&apos;,7839,&apos;1981-04-02&apos;,2975,NULL,20);
+INSERT INTO emp VALUES(7654,&apos;MARTIN&apos;,&apos;SALESMAN&apos;,7698,&apos;1981-09-28&apos;,1250,1400,30);
+INSERT INTO emp VALUES(7698,&apos;BLAKE&apos;,&apos;MANAGER&apos;,7839,&apos;1981-05-01&apos;,2850,NULL,30);
+INSERT INTO emp VALUES(7782,&apos;CLARK&apos;,&apos;MANAGER&apos;,7839,&apos;1981-06-09&apos;,2450,NULL,10);
+INSERT INTO emp VALUES(7788,&apos;SCOTT&apos;,&apos;ANALYST&apos;,7566,&apos;1987-04-19&apos;,3000,NULL,20);
+INSERT INTO emp VALUES(7839,&apos;KING&apos;,&apos;PRESIDENT&apos;,NULL,&apos;1981-11-17&apos;,5000,NULL,10);
+INSERT INTO emp VALUES(7844,&apos;TURNER&apos;,&apos;SALESMAN&apos;,7698,&apos;1981-09-08&apos;,1500,0,30);
+INSERT INTO emp VALUES(7876,&apos;ADAMS&apos;,&apos;CLERK&apos;,7788,&apos;1987-05-23&apos;,1100,NULL,20);
+INSERT INTO emp VALUES(7900,&apos;JAMES&apos;,&apos;CLERK&apos;,7698,&apos;1981-12-03&apos;,950,NULL,30);
+INSERT INTO emp VALUES(7902,&apos;FORD&apos;,&apos;ANALYST&apos;,7566,&apos;1981-12-03&apos;,3000,NULL,20);
+INSERT INTO emp VALUES(7934,&apos;MILLER&apos;,&apos;CLERK&apos;,7782,&apos;1982-01-23&apos;,1300,NULL,10);
+
+
+CREATE TABLE dept(
+    deptno        INT,
+    dname        VARCHAR(14),
+    loc        VARCHAR(13)
+);
+
+INSERT INTO dept VALUES(10, &apos;ACCOUNTING&apos;, &apos;NEW YORK&apos;);
+INSERT INTO dept VALUES(20, &apos;RESEARCH&apos;, &apos;DALLAS&apos;);
+INSERT INTO dept VALUES(30, &apos;SALES&apos;, &apos;CHICAGO&apos;);
+INSERT INTO dept VALUES(40, &apos;OPERATIONS&apos;, &apos;BOSTON&apos;);
+</code></pre><h3 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h3><p>1.1　查询所有列</p>
+<pre><code>SELECT * FROM stu;
+</code></pre><p>1.2　查询指定列</p>
+<pre><code>SELECT sid, sname, age FROM stu;
+</code></pre><h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><pre><code>-- 查询性别为女，并且年龄&gt;=50的记录
+SELECT * FROM stu WHERE gender=&apos;female&apos; AND age &gt;=50;
+
+-- 查询学号为S_1001，或者姓名为liSi的记录
+SELECT * FROM stu 
+WHERE sid =&apos;S_1001&apos; OR sname=&apos;liSi&apos;;
+
+-- 查询学号为S_1001，S_1002，S_1003的记录
+SELECT * FROM stu 
+WHERE sid IN (&apos;S_1001&apos;,&apos;S_1002&apos;,&apos;S_1003&apos;);
+
+-- 查询学号不是S_1001，S_1002，S_1003的记录
+SELECT * FROM stu 
+WHERE sid NOT IN (&apos;S_1001&apos;,&apos;S_1002&apos;,&apos;S_1003&apos;);
+
+-- 查询年龄为null的记录
+SELECT * FROM stu
+WHERE age IS NULL;
+
+-- 查询年龄在20到40之间的学生记录
+SELECT * 
+FROM stu
+WHERE age&gt;=20 AND age&lt;=40;
+-- 或者
+SELECT * 
+FROM stu 
+WHERE age BETWEEN 20 AND 40;
+
+-- 查询性别非男的学生记录
+SELECT * 
+FROM stu
+WHERE gender!=&apos;male&apos;;
+-- 或者
+SELECT * 
+FROM stu
+WHERE gender&lt;&gt;&apos;male&apos;;
+-- 或者
+SELECT * 
+FROM stu
+WHERE NOT gender=&apos;male&apos;;
+
+-- 查询姓名不为null的学生记录
+
+SELECT * FROM stu WHERE sname IS NOT NULL;
+</code></pre><h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><blockquote>
+<p>当想查询姓名中包含a字母的学生时就需要使用模糊查询了。模糊查询需要使用关键字LIKE。</p>
+</blockquote>
+<p><strong>通配符:</strong> </p>
+<pre><code>_ ：任意一个字符
+
+  % ：任意0~n个字符
+</code></pre><p><strong>Example:</strong></p>
+<pre><code>-- 查询姓名由5个字母构成的学生记录
+SELECT * 
+FROM stu
+WHERE sname LIKE &apos;_____&apos;;
+-- 模糊查询必须使用LIKE关键字。其中 “_”匹配任意一个字母，5个“_”表示5个任意字母。
+
+-- 3.2　查询姓名由5个字母构成，并且第5个字母为“i”的学生记录
+SELECT * 
+FROM stu
+WHERE sname LIKE &apos;____i&apos;;
+
+-- 3.3　查询姓名以“z”开头的学生记录
+SELECT * 
+FROM stu
+WHERE sname LIKE &apos;z%&apos;;
+-- 其中“%”匹配0~n个任何字母。
+
+-- 3.4　查询姓名中第2个字母为“i”的学生记录
+SELECT * 
+FROM stu
+WHERE sname LIKE &apos;_i%&apos;;
+
+-- 3.5　查询姓名中包含“a”字母的学生记录
+SELECT * 
+FROM stu
+WHERE sname LIKE &apos;%a%&apos;;
+</code></pre><h3 id="字段控制查询"><a href="#字段控制查询" class="headerlink" title="字段控制查询"></a>字段控制查询</h3><pre><code>SELECT * FROM emp;
+-- 去除重复记录
+SELECT DISTINCT deptno,mgr FROM emp;
+
+-- 查看雇员的月薪与佣金之和
+SELECT * ,sal+comm FROM emp;
+-- 过滤null 并起别名
+SELECT * ,sal+IFNULL(comm,0) AS total FROM emp;
+</code></pre><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><blockquote>
+<p>order by 列名 asc(默认) desc</p>
+</blockquote>
+<pre><code>-- 查询所有学生记录，按年龄升序排序
+SELECT * FROM stu ORDER BY age ASC;
+-- 查询所有学生记录，按年龄降序排序
+SELECT * FROM stu ORDER BY age DESC;
+-- 查询所有雇员，按月薪降序排序，如果月薪相同时，按编号升序排序
+SELECT * FROM emp
+ORDER BY sal DESC,empno ASC;
+</code></pre><h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><blockquote>
+<p>聚合函数是用来做纵向运算的函数：</p>
+<p>COUNT()：统计指定列不为NULL的记录行数；</p>
+<p>MAX()：计算指定列的最大值，如果指定列是字符串类型，那么使用字符串排序运算；</p>
+<p>MIN()：计算指定列的最小值，如果指定列是字符串类型，那么使用字符串排序运算；</p>
+<p>SUM()：计算指定列的数值和，如果指定列类型不是数值类型，那么计算结果为0；</p>
+<p>AVG()：计算指定列的平均值，如果指定列类型不是数值类型，那么计算结果为0；</p>
+</blockquote>
+<pre><code>-- 查询emp表中记录数：
+SELECT COUNT(*) AS cnt FROM emp;
+
+-- 查询emp表中有佣金的人数：
+SELECT COUNT(comm) cnt FROM emp;
+-- 注意，因为count()函数中给出的是comm列，那么只统计comm列非NULL的行数。
+
+-- 查询emp表中月薪大于2500的人数：
+SELECT COUNT(*) FROM emp
+WHERE sal &gt; 2500;
+
+-- 统计月薪与佣金之和大于2500元的人数：
+SELECT COUNT(*) AS cnt FROM emp WHERE sal+IFNULL(comm,0) &gt; 2500;
+
+-- 查询有佣金的人数，有领导的人数：
+SELECT COUNT(comm), COUNT(mgr) FROM emp;
+
+
+-- 查询所有雇员月薪和：
+SELECT SUM(sal) FROM emp;
+
+-- 查询所有雇员月薪和，以及所有雇员佣金和：
+SELECT SUM(sal), SUM(comm) FROM emp;
+
+-- 查询所有雇员月薪+佣金和：
+SELECT SUM(sal+IFNULL(comm,0)) FROM emp;
+
+-- 统计所有员工平均工资：
+SELECT AVG(sal) FROM emp;
+
+-- MAX和MIN
+-- 查询最高工资和最低工资：
+SELECT MAX(sal), MIN(sal) FROM emp;
+</code></pre><h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><blockquote>
+<p>注：凡和聚合函数同时出现的列名，一定要写在group by 之后</p>
+</blockquote>
+<pre><code>-- 查询每个部门的部门编号和每个部门的工资和：
+SELECT deptno, SUM(sal)
+FROM emp
+GROUP BY deptno;
+
+-- 查询每个部门的部门编号以及每个部门的人数：
+SELECT deptno,COUNT(*)
+FROM emp
+GROUP BY deptno;
+
+-- 查询每个部门的部门编号以及每个部门工资大于1500的人数：
+SELECT deptno,COUNT(*)
+FROM emp
+WHERE sal&gt;1500
+GROUP BY deptno;
+
+-- 查询工资总和大于9000的部门编号以及工资和：
+SELECT deptno, SUM(sal)
+FROM emp
+GROUP BY deptno
+HAVING SUM(sal) &gt; 9000;
+</code></pre><p><strong>注：</strong></p>
+<p>  <em>having与where的区别:</em></p>
+<pre><code>1.having是在分组后对数据进行过滤.
+
+  where是在分组前对数据进行过滤
+
+2.having后面可以使用聚合函数(统计函数)
+
+  where后面不可以使用聚合函数。
+</code></pre><p><em>WHERE是对分组前记录的条件，如果某行记录没有满足WHERE子句的条件，那么这行记录不会参加分组；而HAVING是对分组后数据的约束。</em></p>
+<h3 id="LIMIT"><a href="#LIMIT" class="headerlink" title="LIMIT"></a>LIMIT</h3><blockquote>
+<p>LIMIT用来限定查询结果的起始行，以及总行数。</p>
+</blockquote>
+<pre><code>-- 查询5行记录，起始行从0开始
+SELECT * FROM emp LIMIT 0, 5;
+-- 查询10行记录，起始行从3开始
+SELECT * FROM emp LIMIT 3, 10;
 </code></pre></the></excerpt>]]></content>
       
         <categories>
@@ -1133,30 +1373,13 @@ hexo d -g #生成并上传
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> Git </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> node </tag>
             
             <tag> github </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
             
         </tags>
         
@@ -1180,6 +1403,23 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
             
         </tags>
         

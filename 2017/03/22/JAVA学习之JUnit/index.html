@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/03/22/JAVA学习之JUnit/">
+    
+    
+    <title>JAVA学习之JUnit | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,JUnit">
+    <meta name="description" content="JUnit是什么？
+JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
+JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA学习之JUnit">
+<meta property="og:url" content="http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="JUnit是什么？
+JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
+JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。">
+<meta property="og:updated_time" content="2017-03-23T06:04:28.077Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA学习之JUnit">
+<meta name="twitter:description" content="JUnit是什么？
+JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
+JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。">
+    
+        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JAVA学习之JUnit</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JAVA学习之JUnit</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-22T14:33:06.000Z" itemprop="datePublished" class="page-time">
+  2017-03-22
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit是什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">JUnit是什么？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JUnit提供"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">JUnit提供</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JUnit用于测试"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">JUnit用于测试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JUnit的特点"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">JUnit的特点</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit简单示例"><span class="post-toc-number">2.</span> <span class="post-toc-text">JUnit简单示例</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit注解"><span class="post-toc-number">3.</span> <span class="post-toc-text">JUnit注解</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit断言"><span class="post-toc-number">4.</span> <span class="post-toc-text">JUnit断言</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-JAVA学习之JUnit"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JAVA学习之JUnit</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月22日 22:33" datetime="2017-03-22T14:33:06.000Z"  itemprop="datePublished">2017-03-22</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+<span>
+    <a href="/2017/03/22/JAVA学习之JUnit/#comments" class="ds-thread-count" data-thread-key="JAVA学习之JUnit" data-count-type="comments"></a>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="JUnit是什么？"><a href="#JUnit是什么？" class="headerlink" title="JUnit是什么？"></a>JUnit是什么？</h1><blockquote>
+<p>JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。</p>
+<p>JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。</p>
+</blockquote>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h2 id="JUnit提供"><a href="#JUnit提供" class="headerlink" title="JUnit提供"></a>JUnit提供</h2><ol>
+<li>断言测试预期结果。</li>
+<li>测试功能共享通用的测试数据。</li>
+<li>测试套件轻松地组织和运行测试。</li>
+<li>图形和文本测试运行。</li>
+</ol>
+<h2 id="JUnit用于测试"><a href="#JUnit用于测试" class="headerlink" title="JUnit用于测试"></a>JUnit用于测试</h2><ol>
+<li>整个对象</li>
+<li>对象的一部分 - 交互的方法或一些方法</li>
+<li>几个对象之间的互动(交互)</li>
+</ol>
+<h2 id="JUnit的特点"><a href="#JUnit的特点" class="headerlink" title="JUnit的特点"></a>JUnit的特点</h2><ol>
+<li>JUnit是用于编写和运行测试的开源框架。</li>
+<li>提供了注释，以确定测试方法。</li>
+<li>提供断言测试预期结果。</li>
+<li>提供了测试运行的运行测试。</li>
+<li>JUnit测试让您可以更快地编写代码，提高质量</li>
+<li>JUnit是优雅简洁。它是不那么复杂以及不需要花费太多的时间。</li>
+<li>JUnit测试可以自动运行，检查自己的结果，并提供即时反馈。没有必要通过测试结果报告来手动梳理。</li>
+<li>JUnit测试可以组织成测试套件包含测试案例，甚至其他测试套件。</li>
+<li>Junit显示测试进度的，如果测试是没有问题条形是绿色的，测试失败则会变成红色。</li>
+</ol>
+<h1 id="JUnit简单示例"><a href="#JUnit简单示例" class="headerlink" title="JUnit简单示例"></a>JUnit简单示例</h1><blockquote>
+<p>使用工具：eclipse</p>
+</blockquote>
+<p>测试类：</p>
+<p><em>Calculate.java</em></p>
+<pre><code>public class Calculate {
+
+    public int sum(int var1, int var2) {
+        System.out.println(&quot;相加的值是: &quot; + var1 + &quot; + &quot; + var2);
+        return var1 + var2;
+    }
+
+}
+</code></pre><p><em>CalculateTest.java</em></p>
+<pre><code>public class CalculateTest {
+
+    Calculate calculation = new Calculate();
+    int sum = calculation.sum(2, 5);
+    int testSum = 7;
+
+    @Test
+    public void testSum() {
+        System.out.println(&quot;@Test sum(): &quot; + sum + &quot; = &quot; + testSum);
+        assertEquals(sum, testSum);
+    }
+
+}
+</code></pre><blockquote>
+<p>@Test的注解在 testSum()方法的上方。 这个注释指示该公共无效(public void)方法它所附着可以作为一个测试用例。<br>因此，testSum()方法将用于测试公开方法 sum() 。 </p>
+<p>方法 assertEquals(sum, testsum)。<br>assertEquals ([String message], object expected, object actual) 方法持有两个对象作为输入，并断言这两个对象相等。</p>
+</blockquote>
+<p><em>如果要运行测试类，右键点击测试类，并选择 Run As -&gt; Junit Test</em>。</p>
+<h1 id="JUnit注解"><a href="#JUnit注解" class="headerlink" title="JUnit注解"></a>JUnit注解</h1><p>在本节中，我们将提到支持在JUnit4基本注释，下表列出了这些注释的概括：</p>
+<table><br><tr><td>注解</td>    <td>描述</td></tr><br><tr><td>@Test<br><br>public void method()</td>    <td>测试注释指示该公共无效方法它所附着可以作为一个测试用例。</td></tr><br><tr><td>@Before<br><br>public void method()</td>    <td>Before注释表示，该方法必须在类中的每个测试之前执行，以便执行测试某些必要的先决条件。</td></tr><br><tr><td>@BeforeClass<br><br>public static void method()</td><td>BeforeClass注释指出这是附着在静态方法必须执行一次并在类的所有测试之前。发生这种情况时一般是测试计算共享配置方法(如连接到数据库)。</td></tr><br><tr><td>@After<br><br>public void method()</td><td>After 注释指示，该方法在执行每项测试后执行(如执行每一个测试后重置某些变量，删除临时变量等)</td></tr><br><tr><td>@AfterClass<br><br>public static void method()</td><td>当需要执行所有的测试在JUnit测试用例类后执行，AfterClass注解可以使用以清理建立方法，(从数据库如断开连接)。注意：附有此批注(类似于BeforeClass)的方法必须定义为静态。</td></tr><br><tr><td>@Ignore<br><br>public static void method()</td><td>当想暂时禁用特定的测试执行可以使用忽略注释。每个被注解为@Ignore的方法将不被执行。</td></tr><br></table>
+
+<p>让我们看看一个测试类，在上面提到的一些注解的一个例子。</p>
+<p><em>AnnotationsTest.java</em></p>
+<pre><code>package com.yiibai.junit;
+
+import static org.junit.Assert.*;
+import java.util.*;
+import org.junit.*;
+
+public class AnnotationsTest {
+
+private ArrayList testList;
+
+@BeforeClass
+public static void onceExecutedBeforeAll() {
+System.out.println(&quot;@BeforeClass: onceExecutedBeforeAll&quot;);
+}
+
+@Before
+public void executedBeforeEach() {
+testList = new ArrayList();
+System.out.println(&quot;@Before: executedBeforeEach&quot;);
+}
+
+@AfterClass
+public static void onceExecutedAfterAll() {
+System.out.println(&quot;@AfterClass: onceExecutedAfterAll&quot;);
+}
+
+@After
+public void executedAfterEach() {
+testList.clear();
+System.out.println(&quot;@After: executedAfterEach&quot;);
+}
+
+@Test
+public void EmptyCollection() {
+assertTrue(testList.isEmpty());
+System.out.println(&quot;@Test: EmptyArrayList&quot;);
+}
+
+@Test
+public void OneItemCollection() {
+testList.add(&quot;oneItem&quot;);
+assertEquals(1, testList.size());
+System.out.println(&quot;@Test: OneItemArrayList&quot;);
+}
+
+@Ignore
+public void executionIgnored() {
+System.out.println(&quot;@Ignore: This execution is ignored&quot;);
+}
+}
+</code></pre><p>如果我们运行上面的测试，控制台输出将是以下几点：</p>
+<pre><code>@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+@Test: EmptyArrayList
+@After: executedAfterEach
+@Before: executedBeforeEach
+@Test: OneItemArrayList
+@After: executedAfterEach
+@AfterClass: onceExecutedAfterAll
+</code></pre><h1 id="JUnit断言"><a href="#JUnit断言" class="headerlink" title="JUnit断言"></a>JUnit断言</h1><p>在本节中，我们将介绍一些断言方法。所有这些方法都受到 Assert 类扩展了java.lang.Object类并为它们提供编写测试，以便检测故障。下表中有一种最常用的断言方法的更详细的解释。</p>
+<table><br><tr><td>断言</td><td>描述</td></tr><br><tr><td>void assertEquals([String message], expected value, actual value)</td><td>断言两个值相等。值可能是类型有 int, short, long, byte, char or java.lang.Object. 第一个参数是一个可选的字符串消息</td></tr><br><tr><td>void assertTrue([String message], boolean condition)</td><td>断言一个条件为真</td></tr><br><tr><td>void assertFalse([String message],boolean condition)</td><td>断言一个条件为假</td></tr><br><tr><td>void assertNotNull([String message], java.lang.Object object)</td><td>断言一个对象不为空(null)</td></tr><br><tr><td>void assertNull([String message], java.lang.Object object)</td><td>断言一个对象为空(null)</td></tr><br><tr><td>void assertSame([String message], java.lang.Object expected, java.lang.Object actual)</td><td>断言，两个对象引用相同的对象</td></tr><br><tr><td>void assertNotSame([String message], java.lang.Object unexpected, java.lang.Object actual)</td><td>断言，两个对象不是引用同一个对象</td></tr><br><tr><td>void assertArrayEquals([String message], expectedArray, resultArray)</td><td>断言预期数组和结果数组相等。数组的类型可能是 int, long, short, char, byte or java.lang.Object.</td></tr><br></table>
+
+<p> 让我们看的一些前述断言的一个例子。</p>
+<pre><code>AssertionsTest.java
+
+package com.yiibai.junit;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class AssertionsTest {
+
+@Test
+public void test() {
+    String obj1 = &quot;junit&quot;;
+    String obj2 = &quot;junit&quot;;
+    String obj3 = &quot;test&quot;;
+    String obj4 = &quot;test&quot;;
+    String obj5 = null;
+    int var1 = 1;
+    int var2 = 2;
+    int[] arithmetic1 = { 1, 2, 3 };
+    int[] arithmetic2 = { 1, 2, 3 };
+
+    assertEquals(obj1, obj2);
+
+    assertSame(obj3, obj4);
+
+    assertNotSame(obj2, obj4);
+
+    assertNotNull(obj1);
+
+    assertNull(obj5);
+
+    assertTrue(var1  var2);
+
+    assertArrayEquals(arithmetic1, arithmetic2);
+}
+
+}
+</code></pre><p>在以上类中我们可以看到，这些断言方法是可以工作的。</p>
+<ul>
+<li>assertEquals() 如果比较的两个对象是相等的，此方法将正常返回；否则失败显示在JUnit的窗口测试将中止。</li>
+<li>assertSame() 和 assertNotSame() 方法测试两个对象引用指向完全相同的对象。</li>
+<li>assertNull() 和 assertNotNull() 方法测试一个变量是否为空或不为空(null)。</li>
+<li>assertTrue() 和 assertFalse() 方法测试if条件或变量是true还是false。</li>
+<li>assertArrayEquals() 将比较两个数组，如果它们相等，则该方法将继续进行不会发出错误。否则失败将显示在JUnit窗口和中止测试。</li>
+</ul>
+<blockquote>
+<p>文章转载自：易百教程 [http:/www.yiibai.com]</p>
+</blockquote>
+</the></excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-23T06:04:28.077Z" itemprop="dateUpdated">2017年3月23日 14:04</time>
+</span><br>
+
+
+        转载请注明出处：<a href="/2017/03/22/JAVA学习之JUnit/" target="_blank" rel="external">http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/</a>
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JUnit/">JUnit</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&source=
+
+JUnit是什么？
+JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
+JUnit可广泛用于工业和作为支..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之JUnit》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/03/22/JAVA学习之JDBC/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JAVA学习之JDBC</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/21/JAVA学习之MySQL/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JAVA学习之MySQL</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="JAVA学习之JUnit" data-title="JAVA学习之JUnit" data-url="http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry_Tian's Code日志 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&source=
+
+JUnit是什么？
+JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
+JUnit可广泛用于工业和作为支..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之JUnit》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aS27DMAwFwNz/0i5QdJfGeSTtopFGq6BQHI0XLD96POJ1fK/nz692Pu95/vtxuh53LAwMjI9lJI+rHuJ8Z8IrUzEwMDZgzIPs+aGrLyg/GwYGBkZyiDwo93ZiYGBgzBlJuJyEbwwMDIy8ED1vqFUZ52XtjbU4BgbGBzImg4G7P//RfAMDA+MfM47x6rX+r/r1n2diYGAszbgjaZskiL1SGQMDY23GtU38qCkWJILV14eBgbEno9eg76WM+SXXl9/FwMBYmlEtJicDyKSIzZ+PgYGxD6Oa5M3b/eW0LwFjYGAszeilekmyWG7rx78YDTgxMDAWYvTGkHn4S0rfathtDgYwMDA+lpGngEkS2QuvvVfw5n8IBgbGQow8CeuVlNVUL08Zf6nFMTAwFmX0brDnj8gD9CTHw8DAWJsxHwzkiWM+5mzeGcHAwNiMcQfvqkAc3RbBwMDYgDFp6+er2ox7+YIwMDC2YUyuO1THjdWA/iYcY2BgLM3IL4T1LkxMSlkMDAyMasDtNcWqx+3BMDAw1mZM0rs8gZuMMMsLAwNjOcZRXFGbvtiGy8cSL8+DgYGxNKMa06pHzweZzUQQAwNjG0YSZHtXvnot/mbAxcDA2IBxVejME75qkleYbGBgYGzPmHS9kv298QMGBgbG/GJEdXh5fpkDAwNjT0Ye/vJjVZv+ebutPOXAwMD4cEZ1MFAdKPYC9CRJxcDAWIjxBed9esCXR5VvAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.8');
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

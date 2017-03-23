@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-03-22T12:32:51.376Z</updated>
+  <updated>2017-03-22T15:02:16.334Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JAVA学习之JDBC</title>
+    <link href="http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/"/>
+    <id>http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/</id>
+    <published>2017-03-22T14:33:39.000Z</published>
+    <updated>2017-03-22T15:02:16.334Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;h1 id=&quot;JDBC概述&quot;&gt;&lt;a href=&quot;#JDBC概述&quot; class=&quot;headerlink&quot; title=&quot;JDBC概述&quot;&gt;&lt;/a&gt;JDBC概述&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。&lt;/p&gt;
+&lt;p&gt;JDBC与数据库驱动的关系：接口与实现的关系。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;JDBC规范（掌握四个核心对象）：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DriverManager:用于注册驱动&lt;/li&gt;
+&lt;li&gt;Connection: 表示与数据库创建的连接&lt;/li&gt;
+&lt;li&gt;Statement: 操作数据库sql语句的对象&lt;/li&gt;
+&lt;li&gt;ResultSet: 结果集或一张虚拟表&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="JDBC" scheme="http://mutouspace.cn/tags/JDBC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA学习之JUnit</title>
+    <link href="http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJUnit/"/>
+    <id>http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/</id>
+    <published>2017-03-22T14:33:06.000Z</published>
+    <updated>2017-03-23T06:04:28.077Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;h1 id=&quot;JUnit是什么？&quot;&gt;&lt;a href=&quot;#JUnit是什么？&quot; class=&quot;headerlink&quot; title=&quot;JUnit是什么？&quot;&gt;&lt;/a&gt;JUnit是什么？&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。&lt;/p&gt;
+&lt;p&gt;JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="JUnit" scheme="http://mutouspace.cn/tags/JUnit/"/>
+    
+  </entry>
   
   <entry>
     <title>JAVA学习之MySQL</title>

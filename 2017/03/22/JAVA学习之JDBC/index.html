@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/03/22/JAVA学习之JDBC/">
+    
+    
+    <title>JAVA学习之JDBC | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,JDBC">
+    <meta name="description" content="JDBC概述
+JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。
+JDBC与数据库驱动的关系：接口与实现的关系。
+
+JDBC规范（掌握四个核心对象）：
+
+DriverManager:用于注册驱动
+Connection: 表示与数据库创建的连接
+Statement: 操作数据库sql语句的对象
+ResultSet: 结果集或一张虚拟表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA学习之JDBC">
+<meta property="og:url" content="http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="JDBC概述
+JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。
+JDBC与数据库驱动的关系：接口与实现的关系。
+
+JDBC规范（掌握四个核心对象）：
+
+DriverManager:用于注册驱动
+Connection: 表示与数据库创建的连接
+Statement: 操作数据库sql语句的对象
+ResultSet: 结果集或一张虚拟表">
+<meta property="og:updated_time" content="2017-03-22T15:02:16.334Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA学习之JDBC">
+<meta name="twitter:description" content="JDBC概述
+JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。
+JDBC与数据库驱动的关系：接口与实现的关系。
+
+JDBC规范（掌握四个核心对象）：
+
+DriverManager:用于注册驱动
+Connection: 表示与数据库创建的连接
+Statement: 操作数据库sql语句的对象
+ResultSet: 结果集或一张虚拟表">
+    
+        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JAVA学习之JDBC</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JAVA学习之JDBC</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-22T14:33:39.000Z" itemprop="datePublished" class="page-time">
+  2017-03-22
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JDBC概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">JDBC概述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开发一个JDBC程序（重要）"><span class="post-toc-number">2.</span> <span class="post-toc-text">开发一个JDBC程序（重要）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JDBC常用的类和接口详解"><span class="post-toc-number">3.</span> <span class="post-toc-text">JDBC常用的类和接口详解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#java-sql-Drivermanager类-创建连接"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">java.sql.Drivermanager类 : 创建连接</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-JAVA学习之JDBC"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JAVA学习之JDBC</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月22日 22:33" datetime="2017-03-22T14:33:39.000Z"  itemprop="datePublished">2017-03-22</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+<span>
+    <a href="/2017/03/22/JAVA学习之JDBC/#comments" class="ds-thread-count" data-thread-key="JAVA学习之JDBC" data-count-type="comments"></a>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="JDBC概述"><a href="#JDBC概述" class="headerlink" title="JDBC概述"></a>JDBC概述</h1><blockquote>
+<p>JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。</p>
+<p>JDBC与数据库驱动的关系：接口与实现的关系。</p>
+</blockquote>
+<p><strong>JDBC规范（掌握四个核心对象）：</strong></p>
+<ul>
+<li>DriverManager:用于注册驱动</li>
+<li>Connection: 表示与数据库创建的连接</li>
+<li>Statement: 操作数据库sql语句的对象</li>
+<li>ResultSet: 结果集或一张虚拟表</li>
+</ul>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="开发一个JDBC程序（重要）"><a href="#开发一个JDBC程序（重要）" class="headerlink" title="开发一个JDBC程序（重要）"></a>开发一个JDBC程序（重要）</h1><ol>
+<li><p>创建数据库表，并向表中添加测试数据 </p>
+<p>create database day06;<br>use day06;</p>
+<p>create table users(</p>
+<pre><code>id int primary key auto_increment,
+name varchar(40),
+password varchar(40),
+email varchar(60),
+birthday date
+</code></pre><p>)character set utf8 collate utf8_general_ci;</p>
+<p>insert into users(name,password,email,birthday) values(‘zs’,’123456’,’zs@sina.com’,’1980-12-04’);<br>insert into users(name,password,email,birthday) values(‘lisi’,’123456’,’lisi@sina.com’,’1981-12-04’);<br>insert into users(name,password,email,birthday) values(‘wangwu’,’123456’,’wangwu@sina.com’,’1979-12-04’);</p>
+</li>
+<li><p>创建java project项目，添加数据库驱动（*.jar）</p>
+</li>
+<li><p>实现JDBC操作</p>
+<pre><code>- 注册驱动
+- 创建连接
+- 得到执行sql语句的Statement对象
+- 执行sql语句，并返回结果
+- 处理结果
+- 关闭资源
+</code></pre><p><strong>example:</strong></p>
+<p> public class demo01 {</p>
+<p> public static void main(String[] args) throws Exception{</p>
+<pre><code>// TODO Auto-generated method stub
+//1、注册驱动
+//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+//1.加载驱动
+ Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+ //2、创建连接
+Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
+        //3、得到执行sql语句的Statement对象
+Statement stmt = conn.createStatement();
+        //4、执行sql语句，并返回结果
+String sql = &quot;select id,name,password,email,birthday from users&quot;;
+ResultSet rs = stmt.executeQuery(sql);
+        //5、处理结果
+while (rs.next()) {
+            System.out.println(rs.getObject(1));
+            System.out.println(rs.getObject(2));
+            System.out.println(rs.getObject(3));
+            System.out.println(rs.getObject(4));
+            System.out.println(rs.getObject(5));
+        }
+        //6关闭资源
+rs.close();
+stmt.close();
+conn.close();
+</code></pre><p> }</p>
+<p> }</p>
+</li>
+</ol>
+<h1 id="JDBC常用的类和接口详解"><a href="#JDBC常用的类和接口详解" class="headerlink" title="JDBC常用的类和接口详解"></a>JDBC常用的类和接口详解</h1><h2 id="java-sql-Drivermanager类-创建连接"><a href="#java-sql-Drivermanager类-创建连接" class="headerlink" title="java.sql.Drivermanager类 : 创建连接"></a>java.sql.Drivermanager类 : 创建连接</h2><ol>
+<li><p>注册驱动</p>
+<p>DriverManager.registerDriver(new com.mysql.jdbc.Driver());不建议使用<br>原因有2个：</p>
+<ul>
+<li>导致驱动被注册2次。</li>
+<li>强烈依赖数据库的驱动jar</li>
+</ul>
+</li>
+</ol>
+<p>   解决办法：</p>
+<pre><code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+</code></pre><ol>
+<li><p>与数据库建立连接</p>
+<pre><code>static Connection getConnection(String url, String user, String password) 
+
+getConnection(&quot;jdbc:mysql://localhost:3306/day06&quot;, &quot;root&quot;, &quot;root&quot;);
+
+ URL:SUN公司与数据库厂商之间的一种协议。
+ jdbc:mysql://localhost:3306/day06
+ 协议 子协议          IP:端口号 数据库
+
+ mysql: jdbc:mysql://localhost:3306/day14 或者 jdbc:mysql:///day14（默认本机连接）
+ oracle: jdbc:oracle:thin:@localhost:1521:sid
+</code></pre></li>
+</ol>
+<pre><code>Properties info = new Properties();//要参考数据库文档
+info.setProperty(&quot;user&quot;, &quot;root&quot;);
+info.setProperty(&quot;password&quot;,&quot;root&quot;);
+
+getConnection(String url, Properties info) 
+
+getConnection(String url) 
+DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&amp;password=root&quot;);
+</code></pre></the></excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-22T15:02:16.334Z" itemprop="dateUpdated">2017年3月22日 23:02</time>
+</span><br>
+
+
+        转载请注明出处：<a href="/2017/03/22/JAVA学习之JDBC/" target="_blank" rel="external">http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/</a>
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JDBC/">JDBC</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/&title=《JAVA学习之JDBC》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/&title=《JAVA学习之JDBC》 — Terry_Tian's Code日志&source=
+
+JDBC概述
+JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。
+JDBC与数据库驱动的关系：..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之JDBC》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/22/JAVA学习之JUnit/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JAVA学习之JUnit</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="JAVA学习之JDBC" data-title="JAVA学习之JDBC" data-url="http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry_Tian's Code日志 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/&title=《JAVA学习之JDBC》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/&title=《JAVA学习之JDBC》 — Terry_Tian's Code日志&source=
+
+JDBC概述
+JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。
+JDBC与数据库驱动的关系：..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之JDBC》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aS26DQBAFwNz/0o6UVSQL+71p4oihWCFsw5QXTX/m6ys+Hj9H+/3fv3o+f77n0fXTDgwMjMsyHi+Po0UcIVtAfrejtWFgYNyH8TrI5rz20xZ5eB0DAwOjDIJJIpg/CwMDA2Mt4J4VTP/5vYGBgXEpxtpCk/skxepHa3EMDIwLMtrBwCfP/3C+gYGBcRHGozzmATq/UqwKAwNja8YkaUvi3lpDba2sxcDA2JsxybXa0JkMRJOhQlTKYmBgbMHIW1eTbRbJgtbK6XrfKwYGxsUZyYMnKeOkxfbmmxgYGFszJoOBeWJ3VujHwMC4A6NtjU02Q4xa/6+DLwYGxqaM01rwg/58G3YPJ7EYGBibMvJUb/KASTsvCdwYGBh7M+bts3zzxFr4jv5WDAyMGzDyRbSDzLUWf7tpDAMD4z6MSZtsbUNGmxoekjAwMG7JWHv8Wou/3dJRBFwMDIwtGGsjgTZNnADy7RoYGBh3YNQjw3hZbfrYtuEwMDD2Zpw1bsyHB8mgtB1UYGBg3IGRn+cpYH6eF73RGwMDA2M7RpuQJYXlZBPY2sYLDAyMvRlrbf18eNAWvYufYmBgbM1og+xaUF4bPCTvCgwMjPsw8iDblrX5do21EWmx7wMDA2MLRl37DkLnJIhjYGBgTMYGbQHcDgnelK8YGBgY5UCxTRDbErqYb2BgYGzEaIcB88ZcOzY4rRbHwMC4IGOtgPy7gvbcvxUDA+PijG9LubJQtMLcEQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.8');
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

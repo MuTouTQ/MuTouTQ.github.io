@@ -4,6 +4,330 @@
   
     
     <entry>
+      <title><![CDATA[JAVA学习之JDBC]]></title>
+      <url>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="JDBC概述"><a href="#JDBC概述" class="headerlink" title="JDBC概述"></a>JDBC概述</h1><blockquote>
+<p>JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。</p>
+<p>JDBC与数据库驱动的关系：接口与实现的关系。</p>
+</blockquote>
+<p><strong>JDBC规范（掌握四个核心对象）：</strong></p>
+<ul>
+<li>DriverManager:用于注册驱动</li>
+<li>Connection: 表示与数据库创建的连接</li>
+<li>Statement: 操作数据库sql语句的对象</li>
+<li>ResultSet: 结果集或一张虚拟表</li>
+</ul>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="开发一个JDBC程序（重要）"><a href="#开发一个JDBC程序（重要）" class="headerlink" title="开发一个JDBC程序（重要）"></a>开发一个JDBC程序（重要）</h1><ol>
+<li><p>创建数据库表，并向表中添加测试数据 </p>
+<p>create database day06;<br>use day06;</p>
+<p>create table users(</p>
+<pre><code>id int primary key auto_increment,
+name varchar(40),
+password varchar(40),
+email varchar(60),
+birthday date
+</code></pre><p>)character set utf8 collate utf8_general_ci;</p>
+<p>insert into users(name,password,email,birthday) values(‘zs’,’123456’,’zs@sina.com’,’1980-12-04’);<br>insert into users(name,password,email,birthday) values(‘lisi’,’123456’,’lisi@sina.com’,’1981-12-04’);<br>insert into users(name,password,email,birthday) values(‘wangwu’,’123456’,’wangwu@sina.com’,’1979-12-04’);</p>
+</li>
+<li><p>创建java project项目，添加数据库驱动（*.jar）</p>
+</li>
+<li><p>实现JDBC操作</p>
+<pre><code>- 注册驱动
+- 创建连接
+- 得到执行sql语句的Statement对象
+- 执行sql语句，并返回结果
+- 处理结果
+- 关闭资源
+</code></pre><p><strong>example:</strong></p>
+<p> public class demo01 {</p>
+<p> public static void main(String[] args) throws Exception{</p>
+<pre><code>// TODO Auto-generated method stub
+//1、注册驱动
+//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+//1.加载驱动
+ Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+ //2、创建连接
+Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
+        //3、得到执行sql语句的Statement对象
+Statement stmt = conn.createStatement();
+        //4、执行sql语句，并返回结果
+String sql = &quot;select id,name,password,email,birthday from users&quot;;
+ResultSet rs = stmt.executeQuery(sql);
+        //5、处理结果
+while (rs.next()) {
+            System.out.println(rs.getObject(1));
+            System.out.println(rs.getObject(2));
+            System.out.println(rs.getObject(3));
+            System.out.println(rs.getObject(4));
+            System.out.println(rs.getObject(5));
+        }
+        //6关闭资源
+rs.close();
+stmt.close();
+conn.close();
+</code></pre><p> }</p>
+<p> }</p>
+</li>
+</ol>
+<h1 id="JDBC常用的类和接口详解"><a href="#JDBC常用的类和接口详解" class="headerlink" title="JDBC常用的类和接口详解"></a>JDBC常用的类和接口详解</h1><h2 id="java-sql-Drivermanager类-创建连接"><a href="#java-sql-Drivermanager类-创建连接" class="headerlink" title="java.sql.Drivermanager类 : 创建连接"></a>java.sql.Drivermanager类 : 创建连接</h2><ol>
+<li><p>注册驱动</p>
+<p>DriverManager.registerDriver(new com.mysql.jdbc.Driver());不建议使用<br>原因有2个：</p>
+<ul>
+<li>导致驱动被注册2次。</li>
+<li>强烈依赖数据库的驱动jar</li>
+</ul>
+</li>
+</ol>
+<p>   解决办法：</p>
+<pre><code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+</code></pre><ol>
+<li><p>与数据库建立连接</p>
+<pre><code>static Connection getConnection(String url, String user, String password) 
+
+getConnection(&quot;jdbc:mysql://localhost:3306/day06&quot;, &quot;root&quot;, &quot;root&quot;);
+
+ URL:SUN公司与数据库厂商之间的一种协议。
+ jdbc:mysql://localhost:3306/day06
+ 协议 子协议          IP:端口号 数据库
+
+ mysql: jdbc:mysql://localhost:3306/day14 或者 jdbc:mysql:///day14（默认本机连接）
+ oracle: jdbc:oracle:thin:@localhost:1521:sid
+</code></pre></li>
+</ol>
+<pre><code>Properties info = new Properties();//要参考数据库文档
+info.setProperty(&quot;user&quot;, &quot;root&quot;);
+info.setProperty(&quot;password&quot;,&quot;root&quot;);
+
+getConnection(String url, Properties info) 
+
+getConnection(String url) 
+DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&amp;password=root&quot;);
+</code></pre></the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> JAVA </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+            <tag> JDBC </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JAVA学习之JUnit]]></title>
+      <url>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJUnit/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="JUnit是什么？"><a href="#JUnit是什么？" class="headerlink" title="JUnit是什么？"></a>JUnit是什么？</h1><blockquote>
+<p>JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。</p>
+<p>JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。</p>
+</blockquote>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h2 id="JUnit提供"><a href="#JUnit提供" class="headerlink" title="JUnit提供"></a>JUnit提供</h2><ol>
+<li>断言测试预期结果。</li>
+<li>测试功能共享通用的测试数据。</li>
+<li>测试套件轻松地组织和运行测试。</li>
+<li>图形和文本测试运行。</li>
+</ol>
+<h2 id="JUnit用于测试"><a href="#JUnit用于测试" class="headerlink" title="JUnit用于测试"></a>JUnit用于测试</h2><ol>
+<li>整个对象</li>
+<li>对象的一部分 - 交互的方法或一些方法</li>
+<li>几个对象之间的互动(交互)</li>
+</ol>
+<h2 id="JUnit的特点"><a href="#JUnit的特点" class="headerlink" title="JUnit的特点"></a>JUnit的特点</h2><ol>
+<li>JUnit是用于编写和运行测试的开源框架。</li>
+<li>提供了注释，以确定测试方法。</li>
+<li>提供断言测试预期结果。</li>
+<li>提供了测试运行的运行测试。</li>
+<li>JUnit测试让您可以更快地编写代码，提高质量</li>
+<li>JUnit是优雅简洁。它是不那么复杂以及不需要花费太多的时间。</li>
+<li>JUnit测试可以自动运行，检查自己的结果，并提供即时反馈。没有必要通过测试结果报告来手动梳理。</li>
+<li>JUnit测试可以组织成测试套件包含测试案例，甚至其他测试套件。</li>
+<li>Junit显示测试进度的，如果测试是没有问题条形是绿色的，测试失败则会变成红色。</li>
+</ol>
+<h1 id="JUnit简单示例"><a href="#JUnit简单示例" class="headerlink" title="JUnit简单示例"></a>JUnit简单示例</h1><blockquote>
+<p>使用工具：eclipse</p>
+</blockquote>
+<p>测试类：</p>
+<p><em>Calculate.java</em></p>
+<pre><code>public class Calculate {
+
+    public int sum(int var1, int var2) {
+        System.out.println(&quot;相加的值是: &quot; + var1 + &quot; + &quot; + var2);
+        return var1 + var2;
+    }
+
+}
+</code></pre><p><em>CalculateTest.java</em></p>
+<pre><code>public class CalculateTest {
+
+    Calculate calculation = new Calculate();
+    int sum = calculation.sum(2, 5);
+    int testSum = 7;
+
+    @Test
+    public void testSum() {
+        System.out.println(&quot;@Test sum(): &quot; + sum + &quot; = &quot; + testSum);
+        assertEquals(sum, testSum);
+    }
+
+}
+</code></pre><blockquote>
+<p>@Test的注解在 testSum()方法的上方。 这个注释指示该公共无效(public void)方法它所附着可以作为一个测试用例。<br>因此，testSum()方法将用于测试公开方法 sum() 。 </p>
+<p>方法 assertEquals(sum, testsum)。<br>assertEquals ([String message], object expected, object actual) 方法持有两个对象作为输入，并断言这两个对象相等。</p>
+</blockquote>
+<p><em>如果要运行测试类，右键点击测试类，并选择 Run As -&gt; Junit Test</em>。</p>
+<h1 id="JUnit注解"><a href="#JUnit注解" class="headerlink" title="JUnit注解"></a>JUnit注解</h1><p>在本节中，我们将提到支持在JUnit4基本注释，下表列出了这些注释的概括：</p>
+<table><br><tr><td>注解</td>    <td>描述</td></tr><br><tr><td>@Test<br><br>public void method()</td>    <td>测试注释指示该公共无效方法它所附着可以作为一个测试用例。</td></tr><br><tr><td>@Before<br><br>public void method()</td>    <td>Before注释表示，该方法必须在类中的每个测试之前执行，以便执行测试某些必要的先决条件。</td></tr><br><tr><td>@BeforeClass<br><br>public static void method()</td><td>BeforeClass注释指出这是附着在静态方法必须执行一次并在类的所有测试之前。发生这种情况时一般是测试计算共享配置方法(如连接到数据库)。</td></tr><br><tr><td>@After<br><br>public void method()</td><td>After 注释指示，该方法在执行每项测试后执行(如执行每一个测试后重置某些变量，删除临时变量等)</td></tr><br><tr><td>@AfterClass<br><br>public static void method()</td><td>当需要执行所有的测试在JUnit测试用例类后执行，AfterClass注解可以使用以清理建立方法，(从数据库如断开连接)。注意：附有此批注(类似于BeforeClass)的方法必须定义为静态。</td></tr><br><tr><td>@Ignore<br><br>public static void method()</td><td>当想暂时禁用特定的测试执行可以使用忽略注释。每个被注解为@Ignore的方法将不被执行。</td></tr><br></table>
+
+<p>让我们看看一个测试类，在上面提到的一些注解的一个例子。</p>
+<p><em>AnnotationsTest.java</em></p>
+<pre><code>package com.yiibai.junit;
+
+import static org.junit.Assert.*;
+import java.util.*;
+import org.junit.*;
+
+public class AnnotationsTest {
+
+private ArrayList testList;
+
+@BeforeClass
+public static void onceExecutedBeforeAll() {
+System.out.println(&quot;@BeforeClass: onceExecutedBeforeAll&quot;);
+}
+
+@Before
+public void executedBeforeEach() {
+testList = new ArrayList();
+System.out.println(&quot;@Before: executedBeforeEach&quot;);
+}
+
+@AfterClass
+public static void onceExecutedAfterAll() {
+System.out.println(&quot;@AfterClass: onceExecutedAfterAll&quot;);
+}
+
+@After
+public void executedAfterEach() {
+testList.clear();
+System.out.println(&quot;@After: executedAfterEach&quot;);
+}
+
+@Test
+public void EmptyCollection() {
+assertTrue(testList.isEmpty());
+System.out.println(&quot;@Test: EmptyArrayList&quot;);
+}
+
+@Test
+public void OneItemCollection() {
+testList.add(&quot;oneItem&quot;);
+assertEquals(1, testList.size());
+System.out.println(&quot;@Test: OneItemArrayList&quot;);
+}
+
+@Ignore
+public void executionIgnored() {
+System.out.println(&quot;@Ignore: This execution is ignored&quot;);
+}
+}
+</code></pre><p>如果我们运行上面的测试，控制台输出将是以下几点：</p>
+<pre><code>@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+@Test: EmptyArrayList
+@After: executedAfterEach
+@Before: executedBeforeEach
+@Test: OneItemArrayList
+@After: executedAfterEach
+@AfterClass: onceExecutedAfterAll
+</code></pre><h1 id="JUnit断言"><a href="#JUnit断言" class="headerlink" title="JUnit断言"></a>JUnit断言</h1><p>在本节中，我们将介绍一些断言方法。所有这些方法都受到 Assert 类扩展了java.lang.Object类并为它们提供编写测试，以便检测故障。下表中有一种最常用的断言方法的更详细的解释。</p>
+<table><br><tr><td>断言</td><td>描述</td></tr><br><tr><td>void assertEquals([String message], expected value, actual value)</td><td>断言两个值相等。值可能是类型有 int, short, long, byte, char or java.lang.Object. 第一个参数是一个可选的字符串消息</td></tr><br><tr><td>void assertTrue([String message], boolean condition)</td><td>断言一个条件为真</td></tr><br><tr><td>void assertFalse([String message],boolean condition)</td><td>断言一个条件为假</td></tr><br><tr><td>void assertNotNull([String message], java.lang.Object object)</td><td>断言一个对象不为空(null)</td></tr><br><tr><td>void assertNull([String message], java.lang.Object object)</td><td>断言一个对象为空(null)</td></tr><br><tr><td>void assertSame([String message], java.lang.Object expected, java.lang.Object actual)</td><td>断言，两个对象引用相同的对象</td></tr><br><tr><td>void assertNotSame([String message], java.lang.Object unexpected, java.lang.Object actual)</td><td>断言，两个对象不是引用同一个对象</td></tr><br><tr><td>void assertArrayEquals([String message], expectedArray, resultArray)</td><td>断言预期数组和结果数组相等。数组的类型可能是 int, long, short, char, byte or java.lang.Object.</td></tr><br></table>
+
+<p> 让我们看的一些前述断言的一个例子。</p>
+<pre><code>AssertionsTest.java
+
+package com.yiibai.junit;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class AssertionsTest {
+
+@Test
+public void test() {
+    String obj1 = &quot;junit&quot;;
+    String obj2 = &quot;junit&quot;;
+    String obj3 = &quot;test&quot;;
+    String obj4 = &quot;test&quot;;
+    String obj5 = null;
+    int var1 = 1;
+    int var2 = 2;
+    int[] arithmetic1 = { 1, 2, 3 };
+    int[] arithmetic2 = { 1, 2, 3 };
+
+    assertEquals(obj1, obj2);
+
+    assertSame(obj3, obj4);
+
+    assertNotSame(obj2, obj4);
+
+    assertNotNull(obj1);
+
+    assertNull(obj5);
+
+    assertTrue(var1  var2);
+
+    assertArrayEquals(arithmetic1, arithmetic2);
+}
+
+}
+</code></pre><p>在以上类中我们可以看到，这些断言方法是可以工作的。</p>
+<ul>
+<li>assertEquals() 如果比较的两个对象是相等的，此方法将正常返回；否则失败显示在JUnit的窗口测试将中止。</li>
+<li>assertSame() 和 assertNotSame() 方法测试两个对象引用指向完全相同的对象。</li>
+<li>assertNull() 和 assertNotNull() 方法测试一个变量是否为空或不为空(null)。</li>
+<li>assertTrue() 和 assertFalse() 方法测试if条件或变量是true还是false。</li>
+<li>assertArrayEquals() 将比较两个数组，如果它们相等，则该方法将继续进行不会发出错误。否则失败将显示在JUnit窗口和中止测试。</li>
+</ul>
+<blockquote>
+<p>文章转载自：易百教程 [http:/www.yiibai.com]</p>
+</blockquote>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> JAVA </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+            <tag> JUnit </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JAVA学习之MySQL]]></title>
       <url>http://mutouspace.cn/2017/03/21/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BMySQL/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">

@@ -4,6 +4,251 @@
   
     
     <entry>
+      <title><![CDATA[常用工具的环境变量配置]]></title>
+      <url>http://mutouspace.cn/2017/03/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<blockquote>
+<p>本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！</p>
+</blockquote>
+<p><em><p style="color:red;">转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p></em></p>
+<p>date: 2017-03-24 17:34:56</p>
+<ul>
+<li>JDK的环境变量配置</li>
+<li>Tomcat的环境变量配置</li>
+</ul>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<p><strong><p style="color:blue;">大家既然想找的是如何配置环境变量，那读者一定知道软件是如何下载、如何安装的，所以本文中就不再过多的介绍下载和安装过程了，重点记录一下环境变量的配置。</p></strong><br><strong>作者环境：Windows 10 X64</strong></p>
+<h1 id="JDK的环境变量配置"><a href="#JDK的环境变量配置" class="headerlink" title="JDK的环境变量配置"></a>JDK的环境变量配置</h1><ul>
+<li>新建JAVA_HOME</li>
+<li>新建CLASSPATH</li>
+<li>编辑PATH</li>
+</ul>
+<p>第一步：“我的电脑” -&gt; 右击 -&gt; “属性” -&gt; “高级系统设置” -&gt; “环境变量”;</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/Lpunvcv.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/3DWNUho.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第二步：新建JAVA_HOME  里边填入jdk的绝对地址： <strong>E:\JAVA\jdk</strong>   </p><p style="color:red;">注意：最后不要加分号！！！！</p><p></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/mJWOYqo.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/3ut5fZS.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第三步：新建CLASSPATH  内容为： <strong>.;%JAVA_HOME%\lib;</strong>  </p><p style="color:red;">注意：不要忘记前面的“ .; ”！！！！</p><p></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/zXXE2m1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第四步：编辑PATH       新加入： <strong>%JAVA_HOME%\bin;</strong>   </p><p style="color:red;">注意：每个路径之间都有分号！！！！</p><p></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/DUYrxAA.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第五步：在控制台页面分别输入 “java” “javac” “java -version” 做测试</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/u1cJtn9.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/Du4vRPx.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/FNjVydQ.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>补充：</p>
+<p><strong>‘JAVAC’ 不是内部或外部命令解决方法</strong></p>
+<p><a href="http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html" target="_blank" rel="external">链接：http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html</a></p>
+<h1 id="Tomcat的环境变量配置"><a href="#Tomcat的环境变量配置" class="headerlink" title="Tomcat的环境变量配置"></a>Tomcat的环境变量配置</h1><ol>
+<li>新建变量名：CATALINA_BASE，变量值：E:\tomcat</li>
+<li>新建变量名：CATALINA_HOME，变量值：E:\tomcat</li>
+<li>打开PATH，添加变量值：%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;</li>
+</ol>
+<p>有了JDK环境变量配置的经验，我相信大家对配置都已经轻车熟路了，这里就不配图了。</p>
+<p>最后一步：</p>
+<p> 在CMD命令下输入命令：<code>startup</code>，出现如下对话框，表明服务启动成功。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/PRUhe0t.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> 工具 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 环境变量配置 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[常用的专业搜索工具（分类)]]></title>
+      <url>http://mutouspace.cn/2017/03/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%93%E4%B8%9A%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7%EF%BC%88%E5%88%86%E7%B1%BB/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+
+<blockquote>
+<p>本文基于大家日常上网的需要，分类整理了不同检索需求的工具，<br>主要包括：电子书、图片、网盘、音乐、工作机会以及商品价格检索。</p>
+</blockquote>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h2 id="一、电子书检索"><a href="#一、电子书检索" class="headerlink" title="一、电子书检索"></a>一、电子书检索</h2><p>1、<a href="https://www.jiumodiary.com/" title="鸠摩搜书" target="_blank" rel="external">鸠摩搜书</a></p>
+<p><img src="http://i.imgur.com/jJG97pv.png" alt="鸠摩搜书"><br>鸠摩搜书是一款非常棒的电子书搜索引擎。有了它，你可以轻易发现其他站点上的电子书资源。这样可以省去很多时间。</p>
+<p>2、<a href="http://bookzz.org/" title="bookzz" target="_blank" rel="external">BOOKZZ</a>/<a href="http://sur.ly/o/gen.lib.rus.ec/AA000014" title="Library Genesis" target="_blank" rel="external">Library Genesis</a></p>
+<p>值得一提的是，这两个网站都可以不用翻墙，所以墙里的同学，也可以享受到来自世界的福利。</p>
+<p>这两款可以说是英文教材资源站的神器了。</p>
+<p>基本上，你想要的，它俩都能给你。</p>
+<p>其他的电子书资源站点收录如下（含国内和国外）：</p>
+<p>1、<a href="http://www.oxingtui.com/other/resource.htm" title="电子书网站汇总" target="_blank" rel="external">电子书网站汇总</a></p>
+<p>注：这个是电子书资源汇总终极站，资源丰富的丧心病狂！</p>
+<h2 id="二、图片检索"><a href="#二、图片检索" class="headerlink" title="二、图片检索"></a>二、图片检索</h2><p>1、<a href="http://www.duososo.com/" title="多搜搜：www.duososo.com" target="_blank" rel="external">多搜搜：www.duososo.com</a></p>
+<p>2、<a href="http://gensun.org/" title="原寸画像检索：gensun.org" target="_blank" rel="external">原寸画像检索：gensun.org</a></p>
+<p>3、<a href="http://www.incogna.com/#random" title="incogna：www.incogna.com" target="_blank" rel="external">incogna：www.incogna.com</a></p>
+<p>4、<a href="http://image.baidu.com/?fr=shitu" title="百度识图" target="_blank" rel="external">百度识图</a>  支持一下百度同学，毕竟国产</p>
+<h2 id="三、网盘资源检索："><a href="#三、网盘资源检索：" class="headerlink" title="三、网盘资源检索："></a>三、网盘资源检索：</h2><p>1、<a href="http://www.panc.cc/" title="胖次搜索" target="_blank" rel="external">胖次搜索</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/SgbBgny.png" alt="胖次搜索" title="">
+                </div>
+                <div class="image-caption">胖次搜索</div>
+            </figure>
+<p>胖次搜索是一个很有意思的网盘资源搜索引擎，可以解析被吞的百度云分享链接。</p>
+<p>2、<a href="http://so.baiduyun.me/" title="百度网盘搜索" target="_blank" rel="external">百度网盘搜索</a></p>
+<p>百度网盘是比百度本身更靠谱的搜索工具。</p>
+<p>其他的网盘搜索引擎收录如下：</p>
+<p>1、<a href="http://www.pansou.com" title="盘搜：www.pansou.com" target="_blank" rel="external">盘搜：www.pansou.com</a></p>
+<p>2、<a href="http://www.xilinjie.com" title="西林街：www.xilinjie.com" target="_blank" rel="external">西林街：www.xilinjie.com</a></p>
+<p>3、<a href="http://panyisou.com" title="盘易搜：panyisou.com" target="_blank" rel="external">盘易搜：panyisou.com</a></p>
+<p>4、<a href="http://www.baidu10.net" title="麦库搜索：www.baidu10.net" target="_blank" rel="external">麦库搜索：www.baidu10.net</a></p>
+<p>5、<a href="http://www.daysou.com" title="云搜：www.daysou.com" target="_blank" rel="external">云搜：www.daysou.com</a></p>
+<p>6、<a href="http://www.zhaofile.com" title="找文件：www.zhaofile.com" target="_blank" rel="external">找文件：www.zhaofile.com</a></p>
+<p>7、<a href="http://www.360swp.com" title="360搜网盘www.360swp.com" target="_blank" rel="external">360搜网盘www.360swp.com</a></p>
+<p>8、<a href="http://search.likebeta.com" title="尝鲜搜索：search.likebeta.com" target="_blank" rel="external">尝鲜搜索：search.likebeta.com</a></p>
+<p>9、<a href="http://so.xpan.me/index.html" title="吸盘：so.xpan.me/index.html" target="_blank" rel="external">吸盘：so.xpan.me/index.html</a></p>
+<p>10、<a href="http://www.quzhuanpan.com" title="去转盘：www.quzhuanpan.com" target="_blank" rel="external">去转盘：www.quzhuanpan.com</a></p>
+<h2 id="四、音乐检索"><a href="#四、音乐检索" class="headerlink" title="四、音乐检索"></a>四、音乐检索</h2><p>作为网易云的忠实拥簇，一般来说，刷刷评论区，随机听一听FM，再收一收网易的推荐，基本上我的音乐边界就可以触到了。</p>
+<p>然而，对于那些视音乐为生命的乐迷来说，世界上的好音乐总是不嫌多的。</p>
+<p>有什么办法可以找到更丰富的音乐资源，享受更极致的音乐体验呢？</p>
+<p>下面的音乐检索工具，相信你一定不会错过。</p>
+<p>1、<a href="http://listen1.github.io/listen1/" title="Listen 1 音乐播放器" target="_blank" rel="external">Listen 1 音乐播放器</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.imgur.com/jLoy1vw.png" alt="Listen" title="">
+                </div>
+                <div class="image-caption">Listen</div>
+            </figure>
+<p>Listen 1是一款搜索与播放来自网易云音乐，虾米，QQ音乐三个主流音乐网站的曲库软件。</p>
+<p>这款软件的作用不言而喻，可以帮你减少在不同音乐站点搜索资源的时间花费。</p>
+<p>软件本身支持windows、linux、MAC以及chrome和firefox的插件。</p>
+<p>对多平台的支持，大大提高了普适性。</p>
+<p>其他的音乐搜索工具收录如下：</p>
+<p>1、<a href="http://www.last.fm/zh/" title="Last.fm" target="_blank" rel="external">Last.fm</a> - 通过网上最大的音乐库收听免费音乐、观赏精彩视频</p>
+<p>2、<a href="http://www.midomi.com" title="www.midomi.com" target="_blank" rel="external">www.midomi.com</a></p>
+<p>3、<a href="http://www.bored.com" title="www.bored.com" target="_blank" rel="external">www.bored.com</a></p>
+<p>4、<a href="http://www.sogua.com" title="www.sogua.com" target="_blank" rel="external">www.sogua.com</a></p>
+<h2 id="五、职位搜索引擎"><a href="#五、职位搜索引擎" class="headerlink" title="五、职位搜索引擎"></a>五、职位搜索引擎</h2><p>按理说，职位搜索引擎是一个鸡肋般的存在。</p>
+<p>因为国内的一些主流的招聘网站，基本上能够满足我们的需求。</p>
+<p>智联、前程自不必说，拉勾、脉脉、boss直聘、猎聘、领英等，基本上就可以搞定我们的95%网络求职的需求。</p>
+<p>一些垂着的，比如topys、站酷、秒聘，甚至水木社区招聘、itpub、豆瓣招聘小组等，都可以获得丰富的招聘机会。</p>
+<p>因此机会从来不缺，但是我们缺一个获取机会的最快捷径。</p>
+<p>这时候，一款合适的搜索引擎工具，就显得尤为重要了。</p>
+<p>下面来分享几款较好的搜索引擎工具。</p>
+<p>1、百度招聘</p>
+<p>通过职位关键词，你可以找到大量的国内主流招聘网站发布的求职机会。</p>
+<p>比如，前程、智联、拉勾、boss直聘等。</p>
+<p>这样做的好处是明显的，不用疲于奔命，可以有效降低时间成本。</p>
+<p>2、伯益 ：www.boryi.com</p>
+<h2 id="六、价格检索"><a href="#六、价格检索" class="headerlink" title="六、价格检索"></a>六、价格检索</h2><p>现在市场上的产品信息实在是太多太杂。</p>
+<p>因为缺乏一个共同的标准，所以我们在购物的时候，总是满怀感叹：为什么同一件商品会有不同的价格。</p>
+<p>这里面除了促销、进货成本的因素，平台本身也是一个很大的影响因子。</p>
+<p>为了消除价格信息不对称引起的无效浪费，</p>
+<p>我们需要一些有用的比价工具。</p>
+<p>下面就是一些有效的比价网站。</p>
+<p>1、<a href="http://www.b1bj.com/" title="比一比价" target="_blank" rel="external">比一比价</a></p>
+<p>比一比价网是一款非常不错的购物价格搜索引擎。</p>
+<p>主要检索各个购物网站同类商品的价格。比如京东、天猫、1号店、亚马逊、当当等。</p>
+<p>网站主要支持关键词搜索，可以横向对比商品在各渠道的价格分布。</p>
+<p>图书比价功能也很不错，堪比枣书。</p>
+<p>2、<a href="http://www.xitie.com/" title="历史价格检索" target="_blank" rel="external">历史价格检索</a></p>
+<p>西贴真是一个神奇的网站。</p>
+<p>作为一个商品历史价格查询器，西贴可以监控到某个商品的历史价格分布。</p>
+<p>细心观察网站提供的价格变化曲线，我们可以发现一些不为察觉的价格猫腻。</p>
+<p>若是放在双十一前后，大家是不是会忍住剁手的欲望？</p>
+<p>其他的价格检索收录如下：</p>
+<p>1、<a href="http://www.tangou.cn" title="Tangou：www.tangou.cn" target="_blank" rel="external">Tangou：www.tangou.cn</a></p>
+<p>2、<a href="http://go.xungou.com" title="寻购网：go.xungou.com" target="_blank" rel="external">寻购网：go.xungou.com</a></p>
+<p>3、<a href="http://www.huihui.cn" title="惠惠网 ：www.huihui.cn" target="_blank" rel="external">惠惠网 ：www.huihui.cn</a></p>
+<h1 id="写在最后："><a href="#写在最后：" class="headerlink" title="写在最后："></a>写在最后：</h1><hr>
+<p> <strong> 适合自己的才是最好的！</strong></p>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> 分享 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JAVA学习之JDBC]]></title>
       <url>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -107,7 +352,8 @@ getConnection(String url, Properties info)
 
 getConnection(String url) 
 DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&amp;password=root&quot;);
-</code></pre></the></excerpt>]]></content>
+</code></pre><h1 id="实现一个用户登录的功能"><a href="#实现一个用户登录的功能" class="headerlink" title="实现一个用户登录的功能"></a>实现一个用户登录的功能</h1><p>Demo:<a href="https://github.com/MuTouTQ/login" target="_blank" rel="external">https://github.com/MuTouTQ/login</a></p>
+</the></excerpt>]]></content>
       
         <categories>
             
@@ -1710,6 +1956,23 @@ hexo d -g #生成并上传
     </entry>
     
     <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://mutouspace.cn/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -1727,23 +1990,6 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
             
         </tags>
         

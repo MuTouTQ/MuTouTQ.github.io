@@ -7,8 +7,16 @@
     </url>
 
     <url>
-        <loc>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJUnit/</loc>
-        <lastmod>2017-03-23T06:04:28.077Z</lastmod>
+        <loc>http://mutouspace.cn/2017/03/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%93%E4%B8%9A%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7%EF%BC%88%E5%88%86%E7%B1%BB/</loc>
+        <lastmod>2017-03-24T11:16:24.690Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mutouspace.cn/2017/03/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</loc>
+        <lastmod>2017-03-24T11:13:25.164Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +24,15 @@
 
     <url>
         <loc>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/</loc>
-        <lastmod>2017-03-22T15:02:16.334Z</lastmod>
+        <lastmod>2017-03-23T13:27:19.275Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJUnit/</loc>
+        <lastmod>2017-03-23T06:04:28.077Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

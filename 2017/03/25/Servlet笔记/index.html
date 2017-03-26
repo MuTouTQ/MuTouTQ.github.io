@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/03/25/Servlet笔记/">
+    
+    
+    <title>Servlet笔记 | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,Servlet">
+    <meta name="description" content="Servlet 简介
+Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
+
+Servlet 任务
+
+读取客户端（浏览器）发送的显式的数据。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。
+读取客户端（浏览器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Servlet笔记">
+<meta property="og:url" content="http://mutouspace.cn/2017/03/25/Servlet笔记/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="Servlet 简介
+Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
+
+Servlet 任务
+
+读取客户端（浏览器）发送的显式的数据。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。
+读取客户端（浏览器">
+<meta property="og:updated_time" content="2017-03-26T06:51:40.133Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Servlet笔记">
+<meta name="twitter:description" content="Servlet 简介
+Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
+
+Servlet 任务
+
+读取客户端（浏览器）发送的显式的数据。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。
+读取客户端（浏览器">
+    
+        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Servlet笔记</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Servlet笔记</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-25T15:31:16.000Z" itemprop="datePublished" class="page-time">
+  2017-03-25
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Servlet-简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">Servlet 简介</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Servlet-生命周期"><span class="post-toc-number">2.</span> <span class="post-toc-text">Servlet 生命周期</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTTP-状态码"><span class="post-toc-number">3.</span> <span class="post-toc-text">HTTP 状态码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置-HTTP-状态代码的方法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">设置 HTTP 状态代码的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTTP-状态码实例"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">HTTP 状态码实例</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Cookie"><span class="post-toc-number">4.</span> <span class="post-toc-text">Cookie</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#文件下载："><span class="post-toc-number">5.</span> <span class="post-toc-text">文件下载：</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Servlet笔记"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Servlet笔记</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月25日 23:31" datetime="2017-03-25T15:31:16.000Z"  itemprop="datePublished">2017-03-25</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+<span>
+    <a href="/2017/03/25/Servlet笔记/#comments" class="ds-thread-count" data-thread-key="Servlet笔记" data-count-type="comments"></a>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="Servlet-简介"><a href="#Servlet-简介" class="headerlink" title="Servlet 简介"></a>Servlet 简介</h1><blockquote>
+<p>Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。</p>
+</blockquote>
+<p><strong>Servlet 任务</strong></p>
+<ul>
+<li>读取客户端（浏览器）发送的显式的数据。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。</li>
+<li>读取客户端（浏览器）发送的隐式的 HTTP 请求数据。这包括 cookies、媒体类型和浏览器能理解的压缩格式等等。</li>
+<li>处理数据并生成结果。这个过程可能需要访问数据库，执行 RMI 或 CORBA 调用，调用 Web 服务，或者直接计算得出对应的响应。</li>
+<li>发送显式的数据（即文档）到客户端（浏览器）。该文档的格式可以是多种多样的，包括文本文件（HTML 或 XML）、二进制文件（GIF 图像）、Excel 等。</li>
+<li>发送隐式的 HTTP 响应到客户端（浏览器）。这包括告诉浏览器或其他客户端被返回的文档类型（例如 HTML），设置 cookies 和缓存参数，以及其他类似的任务。</li>
+</ul>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="Servlet-生命周期"><a href="#Servlet-生命周期" class="headerlink" title="Servlet 生命周期"></a>Servlet 生命周期</h1><pre><code>public class ServletDemo1 implements Servlet{
+
+//Servlet生命周期方法
+//实例化
+//在Servlet第一次访问时调用
+public ServletDemo1(){
+    System.out.println(&quot;*************ServletDemo1执行了***************&quot;);
+}
+//Servlet生命周期方法
+//初始化
+//在Servlet第一次访问时调用,在后续每次用户请求时不再调用
+@Override
+public void init(ServletConfig arg0) throws ServletException {
+    System.out.println(&quot;*************init执行了***************&quot;);
+
+}
+//Servlet生命周期方法
+//服务
+//每次访问时都调用
+@Override
+public void service(ServletRequest arg0, ServletResponse arg1)
+        throws ServletException, IOException {
+    System.out.println(&quot;*************service执行了***************&quot;);
+}
+//Servlet生命周期方法
+//销毁
+@Override
+public void destroy() {
+    System.out.println(&quot;*************destroy执行了***************&quot;);
+
+}
+
+@Override
+public ServletConfig getServletConfig() {
+    // TODO Auto-generated method stub
+    return null;
+}
+
+@Override
+public String getServletInfo() {
+    // TODO Auto-generated method stub
+    return null;
+}
+
+
+}
+</code></pre><h1 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h1><table><tr><td>代码</td><td>    消息</td><td>    描述</td></tr><br><tr><td>100</td><td>    Continue    </td><td>只有请求的一部分已经被服务器接收，但只要它没有被拒绝，客户端应继续该请求。</td></tr><br><tr><td>101    </td><td>Switching Protocols</td><td>    服务器切换协议。</td></tr><br><tr><td>200</td><td>    OK</td><td>    请求成功。</td></tr><br><tr><td>201    </td><td>Created</td><td>    该请求是完整的，并创建一个新的资源。</td></tr><br><tr><td>202    </td><td>Accepted    </td><td>该请求被接受处理，但是该处理是不完整的。</td></tr><br><tr><td>203    </td><td>Non-authoritative Information    </td><td> </td></tr><br><tr><td>204    </td><td>No Content     </td><td></td></tr><br><tr><td>205    </td><td>Reset Content     </td><td></td></tr><br><tr><td>206    </td><td>Partial Content    </td><td> </td></tr><br><tr><td>300    </td><td>Multiple Choices</td><td>    链接列表。用户可以选择一个链接，进入到该位置。最多五个地址。</td></tr><br><tr><td>301    </td><td>Moved Permanently    </td><td>所请求的页面已经转移到一个新的 URL。</td></tr><br><tr><td>302    </td><td>Found    </td><td>所请求的页面已经临时转移到一个新的 URL。</td></tr><br><tr><td>303    </td><td>See Other    </td><td>所请求的页面可以在另一个不同的 URL 下被找到。</td></tr><br><tr><td>304    </td><td>Not Modified    </td><td> </td></tr><br><tr><td>305    </td><td>Use Proxy     </td><td></td></tr><br><tr><td>306    </td><td>Unused    </td><td>在以前的版本中使用该代码。现在已不再使用它，但代码仍被保留。</td></tr><br><tr><td>307    </td><td>Temporary Redirect</td><td>    所请求的页面已经临时转移到一个新的 URL。</td></tr><br><tr><td>400    </td><td>Bad Request</td><td>    服务器不理解请求。</td></tr><br><tr><td>401    </td><td>Unauthorized</td><td>    所请求的页面需要用户名和密码。</td></tr><br><tr><td>402    </td><td>Payment Required</td><td>    您还不能使用该代码。</td></tr><br><tr><td>403    </td><td>Forbidden</td><td>    禁止访问所请求的页面。</td></tr><br><tr><td>404    </td><td>Not Found    </td><td>服务器无法找到所请求的页面。.</td></tr><br><tr><td>405    </td><td>Method Not Allowed    </td><td>在请求中指定的方法是不允许的。</td></tr><br><tr><td>406    </td><td>Not Acceptable    </td><td>服务器只生成一个不被客户端接受的响应。</td></tr><br><tr><td>407    </td><td>Proxy Authentication Required    </td><td>在请求送达之前，您必须使用代理服务器的验证。</td></tr><br><tr><td>408    </td><td>Request Timeout    </td><td>请求需要的时间比服务器能够等待的时间长，超时。</td></tr><br><tr><td>409    </td><td>Conflict    </td><td>请求因为冲突无法完成。</td></tr><br><tr><td>410    </td><td>Gone    </td><td>所请求的页面不再可用。</td></tr><br><tr><td>411    </td><td>Length Required    </td><td>“Content-Length” 未定义。服务器无法处理客户端发送的不带 Content-Length 的请求信息。</td></tr><br><tr><td>412    </td><td>Precondition Failed    </td><td>请求中给出的先决条件被服务器评估为 false。</td></tr><br><tr><td>413    </td><td>Request Entity Too Large    </td><td>服务器不接受该请求，因为请求实体过大。</td></tr><br><tr><td>414    </td><td>Request-url Too Long    </td><td>服务器不接受该请求，因为 URL 太长。当您转换一个 “post” 请求为一个带有长的查询信息的 “get” 请求时发生。</td></tr><br><tr><td>415    </td><td>Unsupported Media Type    </td><td>服务器不接受该请求，因为媒体类型不被支持。</td></tr><br><tr><td>417    </td><td>Expectation Failed     </td><td></td></tr><br><tr><td>500    </td><td>Internal Server Error    </td><td>未完成的请求。服务器遇到了一个意外的情况。</td></tr><br><tr><td>501    </td><td>Not Implemented    </td><td>未完成的请求。服务器不支持所需的功能。</td></tr><br><tr><td>502    </td><td>Bad Gateway    </td><td>未完成的请求。服务器从上游服务器收到无效响应。</td></tr><br><tr><td>503    </td><td>Service Unavailable    </td><td>未完成的请求。服务器暂时超载或死机。</td></tr><br><tr><td>504    </td><td>Gateway Timeout    </td><td>网关超时。</td></tr><br><tr><td>505    </td><td>HTTP Version Not Supported</td><td>    服务器不支持”HTTP协议”版本。</td></tr><br></table>
+
+<h2 id="设置-HTTP-状态代码的方法"><a href="#设置-HTTP-状态代码的方法" class="headerlink" title="设置 HTTP 状态代码的方法"></a>设置 HTTP 状态代码的方法</h2><table><br><tr><td>序号</td><td>    方法 &amp; 描述</td></tr><br><tr><td>1    public void setStatus ( int statusCode )</td><td><br>该方法设置一个任意的状态码。setStatus 方法接受一个 int（状态码）作为参数。如果您的反应包含了一个特殊的状态码和文档，请确保在使用 PrintWriter 实际返回任何内容之前调用 setStatus。</td></tr><br><tr><td>2    public void sendRedirect(String url)</td><td><br>该方法生成一个 302 响应，连同一个带有新文档 URL 的 Location 头。</td></tr><br><tr><td>3    public void sendError(int code, String message)</td><td><br>该方法发送一个状态码（通常为 404），连同一个在 HTML 文档内部自动格式化并发送到客户端的短消息。</td></tr><br></table>
+
+<h2 id="HTTP-状态码实例"><a href="#HTTP-状态码实例" class="headerlink" title="HTTP 状态码实例"></a>HTTP 状态码实例</h2><pre><code>// 扩展 HttpServlet 类
+public class showError extends HttpServlet {
+
+// 处理 GET 方法请求的方法
+public void doGet(HttpServletRequest request,
+                HttpServletResponse response)
+        throws ServletException, IOException
+ {
+  // 设置错误代码和原因
+  response.sendError(407, &quot;Need authentication!!!&quot; );
+ }
+// 处理 POST 方法请求的方法
+public void doPost(HttpServletRequest request,
+                 HttpServletResponse response)
+  throws ServletException, IOException {
+ doGet(request, response);
+}
+}
+</code></pre><h1 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h1><p><em>Cookie实例：</em></p>
+<pre><code>public class Cookie01 extends HttpServlet {
+
+public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    doPost(request, response);
+}
+public void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+    getCookie(request, response);
+}
+//通过Servlet获取Cookie
+private void getCookie(HttpServletRequest request,
+        HttpServletResponse response) throws UnsupportedEncodingException {
+    Cookie cookie = null;
+    Cookie[] cookies = null;
+    // 获取与该域相关的 Cookie 的数组
+    cookies = request.getCookies();
+
+     // 设置响应内容类型
+     response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+
+      if( cookies != null ){
+        for (int i = 0; i &lt; cookies.length; i++){
+           cookie = cookies[i];
+           if((cookie.getName( )).compareTo(&quot;name&quot;) == 0 ){
+                cookie.setMaxAge(0);
+                response.addCookie(cookie);
+                System.out.println(&quot;已删除的 cookie：&quot; + 
+                        cookie.getName( ));
+           }
+           System.out.println(&quot;名称：&quot; + cookie.getName( ) + &quot;,&quot;);
+           System.out.println(&quot;值：&quot; +  URLDecoder.decode(cookie.getValue(), &quot;utf-8&quot;));
+        }
+     }
+}
+//设置Cookie
+private void setCookie(HttpServletRequest request,
+        HttpServletResponse response) throws UnsupportedEncodingException,
+        IOException {
+    // 为名字和姓氏创建 Cookie      
+        Cookie name = new Cookie(&quot;name&quot;,
+                URLEncoder.encode(request.getParameter(&quot;name&quot;), &quot;UTF-8&quot;)); // 中文转码
+        Cookie url = new Cookie(&quot;url&quot;,
+                      request.getParameter(&quot;url&quot;));
+
+        // 为两个 Cookie 设置过期日期为 24 小时后
+        name.setMaxAge(60*60*24); 
+        url.setMaxAge(60*60*24); 
+
+        // 在响应头中添加两个 Cookie
+        response.addCookie(name);
+        response.addCookie(url);
+
+        // 设置响应内容类型
+        response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+
+        System.out.println(request.getParameter(&quot;name&quot;));
+        System.out.println(request.getParameter(&quot;url&quot;) );
+}
+
+}
+</code></pre><p>html文件：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=servlet/cookie01 method=&quot;GET&quot;&gt;
+站点名 ：&lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+&lt;br /&gt;
+站点 URL：&lt;input type=&quot;text&quot; name=&quot;url&quot; /&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="文件下载："><a href="#文件下载：" class="headerlink" title="文件下载："></a>文件下载：</h1><p>java文件：</p>
+<pre><code>import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URLEncoder;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+/**
+ * 文件下载
+ * @author tianq
+ *
+ */
+public class ServletDemo5 extends HttpServlet {
+
+public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+    doPost(request,response);
+}
+
+public void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+   //通过路径得到一个输入流
+    String path = this.getServletContext().getRealPath(&quot;WEB-INF/classes/美景.jpg&quot;);
+    FileInputStream fis = new FileInputStream(path);
+    //创建字节输出流
+    ServletOutputStream sos = response.getOutputStream();
+    //得到要下载的文件名
+    String fileName = path.substring(path.lastIndexOf(&quot;\\&quot;)+1);
+    //设置文件名编码
+    fileName = URLEncoder.encode(fileName, &quot;UTF-8&quot;);
+    //告知客户端下载
+    response.setHeader(&quot;content-disposition&quot;, &quot;attachment;filename=&quot;+fileName);
+    response.setHeader(&quot;content-type&quot;, &quot;image/jpeg&quot;);
+    //执行输出操作
+    int len = 1;
+    byte[] b = new byte[1024];
+    while ((len=fis.read(b))!=-1) {
+        sos.write(b, 0, len);
+
+    }
+
+}
+
+}
+</code></pre></the></excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-26T06:51:40.133Z" itemprop="dateUpdated">2017年3月26日 14:51</time>
+</span><br>
+
+
+        转载请注明出处：<a href="/2017/03/25/Servlet笔记/" target="_blank" rel="external">http://mutouspace.cn/2017/03/25/Servlet笔记/</a>
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Servlet/">Servlet</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/25/Servlet笔记/&title=《Servlet笔记》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/25/Servlet笔记/&title=《Servlet笔记》 — Terry_Tian's Code日志&source=
+
+Servlet 简介
+Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/25/Servlet笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Servlet笔记》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/25/Servlet笔记/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/25/Servlet笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/24/常用工具的环境变量配置/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">常用工具的环境变量配置</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="Servlet笔记" data-title="Servlet笔记" data-url="http://mutouspace.cn/2017/03/25/Servlet笔记/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry_Tian's Code日志 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/25/Servlet笔记/&title=《Servlet笔记》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/25/Servlet笔记/&title=《Servlet笔记》 — Terry_Tian's Code日志&source=
+
+Servlet 简介
+Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/25/Servlet笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Servlet笔记》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/25/Servlet笔记/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/25/Servlet笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNklEQVR42u3aQW7DMAxE0dz/0i7QVQE7ygxHDSDya1U4juWXBUuKfL3kdf2u+5W/16/bWl9/9+n9nm0LBgwYxzKu5boz3m2jvK6yo34nDBgwpjHWQXb9WnroVIKp/pPBgAEDRpLeKdf1J8CAAQOGG3D1YOqG6a/+34ABA8aBDL2Y1JHut9xyFwYMGHMYbmPgm3//Y38DBgwYhzCueOlPXt+TvA8MGDB6M9ZFqR583aRNTxyNQAwDBoymDP0QTf9UOVBLwvTDM2HAgDGA4Ubo2reSAY5XHr9hwIBxOENvKNptxdJeSlsCBgwYcxj68ESe9rlB2T7mgwEDxgDGrvGL5E43iXxoDMCAAaMdwx1r0FNG/bjf3QUGDBjTGBsSstJmtcanlGLCgAGjKUMPiEq56wZNNxB/GAuDAQNGO0btQC3ZPj/Vf/gUBgwYrRnuykfHkoO5DQAYMGAczlBCql7iJklkFMRhwIDRjqEEO70adgOxO34h9WBhwIDRjqEnannC545Q2GNqMGDAGMCoDUm4bci8RVosX2HAgNGIkaSMyhU9uXTfAQYMGL0ZtaTNLWJrrU1jZgQGDBhNGZe5lAOyWlPBLYYfZkZgwIDRlOGOWewtfd2SFQYMGJMZtfLSPb6vtRz0QA8DBowJjOJxfKl8rcX+D8+EAQMGjPgoTbminxFK/Q0YMGCMZCQpXW28zAjQMGDAGMDQD+uVJ7jP15+2oRaHAQPGgQy3MZC0OfWfyd0RBgwYTRk/GW5BzxPY9PkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.8');
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

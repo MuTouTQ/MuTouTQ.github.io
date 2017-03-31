@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-03-26T06:51:40.133Z</updated>
+  <updated>2017-03-31T10:10:24.307Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jsp学习笔记</title>
+    <link href="http://mutouspace.cn/2017/03/29/Jsp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://mutouspace.cn/2017/03/29/Jsp学习笔记/</id>
+    <published>2017-03-29T12:41:07.000Z</published>
+    <updated>2017-03-31T10:10:24.307Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;h1 id=&quot;Jsp-简介&quot;&gt;&lt;a href=&quot;#Jsp-简介&quot; class=&quot;headerlink&quot; title=&quot;Jsp 简介&quot;&gt;&lt;/a&gt;Jsp 简介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;JSP全称是Java Server Pages，它和servle技术一样，都是SUN公司定义的一种用于开发动态web资源的技术。&lt;strong&gt;JSP实际上就是Servlet。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;jsp = html + java&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;html:&lt;/strong&gt;静态内容&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;servlet：&lt;/strong&gt;服务器端的小应用程序。适合编写java逻辑代码，如果编写网页内容–苦逼。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;jsp:&lt;/strong&gt;适合编写输出动态内容，但不适合编写java逻辑。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="JSP" scheme="http://mutouspace.cn/tags/JSP/"/>
+    
+  </entry>
   
   <entry>
     <title>Servlet笔记</title>
@@ -353,24 +383,6 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://mutouspace.cn/2017/02/17/hello-world/"/>
-    <id>http://mutouspace.cn/2017/02/17/hello-world/</id>
-    <published>2017-02-17T11:51:30.000Z</published>
-    <updated>2017-03-06T14:14:31.510Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>测试二</title>
     <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
     <id>http://mutouspace.cn/2017/02/17/测试二/</id>
@@ -385,6 +397,24 @@
     
     
       <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://mutouspace.cn/2017/02/17/hello-world/"/>
+    <id>http://mutouspace.cn/2017/02/17/hello-world/</id>
+    <published>2017-02-17T11:51:30.000Z</published>
+    <updated>2017-03-06T14:14:31.510Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
     
   </entry>
   

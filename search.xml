@@ -4,6 +4,349 @@
   
     
     <entry>
+      <title><![CDATA[Jsp学习笔记]]></title>
+      <url>http://mutouspace.cn/2017/03/29/Jsp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="Jsp-简介"><a href="#Jsp-简介" class="headerlink" title="Jsp 简介"></a>Jsp 简介</h1><blockquote>
+<p>JSP全称是Java Server Pages，它和servle技术一样，都是SUN公司定义的一种用于开发动态web资源的技术。<strong>JSP实际上就是Servlet。</strong></p>
+</blockquote>
+<p><strong><em>jsp = html + java</em></strong></p>
+<p><strong>html:</strong>静态内容</p>
+<p><strong>servlet：</strong>服务器端的小应用程序。适合编写java逻辑代码，如果编写网页内容–苦逼。</p>
+<p><strong>jsp:</strong>适合编写输出动态内容，但不适合编写java逻辑。</p>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="jsp的原理"><a href="#jsp的原理" class="headerlink" title="jsp的原理"></a>jsp的原理</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/jsp1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h1 id="JSP-语法"><a href="#JSP-语法" class="headerlink" title="JSP 语法"></a>JSP 语法</h1><blockquote>
+<p>接下来就是JSP的3（jsp的3个指令）6（jsp的6个动作）9（jsp的9个内置对象）了，简称：三六九。</p>
+</blockquote>
+<h2 id="JSP的脚本"><a href="#JSP的脚本" class="headerlink" title="JSP的脚本"></a>JSP的脚本</h2><ol>
+<li>小脚本: &lt;% java代码 %&gt;</li>
+<li>表达式: &lt;%= 2+3 %&gt; 等价于out.print(2+3);  </li>
+<li>声明:   &lt;%! %&gt; 表示在类中定义全局成员，和静态块。</li>
+</ol>
+<p>1、脚本程序的语法格式及示例：</p>
+<pre><code>&lt;% 代码片段 %&gt;
+
+&lt;%
+out.println(&quot;Your IP address is &quot; + request.getRemoteAddr());
+%&gt;
+</code></pre><p>2、表达式示例：</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+   &lt;%
+   Date date = new Date();
+   out.write(date.toLocaleString());
+ %&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>3、声明示例：</p>
+<blockquote>
+<p>一个声明语句可以声明一个或多个变量、方法，供后面的Java代码使用。在JSP文件中，您必须先声明这些变量和方法然后才能使用它们。</p>
+</blockquote>
+<pre><code>&lt;%! int i = 0; %&gt; 
+&lt;%! int a, b, c; %&gt; 
+&lt;%! Circle a = new Circle(2.0); %&gt; 
+</code></pre><h2 id="JSP-指令（3）"><a href="#JSP-指令（3）" class="headerlink" title="JSP 指令（3）"></a>JSP 指令（3）</h2><p>JSP中的三种指令标签：</p>
+<table><br><tr><td>指令</td><td>    描述</td></tr><br><tr><td>  page  </td><td>    定义网页依赖属性，比如脚本语言、error页面、缓存需求等等</td></tr><br><tr><td>  include  </td><td>    包含其他文件</td></tr><br><tr><td> taglib  </td><td>    引入标签库的定义</td></tr><br></table>
+
+<h3 id="Page指令"><a href="#Page指令" class="headerlink" title="Page指令"></a>Page指令</h3><p>Page指令为容器提供当前页面的使用说明。一个JSP页面可以包含多个page指令。</p>
+<p>Page指令的语法格式：</p>
+<pre><code>&lt;%@ 指令名称 属性1=“属性值1” 属性2=“属性值2”。。。%&gt;
+或者：
+&lt;%@ 指令名称 属性1=“属性值1”%&gt;
+&lt;%@ 指令名称 属性2=“属性值2”%&gt;
+</code></pre><p>如：</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+或者：
+&lt;%@ page language=&quot;java&quot; %&gt;
+&lt;%@ page import=&quot;java.util.*&quot; %&gt;
+</code></pre><p>与Page指令相关的属性：</p>
+<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>buffer</td><td>    JSP中有javax.servlet.jsp.JspWriter输出字符流。指定out对象使用缓冲区的大小,默认是8kb.</td></tr><br><tr><td>autoFlush</td><td>    控制out对象的 缓存区</td></tr><br><tr><td>contentType</td><td>    指定当前JSP页面的MIME类型和字符编码，等同于response.setContextType(“text/html;charset=utf-8”);</td></tr><br><tr><td>errorPage</td><td>    指定当JSP页面发生异常时需要转向的错误处理页面</td></tr><br><tr><td>isErrorPage</td><td>    指定当前页面是否可以作为另一个JSP页面的错误处理页面，默认是false。</td></tr><br><tr><td>extends</td><td>    指定servlet从哪一个类继承</td></tr><br><tr><td>import</td><td>    导入要使用的Java类,和java代码中的import是一样的</td></tr><br><tr><td>info</td><td>    定义JSP页面的描述信息</td></tr><br><tr><td>isThreadSafe</td><td>    指定对JSP页面的访问是否为线程安全</td></tr><br><tr><td>language</td><td>    定义JSP页面所用的脚本语言，默认是Java</td></tr><br><tr><td>session</td><td>    指定JSP页面是否使用session,默认值是true</td></tr><br><tr><td>isELIgnored</td><td>    指定是否执行EL表达式</td></tr><br><tr><td>isScriptingEnabled</td><td>    确定脚本元素能否被使用</td></tr><br><tr><td>pageEncoding</td><td>    告诉JSP引擎要翻译的文件使用的编码</td></tr><br></table><br>注：<br><br>1. errorPage：errorPage=”/uri” 如果写“/”则代表当前应用的目录下，绝对路径。<br>如果不写“/”则代表相对路径。<br><br>### include指令 ###<br><br>&gt; JSP可以通过include指令来包含其他文件。被包含的文件可以是JSP文件、HTML文件或文本文件。包含的文件就好像是该JSP文件的一部分，会被同时编译执行。<br><br>静态包含：把其它资源包含到当前页面中。<br><br>    &lt;%@ include file=”/include/header.jsp” %&gt;<br><br>动态包含：<br><br>    <jsp:include page="/include/header.jsp"></jsp:include><br><br>两者的区别：翻译的时间段不同<br><br>前者：在翻译时就把两个文件合并<br><br>后者：不会合并文件，当代码执行到include时，才包含另一个文件的内容。<br><br>原则：能用静的就不用动的。<br><br>### taglib指令 ###<br><br><strong>作用：</strong>在JSP页面中导入JSTL标签库。替换jsp中的java代码片段。<br><br>    &lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core" target="_blank" rel="external">http://java.sun.com/jsp/jstl/core</a>“ prefix=”c” %&gt;<br><br>### JSP 动作元素（6） ###<br><br>&gt;  使用标签的形式来表示一段java代码。<br><br>- <jsp:include> 动态包含<br>- <jsp:forward> 请求转发<br>- <jsp:param> 设置请求参数<br>- <jsp:usebean> 创建一个对象<br>- <jsp:setproperty> 给指定的对象属性赋值<br>- <jsp:getproperty> 取出指定对象的属性值<br><br><br> 1. <jsp:include>动作元素<br><br><jsp:include>动作元素用来包含静态和动态的文件。该动作把指定文件插入正在生成的页面。<br><br>语法格式如下：<br><br>    <jsp:include page="相对 URL 地址" flush="true"><br><table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>page</td><td>    包含在页面中的相对URL地址。</td></tr><br><tr><td>flush</td><td>    布尔属性，定义在包含资源前是否刷新缓存区。</td></tr><br></table>
+
+<p><strong>实例:</strong></p>
+<p>date.jsp文件代码：</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;p&gt;
+   今天的日期是: &lt;%= (new java.util.Date()).toLocaleString()%&gt;
+&lt;/p&gt;
+</code></pre><p>main.jsp文件代码：</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;123&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;include 动作实例&lt;/h2&gt;
+&lt;jsp:include page=&quot;date.jsp&quot; flush=&quot;true&quot; /&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ol>
+<li><jsp:usebean>动作元素</jsp:usebean></li>
+</ol>
+<p>jsp:useBean动作最简单的语法为：</p>
+<pre><code>&lt;jsp:useBean id=&quot;name&quot; class=&quot;package.class&quot; /&gt;
+
+&lt;jsp:useBean id=&quot;stu1&quot; class=&quot;com.itheima.entity.Student&quot;&gt;&lt;/jsp:useBean&gt;
+</code></pre><p>注：</p>
+<ul>
+<li>class中填写的是Bean类的完整路径</li>
+<li>id 为定义的的Bean变量名，如 Bean b = new Bean()中的b;</li>
+</ul>
+<ol>
+<li><jsp:setproperty>动作元素</jsp:setproperty></li>
+</ol>
+<blockquote>
+<p>jsp:setProperty用来设置已经实例化的Bean对象的属性.</p>
+</blockquote>
+<pre><code>&lt;jsp:setProperty property=&quot;name&quot; name=&quot;stu1&quot; value=&quot;jerry&quot;/&gt;
+</code></pre><p>jsp:setProperty动作有下面四个属性,如下表：</p>
+<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>name</td><td>    name属性是必需的。它表示要设置属性的是哪个Bean。</td></tr><br><tr><td>property</td><td>    property属性是必需的。它表示要设置哪个属性。有一个特殊用法：如果property的值是”*”，表示所有名字和Bean属性名字匹配的请求参数都将被传递给相应的属性set方法。</td></tr><br><tr><td>value</td><td>    value 属性是可选的。该属性用来指定Bean属性的值。字符串数据会在目标类中通过标准的valueOf方法自动转换成数字、boolean、Boolean、 byte、Byte、char、Character。例如，boolean和Boolean类型的属性值（比如”true”）通过 Boolean.valueOf转换，int和Integer类型的属性值（比如”42”）通过Integer.valueOf转换。 　　value和param不能同时使用，但可以使用其中任意一个。</td></tr><br><tr><td>param</td><td>    param 是可选的。它指定用哪个请求参数作为Bean属性的值。如果当前请求没有参数，则什么事情也不做，系统不会把null传递给Bean属性的set方法。因此，你可以让Bean自己提供默认属性值，只有当请求参数明确指定了新值时才修改默认属性值。</td></tr><br></table>
+
+<p>4.<jsp:getproperty>动作元素</jsp:getproperty></p>
+<p>jsp:getProperty动作提取指定Bean属性的值，转换成字符串，然后输出。语法格式如下：</p>
+<pre><code>&lt;jsp:getProperty property=&quot;name&quot; name=&quot;stu1&quot;/&gt;
+</code></pre><p>下表是与getProperty相关联的属性：</p>
+<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>name</td><td>    要检索的Bean属性名称。Bean必须已定义。</td></tr><br><tr><td>property</td><td>    表示要提取Bean属性的值</td></tr><br></table>
+
+<p><strong>实例：</strong></p>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;useBean&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Jsp 使用 JavaBean 实例&lt;/h2&gt;
+&lt;jsp:useBean id=&quot;test&quot; class=&quot;com.runoob.main.TestBean&quot; /&gt;
+
+&lt;jsp:setProperty name=&quot;test&quot; 
+property=&quot;message&quot; 
+value=&quot;教程...&quot; /&gt;
+
+&lt;p&gt;输出信息....&lt;/p&gt;
+
+&lt;jsp:getProperty name=&quot;test&quot; property=&quot;message&quot; /&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>5.<jsp:forward> 动作元素</jsp:forward></p>
+<blockquote>
+<p>jsp:forward动作把请求转到另外的页面。jsp:forward标记只有一个属性page。</p>
+</blockquote>
+<p>语法格式如下所示：</p>
+<pre><code>&lt;jsp:forward page=&quot;相对 URL 地址&quot; /&gt;
+</code></pre><p>以下是forward相关联的属性：</p>
+<table><br><tr><td>属性</td></tr><tr>    描述</tr><br><tr><td>page</td></tr><tr>    page属性包含的是一个相对URL。page的值既可以直接给出，也可以在请求的时候动态计算，可以是一个JSP页面或者一个 Java Servlet.</tr></table>
+
+<p><strong>实例</strong><br>date.jsp 文件代码如下：</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;p&gt;
+   今天的日期是: &lt;%= (new java.util.Date()).toLocaleString()%&gt;
+&lt;/p&gt;
+</code></pre><p>main.jsp文件代码：</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;forward 动作实例&lt;/h2&gt;
+&lt;jsp:forward page=&quot;date.jsp&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="JSP-隐式对象"><a href="#JSP-隐式对象" class="headerlink" title="JSP 隐式对象"></a>JSP 隐式对象</h3><blockquote>
+<p>JSP隐式对象是JSP容器为每个页面提供的Java对象，开发者可以直接使用它们而不用显式声明。JSP隐式对象也被称为预定义变量。</p>
+</blockquote>
+<p>JSP所支持的九大隐式对象：</p>
+<table><br><tr><td>对象</td><td>    描述</td></tr><br><tr><td>request</td><td>    HttpServletRequest类的实例</td></tr><br><tr><td>response</td><td>    HttpServletResponse类的实例</td></tr><br><tr><td>out</td><td>    PrintWriter类的实例，用于把结果输出至网页上</td></tr><br><tr><td>session</td><td>    HttpSession类的实例</td></tr><br><tr><td>application</td><td>    ServletContext类的实例，与应用上下文有关</td></tr><br><tr><td>config</td><td>    ServletConfig类的实例</td></tr><br><tr><td>pageContext</td><td>    PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问</td></tr><br><tr><td>page</td><td>    类似于Java类中的this关键字</td></tr><br><tr><td>Exception</td><td>    Exception类的对象，代表发生错误的JSP页面中对应的异常对象</td></tr><br></table>
+
+<p><strong>pageContext(重要):</strong><br>1、本身也是一个域对象：它可以操作其它三个域对象（<code>request</code> <code>session</code> <code>application</code>）的数据.</p>
+<h1 id="四大域对象"><a href="#四大域对象" class="headerlink" title="四大域对象"></a>四大域对象</h1><p>PageContext : pageConext 存放的数据在当前页面有效。开发时使用较少。</p>
+<p>ServletRequest: request  存放的数据在一次请求（转发）内有效。使用非常多。</p>
+<p>HttpSession: session 存放的数据在一次会话中有效。使用的比较多。如：存放用户的登录信息，购物车功能。</p>
+<p>ServletContext: application 存放的数据在整个应用范围内都有效。因为范围太大，应尽量少用。</p>
+<h1 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h1><h2 id="EL概述和基本语法"><a href="#EL概述和基本语法" class="headerlink" title="EL概述和基本语法"></a>EL概述和基本语法</h2><p> EL表达式：expression language 表达式语言</p>
+<p> 要简化jsp中java代码开发。</p>
+<p> 它不是一种开发语言，是jsp中获取数据的一种规范</p>
+<p> 基本语法如下：</p>
+<p>  <code>${表达式}</code></p>
+<h2 id="EL中的基础操作符"><a href="#EL中的基础操作符" class="headerlink" title="EL中的基础操作符"></a>EL中的基础操作符</h2><table><br><tr><td>操作符</td><td>    描述</td></tr><br><tr><td>.</td><td>    访问一个Bean属性或者一个映射条目</td></tr><br><tr><td>[]</td><td>    访问一个数组或者链表的元素</td></tr><br><tr><td>( )</td><td>    组织一个子表达式以改变优先级</td></tr><br><tr><td>+</td><td>    加</td></tr><br><tr><td>-</td><td>    减或负</td></tr><br><tr><td>*</td><td>    乘</td></tr><br><tr><td>/ or div</td><td>    除</td></tr><br><tr><td>% or mod</td><td>    取模</td></tr><br><tr><td>A?B:C</td><td>    执行某种条件判断</td></tr><br><tr><td>== or eq</td><td>    测试是否相等</td></tr><br><tr><td>!= or ne</td><td>    测试是否不等</td></tr><br><tr><td>&lt; or lt</td><td>    测试是否小于</td></tr><br><tr><td>&gt; or gt</td><td>    测试是否大于</td></tr><br><tr><td>&lt;= or le</td><td>    测试是否小于等于</td></tr><br><tr><td>&gt;= or ge</td><td>    测试是否大于等于</td></tr><br><tr><td>&amp;&amp; or and</td><td>    测试逻辑与</td></tr><br><tr><td>|| or or</td><td>    测试逻辑或</td></tr><br><tr><td>! or not</td><td>    测试取反</td></tr><br><tr><td>empty</td><td>    测试是否空值</td></tr><br></table>
+
+<p><em>补：</em></p>
+<p>EL表达式中的empty运算符用于判断某个对象是否为null或””，结果为布尔类型，语法格式如下：</p>
+<pre><code>${empty var}
+</code></pre><p>下列情况empty返回值为true。</p>
+<ul>
+<li>var变量不存在，即没有定义，例如表达式${empty name},如果不存在 name 变量，就返回 true。</li>
+<li>var变量的值为null，例如表达式 ${empty customer.name},如果customer.name的值为null，就返回true.</li>
+<li>var变量引用集合（Set、Map、List）类型对象，并且在集合对象中不包含任何元素。</li>
+</ul>
+<h2 id="防止HTML注入"><a href="#防止HTML注入" class="headerlink" title="防止HTML注入"></a>防止HTML注入</h2><p>displayMessage.jsp</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form action=&quot;servlet/ResultServlet&quot; method=&quot;post&quot;&gt;
+用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;br&gt;
+留言：
+&lt;textarea rows=&quot;6&quot; cols=&quot;50&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;
+&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>ResultServlet.java</p>
+<pre><code>package com.tq.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ResultServlet extends HttpServlet {
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doPost(request,response);
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.setCharacterEncoding(&quot;UTF-8&quot;);
+        String name = request.getParameter(&quot;username&quot;);
+        String message = request.getParameter(&quot;message&quot;);
+        request.setAttribute(&quot;name&quot;, name);
+        request.setAttribute(&quot;message&quot;, message);
+        request.getRequestDispatcher(&quot;/result.jsp&quot;).forward(request, response);
+        }
+
+}
+</code></pre><p>HTMLFilter.java</p>
+<pre><code>package com.tq.util;
+
+public class HTMLFilter {
+
+    public static String filter(String message){
+        if (message==null) {
+            return (null);
+        }
+        char content[] = new char[message.length()];
+        message.getChars(0, message.length(), content, 0);
+        StringBuffer result = new StringBuffer(content.length);
+        for (int i = 0; i &lt; content.length; i++) {
+            switch (content[i]) {
+            case &apos;&lt;&apos;:
+                result.append(&quot;&amp;lt;&quot;);
+                break;
+            case &apos;&gt;&apos;:
+                result.append(&quot;&amp;gt;&quot;);
+                break;
+            case &apos;&amp;&apos;:
+                result.append(&quot;&amp;amp;&quot;);
+                break;
+            case &apos;&quot;&apos;:
+                result.append(&quot;&amp;quot;&quot;);
+                break;
+            default:
+                result.append(content[i]);
+                break;
+            }
+        }
+        return (result.toString());
+    }
+}
+</code></pre><p>mytaglib.tld</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;taglib xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot;  
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  
+xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd&quot;
+version=&quot;2.0&quot;&gt;
+ &lt;tlib-version&gt;1.0&lt;/tlib-version&gt;
+ &lt;short-name&gt;function&lt;/short-name&gt;
+ &lt;uri&gt;http://www.mutouspace.cn&lt;/uri&gt;
+ &lt;function&gt;
+&lt;name&gt;filter&lt;/name&gt;
+&lt;function-class&gt;
+   com.tq.util.HTMLFilter
+&lt;/function-class&gt;
+&lt;function-signature&gt;
+   java.lang.String filter(java.lang.String)
+&lt;/function-signature&gt;
+ &lt;/function&gt;
+&lt;/taglib&gt;
+</code></pre><p>result.jsp</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@ taglib prefix = &quot;terry&quot; uri=&quot;http://www.mutouspace.cn&quot;  %&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+ 用户名:${name}&lt;br&gt; 
+ 留言：${terry:filter(message)}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>待补充。。。。</p>
+</jsp:include></jsp:include></jsp:include></jsp:getproperty></jsp:setproperty></jsp:usebean></jsp:param></jsp:forward></jsp:include></the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> JAVA </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+            <tag> JSP </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Servlet笔记]]></title>
       <url>http://mutouspace.cn/2017/03/25/Servlet%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -2190,6 +2533,23 @@ hexo d -g #生成并上传
     </entry>
     
     <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://mutouspace.cn/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -2207,23 +2567,6 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
             
         </tags>
         

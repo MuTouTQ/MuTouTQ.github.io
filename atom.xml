@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-03-31T10:10:24.307Z</updated>
+  <updated>2017-04-02T14:00:27.895Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -16,11 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Jsp学习笔记</title>
-    <link href="http://mutouspace.cn/2017/03/29/Jsp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://mutouspace.cn/2017/03/29/Jsp学习笔记/</id>
+    <title>JAVA学习之常用的数据源配置</title>
+    <link href="http://mutouspace.cn/2017/04/02/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/"/>
+    <id>http://mutouspace.cn/2017/04/02/JAVA学习之常用的数据源配置/</id>
+    <published>2017-04-02T12:39:01.000Z</published>
+    <updated>2017-04-02T14:00:27.895Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;p&gt;&lt;strong&gt;常用的数据源配置：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DBCP&lt;/li&gt;
+&lt;li&gt;C3P0&lt;/li&gt;
+&lt;li&gt;用JavaWeb服务器管理数据源：Tomcat&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="连接池" scheme="http://mutouspace.cn/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA学习之Jsp</title>
+    <link href="http://mutouspace.cn/2017/03/29/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJsp/"/>
+    <id>http://mutouspace.cn/2017/03/29/JAVA学习之Jsp/</id>
     <published>2017-03-29T12:41:07.000Z</published>
-    <updated>2017-03-31T10:10:24.307Z</updated>
+    <updated>2017-04-02T12:42:17.147Z</updated>
     
     <summary type="html">
     
@@ -46,11 +75,11 @@
   </entry>
   
   <entry>
-    <title>Servlet笔记</title>
-    <link href="http://mutouspace.cn/2017/03/25/Servlet%E7%AC%94%E8%AE%B0/"/>
-    <id>http://mutouspace.cn/2017/03/25/Servlet笔记/</id>
+    <title>JAVA之Servlet</title>
+    <link href="http://mutouspace.cn/2017/03/25/JAVA%E4%B9%8BServlet/"/>
+    <id>http://mutouspace.cn/2017/03/25/JAVA之Servlet/</id>
     <published>2017-03-25T15:31:16.000Z</published>
-    <updated>2017-03-26T06:51:40.133Z</updated>
+    <updated>2017-04-02T12:42:43.078Z</updated>
     
     <summary type="html">
     
@@ -383,24 +412,6 @@
   </entry>
   
   <entry>
-    <title>测试二</title>
-    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
-    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
-    <published>2017-02-17T11:51:30.000Z</published>
-    <updated>2017-02-17T13:18:19.296Z</updated>
-    
-    <summary type="html">
-    
-      Welcome to Hexo! This is your very first post.
-    
-    </summary>
-    
-    
-      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://mutouspace.cn/2017/02/17/hello-world/"/>
     <id>http://mutouspace.cn/2017/02/17/hello-world/</id>
@@ -415,6 +426,24 @@
     
     
       <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试二</title>
+    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
+    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
+    <published>2017-02-17T11:51:30.000Z</published>
+    <updated>2017-02-17T13:18:19.296Z</updated>
+    
+    <summary type="html">
+    
+      Welcome to Hexo! This is your very first post.
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

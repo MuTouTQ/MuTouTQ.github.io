@@ -41,7 +41,7 @@ html:静态内容
 servlet：服务器端的小应用程序。适合编写java逻辑代码，如果编写网页内容–苦逼。
 jsp:适合编写输出动态内容，但不适合编写java逻辑。">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/jsp1.png">
-<meta property="og:updated_time" content="2017-04-02T12:42:17.147Z">
+<meta property="og:updated_time" content="2017-04-15T09:23:31.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA学习之Jsp">
 <meta name="twitter:description" content="Jsp 简介
@@ -188,7 +188,7 @@ jsp:适合编写输出动态内容，但不适合编写java逻辑。">
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Jsp-简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">Jsp 简介</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#jsp的原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">jsp的原理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP-语法"><span class="post-toc-number">3.</span> <span class="post-toc-text">JSP 语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSP的脚本"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JSP的脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSP-指令（3）"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">JSP 指令（3）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Page指令"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">Page指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSP-隐式对象"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">JSP 隐式对象</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四大域对象"><span class="post-toc-number">4.</span> <span class="post-toc-text">四大域对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#EL表达式"><span class="post-toc-number">5.</span> <span class="post-toc-text">EL表达式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#EL概述和基本语法"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">EL概述和基本语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#EL中的基础操作符"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">EL中的基础操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#防止HTML注入"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">防止HTML注入</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP-标准标签库（JSTL）"><span class="post-toc-number">6.</span> <span class="post-toc-text">JSP 标准标签库（JSTL）</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Jsp-简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">Jsp 简介</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#jsp的原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">jsp的原理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP-语法-3、6、9"><span class="post-toc-number">3.</span> <span class="post-toc-text">JSP 语法(3、6、9)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSP的脚本"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JSP的脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSP-指令（3）"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">JSP 指令（3）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Page指令"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">Page指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#include指令"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">include指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#taglib指令"><span class="post-toc-number">3.2.3.</span> <span class="post-toc-text">taglib指令</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSP-动作元素（6）"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">JSP 动作元素（6）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动作元素-jsp-include"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">动作元素(jsp:include)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动作元素-jsp-useBean"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">动作元素(jsp:useBean)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动作元素-jsp-setProperty"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">动作元素(jsp:setProperty)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动作元素-jsp-getProperty"><span class="post-toc-number">3.3.4.</span> <span class="post-toc-text">动作元素(jsp:getProperty)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动作元素-jsp-forward"><span class="post-toc-number">3.3.5.</span> <span class="post-toc-text">动作元素(jsp:forward)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSP-隐式对象-9"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">JSP 隐式对象(9)</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四大域对象"><span class="post-toc-number">4.</span> <span class="post-toc-text">四大域对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#EL表达式"><span class="post-toc-number">5.</span> <span class="post-toc-text">EL表达式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#EL概述和基本语法"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">EL概述和基本语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#EL中的基础操作符"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">EL中的基础操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#防止HTML注入"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">防止HTML注入</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP-标准标签库（JSTL）"><span class="post-toc-number">6.</span> <span class="post-toc-text">JSP 标准标签库（JSTL）</span></a></li></ol>
         </nav>
     </aside>
     
@@ -238,7 +238,7 @@ jsp:适合编写输出动态内容，但不适合编写java逻辑。">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h1 id="JSP-语法"><a href="#JSP-语法" class="headerlink" title="JSP 语法"></a>JSP 语法</h1><blockquote>
+<h1 id="JSP-语法-3、6、9"><a href="#JSP-语法-3、6、9" class="headerlink" title="JSP 语法(3、6、9)"></a>JSP 语法(3、6、9)</h1><blockquote>
 <p>接下来就是JSP的3（jsp的3个指令）6（jsp的6个动作）9（jsp的9个内置对象）了，简称：三六九。</p>
 </blockquote>
 <h2 id="JSP的脚本"><a href="#JSP的脚本" class="headerlink" title="JSP的脚本"></a>JSP的脚本</h2><ol>
@@ -276,7 +276,9 @@ out.println(&quot;Your IP address is &quot; + request.getRemoteAddr());
 </code></pre><h2 id="JSP-指令（3）"><a href="#JSP-指令（3）" class="headerlink" title="JSP 指令（3）"></a>JSP 指令（3）</h2><p>JSP中的三种指令标签：</p>
 <table><br><tr><td>指令</td><td>    描述</td></tr><br><tr><td>  page  </td><td>    定义网页依赖属性，比如脚本语言、error页面、缓存需求等等</td></tr><br><tr><td>  include  </td><td>    包含其他文件</td></tr><br><tr><td> taglib  </td><td>    引入标签库的定义</td></tr><br></table>
 
-<h3 id="Page指令"><a href="#Page指令" class="headerlink" title="Page指令"></a>Page指令</h3><p>Page指令为容器提供当前页面的使用说明。一个JSP页面可以包含多个page指令。</p>
+<h3 id="Page指令"><a href="#Page指令" class="headerlink" title="Page指令"></a>Page指令</h3><blockquote>
+<p>Page指令为容器提供当前页面的使用说明。一个JSP页面可以包含多个page指令。</p>
+</blockquote>
 <p>Page指令的语法格式：</p>
 <pre><code>&lt;%@ 指令名称 属性1=“属性值1” 属性2=“属性值2”。。。%&gt;
 或者：
@@ -288,16 +290,51 @@ out.println(&quot;Your IP address is &quot; + request.getRemoteAddr());
 &lt;%@ page language=&quot;java&quot; %&gt;
 &lt;%@ page import=&quot;java.util.*&quot; %&gt;
 </code></pre><p>与Page指令相关的属性：</p>
-<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>buffer</td><td>    JSP中有javax.servlet.jsp.JspWriter输出字符流。指定out对象使用缓冲区的大小,默认是8kb.</td></tr><br><tr><td>autoFlush</td><td>    控制out对象的 缓存区</td></tr><br><tr><td>contentType</td><td>    指定当前JSP页面的MIME类型和字符编码，等同于response.setContextType(“text/html;charset=utf-8”);</td></tr><br><tr><td>errorPage</td><td>    指定当JSP页面发生异常时需要转向的错误处理页面</td></tr><br><tr><td>isErrorPage</td><td>    指定当前页面是否可以作为另一个JSP页面的错误处理页面，默认是false。</td></tr><br><tr><td>extends</td><td>    指定servlet从哪一个类继承</td></tr><br><tr><td>import</td><td>    导入要使用的Java类,和java代码中的import是一样的</td></tr><br><tr><td>info</td><td>    定义JSP页面的描述信息</td></tr><br><tr><td>isThreadSafe</td><td>    指定对JSP页面的访问是否为线程安全</td></tr><br><tr><td>language</td><td>    定义JSP页面所用的脚本语言，默认是Java</td></tr><br><tr><td>session</td><td>    指定JSP页面是否使用session,默认值是true</td></tr><br><tr><td>isELIgnored</td><td>    指定是否执行EL表达式</td></tr><br><tr><td>isScriptingEnabled</td><td>    确定脚本元素能否被使用</td></tr><br><tr><td>pageEncoding</td><td>    告诉JSP引擎要翻译的文件使用的编码</td></tr><br></table><br>注：<br><br>1. errorPage：errorPage=”/uri” 如果写“/”则代表当前应用的目录下，绝对路径。<br>如果不写“/”则代表相对路径。<br><br>### include指令 ###<br><br>&gt; JSP可以通过include指令来包含其他文件。被包含的文件可以是JSP文件、HTML文件或文本文件。包含的文件就好像是该JSP文件的一部分，会被同时编译执行。<br><br>静态包含：把其它资源包含到当前页面中。<br><br>    &lt;%@ include file=”/include/header.jsp” %&gt;<br><br>动态包含：<br><br>    <jsp:include page="/include/header.jsp"></jsp:include><br><br>两者的区别：翻译的时间段不同<br><br>前者：在翻译时就把两个文件合并<br><br>后者：不会合并文件，当代码执行到include时，才包含另一个文件的内容。<br><br>原则：能用静的就不用动的。<br><br>### taglib指令 ###<br><br><strong>作用：</strong>在JSP页面中导入JSTL标签库。替换jsp中的java代码片段。<br><br>    &lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core" target="_blank" rel="external">http://java.sun.com/jsp/jstl/core</a>“ prefix=”c” %&gt;<br><br>### JSP 动作元素（6） ###<br><br>&gt;  使用标签的形式来表示一段java代码。<br><br>- <jsp:include> 动态包含<br>- <jsp:forward> 请求转发<br>- <jsp:param> 设置请求参数<br>- <jsp:usebean> 创建一个对象<br>- <jsp:setproperty> 给指定的对象属性赋值<br>- <jsp:getproperty> 取出指定对象的属性值<br><br><br> 1. <jsp:include>动作元素<br><br><jsp:include>动作元素用来包含静态和动态的文件。该动作把指定文件插入正在生成的页面。<br><br>语法格式如下：<br><br>    <jsp:include page="相对 URL 地址" flush="true"><br><table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>page</td><td>    包含在页面中的相对URL地址。</td></tr><br><tr><td>flush</td><td>    布尔属性，定义在包含资源前是否刷新缓存区。</td></tr><br></table>
+<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>buffer</td><td>    JSP中有javax.servlet.jsp.JspWriter输出字符流。指定out对象使用缓冲区的大小,默认是8kb.</td></tr><br><tr><td>autoFlush</td><td>    控制out对象的 缓存区</td></tr><br><tr><td>contentType</td><td>    指定当前JSP页面的MIME类型和字符编码，等同于response.setContextType(“text/html;charset=utf-8”);</td></tr><br><tr><td>errorPage</td><td>    指定当JSP页面发生异常时需要转向的错误处理页面</td></tr><br><tr><td>isErrorPage</td><td>    指定当前页面是否可以作为另一个JSP页面的错误处理页面，默认是false。</td></tr><br><tr><td>extends</td><td>    指定servlet从哪一个类继承</td></tr><br><tr><td>import</td><td>    导入要使用的Java类,和java代码中的import是一样的</td></tr><br><tr><td>info</td><td>    定义JSP页面的描述信息</td></tr><br><tr><td>isThreadSafe</td><td>    指定对JSP页面的访问是否为线程安全</td></tr><br><tr><td>language</td><td>    定义JSP页面所用的脚本语言，默认是Java</td></tr><br><tr><td>session</td><td>    指定JSP页面是否使用session,默认值是true</td></tr><br><tr><td>isELIgnored</td><td>    指定是否执行EL表达式</td></tr><br><tr><td>isScriptingEnabled</td><td>    确定脚本元素能否被使用</td></tr><br><tr><td>pageEncoding</td><td>    告诉JSP引擎要翻译的文件使用的编码</td></tr><br></table>
+
+<p> <strong>注：</strong></p>
+<ol>
+<li>errorPage：errorPage=”/uri” 如果写“/”则代表<em>当前应用</em>的目录下，<em>绝对路径</em>。<br>如果不写“/”则代表<em>相对路径</em>。</li>
+</ol>
+<h3 id="include指令"><a href="#include指令" class="headerlink" title="include指令"></a>include指令</h3><blockquote>
+<p>JSP可以通过include指令来包含其他文件。被包含的文件可以是JSP文件、HTML文件或文本文件。包含的文件就好像是该JSP文件的一部分，会被同时编译执行。</p>
+</blockquote>
+<p>静态包含：把其它资源包含到当前页面中。</p>
+<pre><code>&lt;%@ include file=&quot;/include/header.jsp&quot; %&gt;
+</code></pre><p>动态包含：</p>
+<pre><code>&lt;jsp:include page=&quot;/include/header.jsp&quot;&gt;&lt;/jsp:include&gt;
+</code></pre><p>两者的区别：翻译的时间段不同</p>
+<p>前者：在翻译时就把两个文件合并</p>
+<p>后者：不会合并文件，当代码执行到include时，才包含另一个文件的内容。</p>
+<p>原则：能用静的就不用动的。</p>
+<h3 id="taglib指令"><a href="#taglib指令" class="headerlink" title="taglib指令"></a>taglib指令</h3><p><strong>作用：</strong>在JSP页面中导入JSTL标签库。替换jsp中的java代码片段。</p>
+<pre><code>&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt; 
+</code></pre><h2 id="JSP-动作元素（6）"><a href="#JSP-动作元素（6）" class="headerlink" title="JSP 动作元素（6）"></a>JSP 动作元素（6）</h2><blockquote>
+<p> 使用标签的形式来表示一段java代码。</p>
+</blockquote>
+<ul>
+<li><code>&lt;jsp:include &gt;</code> 动态包含 </li>
+<li><code>&lt;jsp:forward&gt;</code> 请求转发 </li>
+<li><code>&lt;jsp:param&gt;</code> 设置请求参数</li>
+<li><code>&lt;jsp:useBean&gt;</code> 创建一个对象</li>
+<li><code>&lt;jsp:setProperty&gt;</code> 给指定的对象属性赋值</li>
+<li><code>&lt;jsp:getProperty&gt;</code> 取出指定对象的属性值</li>
+</ul>
+<h3 id="动作元素-jsp-include"><a href="#动作元素-jsp-include" class="headerlink" title="动作元素(jsp:include)"></a>动作元素(jsp:include)</h3><blockquote>
+<p><jsp:include>动作元素用来包含静态和动态的文件。该动作把指定文件插入正在生成的页面。</jsp:include></p>
+</blockquote>
+<p>语法格式如下：</p>
+<pre><code>&lt;jsp:include page=&quot;相对 URL 地址&quot; flush=&quot;true&quot; /&gt;
+</code></pre><table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>page</td><td>    包含在页面中的相对URL地址。</td></tr><br><tr><td>flush</td><td>    布尔属性，定义在包含资源前是否刷新缓存区。</td></tr><br></table>
 
 <p><strong>实例:</strong></p>
-<p>date.jsp文件代码：</p>
+<p><em>date.jsp文件代码：</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;p&gt;
    今天的日期是: &lt;%= (new java.util.Date()).toLocaleString()%&gt;
 &lt;/p&gt;
-</code></pre><p>main.jsp文件代码：</p>
+</code></pre><p><em>main.jsp文件代码：</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;!DOCTYPE html&gt;
@@ -313,30 +350,27 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><ol>
-<li><jsp:usebean>动作元素</jsp:usebean></li>
-</ol>
-<p>jsp:useBean动作最简单的语法为：</p>
-<pre><code>&lt;jsp:useBean id=&quot;name&quot; class=&quot;package.class&quot; /&gt;
-
+</code></pre><h3 id="动作元素-jsp-useBean"><a href="#动作元素-jsp-useBean" class="headerlink" title="动作元素(jsp:useBean)"></a>动作元素(jsp:useBean)</h3><p>jsp:useBean动作最简单的语法为：</p>
+<pre><code> &lt;!-- 模板 --&gt;
+&lt;jsp:useBean id=&quot;name&quot; class=&quot;package.class&quot; /&gt;
+ &lt;!-- 示例 --&gt;
 &lt;jsp:useBean id=&quot;stu1&quot; class=&quot;com.itheima.entity.Student&quot;&gt;&lt;/jsp:useBean&gt;
-</code></pre><p>注：</p>
+</code></pre><p><strong>注：</strong></p>
 <ul>
 <li>class中填写的是Bean类的完整路径</li>
 <li>id 为定义的的Bean变量名，如 Bean b = new Bean()中的b;</li>
 </ul>
-<ol>
-<li><jsp:setproperty>动作元素</jsp:setproperty></li>
-</ol>
-<blockquote>
+<h3 id="动作元素-jsp-setProperty"><a href="#动作元素-jsp-setProperty" class="headerlink" title="动作元素(jsp:setProperty)"></a>动作元素(jsp:setProperty)</h3><blockquote>
 <p>jsp:setProperty用来设置已经实例化的Bean对象的属性.</p>
 </blockquote>
 <pre><code>&lt;jsp:setProperty property=&quot;name&quot; name=&quot;stu1&quot; value=&quot;jerry&quot;/&gt;
 </code></pre><p>jsp:setProperty动作有下面四个属性,如下表：</p>
 <table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>name</td><td>    name属性是必需的。它表示要设置属性的是哪个Bean。</td></tr><br><tr><td>property</td><td>    property属性是必需的。它表示要设置哪个属性。有一个特殊用法：如果property的值是”*”，表示所有名字和Bean属性名字匹配的请求参数都将被传递给相应的属性set方法。</td></tr><br><tr><td>value</td><td>    value 属性是可选的。该属性用来指定Bean属性的值。字符串数据会在目标类中通过标准的valueOf方法自动转换成数字、boolean、Boolean、 byte、Byte、char、Character。例如，boolean和Boolean类型的属性值（比如”true”）通过 Boolean.valueOf转换，int和Integer类型的属性值（比如”42”）通过Integer.valueOf转换。 　　value和param不能同时使用，但可以使用其中任意一个。</td></tr><br><tr><td>param</td><td>    param 是可选的。它指定用哪个请求参数作为Bean属性的值。如果当前请求没有参数，则什么事情也不做，系统不会把null传递给Bean属性的set方法。因此，你可以让Bean自己提供默认属性值，只有当请求参数明确指定了新值时才修改默认属性值。</td></tr><br></table>
 
-<p>4.<jsp:getproperty>动作元素</jsp:getproperty></p>
-<p>jsp:getProperty动作提取指定Bean属性的值，转换成字符串，然后输出。语法格式如下：</p>
+<h3 id="动作元素-jsp-getProperty"><a href="#动作元素-jsp-getProperty" class="headerlink" title="动作元素(jsp:getProperty)"></a>动作元素(jsp:getProperty)</h3><blockquote>
+<p>jsp:getProperty动作提取指定Bean属性的值，转换成字符串，然后输出。</p>
+</blockquote>
+<p>语法格式如下：</p>
 <pre><code>&lt;jsp:getProperty property=&quot;name&quot; name=&quot;stu1&quot;/&gt;
 </code></pre><p>下表是与getProperty相关联的属性：</p>
 <table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>name</td><td>    要检索的Bean属性名称。Bean必须已定义。</td></tr><br><tr><td>property</td><td>    表示要提取Bean属性的值</td></tr><br></table>
@@ -365,14 +399,13 @@ value=&quot;教程...&quot; /&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>5.<jsp:forward> 动作元素</jsp:forward></p>
-<blockquote>
+</code></pre><h3 id="动作元素-jsp-forward"><a href="#动作元素-jsp-forward" class="headerlink" title="动作元素(jsp:forward)"></a>动作元素(jsp:forward)</h3><blockquote>
 <p>jsp:forward动作把请求转到另外的页面。jsp:forward标记只有一个属性page。</p>
 </blockquote>
 <p>语法格式如下所示：</p>
 <pre><code>&lt;jsp:forward page=&quot;相对 URL 地址&quot; /&gt;
 </code></pre><p>以下是forward相关联的属性：</p>
-<table><br><tr><td>属性</td></tr><tr>    描述</tr><br><tr><td>page</td></tr><tr>    page属性包含的是一个相对URL。page的值既可以直接给出，也可以在请求的时候动态计算，可以是一个JSP页面或者一个 Java Servlet.</tr></table>
+<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>page</td><td>    page属性包含的是一个相对URL。page的值既可以直接给出，也可以在请求的时候动态计算，可以是一个JSP页面或者一个 Java Servlet.</td></tr></table>
 
 <p><strong>实例</strong><br>date.jsp 文件代码如下：</p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
@@ -387,7 +420,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -395,11 +428,11 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;jsp:forward page=&quot;date.jsp&quot; /&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h3 id="JSP-隐式对象"><a href="#JSP-隐式对象" class="headerlink" title="JSP 隐式对象"></a>JSP 隐式对象</h3><blockquote>
+</code></pre><h2 id="JSP-隐式对象-9"><a href="#JSP-隐式对象-9" class="headerlink" title="JSP 隐式对象(9)"></a>JSP 隐式对象(9)</h2><blockquote>
 <p>JSP隐式对象是JSP容器为每个页面提供的Java对象，开发者可以直接使用它们而不用显式声明。JSP隐式对象也被称为预定义变量。</p>
 </blockquote>
 <p>JSP所支持的九大隐式对象：</p>
-<table><br><tr><td>对象</td><td>    描述</td></tr><br><tr><td>request</td><td>    HttpServletRequest类的实例</td></tr><br><tr><td>response</td><td>    HttpServletResponse类的实例</td></tr><br><tr><td>out</td><td>    PrintWriter类的实例，用于把结果输出至网页上</td></tr><br><tr><td>session</td><td>    HttpSession类的实例</td></tr><br><tr><td>application</td><td>    ServletContext类的实例，与应用上下文有关</td></tr><br><tr><td>config</td><td>    ServletConfig类的实例</td></tr><br><tr><td>pageContext</td><td>    PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问</td></tr><br><tr><td>page</td><td>    类似于Java类中的this关键字</td></tr><br><tr><td>Exception</td><td>    Exception类的对象，代表发生错误的JSP页面中对应的异常对象</td></tr><br></table>
+<table><br><tr><td>对象</td><td>    描述</td></tr><br><tr><td>request</td><td>    HttpServletRequest类的实例,它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header, 和session数据的有用的方法。</td></tr><br><tr><td>response</td><td>    HttpServletResponse类的实例，并提供了几个用于设置送回<br>浏览器的响应的方法（如cookies,头信息等）。</td></tr><br><tr><td>out</td><td>    PrintWriter类的实例，用于把结果输出至网页上</td></tr><br><tr><td>session</td><td>    HttpSession类的实例,Session可以存贮用户的状态信息。</td></tr><br><tr><td>application</td><td>    ServletContext类的实例，与应用上下文有关,有助于查找有关servlet引擎和servlet环境的信息。</td></tr><br><tr><td>config</td><td>    ServletConfig类的实例,该对象用于存取servlet实例的初始化参数。</td></tr><br><tr><td>pageContext</td><td>    PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问</td></tr><br><tr><td>page</td><td>    类似于Java类中的this关键字，表示从该页面产生的一个servlet实例。</td></tr><br><tr><td>Exception</td><td>    Exception类的对象，代表发生错误的JSP页面中对应的异常对象</td></tr><br></table>
 
 <p><strong>pageContext(重要):</strong><br>1、本身也是一个域对象：它可以操作其它三个域对象（<code>request</code> <code>session</code> <code>application</code>）的数据.</p>
 <h1 id="四大域对象"><a href="#四大域对象" class="headerlink" title="四大域对象"></a>四大域对象</h1><p>PageContext : pageConext 存放的数据在当前页面有效。开发时使用较少。</p>
@@ -422,7 +455,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 <li>var变量的值为null，例如表达式 ${empty customer.name},如果customer.name的值为null，就返回true.</li>
 <li>var变量引用集合（Set、Map、List）类型对象，并且在集合对象中不包含任何元素。</li>
 </ul>
-<h2 id="防止HTML注入"><a href="#防止HTML注入" class="headerlink" title="防止HTML注入"></a>防止HTML注入</h2><p>displayMessage.jsp</p>
+<h2 id="防止HTML注入"><a href="#防止HTML注入" class="headerlink" title="防止HTML注入"></a>防止HTML注入</h2><p><em>displayMessage.jsp</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
@@ -441,7 +474,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
   &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>ResultServlet.java</p>
+</code></pre><p><em>ResultServlet.java</em></p>
 <pre><code>package com.tq.servlet;
 
 import java.io.IOException;
@@ -470,7 +503,7 @@ public class ResultServlet extends HttpServlet {
         }
 
 }
-</code></pre><p>HTMLFilter.java</p>
+</code></pre><p><em>HTMLFilter.java</em></p>
 <pre><code>package com.tq.util;
 
 public class HTMLFilter {
@@ -504,7 +537,7 @@ public class HTMLFilter {
         return (result.toString());
     }
 }
-</code></pre><p>mytaglib.tld</p>
+</code></pre><p><em>mytaglib.tld</em></p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;taglib xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot;  
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  
@@ -523,7 +556,7 @@ version=&quot;2.0&quot;&gt;
 &lt;/function-signature&gt;
  &lt;/function&gt;
 &lt;/taglib&gt;
-</code></pre><p>result.jsp</p>
+</code></pre><p><em>result.jsp</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;%@ taglib prefix = &quot;terry&quot; uri=&quot;http://www.mutouspace.cn&quot;  %&gt;
@@ -540,14 +573,14 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>待补充。。。。</p>
-</jsp:include></jsp:include></jsp:include></jsp:getproperty></jsp:setproperty></jsp:usebean></jsp:param></jsp:forward></jsp:include></the></excerpt>
+</the></excerpt>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-04-02T12:42:17.147Z" itemprop="dateUpdated">2017年4月2日 20:42</time>
+    最后更新时间：<time datetime="2017-04-15T09:23:31.278Z" itemprop="dateUpdated">2017年4月15日 17:23</time>
 </span><br>
 
 
@@ -642,7 +675,7 @@ JSP全称是Java Server Pages，它和servle技术一样，都是SUN公司定义
     <div class="waves-block waves-effect next">
       <a href="/2017/03/25/JAVA之Servlet/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">JAVA之Servlet</h4>
+        <h4 class="title">JAVA学习之Servlet</h4>
       </a>
     </div>
   

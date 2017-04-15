@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/">
+    
+    
+    <title>JAVA学习之Struts2框架 | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,框架,Struts2">
+    <meta name="description" content="Struts2简介Struts2概述Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。
+Struts2的来历Struts1：也是apache开发的一套mvc的开源框架。在2005年之前非常流行。
+ 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。
+Struts2：在long long ago，有一个设计超前的框架XWor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA学习之Struts2框架">
+<meta property="og:url" content="http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="Struts2简介Struts2概述Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。
+Struts2的来历Struts1：也是apache开发的一套mvc的开源框架。在2005年之前非常流行。
+ 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。
+Struts2：在long long ago，有一个设计超前的框架XWor">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%BC%80%E5%8F%91%E5%8C%85%E7%9B%AE%E5%BD%951.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6jar%E5%8C%851.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/dtd1.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/dtd2.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B1.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B2.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/struts%E8%A6%86%E7%9B%96.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/pro%E8%A6%86%E7%9B%96.png">
+<meta property="og:updated_time" content="2017-04-15T11:29:51.436Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA学习之Struts2框架">
+<meta name="twitter:description" content="Struts2简介Struts2概述Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。
+Struts2的来历Struts1：也是apache开发的一套mvc的开源框架。在2005年之前非常流行。
+ 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。
+Struts2：在long long ago，有一个设计超前的框架XWor">
+<meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/%E5%BC%80%E5%8F%91%E5%8C%85%E7%9B%AE%E5%BD%951.png">
+    
+        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JAVA学习之Struts2框架</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JAVA学习之Struts2框架</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-15T12:52:52.000Z" itemprop="datePublished" class="page-time">
+  2017-04-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Struts2简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">Struts2简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Struts2概述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Struts2概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Struts2的来历"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Struts2的来历</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建Struts2开发环境"><span class="post-toc-number">2.</span> <span class="post-toc-text">搭建Struts2开发环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载Struts2开发包"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">下载Struts2开发包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开发包目录结构"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">开发包目录结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建开发环境"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">搭建开发环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拷贝必要jar包到classpath中"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">拷贝必要jar包到classpath中</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#建立Struts2的配置文件"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">建立Struts2的配置文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置控制器"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">配置控制器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#验证是否成功"><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">验证是否成功</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第一个Struts2案例"><span class="post-toc-number">3.</span> <span class="post-toc-text">第一个Struts2案例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#建立一个jsp文件"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">建立一个jsp文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在struts-xml文件中配置"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">在struts.xml文件中配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#建立动作类和动作方法"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">建立动作类和动作方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结果视图页面"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">结果视图页面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#测试："><span class="post-toc-number">3.5.</span> <span class="post-toc-text">测试：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于struts-xml没有代码提示的问题"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">关于struts.xml没有代码提示的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第一个案例的执行过程"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">第一个案例的执行过程</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Struts2的配置文件"><span class="post-toc-number">4.</span> <span class="post-toc-text">Struts2的配置文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#加载时机："><span class="post-toc-number">4.1.</span> <span class="post-toc-text">加载时机：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#加载顺序"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">加载顺序</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Struts2框架提供的常量"><span class="post-toc-number">5.</span> <span class="post-toc-text">Struts2框架提供的常量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常用的常量"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">常用的常量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在struts-xml中覆盖常量"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">在struts.xml中覆盖常量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建struts-properties文件覆盖"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">创建struts.properties文件覆盖</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-JAVA学习之Struts2框架"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JAVA学习之Struts2框架</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年04月15日 20:52" datetime="2017-04-15T12:52:52.000Z"  itemprop="datePublished">2017-04-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+<span>
+    <a href="/2017/04/15/JAVA学习之Struts2框架/#comments" class="ds-thread-count" data-thread-key="JAVA学习之Struts2框架" data-count-type="comments"></a>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="Struts2简介"><a href="#Struts2简介" class="headerlink" title="Struts2简介"></a>Struts2简介</h1><h2 id="Struts2概述"><a href="#Struts2概述" class="headerlink" title="Struts2概述"></a>Struts2概述</h2><p>Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。</p>
+<h2 id="Struts2的来历"><a href="#Struts2的来历" class="headerlink" title="Struts2的来历"></a>Struts2的来历</h2><p><strong>Struts1：</strong>也是apache开发的一套mvc的开源框架。在2005年之前非常流行。</p>
+<p> 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。</p>
+<p><strong>Struts2：</strong>在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。<em>里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。</em></p>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="搭建Struts2开发环境"><a href="#搭建Struts2开发环境" class="headerlink" title="搭建Struts2开发环境"></a>搭建Struts2开发环境</h1><h2 id="下载Struts2开发包"><a href="#下载Struts2开发包" class="headerlink" title="下载Struts2开发包"></a>下载Struts2开发包</h2><p><a href="http://struts.apache.org" target="_blank" rel="external">官网：http://struts.apache.org</a></p>
+<p>由于国内网络比较好，所以说可能有时候打不开，可以百度一下，下载一份。</p>
+<h2 id="开发包目录结构"><a href="#开发包目录结构" class="headerlink" title="开发包目录结构"></a>开发包目录结构</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%BC%80%E5%8F%91%E5%8C%85%E7%9B%AE%E5%BD%951.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h2><h3 id="拷贝必要jar包到classpath中"><a href="#拷贝必要jar包到classpath中" class="headerlink" title="拷贝必要jar包到classpath中"></a>拷贝必要jar包到classpath中</h3><p>   <img src="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6jar%E5%8C%851.png" alt=""></p>
+<p>   <strong>拷贝哪些jar包？</strong></p>
+<p>   找到Struts2自带的例子中，struts-blank的war包，在它的<code>\WEB-INF\lib</code>目录下的jar包全拷贝。</p>
+<h3 id="建立Struts2的配置文件"><a href="#建立Struts2的配置文件" class="headerlink" title="建立Struts2的配置文件"></a>建立Struts2的配置文件</h3><p>  at the top of classpath（在最顶层的构建路径）,建立一个默认名称为<code>struts.xml</code>的配置文件。</p>
+<p>  struts.xml </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC
+&quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+ &quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+&lt;struts&gt;
+
+&lt;/struts&gt;
+</code></pre><p>   <strong>注意：</strong></p>
+<ul>
+<li>文件名大小写。</li>
+<li>创建位置。</li>
+<li>该名称允许修改，但是我们一般不改。</li>
+</ul>
+<h3 id="配置控制器"><a href="#配置控制器" class="headerlink" title="配置控制器"></a>配置控制器</h3><p>a、配置位置：在web.xml中</p>
+<p>b、配置什么： struts2已经写好了的一个过滤器。</p>
+<p><strong>结论：</strong></p>
+<p>struts2比struts1优秀的一个体现就是，它用了更为强大的<code>过滤器</code>作为控制器了。</p>
+<pre><code>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;3.0&quot;&gt;
+&lt;display-name&gt;Struts2Template&lt;/display-name&gt;
+ &lt;!-- 配置Struts核心控制器，就是一个过滤器 --&gt;
+ &lt;filter&gt;
+&lt;filter-name&gt;struts2&lt;/filter-name&gt;
+&lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+&lt;filter-name&gt;struts2&lt;/filter-name&gt;
+&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+&lt;welcome-file-list&gt;
+  &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+&lt;/welcome-file-list&gt;
+&lt;/web-app&gt;
+</code></pre><h3 id="验证是否成功"><a href="#验证是否成功" class="headerlink" title="验证是否成功"></a>验证是否成功</h3><p>部署应用，启动Tomcat，不报错表示搭建成功。</p>
+<h1 id="第一个Struts2案例"><a href="#第一个Struts2案例" class="headerlink" title="第一个Struts2案例"></a>第一个Struts2案例</h1><blockquote>
+<p>以下步骤是日后实际开发中经常重复的。</p>
+</blockquote>
+<h2 id="建立一个jsp文件"><a href="#建立一个jsp文件" class="headerlink" title="建立一个jsp文件"></a>建立一个jsp文件</h2><p><em>index.jsp</em></p>
+<pre><code>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+&lt;title&gt;Struts入门案例&lt;/title&gt;
+  &lt;/head&gt; 
+ &lt;body&gt;
+&lt;a href=&quot;${pageContext.request.contextPath}/hello.action&quot;&gt;访问Struts的第一个入门案例&lt;/a&gt;
+&lt;a href=&quot;${pageContext.request.contextPath}/hello&quot;&gt;访问Struts的第一个入门案例&lt;/a&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="在struts-xml文件中配置"><a href="#在struts-xml文件中配置" class="headerlink" title="在struts.xml文件中配置"></a>在struts.xml文件中配置</h2><p><em>struts.xml</em></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC
+&quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+&quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+&lt;struts&gt;
+  &lt;package name=&quot;p1&quot; extends=&quot;struts-default&quot; &gt;
+  &lt;!-- 
+    name:jsp对应的请求地址；
+    class:指定一个动作类，在这里也就是给hello指定一个动作类
+    method: 对应hello要执行的方法。
+   --&gt;
+ &lt;action name=&quot;hello&quot; class=&quot;cn.terry.web.action.HelloAction&quot; method=&quot;sayHello&quot;&gt;
+    &lt;!-- 配置结果视图 --&gt;
+   &lt;result name=&quot;success&quot;&gt;/success.jsp&lt;/result&gt;
+ &lt;/action&gt;
+  &lt;/package&gt;
+&lt;/struts&gt;
+</code></pre><h2 id="建立动作类和动作方法"><a href="#建立动作类和动作方法" class="headerlink" title="建立动作类和动作方法"></a>建立动作类和动作方法</h2><p><em>HelloAction.java</em></p>
+<pre><code> package cn.terry.web.action;
+
+ public class HelloAction {//动作类
+
+/**
+ * 在动作类中的指定的动作方法
+ * 动作方法的书写要求：
+ *         1、都是public的
+ *         2、返回值必须是一个String
+ *         3、必须没有参数
+ * @return
+ */
+public String sayHello(){
+    System.out.println(&quot;HelloAction的sayHello方法执行了&quot;);
+    return &quot;success&quot;;//与配置文件中result的name取值相对应
+}
+}
+</code></pre><h2 id="结果视图页面"><a href="#结果视图页面" class="headerlink" title="结果视图页面"></a>结果视图页面</h2><p><em>success.jsp</em></p>
+<pre><code>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+&lt;title&gt;title&lt;/title&gt;
+
+&lt;meta http-equiv=&quot;pragma&quot; content=&quot;no-cache&quot;&gt;
+&lt;meta http-equiv=&quot;cache-control&quot; content=&quot;no-cache&quot;&gt;
+&lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt;
+&lt;!--
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;
+ --&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+操作成功
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="测试："><a href="#测试：" class="headerlink" title="测试："></a>测试：</h2><p>只要没有错误，这里就可以得到自己想要的结果。</p>
+<h2 id="关于struts-xml没有代码提示的问题"><a href="#关于struts-xml没有代码提示的问题" class="headerlink" title="关于struts.xml没有代码提示的问题"></a>关于struts.xml没有代码提示的问题</h2><p>分析原因：没有找到对应的dtd约束文件。</p>
+<p>解决办法：</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/dtd1.png" alt=""></p>
+<p>在网上找到struts的.dtd包，放到如图目录中，这个包在网上找就可以。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/dtd2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>    
+<p>ok就可以了。                    </p>
+<h2 id="第一个案例的执行过程"><a href="#第一个案例的执行过程" class="headerlink" title="第一个案例的执行过程"></a>第一个案例的执行过程</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h1 id="Struts2的配置文件"><a href="#Struts2的配置文件" class="headerlink" title="Struts2的配置文件"></a>Struts2的配置文件</h1><h2 id="加载时机："><a href="#加载时机：" class="headerlink" title="加载时机："></a>加载时机：</h2><p>当应用被tomcat加载的时候，struts2的配置文件就已经被加载过了。</p>
+<h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><p><strong>加载顺序：</strong>default.properties——struts-default.xml——plugins配置——struts.xml——struts.properties——web.xml</p>
+<table><br><tr><td>顺序</td><td>配置文件名</td><td>所在位置</td><td>说明</td></tr><br><tr><td>1</td><td>default.properties</td><td>struts2-core-2.3.15.3.jar\org\apache\struts2</td><td>    不能修改</td></tr><br><tr><td>2</td><td>struts-default.xml</td><td>struts2-core-2.3.15.3.jar</td><td>    不能修改</td></tr><br><tr><td>3</td><td>strtuts-plugin.xml</td><td>在struts2提供的插件jar包中</td><td>    不能修改</td></tr><br><tr><td>4</td><td>struts.xml</td><td>我们的应用中</td><td>    我们修改的：推荐</td></tr><br><tr><td>5</td><td>struts.properties</td><td>我们的应用中</td><td>    我们修改的</td></tr><br><tr><td>6</td><td>web.xml</td><td>我们的应用中</td><td>    我们修改的，可以给过滤器配置参数</td></tr><br></table>
+
+<p><strong>注意：</strong></p>
+<p>1、Struts2提供了两种配置的方式。一种是key=value的方式，即使用.properties文件。另一种是xml文件配置。<code>我们推荐使用xml文件（它能描述层级关系）。</code></p>
+<p>2、当多个配置文件中，有相同的参数，后面的会把前面的值给覆盖了。</p>
+<h1 id="Struts2框架提供的常量"><a href="#Struts2框架提供的常量" class="headerlink" title="Struts2框架提供的常量"></a>Struts2框架提供的常量</h1><h2 id="常用的常量"><a href="#常用的常量" class="headerlink" title="常用的常量"></a>常用的常量</h2><p>常量定义在了default.properties配置文件中，体现形式都是key=value。所有的struts2应用都会用到这些常量。</p>
+<p>常用的：</p>
+<table><br><tr><td>常量名</td><td>常量值</td><td>说明</td></tr><br><tr><td>struts.i18n.encoding</td><td>UTF-8</td><td>应用中使用的编码</td></tr><br><tr><td>struts.objectFactory.spring.autoWire</td><td>name</td><td>和spring框架整合有关</td></tr><br><tr><td>struts.multipart.parser    </td><td>jakarta</td><td>    指定文件上传用的组件</td></tr><br><tr><td>struts.multipart.maxSize</td><td>    2097152    </td><td>文件上传总文件大小限制：2M</td></tr><br><tr><td>struts.action.extension</td><td>    action</td><td>    能进入Struts2框架内部的url地址后缀名。多个值用逗号分隔</td></tr><br><tr><td>struts.enable.DynamicMethodInvocation</td><td>    false</td><td>    是否允许动态方法调用</td></tr><br><tr><td>struts.devMode</td><td>    false</td><td>    是否是开发模式。开发模式：改了配置文件，不需要重启。输出更多的错误信息。开发阶段建议为true。</td></tr><br><tr><td>struts.ui.theme</td><td>    xhtml</td><td>    页面展示用的主题</td></tr></table>
+
+<h2 id="在struts-xml中覆盖常量"><a href="#在struts-xml中覆盖常量" class="headerlink" title="在struts.xml中覆盖常量"></a>在struts.xml中覆盖常量</h2><p>使用<code>&lt;constant name=&quot;&quot; value=&quot;&quot;&gt;&lt;/constant&gt;</code>元素进行覆盖</p>
+<p>例如：</p>
+<pre><code>&lt;!-- 修改struts中默认的后缀名 --&gt;
+&lt;constant name=&quot;struts.action.extension&quot; value=&quot;do&quot;&gt;&lt;/constant&gt;
+</code></pre><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts%E8%A6%86%E7%9B%96.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="创建struts-properties文件覆盖"><a href="#创建struts-properties文件覆盖" class="headerlink" title="创建struts.properties文件覆盖"></a>创建struts.properties文件覆盖</h2><p>在应用的构建路径中创建一个struts.properties的文件。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/pro%E8%A6%86%E7%9B%96.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></the></excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-04-15T11:29:51.436Z" itemprop="dateUpdated">2017年4月15日 19:29</time>
+</span><br>
+
+
+        转载请注明出处：<a href="/2017/04/15/JAVA学习之Struts2框架/" target="_blank" rel="external">http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/</a>
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Struts2/">Struts2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/&title=《JAVA学习之Struts2框架》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/&title=《JAVA学习之Struts2框架》 — Terry_Tian's Code日志&source=
+
+Struts2简介Struts2概述Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。
+Struts2的来历Stru..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之Struts2框架》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/15/JAVA学习之框架前述/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JAVA学习之框架前述</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="JAVA学习之Struts2框架" data-title="JAVA学习之Struts2框架" data-url="http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry_Tian's Code日志 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/&title=《JAVA学习之Struts2框架》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/&title=《JAVA学习之Struts2框架》 — Terry_Tian's Code日志&source=
+
+Struts2简介Struts2概述Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。
+Struts2的来历Stru..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之Struts2框架》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aO27EMAwFwNz/0k4bYGPve5JdWBpVi4U/GhcESfHnJ17Hn/X5/9nvz5U87fP/2xYGBsZrGcflOntBu4nrZybvPbsGAwNjH8bZi/NNX1/fRs58bxgYGBjJtoqwePlRMDAwMO5iXKdx0SvLd2FgYGDkxeRMi639QA/W4hgYGC9kzBSWT/9+5HwDAwPjVYyjXHe13maC7D+7wsDAWJrRFpl5eZmMU8wMW2BgYOzJaBtq+WhFWxIPDpBhYGAsyshDXk5t75ofRMPAwNiN0SaF1wVqfpA5dSyKgYGxNGOs954fWLYHmYPlKwYGxgaMpHHfhs4k0UyeUARZDAyMRRljRWk7HjH/Ub7sBwMDY2nGE7lk0SaLU8+pvWFgYCzBuPcbtEebOf5LqMXAwFiUMbbptik2lm4WARoDA2NpxlhTfqxVNzOWEb0dAwNjM0aeoiUJX9u2S8J0XT1jYGC8nJFsqC1Bk4A7M0CGgYGxM2M+aZsJmk9ciYGBsQYjD51jA2RjyONynRaxGBgYGzCSgrM9wmyPB/K7BjNKDAyM1zLGwu7MQOpYU+9LaoiBgbEc4yhXfmw5lgLmVAwMjH0YM0239tE5L9n64AEnBgbGaxltkL03ILYHpaf3YmBgbMBoa9+xlG4sWBelLAYGBkY5fpE395O23RcqBgYGRjl+kR82zKePGBgY+zCSIjYvWceGLdphDgwMjH0YY6Vj+09+aNqWzRgYGEszfgEAgTaUFs49ewAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.8');
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

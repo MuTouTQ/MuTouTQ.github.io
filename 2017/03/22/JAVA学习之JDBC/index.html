@@ -46,7 +46,7 @@ DriverManager:用于注册驱动
 Connection: 表示与数据库创建的连接
 Statement: 操作数据库sql语句的对象
 ResultSet: 结果集或一张虚拟表">
-<meta property="og:updated_time" content="2017-03-23T13:27:19.275Z">
+<meta property="og:updated_time" content="2017-04-15T09:36:46.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA学习之JDBC">
 <meta name="twitter:description" content="JDBC概述
@@ -244,16 +244,22 @@ ResultSet: 结果集或一张虚拟表">
 
 <h1 id="开发一个JDBC程序（重要）"><a href="#开发一个JDBC程序（重要）" class="headerlink" title="开发一个JDBC程序（重要）"></a>开发一个JDBC程序（重要）</h1><ol>
 <li><p>创建数据库表，并向表中添加测试数据 </p>
-<p>create database day06;<br>use day06;</p>
-<p>create table users(</p>
-<pre><code>id int primary key auto_increment,
+<pre><code>&lt;--创建数据库--&gt;
+create database day06;
+use day06;
+&lt;--创建数据库表--&gt;
+create table users(
+id int primary key auto_increment,
 name varchar(40),
 password varchar(40),
 email varchar(60),
 birthday date
-</code></pre><p>)character set utf8 collate utf8_general_ci;</p>
-<p>insert into users(name,password,email,birthday) values(‘zs’,’123456’,’zs@sina.com’,’1980-12-04’);<br>insert into users(name,password,email,birthday) values(‘lisi’,’123456’,’lisi@sina.com’,’1981-12-04’);<br>insert into users(name,password,email,birthday) values(‘wangwu’,’123456’,’wangwu@sina.com’,’1979-12-04’);</p>
-</li>
+ )character set utf8 collate utf8_general_ci;
+&lt;--添加数据--&gt;
+insert into users(name,password,email,birthday) values(&apos;zs&apos;,&apos;123456&apos;,&apos;zs@sina.com&apos;,&apos;1980-12-04&apos;);
+insert into users(name,password,email,birthday) values(&apos;lisi&apos;,&apos;123456&apos;,&apos;lisi@sina.com&apos;,&apos;1981-12-04&apos;);
+insert into users(name,password,email,birthday) values(&apos;wangwu&apos;,&apos;123456&apos;,&apos;wangwu@sina.com&apos;,&apos;1979-12-04&apos;);
+</code></pre></li>
 <li><p>创建java project项目，添加数据库驱动（*.jar）</p>
 </li>
 <li><p>实现JDBC操作</p>
@@ -264,35 +270,37 @@ birthday date
 - 处理结果
 - 关闭资源
 </code></pre><p><strong>example:</strong></p>
-<p> public class demo01 {</p>
-<p> public static void main(String[] args) throws Exception{</p>
-<pre><code>// TODO Auto-generated method stub
-//1、注册驱动
-//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-//1.加载驱动
- Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
- //2、创建连接
-Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
-        //3、得到执行sql语句的Statement对象
-Statement stmt = conn.createStatement();
-        //4、执行sql语句，并返回结果
-String sql = &quot;select id,name,password,email,birthday from users&quot;;
-ResultSet rs = stmt.executeQuery(sql);
-        //5、处理结果
-while (rs.next()) {
-            System.out.println(rs.getObject(1));
-            System.out.println(rs.getObject(2));
-            System.out.println(rs.getObject(3));
-            System.out.println(rs.getObject(4));
-            System.out.println(rs.getObject(5));
-        }
-        //6关闭资源
-rs.close();
-stmt.close();
-conn.close();
-</code></pre><p> }</p>
-<p> }</p>
-</li>
+<pre><code>   public class demo01 {
+
+   public static void main(String[] args) throws Exception{
+ // TODO Auto-generated method stub
+ //1、注册驱动
+ //DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+ //1.加载驱动
+  Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+  //2、创建连接
+ Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
+         //3、得到执行sql语句的Statement对象
+ Statement stmt = conn.createStatement();
+         //4、执行sql语句，并返回结果
+ String sql = &quot;select id,name,password,email,birthday from users&quot;;
+ ResultSet rs = stmt.executeQuery(sql);
+         //5、处理结果
+ while (rs.next()) {
+             System.out.println(rs.getObject(1));
+             System.out.println(rs.getObject(2));
+             System.out.println(rs.getObject(3));
+             System.out.println(rs.getObject(4));
+             System.out.println(rs.getObject(5));
+         }
+         //6关闭资源
+ rs.close();
+ stmt.close();
+ conn.close();
+}
+
+}
+</code></pre></li>
 </ol>
 <h1 id="JDBC常用的类和接口详解"><a href="#JDBC常用的类和接口详解" class="headerlink" title="JDBC常用的类和接口详解"></a>JDBC常用的类和接口详解</h1><h2 id="java-sql-Drivermanager类-创建连接"><a href="#java-sql-Drivermanager类-创建连接" class="headerlink" title="java.sql.Drivermanager类 : 创建连接"></a>java.sql.Drivermanager类 : 创建连接</h2><ol>
 <li><p>注册驱动</p>
@@ -311,12 +319,12 @@ conn.close();
 
 getConnection(&quot;jdbc:mysql://localhost:3306/day06&quot;, &quot;root&quot;, &quot;root&quot;);
 
- URL:SUN公司与数据库厂商之间的一种协议。
- jdbc:mysql://localhost:3306/day06
- 协议 子协议          IP:端口号 数据库
+URL:SUN公司与数据库厂商之间的一种协议。
+jdbc:mysql://localhost:3306/day06
+协议 子协议          IP:端口号 数据库
 
- mysql: jdbc:mysql://localhost:3306/day14 或者 jdbc:mysql:///day14（默认本机连接）
- oracle: jdbc:oracle:thin:@localhost:1521:sid
+mysql: jdbc:mysql://localhost:3306/day14 或者 jdbc:mysql:///day14（默认本机连接）
+oracle: jdbc:oracle:thin:@localhost:1521:sid
 </code></pre></li>
 </ol>
 <pre><code>Properties info = new Properties();//要参考数据库文档
@@ -335,7 +343,7 @@ DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&am
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-03-23T13:27:19.275Z" itemprop="dateUpdated">2017年3月23日 21:27</time>
+    最后更新时间：<time datetime="2017-04-15T09:36:46.076Z" itemprop="dateUpdated">2017年4月15日 17:36</time>
 </span><br>
 
 

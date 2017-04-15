@@ -38,7 +38,7 @@ C3P0
 用JavaWeb服务器管理数据源：Tomcat">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/DBCP.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/C3P0.png">
-<meta property="og:updated_time" content="2017-04-02T14:00:27.895Z">
+<meta property="og:updated_time" content="2017-04-15T09:43:46.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA学习之常用的数据源配置">
 <meta name="twitter:description" content="常用的数据源配置：
@@ -519,29 +519,48 @@ public void testInsert(){
  maxIdle=&quot;10&quot;   
  maxWait=&quot;10000&quot;/&gt;      
 </code></pre><p>2)在项目的web.xml中加入资源引用：</p>
-<p>  <resource-ref><br>  <description>JNDI DataSource</description><br>  <res-ref-name>jndi/mybatis</res-ref-name><br>  <res-ref-type>javax.sql.DataSource</res-ref-type><br>   <res-auth>Container</res-auth><br>  </resource-ref>  </p>
-<p><em>其中res-ref-name值要和context.xml的name值一致。</em></p>
+<pre><code>&lt;resource-ref&gt;  
+&lt;description&gt;JNDI DataSource&lt;/description&gt;  
+&lt;res-ref-name&gt;jndi/mybatis&lt;/res-ref-name&gt;  
+&lt;res-ref-type&gt;javax.sql.DataSource&lt;/res-ref-type&gt;  
+&lt;res-auth&gt;Container&lt;/res-auth&gt;  
+&lt;/resource-ref&gt;  
+</code></pre><p><em>其中res-ref-name值要和context.xml的name值一致。</em></p>
 <p>3）jndi测试方法：</p>
-<p>  public void testJNDI() throws NamingException, SQLException{<br>  Context ctx = new InitialContext();<br>  DataSource ds = (DataSource) ctx.lookup(“java:comp/env/jndi/mybatis”);<br>  Connection conn = ds.getConnection();<br>  System.out.println(conn.isClosed());  </p>
-<p>  }  </p>
-<p>4）在jsp中调用加载jndi方式，不可以直接用main方法测试，必须通过启动容器从jsp中调用：</p>
-</li>
-</ul>
+<pre><code>public void testJNDI() throws NamingException, SQLException{  
+   Context ctx = new InitialContext();  
+   DataSource ds = (DataSource) ctx.lookup(&quot;java:comp/env/jndi/mybatis&quot;);  
+   Connection conn = ds.getConnection();  
+   System.out.println(conn.isClosed());  
+   }  
+</code></pre><p>4）在jsp中调用加载jndi方式，不可以直接用main方法测试，必须通过启动容器从jsp中调用：</p>
 <pre><code>TestPageAccessURL test = new TestPageAccessURL();  
 test.testJNDI();  
-</code></pre><ul>
+</code></pre></li>
+</ul>
+<ul>
 <li><p>（<strong>局部配置1</strong>）如果是在当前应用的META-INF中创建context.xml, 编写数据源，那么只有当前应用可以使用。</p>
 <p>1）在项目的META-INFO下面新建context.xml。加入：</p>
-<p>  &lt;?xml version=”1.0” encoding=”UTF-8”?&gt;  </p>
-  <context><br>  <resource name="jndi/mybatis" auth="Container" type="javax.sql.DataSource" driverclassname="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/appdb" username="root" password="123456" maxactive="20" maxidle="10" maxwait="10000"><br>  </resource></context>  
-
-<p>其他配置同第一种方式。</p>
+<pre><code> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;  
+  &lt;Context&gt;  
+   &lt;Resource name=&quot;jndi/mybatis&quot;   
+ auth=&quot;Container&quot;   
+ type=&quot;javax.sql.DataSource&quot;   
+ driverClassName=&quot;com.mysql.jdbc.Driver&quot;   
+ url=&quot;jdbc:mysql://localhost:3306/appdb&quot;   
+ username=&quot;root&quot;   
+ password=&quot;123456&quot;   
+ maxActive=&quot;20&quot;   
+ maxIdle=&quot;10&quot;   
+ maxWait=&quot;10000&quot;/&gt;      
+&lt;/Context&gt;  
+</code></pre><p>其他配置同第一种方式。</p>
 </li>
 </ul>
 <p><strong>局部配置2</strong>（不推荐）。</p>
 <p>1）在tomcat的server.xml的<host>标签内，添加：</host></p>
 <pre><code>&lt;Context path=&quot;/demo_jndi&quot; docBase=&quot;/demo_jndi&quot;&gt;  
- &lt;Resource  
+&lt;Resource  
  name=&quot;jndi/mybatis&quot;  
  type=&quot;javax.sql.DataSource&quot;  
  driverClassName=&quot;com.mysql.jdbc.Driver&quot;  
@@ -551,7 +570,7 @@ test.testJNDI();
  password=&quot;123456&quot;  
  url=&quot;jdbc:mysql://localhost:3306/appdb&quot;  
  maxActive=&quot;4&quot;/&gt;  
-&lt;/Context&gt;  
+ &lt;/Context&gt;  
 </code></pre><p>其他配置同第一种方式。</p>
 </the></excerpt>
         </div>
@@ -560,7 +579,7 @@ test.testJNDI();
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-04-02T14:00:27.895Z" itemprop="dateUpdated">2017年4月2日 22:00</time>
+    最后更新时间：<time datetime="2017-04-15T09:43:46.202Z" itemprop="dateUpdated">2017年4月15日 17:43</time>
 </span><br>
 
 
@@ -645,7 +664,14 @@ C3P0
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/15/JAVA学习之框架前述/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JAVA学习之框架前述</h4>
+      </a>
+    </div>
   
 
   

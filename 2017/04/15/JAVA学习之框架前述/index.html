@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/04/15/JAVA学习之框架前述/">
+    
+    
+    <title>JAVA学习之框架前述 | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,框架">
+    <meta name="description" content="本篇文章是对学习框架前的开题篇。
+
+内容为：
+
+框架概述
+三层架构
+控制器：MVC中的控制器
+案例中的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA学习之框架前述">
+<meta property="og:url" content="http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="本篇文章是对学习框架前的开题篇。
+
+内容为：
+
+框架概述
+三层架构
+控制器：MVC中的控制器
+案例中的问题">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/01Struts2.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/servlet.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/filter.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6%E6%A1%88%E4%BE%8B1.png">
+<meta property="og:updated_time" content="2017-04-15T10:11:31.293Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA学习之框架前述">
+<meta name="twitter:description" content="本篇文章是对学习框架前的开题篇。
+
+内容为：
+
+框架概述
+三层架构
+控制器：MVC中的控制器
+案例中的问题">
+<meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/01Struts2.png">
+    
+        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JAVA学习之框架前述</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JAVA学习之框架前述</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-15T09:50:03.000Z" itemprop="datePublished" class="page-time">
+  2017-04-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#框架概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">框架概述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三层架构"><span class="post-toc-number">2.</span> <span class="post-toc-text">三层架构</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#控制器：MVC中的控制器"><span class="post-toc-number">3.</span> <span class="post-toc-text">控制器：MVC中的控制器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MVC回顾"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">MVC回顾</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Servlet和Filter"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Servlet和Filter</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#案例中的问题"><span class="post-toc-number">4.</span> <span class="post-toc-text">案例中的问题</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-JAVA学习之框架前述"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JAVA学习之框架前述</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年04月15日 17:50" datetime="2017-04-15T09:50:03.000Z"  itemprop="datePublished">2017-04-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+<span>
+    <a href="/2017/04/15/JAVA学习之框架前述/#comments" class="ds-thread-count" data-thread-key="JAVA学习之框架前述" data-count-type="comments"></a>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<blockquote>
+<p>本篇文章是对学习框架前的开题篇。</p>
+</blockquote>
+<p>内容为：</p>
+<ul>
+<li>框架概述</li>
+<li>三层架构</li>
+<li>控制器：MVC中的控制器</li>
+<li>案例中的问题</li>
+</ul>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="框架概述"><a href="#框架概述" class="headerlink" title="框架概述"></a>框架概述</h1><p><strong>框架的意义与作用：</strong></p>
+<p>  所谓<code>框架</code>，就是<strong>把一些繁琐的重复性代码封装起来</strong>，使程序员在编码中把更多的经历放到业务需求的分析和理解上面。<br>  特点：封装了很多细节，程序员在使用的时候会非常简单。</p>
+<h1 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/01Struts2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<pre><code>表现层：M model V view C control
+业务层：service
+持久层：dao  data access object
+Struts2在三层架构中的位置是处于表现层。Struts2只是一个表现层框架。
+</code></pre><h1 id="控制器：MVC中的控制器"><a href="#控制器：MVC中的控制器" class="headerlink" title="控制器：MVC中的控制器"></a>控制器：MVC中的控制器</h1><h2 id="MVC回顾"><a href="#MVC回顾" class="headerlink" title="MVC回顾"></a>MVC回顾</h2><pre><code>M：Model 模型，封装数据。javabean
+V：view    视图，展示界面。jsp
+C：Controller 控制器，控制程序流程。Servlet
+</code></pre><h2 id="Servlet和Filter"><a href="#Servlet和Filter" class="headerlink" title="Servlet和Filter"></a>Servlet和Filter</h2><p><strong>Servlet:</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/servlet.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>Filter：</strong></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/filter.png" alt=""></p>
+<p><strong>总结：</strong></p>
+<p>Servlet能做的事情，过滤器也可以做到。并且过滤器比Servlet还多了一个放行的功能，因此过滤器比Servlet功能更为强大。<br>结论就是：过滤器同样也适合做控制器。</p>
+<h1 id="案例中的问题"><a href="#案例中的问题" class="headerlink" title="案例中的问题"></a>案例中的问题</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6%E6%A1%88%E4%BE%8B1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>规律：</strong></p>
+<pre><code>1. 获取请求正文，用户要做什么事情
+2. 根据不同的请求，做出不同的判断
+3. 执行具体的方法代码（*动作*）
+4. 转向页面，展示给用户
+</code></pre><p><strong>缺陷：</strong></p>
+<pre><code>1. 重复性劳动太多，具体的执行代码也有冗余代码。
+2. 到底要做什么全是硬编码，像用户要做什么事情，对应执行什么代码，可以写在配置文件中。
+3. 具体的代码方法放到了控制器中，过于臃肿。
+</code></pre></the></excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-04-15T10:11:31.293Z" itemprop="dateUpdated">2017年4月15日 18:11</time>
+</span><br>
+
+
+        转载请注明出处：<a href="/2017/04/15/JAVA学习之框架前述/" target="_blank" rel="external">http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/</a>
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/&title=《JAVA学习之框架前述》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/&title=《JAVA学习之框架前述》 — Terry_Tian's Code日志&source=
+
+
+本篇文章是对学习框架前的开题篇。
+
+内容为：
+
+框架概述
+三层架构
+控制器：MVC中的控制器
+案例中的问题
+" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之框架前述》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/15/JAVA学习之Struts2框架/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JAVA学习之Struts2框架</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/02/JAVA学习之常用的数据源配置/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JAVA学习之常用的数据源配置</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="JAVA学习之框架前述" data-title="JAVA学习之框架前述" data-url="http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry_Tian's Code日志 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/&title=《JAVA学习之框架前述》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/&title=《JAVA学习之框架前述》 — Terry_Tian's Code日志&source=
+
+
+本篇文章是对学习框架前的开题篇。
+
+内容为：
+
+框架概述
+三层架构
+控制器：MVC中的控制器
+案例中的问题
+" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之框架前述》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aS27DMAwFwNz/0u4B2jiPpFNA0mhluHXk8YIQP69XvK5f6/4/e/eT3x8tDAyMZRnX7brfbMJ791RzLwwMjAMY1VBYffXkOvnr2/sYGBgYt4z7V7kPnfchGAMDA6PKqB7pnr3GwMDASJLYyVGvF2S/kotjYGAsyMir7v9//ZX+BgYGxlKMa7Am+F4b4O2bYGBgbM2oBsG8MZDfTxhRMQ4DA2NTRtKATFoCeeLa+xwfRkAwMDC2ZuQHu97LVcttCWaUf2NgYCzIyLfPt5y3QvOBDwwMjBMY1cBXPT4maW31k5X7sRgYGIsz8vLWvDs6ORp++B0MDIytGXm7cdLarN4fTY5gYGBszcjL8XkDslf5a3ZiMTAwNmVUS//VMYskle3h/0hiMTAwDmPMQ2S1DFc9mEYBFwMDYztGr3CfBNZquf/hEhsGBsbijGSb3qt/LxB/6MFiYGAcwJg0D/JmQB5eC58SAwNjU0Y1RObHvl4YzT/BaxLpMTAwlmJUhyHy0a5nR8owMDBOZvQOcNXCXO/ZwkfBwMDYmjEPrNWQ3Sz6J+1VDAyMTRlXcVUT3TytHYV7DAyMrRlP5cG9slpvUGOEwcDAWJYxCaCT3ulTe2FgYJzDyEcrquNi5aw6frbc38DAwDiAkaej+VEyD7WjRiYGBsYxjGr7s9dhbLZCMTAwDmBMktheUO6V/N7ewcDA2JoxSh1b4bgapqOxMAwMjD0ZPz59UJaLL3ytAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.8');
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

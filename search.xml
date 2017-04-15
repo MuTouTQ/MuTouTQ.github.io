@@ -4,6 +4,296 @@
   
     
     <entry>
+      <title><![CDATA[JAVA学习之Struts2框架]]></title>
+      <url>http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="Struts2简介"><a href="#Struts2简介" class="headerlink" title="Struts2简介"></a>Struts2简介</h1><h2 id="Struts2概述"><a href="#Struts2概述" class="headerlink" title="Struts2概述"></a>Struts2概述</h2><p>Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。</p>
+<h2 id="Struts2的来历"><a href="#Struts2的来历" class="headerlink" title="Struts2的来历"></a>Struts2的来历</h2><p><strong>Struts1：</strong>也是apache开发的一套mvc的开源框架。在2005年之前非常流行。</p>
+<p> 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。</p>
+<p><strong>Struts2：</strong>在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。<em>里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。</em></p>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="搭建Struts2开发环境"><a href="#搭建Struts2开发环境" class="headerlink" title="搭建Struts2开发环境"></a>搭建Struts2开发环境</h1><h2 id="下载Struts2开发包"><a href="#下载Struts2开发包" class="headerlink" title="下载Struts2开发包"></a>下载Struts2开发包</h2><p><a href="http://struts.apache.org" target="_blank" rel="external">官网：http://struts.apache.org</a></p>
+<p>由于国内网络比较好，所以说可能有时候打不开，可以百度一下，下载一份。</p>
+<h2 id="开发包目录结构"><a href="#开发包目录结构" class="headerlink" title="开发包目录结构"></a>开发包目录结构</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%BC%80%E5%8F%91%E5%8C%85%E7%9B%AE%E5%BD%951.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h2><h3 id="拷贝必要jar包到classpath中"><a href="#拷贝必要jar包到classpath中" class="headerlink" title="拷贝必要jar包到classpath中"></a>拷贝必要jar包到classpath中</h3><p>   <img src="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6jar%E5%8C%851.png" alt=""></p>
+<p>   <strong>拷贝哪些jar包？</strong></p>
+<p>   找到Struts2自带的例子中，struts-blank的war包，在它的<code>\WEB-INF\lib</code>目录下的jar包全拷贝。</p>
+<h3 id="建立Struts2的配置文件"><a href="#建立Struts2的配置文件" class="headerlink" title="建立Struts2的配置文件"></a>建立Struts2的配置文件</h3><p>  at the top of classpath（在最顶层的构建路径）,建立一个默认名称为<code>struts.xml</code>的配置文件。</p>
+<p>  struts.xml </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC
+&quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+ &quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+&lt;struts&gt;
+
+&lt;/struts&gt;
+</code></pre><p>   <strong>注意：</strong></p>
+<ul>
+<li>文件名大小写。</li>
+<li>创建位置。</li>
+<li>该名称允许修改，但是我们一般不改。</li>
+</ul>
+<h3 id="配置控制器"><a href="#配置控制器" class="headerlink" title="配置控制器"></a>配置控制器</h3><p>a、配置位置：在web.xml中</p>
+<p>b、配置什么： struts2已经写好了的一个过滤器。</p>
+<p><strong>结论：</strong></p>
+<p>struts2比struts1优秀的一个体现就是，它用了更为强大的<code>过滤器</code>作为控制器了。</p>
+<pre><code>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;3.0&quot;&gt;
+&lt;display-name&gt;Struts2Template&lt;/display-name&gt;
+ &lt;!-- 配置Struts核心控制器，就是一个过滤器 --&gt;
+ &lt;filter&gt;
+&lt;filter-name&gt;struts2&lt;/filter-name&gt;
+&lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+&lt;filter-name&gt;struts2&lt;/filter-name&gt;
+&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+&lt;welcome-file-list&gt;
+  &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+&lt;/welcome-file-list&gt;
+&lt;/web-app&gt;
+</code></pre><h3 id="验证是否成功"><a href="#验证是否成功" class="headerlink" title="验证是否成功"></a>验证是否成功</h3><p>部署应用，启动Tomcat，不报错表示搭建成功。</p>
+<h1 id="第一个Struts2案例"><a href="#第一个Struts2案例" class="headerlink" title="第一个Struts2案例"></a>第一个Struts2案例</h1><blockquote>
+<p>以下步骤是日后实际开发中经常重复的。</p>
+</blockquote>
+<h2 id="建立一个jsp文件"><a href="#建立一个jsp文件" class="headerlink" title="建立一个jsp文件"></a>建立一个jsp文件</h2><p><em>index.jsp</em></p>
+<pre><code>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+&lt;title&gt;Struts入门案例&lt;/title&gt;
+  &lt;/head&gt; 
+ &lt;body&gt;
+&lt;a href=&quot;${pageContext.request.contextPath}/hello.action&quot;&gt;访问Struts的第一个入门案例&lt;/a&gt;
+&lt;a href=&quot;${pageContext.request.contextPath}/hello&quot;&gt;访问Struts的第一个入门案例&lt;/a&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="在struts-xml文件中配置"><a href="#在struts-xml文件中配置" class="headerlink" title="在struts.xml文件中配置"></a>在struts.xml文件中配置</h2><p><em>struts.xml</em></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC
+&quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+&quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+&lt;struts&gt;
+  &lt;package name=&quot;p1&quot; extends=&quot;struts-default&quot; &gt;
+  &lt;!-- 
+    name:jsp对应的请求地址；
+    class:指定一个动作类，在这里也就是给hello指定一个动作类
+    method: 对应hello要执行的方法。
+   --&gt;
+ &lt;action name=&quot;hello&quot; class=&quot;cn.terry.web.action.HelloAction&quot; method=&quot;sayHello&quot;&gt;
+    &lt;!-- 配置结果视图 --&gt;
+   &lt;result name=&quot;success&quot;&gt;/success.jsp&lt;/result&gt;
+ &lt;/action&gt;
+  &lt;/package&gt;
+&lt;/struts&gt;
+</code></pre><h2 id="建立动作类和动作方法"><a href="#建立动作类和动作方法" class="headerlink" title="建立动作类和动作方法"></a>建立动作类和动作方法</h2><p><em>HelloAction.java</em></p>
+<pre><code> package cn.terry.web.action;
+
+ public class HelloAction {//动作类
+
+/**
+ * 在动作类中的指定的动作方法
+ * 动作方法的书写要求：
+ *         1、都是public的
+ *         2、返回值必须是一个String
+ *         3、必须没有参数
+ * @return
+ */
+public String sayHello(){
+    System.out.println(&quot;HelloAction的sayHello方法执行了&quot;);
+    return &quot;success&quot;;//与配置文件中result的name取值相对应
+}
+}
+</code></pre><h2 id="结果视图页面"><a href="#结果视图页面" class="headerlink" title="结果视图页面"></a>结果视图页面</h2><p><em>success.jsp</em></p>
+<pre><code>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+&lt;title&gt;title&lt;/title&gt;
+
+&lt;meta http-equiv=&quot;pragma&quot; content=&quot;no-cache&quot;&gt;
+&lt;meta http-equiv=&quot;cache-control&quot; content=&quot;no-cache&quot;&gt;
+&lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt;
+&lt;!--
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;
+ --&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+操作成功
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="测试："><a href="#测试：" class="headerlink" title="测试："></a>测试：</h2><p>只要没有错误，这里就可以得到自己想要的结果。</p>
+<h2 id="关于struts-xml没有代码提示的问题"><a href="#关于struts-xml没有代码提示的问题" class="headerlink" title="关于struts.xml没有代码提示的问题"></a>关于struts.xml没有代码提示的问题</h2><p>分析原因：没有找到对应的dtd约束文件。</p>
+<p>解决办法：</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/dtd1.png" alt=""></p>
+<p>在网上找到struts的.dtd包，放到如图目录中，这个包在网上找就可以。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/dtd2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>    
+<p>ok就可以了。                    </p>
+<h2 id="第一个案例的执行过程"><a href="#第一个案例的执行过程" class="headerlink" title="第一个案例的执行过程"></a>第一个案例的执行过程</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h1 id="Struts2的配置文件"><a href="#Struts2的配置文件" class="headerlink" title="Struts2的配置文件"></a>Struts2的配置文件</h1><h2 id="加载时机："><a href="#加载时机：" class="headerlink" title="加载时机："></a>加载时机：</h2><p>当应用被tomcat加载的时候，struts2的配置文件就已经被加载过了。</p>
+<h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><p><strong>加载顺序：</strong>default.properties——struts-default.xml——plugins配置——struts.xml——struts.properties——web.xml</p>
+<table><br><tr><td>顺序</td><td>配置文件名</td><td>所在位置</td><td>说明</td></tr><br><tr><td>1</td><td>default.properties</td><td>struts2-core-2.3.15.3.jar\org\apache\struts2</td><td>    不能修改</td></tr><br><tr><td>2</td><td>struts-default.xml</td><td>struts2-core-2.3.15.3.jar</td><td>    不能修改</td></tr><br><tr><td>3</td><td>strtuts-plugin.xml</td><td>在struts2提供的插件jar包中</td><td>    不能修改</td></tr><br><tr><td>4</td><td>struts.xml</td><td>我们的应用中</td><td>    我们修改的：推荐</td></tr><br><tr><td>5</td><td>struts.properties</td><td>我们的应用中</td><td>    我们修改的</td></tr><br><tr><td>6</td><td>web.xml</td><td>我们的应用中</td><td>    我们修改的，可以给过滤器配置参数</td></tr><br></table>
+
+<p><strong>注意：</strong></p>
+<p>1、Struts2提供了两种配置的方式。一种是key=value的方式，即使用.properties文件。另一种是xml文件配置。<code>我们推荐使用xml文件（它能描述层级关系）。</code></p>
+<p>2、当多个配置文件中，有相同的参数，后面的会把前面的值给覆盖了。</p>
+<h1 id="Struts2框架提供的常量"><a href="#Struts2框架提供的常量" class="headerlink" title="Struts2框架提供的常量"></a>Struts2框架提供的常量</h1><h2 id="常用的常量"><a href="#常用的常量" class="headerlink" title="常用的常量"></a>常用的常量</h2><p>常量定义在了default.properties配置文件中，体现形式都是key=value。所有的struts2应用都会用到这些常量。</p>
+<p>常用的：</p>
+<table><br><tr><td>常量名</td><td>常量值</td><td>说明</td></tr><br><tr><td>struts.i18n.encoding</td><td>UTF-8</td><td>应用中使用的编码</td></tr><br><tr><td>struts.objectFactory.spring.autoWire</td><td>name</td><td>和spring框架整合有关</td></tr><br><tr><td>struts.multipart.parser    </td><td>jakarta</td><td>    指定文件上传用的组件</td></tr><br><tr><td>struts.multipart.maxSize</td><td>    2097152    </td><td>文件上传总文件大小限制：2M</td></tr><br><tr><td>struts.action.extension</td><td>    action</td><td>    能进入Struts2框架内部的url地址后缀名。多个值用逗号分隔</td></tr><br><tr><td>struts.enable.DynamicMethodInvocation</td><td>    false</td><td>    是否允许动态方法调用</td></tr><br><tr><td>struts.devMode</td><td>    false</td><td>    是否是开发模式。开发模式：改了配置文件，不需要重启。输出更多的错误信息。开发阶段建议为true。</td></tr><br><tr><td>struts.ui.theme</td><td>    xhtml</td><td>    页面展示用的主题</td></tr></table>
+
+<h2 id="在struts-xml中覆盖常量"><a href="#在struts-xml中覆盖常量" class="headerlink" title="在struts.xml中覆盖常量"></a>在struts.xml中覆盖常量</h2><p>使用<code>&lt;constant name=&quot;&quot; value=&quot;&quot;&gt;&lt;/constant&gt;</code>元素进行覆盖</p>
+<p>例如：</p>
+<pre><code>&lt;!-- 修改struts中默认的后缀名 --&gt;
+&lt;constant name=&quot;struts.action.extension&quot; value=&quot;do&quot;&gt;&lt;/constant&gt;
+</code></pre><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts%E8%A6%86%E7%9B%96.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="创建struts-properties文件覆盖"><a href="#创建struts-properties文件覆盖" class="headerlink" title="创建struts.properties文件覆盖"></a>创建struts.properties文件覆盖</h2><p>在应用的构建路径中创建一个struts.properties的文件。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/pro%E8%A6%86%E7%9B%96.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> JAVA </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+            <tag> 框架 </tag>
+            
+            <tag> Struts2 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JAVA学习之框架前述]]></title>
+      <url>http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%A1%86%E6%9E%B6%E5%89%8D%E8%BF%B0/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<blockquote>
+<p>本篇文章是对学习框架前的开题篇。</p>
+</blockquote>
+<p>内容为：</p>
+<ul>
+<li>框架概述</li>
+<li>三层架构</li>
+<li>控制器：MVC中的控制器</li>
+<li>案例中的问题</li>
+</ul>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="框架概述"><a href="#框架概述" class="headerlink" title="框架概述"></a>框架概述</h1><p><strong>框架的意义与作用：</strong></p>
+<p>  所谓<code>框架</code>，就是<strong>把一些繁琐的重复性代码封装起来</strong>，使程序员在编码中把更多的经历放到业务需求的分析和理解上面。<br>  特点：封装了很多细节，程序员在使用的时候会非常简单。</p>
+<h1 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/01Struts2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<pre><code>表现层：M model V view C control
+业务层：service
+持久层：dao  data access object
+Struts2在三层架构中的位置是处于表现层。Struts2只是一个表现层框架。
+</code></pre><h1 id="控制器：MVC中的控制器"><a href="#控制器：MVC中的控制器" class="headerlink" title="控制器：MVC中的控制器"></a>控制器：MVC中的控制器</h1><h2 id="MVC回顾"><a href="#MVC回顾" class="headerlink" title="MVC回顾"></a>MVC回顾</h2><pre><code>M：Model 模型，封装数据。javabean
+V：view    视图，展示界面。jsp
+C：Controller 控制器，控制程序流程。Servlet
+</code></pre><h2 id="Servlet和Filter"><a href="#Servlet和Filter" class="headerlink" title="Servlet和Filter"></a>Servlet和Filter</h2><p><strong>Servlet:</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/servlet.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>Filter：</strong></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/filter.png" alt=""></p>
+<p><strong>总结：</strong></p>
+<p>Servlet能做的事情，过滤器也可以做到。并且过滤器比Servlet还多了一个放行的功能，因此过滤器比Servlet功能更为强大。<br>结论就是：过滤器同样也适合做控制器。</p>
+<h1 id="案例中的问题"><a href="#案例中的问题" class="headerlink" title="案例中的问题"></a>案例中的问题</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6%E6%A1%88%E4%BE%8B1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>规律：</strong></p>
+<pre><code>1. 获取请求正文，用户要做什么事情
+2. 根据不同的请求，做出不同的判断
+3. 执行具体的方法代码（*动作*）
+4. 转向页面，展示给用户
+</code></pre><p><strong>缺陷：</strong></p>
+<pre><code>1. 重复性劳动太多，具体的执行代码也有冗余代码。
+2. 到底要做什么全是硬编码，像用户要做什么事情，对应执行什么代码，可以写在配置文件中。
+3. 具体的代码方法放到了控制器中，过于臃肿。
+</code></pre></the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> JAVA </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+            <tag> 框架 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JAVA学习之常用的数据源配置]]></title>
       <url>http://mutouspace.cn/2017/04/02/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -311,29 +601,48 @@ public void testInsert(){
  maxIdle=&quot;10&quot;   
  maxWait=&quot;10000&quot;/&gt;      
 </code></pre><p>2)在项目的web.xml中加入资源引用：</p>
-<p>  <resource-ref><br>  <description>JNDI DataSource</description><br>  <res-ref-name>jndi/mybatis</res-ref-name><br>  <res-ref-type>javax.sql.DataSource</res-ref-type><br>   <res-auth>Container</res-auth><br>  </resource-ref>  </p>
-<p><em>其中res-ref-name值要和context.xml的name值一致。</em></p>
+<pre><code>&lt;resource-ref&gt;  
+&lt;description&gt;JNDI DataSource&lt;/description&gt;  
+&lt;res-ref-name&gt;jndi/mybatis&lt;/res-ref-name&gt;  
+&lt;res-ref-type&gt;javax.sql.DataSource&lt;/res-ref-type&gt;  
+&lt;res-auth&gt;Container&lt;/res-auth&gt;  
+&lt;/resource-ref&gt;  
+</code></pre><p><em>其中res-ref-name值要和context.xml的name值一致。</em></p>
 <p>3）jndi测试方法：</p>
-<p>  public void testJNDI() throws NamingException, SQLException{<br>  Context ctx = new InitialContext();<br>  DataSource ds = (DataSource) ctx.lookup(“java:comp/env/jndi/mybatis”);<br>  Connection conn = ds.getConnection();<br>  System.out.println(conn.isClosed());  </p>
-<p>  }  </p>
-<p>4）在jsp中调用加载jndi方式，不可以直接用main方法测试，必须通过启动容器从jsp中调用：</p>
-</li>
-</ul>
+<pre><code>public void testJNDI() throws NamingException, SQLException{  
+   Context ctx = new InitialContext();  
+   DataSource ds = (DataSource) ctx.lookup(&quot;java:comp/env/jndi/mybatis&quot;);  
+   Connection conn = ds.getConnection();  
+   System.out.println(conn.isClosed());  
+   }  
+</code></pre><p>4）在jsp中调用加载jndi方式，不可以直接用main方法测试，必须通过启动容器从jsp中调用：</p>
 <pre><code>TestPageAccessURL test = new TestPageAccessURL();  
 test.testJNDI();  
-</code></pre><ul>
+</code></pre></li>
+</ul>
+<ul>
 <li><p>（<strong>局部配置1</strong>）如果是在当前应用的META-INF中创建context.xml, 编写数据源，那么只有当前应用可以使用。</p>
 <p>1）在项目的META-INFO下面新建context.xml。加入：</p>
-<p>  &lt;?xml version=”1.0” encoding=”UTF-8”?&gt;  </p>
-  <context><br>  <resource name="jndi/mybatis" auth="Container" type="javax.sql.DataSource" driverclassname="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/appdb" username="root" password="123456" maxactive="20" maxidle="10" maxwait="10000"><br>  </resource></context>  
-
-<p>其他配置同第一种方式。</p>
+<pre><code> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;  
+  &lt;Context&gt;  
+   &lt;Resource name=&quot;jndi/mybatis&quot;   
+ auth=&quot;Container&quot;   
+ type=&quot;javax.sql.DataSource&quot;   
+ driverClassName=&quot;com.mysql.jdbc.Driver&quot;   
+ url=&quot;jdbc:mysql://localhost:3306/appdb&quot;   
+ username=&quot;root&quot;   
+ password=&quot;123456&quot;   
+ maxActive=&quot;20&quot;   
+ maxIdle=&quot;10&quot;   
+ maxWait=&quot;10000&quot;/&gt;      
+&lt;/Context&gt;  
+</code></pre><p>其他配置同第一种方式。</p>
 </li>
 </ul>
 <p><strong>局部配置2</strong>（不推荐）。</p>
 <p>1）在tomcat的server.xml的<host>标签内，添加：</host></p>
 <pre><code>&lt;Context path=&quot;/demo_jndi&quot; docBase=&quot;/demo_jndi&quot;&gt;  
- &lt;Resource  
+&lt;Resource  
  name=&quot;jndi/mybatis&quot;  
  type=&quot;javax.sql.DataSource&quot;  
  driverClassName=&quot;com.mysql.jdbc.Driver&quot;  
@@ -343,7 +652,7 @@ test.testJNDI();
  password=&quot;123456&quot;  
  url=&quot;jdbc:mysql://localhost:3306/appdb&quot;  
  maxActive=&quot;4&quot;/&gt;  
-&lt;/Context&gt;  
+ &lt;/Context&gt;  
 </code></pre><p>其他配置同第一种方式。</p>
 </the></excerpt>]]></content>
       
@@ -386,7 +695,7 @@ test.testJNDI();
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h1 id="JSP-语法"><a href="#JSP-语法" class="headerlink" title="JSP 语法"></a>JSP 语法</h1><blockquote>
+<h1 id="JSP-语法-3、6、9"><a href="#JSP-语法-3、6、9" class="headerlink" title="JSP 语法(3、6、9)"></a>JSP 语法(3、6、9)</h1><blockquote>
 <p>接下来就是JSP的3（jsp的3个指令）6（jsp的6个动作）9（jsp的9个内置对象）了，简称：三六九。</p>
 </blockquote>
 <h2 id="JSP的脚本"><a href="#JSP的脚本" class="headerlink" title="JSP的脚本"></a>JSP的脚本</h2><ol>
@@ -424,7 +733,9 @@ out.println(&quot;Your IP address is &quot; + request.getRemoteAddr());
 </code></pre><h2 id="JSP-指令（3）"><a href="#JSP-指令（3）" class="headerlink" title="JSP 指令（3）"></a>JSP 指令（3）</h2><p>JSP中的三种指令标签：</p>
 <table><br><tr><td>指令</td><td>    描述</td></tr><br><tr><td>  page  </td><td>    定义网页依赖属性，比如脚本语言、error页面、缓存需求等等</td></tr><br><tr><td>  include  </td><td>    包含其他文件</td></tr><br><tr><td> taglib  </td><td>    引入标签库的定义</td></tr><br></table>
 
-<h3 id="Page指令"><a href="#Page指令" class="headerlink" title="Page指令"></a>Page指令</h3><p>Page指令为容器提供当前页面的使用说明。一个JSP页面可以包含多个page指令。</p>
+<h3 id="Page指令"><a href="#Page指令" class="headerlink" title="Page指令"></a>Page指令</h3><blockquote>
+<p>Page指令为容器提供当前页面的使用说明。一个JSP页面可以包含多个page指令。</p>
+</blockquote>
 <p>Page指令的语法格式：</p>
 <pre><code>&lt;%@ 指令名称 属性1=“属性值1” 属性2=“属性值2”。。。%&gt;
 或者：
@@ -436,16 +747,51 @@ out.println(&quot;Your IP address is &quot; + request.getRemoteAddr());
 &lt;%@ page language=&quot;java&quot; %&gt;
 &lt;%@ page import=&quot;java.util.*&quot; %&gt;
 </code></pre><p>与Page指令相关的属性：</p>
-<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>buffer</td><td>    JSP中有javax.servlet.jsp.JspWriter输出字符流。指定out对象使用缓冲区的大小,默认是8kb.</td></tr><br><tr><td>autoFlush</td><td>    控制out对象的 缓存区</td></tr><br><tr><td>contentType</td><td>    指定当前JSP页面的MIME类型和字符编码，等同于response.setContextType(“text/html;charset=utf-8”);</td></tr><br><tr><td>errorPage</td><td>    指定当JSP页面发生异常时需要转向的错误处理页面</td></tr><br><tr><td>isErrorPage</td><td>    指定当前页面是否可以作为另一个JSP页面的错误处理页面，默认是false。</td></tr><br><tr><td>extends</td><td>    指定servlet从哪一个类继承</td></tr><br><tr><td>import</td><td>    导入要使用的Java类,和java代码中的import是一样的</td></tr><br><tr><td>info</td><td>    定义JSP页面的描述信息</td></tr><br><tr><td>isThreadSafe</td><td>    指定对JSP页面的访问是否为线程安全</td></tr><br><tr><td>language</td><td>    定义JSP页面所用的脚本语言，默认是Java</td></tr><br><tr><td>session</td><td>    指定JSP页面是否使用session,默认值是true</td></tr><br><tr><td>isELIgnored</td><td>    指定是否执行EL表达式</td></tr><br><tr><td>isScriptingEnabled</td><td>    确定脚本元素能否被使用</td></tr><br><tr><td>pageEncoding</td><td>    告诉JSP引擎要翻译的文件使用的编码</td></tr><br></table><br>注：<br><br>1. errorPage：errorPage=”/uri” 如果写“/”则代表当前应用的目录下，绝对路径。<br>如果不写“/”则代表相对路径。<br><br>### include指令 ###<br><br>&gt; JSP可以通过include指令来包含其他文件。被包含的文件可以是JSP文件、HTML文件或文本文件。包含的文件就好像是该JSP文件的一部分，会被同时编译执行。<br><br>静态包含：把其它资源包含到当前页面中。<br><br>    &lt;%@ include file=”/include/header.jsp” %&gt;<br><br>动态包含：<br><br>    <jsp:include page="/include/header.jsp"></jsp:include><br><br>两者的区别：翻译的时间段不同<br><br>前者：在翻译时就把两个文件合并<br><br>后者：不会合并文件，当代码执行到include时，才包含另一个文件的内容。<br><br>原则：能用静的就不用动的。<br><br>### taglib指令 ###<br><br><strong>作用：</strong>在JSP页面中导入JSTL标签库。替换jsp中的java代码片段。<br><br>    &lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core" target="_blank" rel="external">http://java.sun.com/jsp/jstl/core</a>“ prefix=”c” %&gt;<br><br>### JSP 动作元素（6） ###<br><br>&gt;  使用标签的形式来表示一段java代码。<br><br>- <jsp:include> 动态包含<br>- <jsp:forward> 请求转发<br>- <jsp:param> 设置请求参数<br>- <jsp:usebean> 创建一个对象<br>- <jsp:setproperty> 给指定的对象属性赋值<br>- <jsp:getproperty> 取出指定对象的属性值<br><br><br> 1. <jsp:include>动作元素<br><br><jsp:include>动作元素用来包含静态和动态的文件。该动作把指定文件插入正在生成的页面。<br><br>语法格式如下：<br><br>    <jsp:include page="相对 URL 地址" flush="true"><br><table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>page</td><td>    包含在页面中的相对URL地址。</td></tr><br><tr><td>flush</td><td>    布尔属性，定义在包含资源前是否刷新缓存区。</td></tr><br></table>
+<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>buffer</td><td>    JSP中有javax.servlet.jsp.JspWriter输出字符流。指定out对象使用缓冲区的大小,默认是8kb.</td></tr><br><tr><td>autoFlush</td><td>    控制out对象的 缓存区</td></tr><br><tr><td>contentType</td><td>    指定当前JSP页面的MIME类型和字符编码，等同于response.setContextType(“text/html;charset=utf-8”);</td></tr><br><tr><td>errorPage</td><td>    指定当JSP页面发生异常时需要转向的错误处理页面</td></tr><br><tr><td>isErrorPage</td><td>    指定当前页面是否可以作为另一个JSP页面的错误处理页面，默认是false。</td></tr><br><tr><td>extends</td><td>    指定servlet从哪一个类继承</td></tr><br><tr><td>import</td><td>    导入要使用的Java类,和java代码中的import是一样的</td></tr><br><tr><td>info</td><td>    定义JSP页面的描述信息</td></tr><br><tr><td>isThreadSafe</td><td>    指定对JSP页面的访问是否为线程安全</td></tr><br><tr><td>language</td><td>    定义JSP页面所用的脚本语言，默认是Java</td></tr><br><tr><td>session</td><td>    指定JSP页面是否使用session,默认值是true</td></tr><br><tr><td>isELIgnored</td><td>    指定是否执行EL表达式</td></tr><br><tr><td>isScriptingEnabled</td><td>    确定脚本元素能否被使用</td></tr><br><tr><td>pageEncoding</td><td>    告诉JSP引擎要翻译的文件使用的编码</td></tr><br></table>
+
+<p> <strong>注：</strong></p>
+<ol>
+<li>errorPage：errorPage=”/uri” 如果写“/”则代表<em>当前应用</em>的目录下，<em>绝对路径</em>。<br>如果不写“/”则代表<em>相对路径</em>。</li>
+</ol>
+<h3 id="include指令"><a href="#include指令" class="headerlink" title="include指令"></a>include指令</h3><blockquote>
+<p>JSP可以通过include指令来包含其他文件。被包含的文件可以是JSP文件、HTML文件或文本文件。包含的文件就好像是该JSP文件的一部分，会被同时编译执行。</p>
+</blockquote>
+<p>静态包含：把其它资源包含到当前页面中。</p>
+<pre><code>&lt;%@ include file=&quot;/include/header.jsp&quot; %&gt;
+</code></pre><p>动态包含：</p>
+<pre><code>&lt;jsp:include page=&quot;/include/header.jsp&quot;&gt;&lt;/jsp:include&gt;
+</code></pre><p>两者的区别：翻译的时间段不同</p>
+<p>前者：在翻译时就把两个文件合并</p>
+<p>后者：不会合并文件，当代码执行到include时，才包含另一个文件的内容。</p>
+<p>原则：能用静的就不用动的。</p>
+<h3 id="taglib指令"><a href="#taglib指令" class="headerlink" title="taglib指令"></a>taglib指令</h3><p><strong>作用：</strong>在JSP页面中导入JSTL标签库。替换jsp中的java代码片段。</p>
+<pre><code>&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt; 
+</code></pre><h2 id="JSP-动作元素（6）"><a href="#JSP-动作元素（6）" class="headerlink" title="JSP 动作元素（6）"></a>JSP 动作元素（6）</h2><blockquote>
+<p> 使用标签的形式来表示一段java代码。</p>
+</blockquote>
+<ul>
+<li><code>&lt;jsp:include &gt;</code> 动态包含 </li>
+<li><code>&lt;jsp:forward&gt;</code> 请求转发 </li>
+<li><code>&lt;jsp:param&gt;</code> 设置请求参数</li>
+<li><code>&lt;jsp:useBean&gt;</code> 创建一个对象</li>
+<li><code>&lt;jsp:setProperty&gt;</code> 给指定的对象属性赋值</li>
+<li><code>&lt;jsp:getProperty&gt;</code> 取出指定对象的属性值</li>
+</ul>
+<h3 id="动作元素-jsp-include"><a href="#动作元素-jsp-include" class="headerlink" title="动作元素(jsp:include)"></a>动作元素(jsp:include)</h3><blockquote>
+<p><jsp:include>动作元素用来包含静态和动态的文件。该动作把指定文件插入正在生成的页面。</jsp:include></p>
+</blockquote>
+<p>语法格式如下：</p>
+<pre><code>&lt;jsp:include page=&quot;相对 URL 地址&quot; flush=&quot;true&quot; /&gt;
+</code></pre><table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>page</td><td>    包含在页面中的相对URL地址。</td></tr><br><tr><td>flush</td><td>    布尔属性，定义在包含资源前是否刷新缓存区。</td></tr><br></table>
 
 <p><strong>实例:</strong></p>
-<p>date.jsp文件代码：</p>
+<p><em>date.jsp文件代码：</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;p&gt;
    今天的日期是: &lt;%= (new java.util.Date()).toLocaleString()%&gt;
 &lt;/p&gt;
-</code></pre><p>main.jsp文件代码：</p>
+</code></pre><p><em>main.jsp文件代码：</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;!DOCTYPE html&gt;
@@ -461,30 +807,27 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><ol>
-<li><jsp:usebean>动作元素</jsp:usebean></li>
-</ol>
-<p>jsp:useBean动作最简单的语法为：</p>
-<pre><code>&lt;jsp:useBean id=&quot;name&quot; class=&quot;package.class&quot; /&gt;
-
+</code></pre><h3 id="动作元素-jsp-useBean"><a href="#动作元素-jsp-useBean" class="headerlink" title="动作元素(jsp:useBean)"></a>动作元素(jsp:useBean)</h3><p>jsp:useBean动作最简单的语法为：</p>
+<pre><code> &lt;!-- 模板 --&gt;
+&lt;jsp:useBean id=&quot;name&quot; class=&quot;package.class&quot; /&gt;
+ &lt;!-- 示例 --&gt;
 &lt;jsp:useBean id=&quot;stu1&quot; class=&quot;com.itheima.entity.Student&quot;&gt;&lt;/jsp:useBean&gt;
-</code></pre><p>注：</p>
+</code></pre><p><strong>注：</strong></p>
 <ul>
 <li>class中填写的是Bean类的完整路径</li>
 <li>id 为定义的的Bean变量名，如 Bean b = new Bean()中的b;</li>
 </ul>
-<ol>
-<li><jsp:setproperty>动作元素</jsp:setproperty></li>
-</ol>
-<blockquote>
+<h3 id="动作元素-jsp-setProperty"><a href="#动作元素-jsp-setProperty" class="headerlink" title="动作元素(jsp:setProperty)"></a>动作元素(jsp:setProperty)</h3><blockquote>
 <p>jsp:setProperty用来设置已经实例化的Bean对象的属性.</p>
 </blockquote>
 <pre><code>&lt;jsp:setProperty property=&quot;name&quot; name=&quot;stu1&quot; value=&quot;jerry&quot;/&gt;
 </code></pre><p>jsp:setProperty动作有下面四个属性,如下表：</p>
 <table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>name</td><td>    name属性是必需的。它表示要设置属性的是哪个Bean。</td></tr><br><tr><td>property</td><td>    property属性是必需的。它表示要设置哪个属性。有一个特殊用法：如果property的值是”*”，表示所有名字和Bean属性名字匹配的请求参数都将被传递给相应的属性set方法。</td></tr><br><tr><td>value</td><td>    value 属性是可选的。该属性用来指定Bean属性的值。字符串数据会在目标类中通过标准的valueOf方法自动转换成数字、boolean、Boolean、 byte、Byte、char、Character。例如，boolean和Boolean类型的属性值（比如”true”）通过 Boolean.valueOf转换，int和Integer类型的属性值（比如”42”）通过Integer.valueOf转换。 　　value和param不能同时使用，但可以使用其中任意一个。</td></tr><br><tr><td>param</td><td>    param 是可选的。它指定用哪个请求参数作为Bean属性的值。如果当前请求没有参数，则什么事情也不做，系统不会把null传递给Bean属性的set方法。因此，你可以让Bean自己提供默认属性值，只有当请求参数明确指定了新值时才修改默认属性值。</td></tr><br></table>
 
-<p>4.<jsp:getproperty>动作元素</jsp:getproperty></p>
-<p>jsp:getProperty动作提取指定Bean属性的值，转换成字符串，然后输出。语法格式如下：</p>
+<h3 id="动作元素-jsp-getProperty"><a href="#动作元素-jsp-getProperty" class="headerlink" title="动作元素(jsp:getProperty)"></a>动作元素(jsp:getProperty)</h3><blockquote>
+<p>jsp:getProperty动作提取指定Bean属性的值，转换成字符串，然后输出。</p>
+</blockquote>
+<p>语法格式如下：</p>
 <pre><code>&lt;jsp:getProperty property=&quot;name&quot; name=&quot;stu1&quot;/&gt;
 </code></pre><p>下表是与getProperty相关联的属性：</p>
 <table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>name</td><td>    要检索的Bean属性名称。Bean必须已定义。</td></tr><br><tr><td>property</td><td>    表示要提取Bean属性的值</td></tr><br></table>
@@ -513,14 +856,13 @@ value=&quot;教程...&quot; /&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>5.<jsp:forward> 动作元素</jsp:forward></p>
-<blockquote>
+</code></pre><h3 id="动作元素-jsp-forward"><a href="#动作元素-jsp-forward" class="headerlink" title="动作元素(jsp:forward)"></a>动作元素(jsp:forward)</h3><blockquote>
 <p>jsp:forward动作把请求转到另外的页面。jsp:forward标记只有一个属性page。</p>
 </blockquote>
 <p>语法格式如下所示：</p>
 <pre><code>&lt;jsp:forward page=&quot;相对 URL 地址&quot; /&gt;
 </code></pre><p>以下是forward相关联的属性：</p>
-<table><br><tr><td>属性</td></tr><tr>    描述</tr><br><tr><td>page</td></tr><tr>    page属性包含的是一个相对URL。page的值既可以直接给出，也可以在请求的时候动态计算，可以是一个JSP页面或者一个 Java Servlet.</tr></table>
+<table><br><tr><td>属性</td><td>    描述</td></tr><br><tr><td>page</td><td>    page属性包含的是一个相对URL。page的值既可以直接给出，也可以在请求的时候动态计算，可以是一个JSP页面或者一个 Java Servlet.</td></tr></table>
 
 <p><strong>实例</strong><br>date.jsp 文件代码如下：</p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
@@ -535,7 +877,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -543,11 +885,11 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;jsp:forward page=&quot;date.jsp&quot; /&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h3 id="JSP-隐式对象"><a href="#JSP-隐式对象" class="headerlink" title="JSP 隐式对象"></a>JSP 隐式对象</h3><blockquote>
+</code></pre><h2 id="JSP-隐式对象-9"><a href="#JSP-隐式对象-9" class="headerlink" title="JSP 隐式对象(9)"></a>JSP 隐式对象(9)</h2><blockquote>
 <p>JSP隐式对象是JSP容器为每个页面提供的Java对象，开发者可以直接使用它们而不用显式声明。JSP隐式对象也被称为预定义变量。</p>
 </blockquote>
 <p>JSP所支持的九大隐式对象：</p>
-<table><br><tr><td>对象</td><td>    描述</td></tr><br><tr><td>request</td><td>    HttpServletRequest类的实例</td></tr><br><tr><td>response</td><td>    HttpServletResponse类的实例</td></tr><br><tr><td>out</td><td>    PrintWriter类的实例，用于把结果输出至网页上</td></tr><br><tr><td>session</td><td>    HttpSession类的实例</td></tr><br><tr><td>application</td><td>    ServletContext类的实例，与应用上下文有关</td></tr><br><tr><td>config</td><td>    ServletConfig类的实例</td></tr><br><tr><td>pageContext</td><td>    PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问</td></tr><br><tr><td>page</td><td>    类似于Java类中的this关键字</td></tr><br><tr><td>Exception</td><td>    Exception类的对象，代表发生错误的JSP页面中对应的异常对象</td></tr><br></table>
+<table><br><tr><td>对象</td><td>    描述</td></tr><br><tr><td>request</td><td>    HttpServletRequest类的实例,它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header, 和session数据的有用的方法。</td></tr><br><tr><td>response</td><td>    HttpServletResponse类的实例，并提供了几个用于设置送回<br>浏览器的响应的方法（如cookies,头信息等）。</td></tr><br><tr><td>out</td><td>    PrintWriter类的实例，用于把结果输出至网页上</td></tr><br><tr><td>session</td><td>    HttpSession类的实例,Session可以存贮用户的状态信息。</td></tr><br><tr><td>application</td><td>    ServletContext类的实例，与应用上下文有关,有助于查找有关servlet引擎和servlet环境的信息。</td></tr><br><tr><td>config</td><td>    ServletConfig类的实例,该对象用于存取servlet实例的初始化参数。</td></tr><br><tr><td>pageContext</td><td>    PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问</td></tr><br><tr><td>page</td><td>    类似于Java类中的this关键字，表示从该页面产生的一个servlet实例。</td></tr><br><tr><td>Exception</td><td>    Exception类的对象，代表发生错误的JSP页面中对应的异常对象</td></tr><br></table>
 
 <p><strong>pageContext(重要):</strong><br>1、本身也是一个域对象：它可以操作其它三个域对象（<code>request</code> <code>session</code> <code>application</code>）的数据.</p>
 <h1 id="四大域对象"><a href="#四大域对象" class="headerlink" title="四大域对象"></a>四大域对象</h1><p>PageContext : pageConext 存放的数据在当前页面有效。开发时使用较少。</p>
@@ -570,7 +912,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 <li>var变量的值为null，例如表达式 ${empty customer.name},如果customer.name的值为null，就返回true.</li>
 <li>var变量引用集合（Set、Map、List）类型对象，并且在集合对象中不包含任何元素。</li>
 </ul>
-<h2 id="防止HTML注入"><a href="#防止HTML注入" class="headerlink" title="防止HTML注入"></a>防止HTML注入</h2><p>displayMessage.jsp</p>
+<h2 id="防止HTML注入"><a href="#防止HTML注入" class="headerlink" title="防止HTML注入"></a>防止HTML注入</h2><p><em>displayMessage.jsp</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
@@ -589,7 +931,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
   &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>ResultServlet.java</p>
+</code></pre><p><em>ResultServlet.java</em></p>
 <pre><code>package com.tq.servlet;
 
 import java.io.IOException;
@@ -618,7 +960,7 @@ public class ResultServlet extends HttpServlet {
         }
 
 }
-</code></pre><p>HTMLFilter.java</p>
+</code></pre><p><em>HTMLFilter.java</em></p>
 <pre><code>package com.tq.util;
 
 public class HTMLFilter {
@@ -652,7 +994,7 @@ public class HTMLFilter {
         return (result.toString());
     }
 }
-</code></pre><p>mytaglib.tld</p>
+</code></pre><p><em>mytaglib.tld</em></p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;taglib xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot;  
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  
@@ -671,7 +1013,7 @@ version=&quot;2.0&quot;&gt;
 &lt;/function-signature&gt;
  &lt;/function&gt;
 &lt;/taglib&gt;
-</code></pre><p>result.jsp</p>
+</code></pre><p><em>result.jsp</em></p>
 <pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;%@ taglib prefix = &quot;terry&quot; uri=&quot;http://www.mutouspace.cn&quot;  %&gt;
@@ -688,7 +1030,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>待补充。。。。</p>
-</jsp:include></jsp:include></jsp:include></jsp:getproperty></jsp:setproperty></jsp:usebean></jsp:param></jsp:forward></jsp:include></the></excerpt>]]></content>
+</the></excerpt>]]></content>
       
         <categories>
             
@@ -708,7 +1050,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
     </entry>
     
     <entry>
-      <title><![CDATA[JAVA之Servlet]]></title>
+      <title><![CDATA[JAVA学习之Servlet]]></title>
       <url>http://mutouspace.cn/2017/03/25/JAVA%E4%B9%8BServlet/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
@@ -1207,16 +1549,22 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
 
 <h1 id="开发一个JDBC程序（重要）"><a href="#开发一个JDBC程序（重要）" class="headerlink" title="开发一个JDBC程序（重要）"></a>开发一个JDBC程序（重要）</h1><ol>
 <li><p>创建数据库表，并向表中添加测试数据 </p>
-<p>create database day06;<br>use day06;</p>
-<p>create table users(</p>
-<pre><code>id int primary key auto_increment,
+<pre><code>&lt;--创建数据库--&gt;
+create database day06;
+use day06;
+&lt;--创建数据库表--&gt;
+create table users(
+id int primary key auto_increment,
 name varchar(40),
 password varchar(40),
 email varchar(60),
 birthday date
-</code></pre><p>)character set utf8 collate utf8_general_ci;</p>
-<p>insert into users(name,password,email,birthday) values(‘zs’,’123456’,’zs@sina.com’,’1980-12-04’);<br>insert into users(name,password,email,birthday) values(‘lisi’,’123456’,’lisi@sina.com’,’1981-12-04’);<br>insert into users(name,password,email,birthday) values(‘wangwu’,’123456’,’wangwu@sina.com’,’1979-12-04’);</p>
-</li>
+ )character set utf8 collate utf8_general_ci;
+&lt;--添加数据--&gt;
+insert into users(name,password,email,birthday) values(&apos;zs&apos;,&apos;123456&apos;,&apos;zs@sina.com&apos;,&apos;1980-12-04&apos;);
+insert into users(name,password,email,birthday) values(&apos;lisi&apos;,&apos;123456&apos;,&apos;lisi@sina.com&apos;,&apos;1981-12-04&apos;);
+insert into users(name,password,email,birthday) values(&apos;wangwu&apos;,&apos;123456&apos;,&apos;wangwu@sina.com&apos;,&apos;1979-12-04&apos;);
+</code></pre></li>
 <li><p>创建java project项目，添加数据库驱动（*.jar）</p>
 </li>
 <li><p>实现JDBC操作</p>
@@ -1227,35 +1575,37 @@ birthday date
 - 处理结果
 - 关闭资源
 </code></pre><p><strong>example:</strong></p>
-<p> public class demo01 {</p>
-<p> public static void main(String[] args) throws Exception{</p>
-<pre><code>// TODO Auto-generated method stub
-//1、注册驱动
-//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-//1.加载驱动
- Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
- //2、创建连接
-Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
-        //3、得到执行sql语句的Statement对象
-Statement stmt = conn.createStatement();
-        //4、执行sql语句，并返回结果
-String sql = &quot;select id,name,password,email,birthday from users&quot;;
-ResultSet rs = stmt.executeQuery(sql);
-        //5、处理结果
-while (rs.next()) {
-            System.out.println(rs.getObject(1));
-            System.out.println(rs.getObject(2));
-            System.out.println(rs.getObject(3));
-            System.out.println(rs.getObject(4));
-            System.out.println(rs.getObject(5));
-        }
-        //6关闭资源
-rs.close();
-stmt.close();
-conn.close();
-</code></pre><p> }</p>
-<p> }</p>
-</li>
+<pre><code>   public class demo01 {
+
+   public static void main(String[] args) throws Exception{
+ // TODO Auto-generated method stub
+ //1、注册驱动
+ //DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+ //1.加载驱动
+  Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+  //2、创建连接
+ Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
+         //3、得到执行sql语句的Statement对象
+ Statement stmt = conn.createStatement();
+         //4、执行sql语句，并返回结果
+ String sql = &quot;select id,name,password,email,birthday from users&quot;;
+ ResultSet rs = stmt.executeQuery(sql);
+         //5、处理结果
+ while (rs.next()) {
+             System.out.println(rs.getObject(1));
+             System.out.println(rs.getObject(2));
+             System.out.println(rs.getObject(3));
+             System.out.println(rs.getObject(4));
+             System.out.println(rs.getObject(5));
+         }
+         //6关闭资源
+ rs.close();
+ stmt.close();
+ conn.close();
+}
+
+}
+</code></pre></li>
 </ol>
 <h1 id="JDBC常用的类和接口详解"><a href="#JDBC常用的类和接口详解" class="headerlink" title="JDBC常用的类和接口详解"></a>JDBC常用的类和接口详解</h1><h2 id="java-sql-Drivermanager类-创建连接"><a href="#java-sql-Drivermanager类-创建连接" class="headerlink" title="java.sql.Drivermanager类 : 创建连接"></a>java.sql.Drivermanager类 : 创建连接</h2><ol>
 <li><p>注册驱动</p>
@@ -1274,12 +1624,12 @@ conn.close();
 
 getConnection(&quot;jdbc:mysql://localhost:3306/day06&quot;, &quot;root&quot;, &quot;root&quot;);
 
- URL:SUN公司与数据库厂商之间的一种协议。
- jdbc:mysql://localhost:3306/day06
- 协议 子协议          IP:端口号 数据库
+URL:SUN公司与数据库厂商之间的一种协议。
+jdbc:mysql://localhost:3306/day06
+协议 子协议          IP:端口号 数据库
 
- mysql: jdbc:mysql://localhost:3306/day14 或者 jdbc:mysql:///day14（默认本机连接）
- oracle: jdbc:oracle:thin:@localhost:1521:sid
+mysql: jdbc:mysql://localhost:3306/day14 或者 jdbc:mysql:///day14（默认本机连接）
+oracle: jdbc:oracle:thin:@localhost:1521:sid
 </code></pre></li>
 </ol>
 <pre><code>Properties info = new Properties();//要参考数据库文档

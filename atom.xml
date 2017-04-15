@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-04-02T14:00:27.895Z</updated>
+  <updated>2017-04-15T11:29:51.436Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -16,11 +16,73 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JAVA学习之Struts2框架</title>
+    <link href="http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6/"/>
+    <id>http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/</id>
+    <published>2017-04-15T12:52:52.000Z</published>
+    <updated>2017-04-15T11:29:51.436Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;h1 id=&quot;Struts2简介&quot;&gt;&lt;a href=&quot;#Struts2简介&quot; class=&quot;headerlink&quot; title=&quot;Struts2简介&quot;&gt;&lt;/a&gt;Struts2简介&lt;/h1&gt;&lt;h2 id=&quot;Struts2概述&quot;&gt;&lt;a href=&quot;#Struts2概述&quot; class=&quot;headerlink&quot; title=&quot;Struts2概述&quot;&gt;&lt;/a&gt;Struts2概述&lt;/h2&gt;&lt;p&gt;Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。&lt;/p&gt;
+&lt;h2 id=&quot;Struts2的来历&quot;&gt;&lt;a href=&quot;#Struts2的来历&quot; class=&quot;headerlink&quot; title=&quot;Struts2的来历&quot;&gt;&lt;/a&gt;Struts2的来历&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Struts1：&lt;/strong&gt;也是apache开发的一套mvc的开源框架。在2005年之前非常流行。&lt;/p&gt;
+&lt;p&gt; 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Struts2：&lt;/strong&gt;在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。&lt;em&gt;里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="框架" scheme="http://mutouspace.cn/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Struts2" scheme="http://mutouspace.cn/tags/Struts2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA学习之框架前述</title>
+    <link href="http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%A1%86%E6%9E%B6%E5%89%8D%E8%BF%B0/"/>
+    <id>http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/</id>
+    <published>2017-04-15T09:50:03.000Z</published>
+    <updated>2017-04-15T10:11:31.293Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;本篇文章是对学习框架前的开题篇。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;内容为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;框架概述&lt;/li&gt;
+&lt;li&gt;三层架构&lt;/li&gt;
+&lt;li&gt;控制器：MVC中的控制器&lt;/li&gt;
+&lt;li&gt;案例中的问题&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="框架" scheme="http://mutouspace.cn/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JAVA学习之常用的数据源配置</title>
     <link href="http://mutouspace.cn/2017/04/02/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/"/>
     <id>http://mutouspace.cn/2017/04/02/JAVA学习之常用的数据源配置/</id>
     <published>2017-04-02T12:39:01.000Z</published>
-    <updated>2017-04-02T14:00:27.895Z</updated>
+    <updated>2017-04-15T09:43:46.202Z</updated>
     
     <summary type="html">
     
@@ -49,7 +111,7 @@
     <link href="http://mutouspace.cn/2017/03/29/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJsp/"/>
     <id>http://mutouspace.cn/2017/03/29/JAVA学习之Jsp/</id>
     <published>2017-03-29T12:41:07.000Z</published>
-    <updated>2017-04-02T12:42:17.147Z</updated>
+    <updated>2017-04-15T09:23:31.278Z</updated>
     
     <summary type="html">
     
@@ -75,11 +137,11 @@
   </entry>
   
   <entry>
-    <title>JAVA之Servlet</title>
+    <title>JAVA学习之Servlet</title>
     <link href="http://mutouspace.cn/2017/03/25/JAVA%E4%B9%8BServlet/"/>
     <id>http://mutouspace.cn/2017/03/25/JAVA之Servlet/</id>
     <published>2017-03-25T15:31:16.000Z</published>
-    <updated>2017-04-02T12:42:43.078Z</updated>
+    <updated>2017-04-15T09:25:40.638Z</updated>
     
     <summary type="html">
     
@@ -168,7 +230,7 @@
     <link href="http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/"/>
     <id>http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/</id>
     <published>2017-03-22T14:33:39.000Z</published>
-    <updated>2017-03-23T13:27:19.275Z</updated>
+    <updated>2017-04-15T09:36:46.076Z</updated>
     
     <summary type="html">
     

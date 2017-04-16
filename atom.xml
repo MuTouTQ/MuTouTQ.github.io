@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-04-16T08:37:10.324Z</updated>
+  <updated>2017-04-16T14:26:11.719Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ADB的简单使用技巧（Android）</title>
+    <link href="http://mutouspace.cn/2017/04/16/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%88Android%EF%BC%89/"/>
+    <id>http://mutouspace.cn/2017/04/16/ADB命令简单使用技巧（Android）/</id>
+    <published>2017-04-16T12:52:52.000Z</published>
+    <updated>2017-04-16T14:26:11.719Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+
+
+&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;   &lt;strong&gt;连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;   &lt;strong&gt;？？？？？此处为ADB的简单定义？？？？？？&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://mutouspace.cn/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://mutouspace.cn/tags/Android/"/>
+    
+      <category term="ADB" scheme="http://mutouspace.cn/tags/ADB/"/>
+    
+  </entry>
   
   <entry>
     <title>JAVA学习之Struts2框架（一）</title>
@@ -474,24 +501,6 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://mutouspace.cn/2017/02/17/hello-world/"/>
-    <id>http://mutouspace.cn/2017/02/17/hello-world/</id>
-    <published>2017-02-17T11:51:30.000Z</published>
-    <updated>2017-03-06T14:14:31.510Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>测试二</title>
     <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
     <id>http://mutouspace.cn/2017/02/17/测试二/</id>
@@ -506,6 +515,24 @@
     
     
       <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://mutouspace.cn/2017/02/17/hello-world/"/>
+    <id>http://mutouspace.cn/2017/02/17/hello-world/</id>
+    <published>2017-02-17T11:51:30.000Z</published>
+    <updated>2017-03-06T14:14:31.510Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
     
   </entry>
   

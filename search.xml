@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[JAVA学习之Struts2框架]]></title>
+      <title><![CDATA[JAVA学习之Struts2框架（一）]]></title>
       <url>http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
@@ -191,7 +191,119 @@ public String sayHello(){
                     <img src="http://olg3gwtbm.bkt.clouddn.com/pro%E8%A6%86%E7%9B%96.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
-            </figure></the></excerpt>]]></content>
+            </figure>
+<h1 id="struts-xml配置文件的主要元素"><a href="#struts-xml配置文件的主要元素" class="headerlink" title="struts.xml配置文件的主要元素"></a>struts.xml配置文件的主要元素</h1><h2 id="package元素"><a href="#package元素" class="headerlink" title="package元素"></a>package元素</h2><ol>
+<li><p>属性：</p>
+<p><strong>name：</strong>包的名称。必须写。且必须唯一。</p>
+<p><strong>extends：</strong>一般情况下需要继承struts-default包，但不是必须的。不过如果不继承的话，将无法使用struts2提供的核心功能。</p>
+<pre><code>struts-default.xml中定义着struts-default这个包。而struts-default.xml是在我们的struts.xml加载之前加载。
+</code></pre><p><strong>abstract：</strong>把包声明为抽象包，抽象包就是用来被继承的。只要是没有<action>元素的包，就可以声明为抽象包。</action></p>
+<p><strong>namespace：</strong>名称空间。</p>
+<pre><code>`名称空间    +    动作名称    =    访问路径`
+</code></pre><p><em>struts.xml代码片段</em>    </p>
+<pre><code>&lt;!-- 
+  package元素：是定义一个struts的包，它是把配置文件按照面向对象的思想来管理。分模块开发。
+  name属性：包的名称。具有唯一性。
+  extends属性：指定当前包的父包。它是按照面向对象的思想管理的体现。
+  abstract属性：把包声明为一个抽象包。抽象包是用来被继承的。只有没有action元素的包才能被定义为抽象包。
+  namespace属性：名称空间。当指定了名称空间以后，访问路径就变成了：
+                                            访问路径 = 名称空间+动作名称。
+                                      当不指定该属性时，该属性有默认值，默认值是&quot;&quot;,不是&quot;/&quot;.                                 
+ --&gt;
+&lt;package name=&quot;p1&quot; extends=&quot;struts-default&quot; namespace=&quot;/user&quot;&gt;                    
+</code></pre></li>
+<li><p>packege中的namespace详解</p>
+<p> namespace的默认值：</p>
+<pre><code>a.不写该属性
+
+b.写了该属性，取值是一个&quot;&quot;.注意：默认值不是/
+</code></pre></li>
+<li><p>动作类的搜索顺序：</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png" alt=""></p>
+</li>
+</ol>
+<h2 id="action元素"><a href="#action元素" class="headerlink" title="action元素"></a>action元素</h2><ol>
+<li><p>属性：</p>
+<p>name：动作名称</p>
+<p>class：动作类全名。默认的动作类是：com.opensymphony.xwork2.ActionSupport,是在struts-default.xml中定义的,要想替换默认动作类：在应用的struts.xml中，package中加入：</p>
+<p>method：动作类中的方法名称。默认是public String execute(){}</p>
+<pre><code>要求：
+    1.public的
+    2.返回值必须是String
+    3.没有参数
+</code></pre><p><em>struts.xml代码片段</em></p>
+<pre><code> &lt;!-- 
+    action元素：是用于定义动作名称，动作类和动作方法的映射。以及当出现不同情况时前往指定的结果视图。
+    name属性：动作名称。和jsp中请求的url中的名称对应起来。注意：此处不能写 .action
+    class属性：指定的动作类。
+    method属性：动作类中的方法名称。默认是public String execute(){}
+              要求：
+                  1.public的
+                  2.返回值必须是String
+                  3.没有参数
+   --&gt;
+&lt;action name=&quot;action1&quot; class=&quot;cn.terry.web.action.DemoAction1&quot; method=&quot;saveUser&quot;&gt;
+</code></pre></li>
+<li><p>动作类</p>
+<p>a.方式一：动作类就是一个POJO（Plain Old Java Object 原始的java对象），非常简单的javabean。</p>
+<p>b.方式二：动作类实现com.opensymphony.xwork2.Action接口。</p>
+<p>常量：给动作方法返回值用的。用常量可以使你的应用规范和统一。</p>
+<table><br><tr><td>常量变量名</td><td>    对应的值</td><td>    说明</td></tr><br><tr><td>SUCCESS</td><td>    success</td><td>    动作方法执行一切OK</td></tr><br><tr><td>ERROR    </td><td>error</td><td>    动作方法执行时遇到了异常</td></tr><br><tr><td>INPUT</td><td>    input</td><td>    回显</td></tr><br><tr><td>LOGIN</td><td>    login</td><td>    一般转向登陆页面</td></tr><br><tr><td>NONE    </td><td>none</td><td>    不转向任何的视图</td></tr></table>
+
+<p>c.方式三：动作类继承com.opensymphony.xwork2.ActionSupport    推荐使用</p>
+</li>
+<li><p>动作的访问</p>
+<p>a.使用通配符：</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/action11.png" alt=""></p>
+<p>升级版：</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/action12.png" alt="">    </p>
+<p>优先级：绝对匹配优先。使用通配符的按照在配置文件中的先后顺序进行匹配的。</p>
+<p>b.动态方法调用</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/action13.png" alt=""></p>
+</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/action14.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="result元素"><a href="#result元素" class="headerlink" title="result元素"></a>result元素</h2><ol>
+<li><p>属性：</p>
+<p> name：逻辑视图的名称，对应着动作方法的返回值。默认值是success。 </p>
+<p> type：结果类型，指的就是用什么方式转到定义的页面。默认是dispatcher。</p>
+<p> <em>struts.xml</em></p>
+<pre><code>&lt;!--
+ result元素：配置逻辑结果视图；
+ name属性：逻辑视图的名称，对应着动作方法的返回值。默认值是success。 
+ type：结果类型，指的就是用什么方式转到定义的页面。默认是dispatcher。
+                      常用取值：
+         dispatcher：(默认值)
+          使用请求转发，转向一个页面。
+         redirect：
+          使用重定向，转向一个页面。
+  --&gt;
+&lt;result name=&quot;success&quot;&gt;/success.jsp&lt;/result&gt;
+</code></pre></li>
+<li><p>result元素中type的取值</p>
+<p>常用结果类型介绍：</p>
+<p>dispatcher：(默认值)使用请求转发，转向一个页面。</p>
+<p>redirect：使用重定向，转向一个页面。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/redirect.png" alt=""></p>
+<p>redirectAction：注意：使用的是重定向。</p>
+<p>a.重定向到另一个相同名称空间的动作。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/redirectAction1.png" alt=""></p>
+<p>b.重定向到不同名称空间的动作</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/redirectAction2.png" alt=""></p>
+<p>chain：注意： 使用的是请求转发。</p>
+<p>a.转发到另一个相同名称空间的动作。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/chain1.png" alt="">    </p>
+<p>b.请求转发到不同名称空间的动作    </p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/chain2.png" alt=""></p>
+</li>
+</ol>
+</the></excerpt>]]></content>
       
         <categories>
             

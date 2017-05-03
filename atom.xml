@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-04-16T14:26:11.719Z</updated>
+  <updated>2017-05-03T04:35:35.482Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android卸载测试应用后再次安装应用失败</title>
+    <link href="http://mutouspace.cn/2017/05/03/Android%E5%8D%B8%E8%BD%BD%E6%B5%8B%E8%AF%95%E5%BA%94%E7%94%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E5%A4%B1%E8%B4%A5/"/>
+    <id>http://mutouspace.cn/2017/05/03/Android卸载测试应用后再次安装应用失败/</id>
+    <published>2017-05-03T04:19:12.000Z</published>
+    <updated>2017-05-03T04:35:35.482Z</updated>
+    
+    <summary type="html">
+    
+      &lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
+
+
+
+&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论
+    
+    </summary>
+    
+      <category term="Android" scheme="http://mutouspace.cn/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://mutouspace.cn/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA学习之Struts2框架(二)</title>
+    <link href="http://mutouspace.cn/2017/04/20/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6-%E4%BA%8C/"/>
+    <id>http://mutouspace.cn/2017/04/20/JAVA学习之Struts2框架-二/</id>
+    <published>2017-04-20T13:41:17.000Z</published>
+    <updated>2017-04-20T13:56:25.710Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="框架" scheme="http://mutouspace.cn/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Struts2" scheme="http://mutouspace.cn/tags/Struts2/"/>
+    
+  </entry>
   
   <entry>
     <title>ADB的简单使用技巧（Android）</title>
@@ -501,24 +549,6 @@
   </entry>
   
   <entry>
-    <title>测试二</title>
-    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
-    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
-    <published>2017-02-17T11:51:30.000Z</published>
-    <updated>2017-02-17T13:18:19.296Z</updated>
-    
-    <summary type="html">
-    
-      Welcome to Hexo! This is your very first post.
-    
-    </summary>
-    
-    
-      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://mutouspace.cn/2017/02/17/hello-world/"/>
     <id>http://mutouspace.cn/2017/02/17/hello-world/</id>
@@ -533,6 +563,24 @@
     
     
       <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试二</title>
+    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
+    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
+    <published>2017-02-17T11:51:30.000Z</published>
+    <updated>2017-02-17T13:18:19.296Z</updated>
+    
+    <summary type="html">
+    
+      Welcome to Hexo! This is your very first post.
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

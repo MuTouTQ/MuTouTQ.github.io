@@ -1751,9 +1751,9 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://i.imgur.com/jLoy1vw.png" alt="Listen" title="">
+                    <img src="http://i.imgur.com/jLoy1vw.png" alt="Listen 1 音乐播放器" title="">
                 </div>
-                <div class="image-caption">Listen</div>
+                <div class="image-caption">Listen 1 音乐播放器</div>
             </figure>
 <p>Listen 1是一款搜索与播放来自网易云音乐，虾米，QQ音乐三个主流音乐网站的曲库软件。</p>
 <p>这款软件的作用不言而喻，可以帮你减少在不同音乐站点搜索资源的时间花费。</p>

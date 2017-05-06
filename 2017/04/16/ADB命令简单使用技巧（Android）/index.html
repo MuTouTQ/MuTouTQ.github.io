@@ -40,10 +40,10 @@
    ？？？？？此处为ADB的简单定义？？？？？？">
 <meta name="twitter:image" content="http://i.imgur.com/8ToBAAY.png">
     
-        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+        <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 </head>
 
@@ -55,7 +55,7 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap">
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
           <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
@@ -135,7 +135,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -167,6 +167,7 @@
 
     
 
+
 </header>
 
 
@@ -185,7 +186,7 @@
     <div class="post-card">
         <h1 class="post-card-title">ADB的简单使用技巧（Android）</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017年04月16日 20:52" datetime="2017-04-16T12:52:52.000Z"  itemprop="datePublished">2017-04-16</time>
+            <time class="post-time" title="2017-04-16 20:52:52" datetime="2017-04-16T12:52:52.000Z"  itemprop="datePublished">2017-04-16</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Android/">Android</a></li></ul>
@@ -199,10 +200,6 @@
 
 
             
-<span>
-    <a href="/2017/04/16/ADB命令简单使用技巧（Android）/#comments" class="ds-thread-count" data-thread-key="ADB命令简单使用技巧（Android）" data-count-type="comments"></a>
-</span>
-
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
@@ -301,11 +298,13 @@ adb shell input touchscreen swipe 18 665 18 350
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-04-16T14:26:11.719Z" itemprop="dateUpdated">2017年4月16日 22:26</time>
+    Last updated: <time datetime="2017-04-16T14:26:11.719Z" itemprop="dateUpdated">2017-04-16 22:26:11</time>
 </span><br>
 
 
+        
         转载请注明出处：<a href="/2017/04/16/ADB命令简单使用技巧（Android）/" target="_blank" rel="external">http://mutouspace.cn/2017/04/16/ADB命令简单使用技巧（Android）/</a>
+        
     </div>
     <footer>
         <a href="http://mutouspace.cn">
@@ -408,14 +407,33 @@ adb shell input touchscreen swipe 18 665 18 350
 
     
 
-<div class="comments" id="comments">
-    <div class="ds-thread" data-thread-key="ADB命令简单使用技巧（Android）" data-title="ADB的简单使用技巧（Android）" data-url="http://mutouspace.cn/2017/04/16/ADB命令简单使用技巧（Android）/"></div>
-</div>
-<script>
-lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
 
 
-</script>
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://mutouspace.cn/2017/04/16/ADB命令简单使用技巧（Android）/index.html',
+        sourceId: 'ADB命令简单使用技巧（Android）',
+        productKey: 'f6d9ed24d81f427788488b6730a34b4b',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
+        ],
+        mobileFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
+        ]
+    };
+    </script>
+    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
 
 
 
@@ -467,14 +485,16 @@ lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
 
 
         <p>
-            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
         <p>
             <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>Terry_Tian's Code日志 &copy; 2017</span>
+            <span>Terry Tian &copy; 2017</span>
         </p>
     </div>
 </footer>
@@ -539,14 +559,11 @@ lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
-var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
-lazyScripts.push('/js/embed.min.js?v=1.4.8');
-
 
 
 </script>
 
-<script src="/js/main.min.js?v=1.4.8"></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -566,7 +583,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.8');
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.4.8" async></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
@@ -574,6 +591,26 @@ lazyScripts.push('/js/embed.min.js?v=1.4.8');
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
 
 
 </body>

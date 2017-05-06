@@ -32,10 +32,10 @@
 <meta name="twitter:title" content="Terry_Tian's Code日志">
 <meta name="twitter:description" content="在山的这边，海的那边，有一只程序猿。。。">
     
-        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+        <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 </head>
 
@@ -47,7 +47,7 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap">
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
           <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
@@ -127,7 +127,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -153,6 +153,7 @@
 
     
 
+
 </header>
 
 <div class="container body-wrap">
@@ -164,7 +165,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年03月22日 22:33" datetime="2017-03-22T14:33:39.000Z"  itemprop="datePublished">2017-03-22</time>
+        <time class="post-time" title="2017-03-22 22:33:39" datetime="2017-03-22T14:33:39.000Z"  itemprop="datePublished">2017-03-22</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
@@ -172,10 +173,6 @@
 
 
         
-<span>
-    <a href="/2017/03/22/JAVA学习之JDBC/#comments" class="ds-thread-count" data-thread-key="JAVA学习之JDBC" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -194,23 +191,23 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <Excerpt in index | 首页摘要>
+        
 
-<h1 id="JDBC概述"><a href="#JDBC概述" class="headerlink" title="JDBC概述"></a>JDBC概述</h1><blockquote>
-<p>JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。</p>
-<p>JDBC与数据库驱动的关系：接口与实现的关系。</p>
-</blockquote>
-<p><strong>JDBC规范（掌握四个核心对象）：</strong></p>
-<ul>
-<li>DriverManager:用于注册驱动</li>
-<li>Connection: 表示与数据库创建的连接</li>
-<li>Statement: 操作数据库sql语句的对象</li>
-<li>ResultSet: 结果集或一张虚拟表</li>
-</ul>
+JDBC概述
+JDBC:java database connectivity SUN公司提供的一套操作数据库的标准规范。
+JDBC与数据库驱动的关系：接口与实现的关系。
+
+JDBC规范（掌握四个核心对象）：
+
+DriverManager:用于注册驱动
+Connection: 表示与数据库创建的连接
+Statement: 操作数据库sql语句的对象
+ResultSet: 结果集或一张虚拟表
+
     
 
         <a href="/2017/03/22/JAVA学习之JDBC/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -229,7 +226,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年03月22日 22:33" datetime="2017-03-22T14:33:06.000Z"  itemprop="datePublished">2017-03-22</time>
+        <time class="post-time" title="2017-03-22 22:33:06" datetime="2017-03-22T14:33:06.000Z"  itemprop="datePublished">2017-03-22</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
@@ -237,10 +234,6 @@
 
 
         
-<span>
-    <a href="/2017/03/22/JAVA学习之JUnit/#comments" class="ds-thread-count" data-thread-key="JAVA学习之JUnit" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -259,16 +252,16 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <Excerpt in index | 首页摘要>
+        
 
-<h1 id="JUnit是什么？"><a href="#JUnit是什么？" class="headerlink" title="JUnit是什么？"></a>JUnit是什么？</h1><blockquote>
-<p>JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。</p>
-<p>JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。</p>
-</blockquote>
+JUnit是什么？
+JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
+JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。
+
     
 
         <a href="/2017/03/22/JAVA学习之JUnit/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -287,7 +280,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年03月21日 21:52" datetime="2017-03-21T13:52:33.000Z"  itemprop="datePublished">2017-03-21</time>
+        <time class="post-time" title="2017-03-21 21:52:33" datetime="2017-03-21T13:52:33.000Z"  itemprop="datePublished">2017-03-21</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据库/">数据库</a></li></ul>
@@ -295,10 +288,6 @@
 
 
         
-<span>
-    <a href="/2017/03/21/JAVA学习之MySQL/#comments" class="ds-thread-count" data-thread-key="JAVA学习之MySQL" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -317,16 +306,16 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <Excerpt in index | 首页摘要>
+        
 
-<blockquote>
-<p>本文主要记录MySQL数据库的简单使用。<br>本部分记录了MySQL的安装、卸载，SQL语句的基础。</p>
-<p>转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p>
-</blockquote>
+
+本文主要记录MySQL数据库的简单使用。本部分记录了MySQL的安装、卸载，SQL语句的基础。
+转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!
+
     
 
         <a href="/2017/03/21/JAVA学习之MySQL/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -345,7 +334,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年03月09日 22:07" datetime="2017-03-09T14:07:37.000Z"  itemprop="datePublished">2017-03-09</time>
+        <time class="post-time" title="2017-03-09 22:07:37" datetime="2017-03-09T14:07:37.000Z"  itemprop="datePublished">2017-03-09</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/教程/">教程</a></li></ul>
@@ -353,10 +342,6 @@
 
 
         
-<span>
-    <a href="/2017/03/09/Git学习笔记系列/#comments" class="ds-thread-count" data-thread-key="Git学习笔记系列" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -375,14 +360,14 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <Excerpt in index | 首页摘要>
+        
 
-<h1 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h1><h2 id="Git是什么？"><a href="#Git是什么？" class="headerlink" title="Git是什么？"></a>Git是什么？</h2><p>Git是目前世界上最先进的分布式版本控制系统（没有之一）。</p>
-<p>Git有什么特点？简单来说就是：高端大气上档次！</p>
+Git简介Git是什么？Git是目前世界上最先进的分布式版本控制系统（没有之一）。
+Git有什么特点？简单来说就是：高端大气上档次！
     
 
         <a href="/2017/03/09/Git学习笔记系列/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -401,7 +386,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年03月06日 22:00" datetime="2017-03-06T14:00:41.899Z"  itemprop="datePublished">2017-03-06</time>
+        <time class="post-time" title="2017-03-06 22:00:41" datetime="2017-03-06T14:00:41.899Z"  itemprop="datePublished">2017-03-06</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/分享/">分享</a></li></ul>
@@ -409,10 +394,6 @@
 
 
         
-<span>
-    <a href="/2017/03/06/软件分享篇/#comments" class="ds-thread-count" data-thread-key="软件分享篇" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -431,16 +412,16 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <Excerpt in index | 首页摘要>
+        
 
-<blockquote>
-<p>今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！</p>
-</blockquote>
-<p>转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p>
+
+今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！
+
+转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!
     
 
         <a href="/2017/03/06/软件分享篇/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -459,7 +440,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年02月19日 12:31" datetime="2017-02-19T04:31:07.000Z"  itemprop="datePublished">2017-02-19</time>
+        <time class="post-time" title="2017-02-19 12:31:07" datetime="2017-02-19T04:31:07.000Z"  itemprop="datePublished">2017-02-19</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/美文/">美文</a></li></ul>
@@ -467,10 +448,6 @@
 
 
         
-<span>
-    <a href="/2017/02/19/胡歌为什么会有今天的高度？/#comments" class="ds-thread-count" data-thread-key="胡歌为什么会有今天的高度？" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -489,7 +466,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <style type="text/css">
+        
     strong a {
         color: #747474;
     }
@@ -528,21 +505,21 @@
     #ds-hot-posts {
         display: none;
     }
-</style>
 
-<Excerpt in index | 首页摘要>
 
-<p><strong>本文转载于微信公众号：小林分享</strong></p>
-<p><strong>藏书如山积，读书如水流。山形有限度，水流无时休。</strong></p>
-<p class="sign"><span>——</span> Terry_Tian, 2017年2月19日</p>
 
-<p>在娱乐圈里，想通过大荧幕红透半边天的人有很多。</p>
-<p>但能够沉下心，通过学习和阅读来提升自己的不多。</p>
-<p><strong>胡歌</strong>算一个。</p>
+
+本文转载于微信公众号：小林分享
+藏书如山积，读书如水流。山形有限度，水流无时休。
+—— Terry_Tian, 2017年2月19日
+
+在娱乐圈里，想通过大荧幕红透半边天的人有很多。
+但能够沉下心，通过学习和阅读来提升自己的不多。
+胡歌算一个。
     
 
         <a href="/2017/02/19/胡歌为什么会有今天的高度？/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -561,7 +538,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年02月18日 15:46" datetime="2017-02-18T07:46:58.000Z"  itemprop="datePublished">2017-02-18</time>
+        <time class="post-time" title="2017-02-18 15:46:58" datetime="2017-02-18T07:46:58.000Z"  itemprop="datePublished">2017-02-18</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Hexo/">Hexo</a></li></ul>
@@ -569,10 +546,6 @@
 
 
         
-<span>
-    <a href="/2017/02/18/使用Hexo-github建设个人博客教程/#comments" class="ds-thread-count" data-thread-key="使用Hexo-github建设个人博客教程" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -591,22 +564,22 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p><Excerpt in index | 首页摘要></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。</p>
-<p><strong>教程思路：</strong></p>
-<ol>
-<li>列出博客搭建环境+所需工具；</li>
-<li>环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；</li>
-<li>创建Hexo项目，并本地运行查看效果</li>
-<li>修改项目配置文件（根目录下的_config.yml文件）</li>
-<li>安装Hexo框架主题（推荐：Next或yelee主题，本人用的yelee），对主题进行配置，主要是修改theme目录下的_config.yml文件</li>
-<li>将本地设置好的Hexo项目发布到Github Pages上（包括绑定自己的域名）（这里会介绍如何写文章）</li>
-<li>总结</li>
-</ol>
+        
+前言博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。
+教程思路：
+
+列出博客搭建环境+所需工具；
+环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；
+创建Hexo项目，并本地运行查看效果
+修改项目配置文件（根目录下的_config.yml文件）
+安装Hexo框架主题（推荐：Next或yelee主题，本人用的yelee），对主题进行配置，主要是修改theme目录下的_config.yml文件
+将本地设置好的Hexo项目发布到Github Pages上（包括绑定自己的域名）（这里会介绍如何写文章）
+总结
+
     
 
         <a href="/2017/02/18/使用Hexo-github建设个人博客教程/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -625,16 +598,12 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年02月17日 19:51" datetime="2017-02-17T11:51:30.000Z"  itemprop="datePublished">2017-02-17</time>
+        <time class="post-time" title="2017-02-17 19:51:30" datetime="2017-02-17T11:51:30.000Z"  itemprop="datePublished">2017-02-17</time>
 
         
 
 
         
-<span>
-    <a href="/2017/02/17/hello-world/#comments" class="ds-thread-count" data-thread-key="hello-world" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -653,20 +622,12 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Qu...
     
 
         <a href="/2017/02/17/hello-world/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -685,16 +646,12 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年02月17日 19:51" datetime="2017-02-17T11:51:30.000Z"  itemprop="datePublished">2017-02-17</time>
+        <time class="post-time" title="2017-02-17 19:51:30" datetime="2017-02-17T11:51:30.000Z"  itemprop="datePublished">2017-02-17</time>
 
         
 
 
         
-<span>
-    <a href="/2017/02/17/测试二/#comments" class="ds-thread-count" data-thread-key="测试二" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -713,14 +670,14 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+        
 
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>
+
+
     
 
         <a href="/2017/02/17/测试二/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -739,7 +696,7 @@
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2017年02月17日 19:44" datetime="2017-02-17T11:44:07.000Z"  itemprop="datePublished">2017-02-17</time>
+        <time class="post-time" title="2017-02-17 19:44:07" datetime="2017-02-17T11:44:07.000Z"  itemprop="datePublished">2017-02-17</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/测试/">测试</a></li></ul>
@@ -747,10 +704,6 @@
 
 
         
-<span>
-    <a href="/2017/02/17/测试一/#comments" class="ds-thread-count" data-thread-key="测试一" data-count-type="comments"></a>
-</span>
-
 
     </div>
 
@@ -769,12 +722,12 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p><Excerpt in index | 首页摘要></p>
-<p>#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上</p>
+        
+#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上
     
 
         <a href="/2017/02/17/测试一/" class="post-more waves-effect waves-button">
-            阅读全文→
+            Continue reading...
         </a>
     </div>
     
@@ -814,14 +767,16 @@
 
 
         <p>
-            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
         <p>
             <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>Terry_Tian's Code日志 &copy; 2017</span>
+            <span>Terry Tian &copy; 2017</span>
         </p>
     </div>
 </footer>
@@ -881,14 +836,11 @@
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
-var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
-lazyScripts.push('/js/embed.min.js?v=1.4.8');
-
 
 
 </script>
 
-<script src="/js/main.min.js?v=1.4.8"></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -908,7 +860,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.8');
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.4.8" async></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
@@ -916,6 +868,26 @@ lazyScripts.push('/js/embed.min.js?v=1.4.8');
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
 
 
 </body>

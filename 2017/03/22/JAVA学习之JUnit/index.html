@@ -39,10 +39,10 @@ JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单�
 JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
 JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。">
     
-        <link rel="alternative" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+        <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 </head>
 
@@ -54,7 +54,7 @@ JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单�
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap">
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
           <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
@@ -134,7 +134,7 @@ JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单�
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -166,6 +166,7 @@ JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单�
 
     
 
+
 </header>
 
 
@@ -184,7 +185,7 @@ JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单�
     <div class="post-card">
         <h1 class="post-card-title">JAVA学习之JUnit</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017年03月22日 22:33" datetime="2017-03-22T14:33:06.000Z"  itemprop="datePublished">2017-03-22</time>
+            <time class="post-time" title="2017-03-22 22:33:06" datetime="2017-03-22T14:33:06.000Z"  itemprop="datePublished">2017-03-22</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
@@ -198,10 +199,6 @@ JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单�
 
 
             
-<span>
-    <a href="/2017/03/22/JAVA学习之JUnit/#comments" class="ds-thread-count" data-thread-key="JAVA学习之JUnit" data-count-type="comments"></a>
-</span>
-
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
@@ -391,11 +388,13 @@ public void test() {
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-03-23T06:04:28.077Z" itemprop="dateUpdated">2017年3月23日 14:04</time>
+    Last updated: <time datetime="2017-03-23T06:04:28.077Z" itemprop="dateUpdated">2017-03-23 14:04:28</time>
 </span><br>
 
 
+        
         转载请注明出处：<a href="/2017/03/22/JAVA学习之JUnit/" target="_blank" rel="external">http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/</a>
+        
     </div>
     <footer>
         <a href="http://mutouspace.cn">
@@ -497,14 +496,33 @@ JUnit可广泛用于工业和作为支..." data-title=" QQ">
 
     
 
-<div class="comments" id="comments">
-    <div class="ds-thread" data-thread-key="JAVA学习之JUnit" data-title="JAVA学习之JUnit" data-url="http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/"></div>
-</div>
-<script>
-lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
 
 
-</script>
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/index.html',
+        sourceId: 'JAVA学习之JUnit',
+        productKey: 'f6d9ed24d81f427788488b6730a34b4b',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
+        ],
+        mobileFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
+        ]
+    };
+    </script>
+    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
 
 
 
@@ -556,14 +574,16 @@ lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
 
 
         <p>
-            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
         <p>
             <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>Terry_Tian's Code日志 &copy; 2017</span>
+            <span>Terry Tian &copy; 2017</span>
         </p>
     </div>
 </footer>
@@ -627,14 +647,11 @@ JUnit可广泛用于工业和作为支..." data-title=" QQ">
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
-var duoshuoQuery = {short_name:'mutouspace', theme: 'none'};
-lazyScripts.push('/js/embed.min.js?v=1.4.8');
-
 
 
 </script>
 
-<script src="/js/main.min.js?v=1.4.8"></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -654,7 +671,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.8');
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.4.8" async></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
@@ -662,6 +679,26 @@ lazyScripts.push('/js/embed.min.js?v=1.4.8');
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
 
 
 </body>

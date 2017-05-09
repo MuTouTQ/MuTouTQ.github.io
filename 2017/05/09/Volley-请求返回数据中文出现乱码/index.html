@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/">
+    
+    
+    <title>Volley 请求返回数据中文出现乱码 | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,Volley">
+    <meta name="description" content="最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。
+  经过排查，发现问题确实出在volley的一个工具类上 。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Volley 请求返回数据中文出现乱码">
+<meta property="og:url" content="http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。
+  经过排查，发现问题确实出在volley的一个工具类上 。">
+<meta property="og:updated_time" content="2017-05-09T13:26:40.635Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Volley 请求返回数据中文出现乱码">
+<meta name="twitter:description" content="最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。
+  经过排查，发现问题确实出在volley的一个工具类上 。">
+    
+        <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Volley 请求返回数据中文出现乱码</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Volley 请求返回数据中文出现乱码</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-09T13:08:08.000Z" itemprop="datePublished" class="page-time">
+  2017-05-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-Volley-请求返回数据中文出现乱码"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Volley 请求返回数据中文出现乱码</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-09 21:08:08" datetime="2017-05-09T13:08:08.000Z"  itemprop="datePublished">2017-05-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<p>  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。</p>
+<p>  经过排查，发现问题确实出在volley的一个工具类上 。</p>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<pre><code>HttpHeaderParser.parseCharset(response.headers);
+</code></pre><p>利用StringRequst请求，获取数据的是这个方法</p>
+<pre><code>@Override
+
+protected Response&lt;String&gt; parseNetworkResponse(NetworkResponse response) {
+String parsed;
+try {
+    parsed = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
+} catch (UnsupportedEncodingException e) {
+    parsed = new String(response.data);
+}
+return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));
+}
+</code></pre><p>返回的是byte[]，byte[]转化为String需要指定编码格式。问题就是出现在这个编码格式上</p>
+<pre><code>/**
+ * Returns the charset specified in the Content-Type of this header,
+ * or the HTTP default (ISO-8859-1) if none can be found.
+ */
+public static String parseCharset(Map&lt;String, String&gt; headers) {
+String contentType = headers.get(HTTP.CONTENT_TYPE);
+if (contentType != null) {
+    String[] params = contentType.split(&quot;;&quot;);
+    for (int i = 1; i &lt; params.length; i++) {
+        String[] pair = params[i].trim().split(&quot;=&quot;);
+        if (pair.length == 2) {
+            if (pair[0].equals(&quot;charset&quot;)) {
+                return pair[1];
+            }
+        }
+    }
+}
+
+return HTTP.DEFAULT_CONTENT_CHARSET;
+}
+</code></pre><p>这段代码会试图获取header中的编码格式。如果没获取到，就会返回默认的编码格式 iso.<br>之所以出现乱码，就是因为返回了默认的编码iso，而没有正确的返回了header中包含的编码格式。</p>
+<p>解决的办法很简单，就是重写</p>
+<pre><code>parseNetworkResponse(NetworkResponse response) 
+</code></pre><p>方法，手动的改为UTF-8编码</p>
+<p>修改如下：</p>
+<p> @Override</p>
+<pre><code>protected Response&lt;String&gt; parseNetworkResponse(NetworkResponse response) {
+String parsed;
+try {
+    parsed = new String(response.data, &quot;UTF-8&quot;);
+} catch (UnsupportedEncodingException e) {
+    parsed = new String(response.data);
+}
+return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));
+}
+</code></pre><p>参考：</p>
+<ol>
+<li><a href="http://blog.csdn.net/u013539084/article/details/51731057" target="_blank" rel="external">Volley 请求返回数据中文出现乱码</a></li>
+<li><a href="http://blog.csdn.net/zglslyg/article/details/39501171" target="_blank" rel="external">volley 获取cookie总结</a></li>
+</ol>
+</the></excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-09T13:26:40.635Z" itemprop="dateUpdated">2017-05-09 21:26:40</time>
+</span><br>
+
+
+        
+        转载请注明出处：<a href="/2017/05/09/Volley-请求返回数据中文出现乱码/" target="_blank" rel="external">http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/</a>
+        
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Volley/">Volley</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/&title=《Volley 请求返回数据中文出现乱码》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/&title=《Volley 请求返回数据中文出现乱码》 — Terry_Tian's Code日志&source=
+
+  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Volley 请求返回数据中文出现乱码》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/05/09/RecyclerView的万能分割线/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">RecyclerView的万能分割线</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/05/09/java-int类型转换成String-不足10位在前面补0/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">java int类型转换成String,不足10位在前面补0</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/index.html',
+        sourceId: 'Volley-请求返回数据中文出现乱码',
+        productKey: 'f6d9ed24d81f427788488b6730a34b4b',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
+        ],
+        mobileFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
+        ]
+    };
+    </script>
+    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry Tian &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/&title=《Volley 请求返回数据中文出现乱码》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/&title=《Volley 请求返回数据中文出现乱码》 — Terry_Tian's Code日志&source=
+
+  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Volley 请求返回数据中文出现乱码》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrklEQVR42u3aUW7CMBAEUO5/aXoAaDTjtQNIj68qtGSfK8Vmdh+P+PV8eb2+e33l9XOuryT33fbCw8PDG5d+XcR16f9duWYksOTdN7Xh4eHhHeNdl9sWuvZYz5cvX2I8PDy8b+DlpeQH5cmn4eHh4f0uLy931wLh4eHhfZaXfPlvo4fkLvnSHM9a8PDw8LpTa9RF+p6fj/T38PDw8MZd9XyTiI62g3GE59ILDw8P7wRvUkq+BHVBQcutCDjw8PDwtvLmB9k2sLguNw8sokrw8PDwDvDasYC1Q3b7VwmpCCbw8PDwbuclD+jkMJ0fjifBRzQZgYeHhzfgtYHCvOh2mTYMBODh4eFt5U1uP1+yOm+OA2I8PDy8e3j543jv4FSyBG1sEf0P8fDw8DbxJiFs27jKC0qGDLZ9q8DDw8MLeG17qW3855tBMmpQH/rx8PDwDvByah717hogWBsdWNwk8PDw8AJegsljiDxgbaOK/Ohf/6/w8PDwSl7yq22SkQ8EtFFsO+qKh4eHd4LXHoiTK0lw0MYWbRPuzZEaDw8PbytvbVC13QDWYuK1KAQPDw/vfl4esObH4gl4ccQBDw8P7wBvMgrQbirJ1pI3wPDw8PA+xVsrqx0IWGuPzTcbPDw8vBO8pOnVtp2S289HFuoQBA8PD28rLw8I5rHs3qd39Ml4eHh4x3jtETbfJJIi8q0ofxcPDw/vNK/dMNqRqTaSWGt9vakcDw8PbytvrcW1NoyVbxjzbQkPDw/vHG8+0jSPD9pFzOMPPDw8vHO8vaNUdx7Bo5ACDw8P7xgvHwhoI+A2gJgEE4v9PTw8PLxbeG38ujZ6tRaF4OHh4X0bb1dbKwe3kQceHh7ePby1Jla+HG37KhqoSo7+eHh4eAd4k2/0yTJNDs0bSsfDw8PbyfsDAnpUufl98S0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

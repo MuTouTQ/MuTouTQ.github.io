@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/">
+    
+    
+    <title>java int类型转换成String,不足10位在前面补0 | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JAVA,基础">
+    <meta name="description" content="String.format(“%010d”, 25);
+0代表前面要补的字符
+10代表字符串长度
+d表示参数为整数类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java int类型转换成String,不足10位在前面补0">
+<meta property="og:url" content="http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="String.format(“%010d”, 25);
+0代表前面要补的字符
+10代表字符串长度
+d表示参数为整数类型">
+<meta property="og:updated_time" content="2017-05-09T13:02:22.090Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java int类型转换成String,不足10位在前面补0">
+<meta name="twitter:description" content="String.format(“%010d”, 25);
+0代表前面要补的字符
+10代表字符串长度
+d表示参数为整数类型">
+    
+        <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Tian</h5>
+          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">java int类型转换成String,不足10位在前面补0</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">java int类型转换成String,不足10位在前面补0</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-09T12:51:02.000Z" itemprop="datePublished" class="page-time">
+  2017-05-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-java-int类型转换成String-不足10位在前面补0"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">java int类型转换成String,不足10位在前面补0</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-09 20:51:02" datetime="2017-05-09T12:51:02.000Z"  itemprop="datePublished">2017-05-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <excerpt in="" index="" |="" 首页摘要="">
+
+<p><strong>String.format(“%010d”, 25);</strong></p>
+<p>0代表前面要补的字符</p>
+<p>10代表字符串长度</p>
+<p>d表示参数为整数类型</p>
+</excerpt>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-09T13:02:22.090Z" itemprop="dateUpdated">2017-05-09 21:02:22</time>
+</span><br>
+
+
+        
+        转载请注明出处：<a href="/2017/05/09/java-int类型转换成String-不足10位在前面补0/" target="_blank" rel="external">http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/</a>
+        
+    </div>
+    <footer>
+        <a href="http://mutouspace.cn">
+            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
+            Terry Tian
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/&title=《java int类型转换成String,不足10位在前面补0》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/&title=《java int类型转换成String,不足10位在前面补0》 — Terry_Tian's Code日志&source=在山的这边，海的那边，有一只程序猿。。。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《java int类型转换成String,不足10位在前面补0》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/05/09/Volley-请求返回数据中文出现乱码/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Volley 请求返回数据中文出现乱码</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/05/03/Android卸载测试应用后再次安装应用失败/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Android卸载测试应用后再次安装应用失败</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/index.html',
+        sourceId: 'java-int类型转换成String-不足10位在前面补0',
+        productKey: 'f6d9ed24d81f427788488b6730a34b4b',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
+        ],
+        mobileFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
+        ]
+    };
+    </script>
+    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        坚持原创技术分享，您的支持将鼓励我继续创作！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Terry Tian &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/&title=《java int类型转换成String,不足10位在前面补0》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/&title=《java int类型转换成String,不足10位在前面补0》 — Terry_Tian's Code日志&source=在山的这边，海的那边，有一只程序猿。。。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《java int类型转换成String,不足10位在前面补0》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/&via=http://mutouspace.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADLUlEQVR42u3awW7bQAwE0Pz/T7tATy0aOTNcp7CYp5MRyNK+zYEmZz8+4uvx+/r389U9f/7l6v7n73r+3eSeF1zY2NjYN2E/nl5X7OSe2Vue/z2/84utwcbGxl7HzotWu6yTOpIAZsUVGxsb+2eyn7+4LSRtm9H+e7CxsbGxZwUsaUhOBljJSrCxsbF/Jjsf9+Sb0gYJSRvTjqVeMEvDxsbGfnv2SdD7bp//U76NjY2N/Tbsx0uv2ZNnhe1ondjY2NiL2LMjkkk80NaRFp887Yv1YGNjY69gt0dq8rHRrGHIy2EbP39St7GxsbHXsdtC0g50ksghf3IbZgyTZGxsbOxbsWel62TA1JbDVzVO2NjY2JvY+ZBottyTjTiZkxXxADY2NvZSdhK15iWtPT+TbM0sSMDGxsbex27H97MYIN/W2ebWZQ8bGxt7KTv/0Z+/LBnZt0Urbzku14mNjY29iN2Ogc6j1qultAeAhoMkbGxs7HXsk2M6+ej/vJmZRRR1K4KNjY19Q3ZbKtoDOnnY0N5/ssXY2NjY+9jtCClfYv6t8+JUrwEbGxt7HTsvJ+fNQPKEfEg0DBiwsbGxV7BbalK68hZi1nKcBL1/zdKwsbGxV7BnM5ZZSNAWnu+4ExsbG3s3Ox/0zMLU2dPaO2exBzY2Nvbd2fmIpy14s2g2bzBO2hhsbGzsHexZqWgHN22Tk5ei4agLGxsbex27LRXDQfxoc3NkUWixsbGxl7KTB7VhcF6cZkd2ZqMlbGxs7N3spHS17HzR58eGomdiY2NjL2K3h3JmjKTBmMUVJy0KNjY29m52/hM/LxXfER7kI7Avajg2Njb2InY73Jmx84D5ZBOLAoaNjY29gp1/OWEnjc2s/cgZdVCBjY2NfUP2o7xOClKetyatUbtNl0d2sLGxsW/Obk+55GFwPqKaRcuzsRQ2Njb2VnY7MMpHQrOgd1aW6vgBGxsbex07LwxtJNAWpNn97QgMGxsbG3sW+g6PSL4oSMDGxsbGPhnBJ8OmkwamHVphY2Nj72MnBSmPfvPnz2KG2ZqxsbGxt7JPgt523H+yiQmgfQs2Njb2zdm/AP0o/WHiNWftAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-05-03T04:35:35.482Z</updated>
+  <updated>2017-05-09T13:34:25.750Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RecyclerView的万能分割线</title>
+    <link href="http://mutouspace.cn/2017/05/09/RecyclerView%E7%9A%84%E4%B8%87%E8%83%BD%E5%88%86%E5%89%B2%E7%BA%BF/"/>
+    <id>http://mutouspace.cn/2017/05/09/RecyclerView的万能分割线/</id>
+    <published>2017-05-09T13:27:55.000Z</published>
+    <updated>2017-05-09T13:34:25.750Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用方法：&quot;&gt;&lt;a href=&quot;#使用方法：&quot; class=&quot;headerlink&quot; title=&quot;使用方法：&quot;&gt;&lt;/a&gt;使用方法：&lt;/h1&gt;&lt;h2 id=&quot;添加默认分割线：高度为2px，颜色为灰色&quot;&gt;&lt;a href=&quot;#添加默认分割线：高度为2px，颜色为灰色&quot;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://mutouspace.cn/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://mutouspace.cn/tags/Android/"/>
+    
+      <category term="Recycle" scheme="http://mutouspace.cn/tags/Recycle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Volley 请求返回数据中文出现乱码</title>
+    <link href="http://mutouspace.cn/2017/05/09/Volley-%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81/"/>
+    <id>http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/</id>
+    <published>2017-05-09T13:08:08.000Z</published>
+    <updated>2017-05-09T13:26:40.635Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;p&gt;  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。&lt;/p&gt;
+&lt;p&gt;  经过排查，发现问题确实出在volley的一个工具类上 。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="Volley" scheme="http://mutouspace.cn/tags/Volley/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java int类型转换成String,不足10位在前面补0</title>
+    <link href="http://mutouspace.cn/2017/05/09/java-int%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%88%90String-%E4%B8%8D%E8%B6%B310%E4%BD%8D%E5%9C%A8%E5%89%8D%E9%9D%A2%E8%A1%A50/"/>
+    <id>http://mutouspace.cn/2017/05/09/java-int类型转换成String-不足10位在前面补0/</id>
+    <published>2017-05-09T12:51:02.000Z</published>
+    <updated>2017-05-09T13:02:22.090Z</updated>
+    
+    <summary type="html">
+    
+      &lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
+
+&lt;p&gt;&lt;strong&gt;String.format(“%010d”, 25);&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;0代表前面要补的字符&lt;/p&gt;
+&lt;p&gt;10代表字符串长度&lt;/p&gt;
+&lt;p&gt;d表示参数为整数类型&lt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="基础" scheme="http://mutouspace.cn/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Android卸载测试应用后再次安装应用失败</title>
@@ -538,70 +612,13 @@
       <category term="Hexo" scheme="http://mutouspace.cn/categories/Hexo/"/>
     
     
-      <category term="Git" scheme="http://mutouspace.cn/tags/Git/"/>
-    
       <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
+    
+      <category term="Git" scheme="http://mutouspace.cn/tags/Git/"/>
     
       <category term="node" scheme="http://mutouspace.cn/tags/node/"/>
     
       <category term="github" scheme="http://mutouspace.cn/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://mutouspace.cn/2017/02/17/hello-world/"/>
-    <id>http://mutouspace.cn/2017/02/17/hello-world/</id>
-    <published>2017-02-17T11:51:30.000Z</published>
-    <updated>2017-03-06T14:14:31.510Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="http://mutouspace.cn/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试二</title>
-    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
-    <id>http://mutouspace.cn/2017/02/17/测试二/</id>
-    <published>2017-02-17T11:51:30.000Z</published>
-    <updated>2017-02-17T13:18:19.296Z</updated>
-    
-    <summary type="html">
-    
-      Welcome to Hexo! This is your very first post.
-    
-    </summary>
-    
-    
-      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试一</title>
-    <link href="http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%B8%80/"/>
-    <id>http://mutouspace.cn/2017/02/17/测试一/</id>
-    <published>2017-02-17T11:44:07.000Z</published>
-    <updated>2017-02-18T05:29:46.604Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;/p&gt;
-&lt;p&gt;#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://mutouspace.cn/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://mutouspace.cn/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

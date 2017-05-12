@@ -4,6 +4,145 @@
   
     
     <entry>
+      <title><![CDATA[Android中布局保存成图片]]></title>
+      <url>http://mutouspace.cn/2017/05/12/Android%E4%B8%AD%E5%B8%83%E5%B1%80%E4%BF%9D%E5%AD%98%E6%88%90%E5%9B%BE%E7%89%87/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>今天做的APP中的一个表单页面需要以后蓝牙连接打印设备后打印出来，当时想过要截屏，但想了一下截屏的话太麻烦，截屏的话是将手机的屏幕截取下来，包含很多无用的信息，所以这个想法就给pass掉了；后来又想到了转化为图片、PDF什么的，在网上搜索了一些相关信息后，发现还是将整个布局变成图片比较简单，并且也找到了一篇不错测教程，文末附有链接。</p>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="实现流程以及实现代码"><a href="#实现流程以及实现代码" class="headerlink" title="实现流程以及实现代码"></a>实现流程以及实现代码</h1><h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><pre><code>&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;
+</code></pre><h2 id="获取布局"><a href="#获取布局" class="headerlink" title="获取布局"></a>获取布局</h2><pre><code>relativeLayout = (RelativeLayout) findViewById(R.id.layout_rl);
+</code></pre><h2 id="设置布局相关设置"><a href="#设置布局相关设置" class="headerlink" title="设置布局相关设置"></a>设置布局相关设置</h2><pre><code> // 获取图片某布局
+relativeLayout.setDrawingCacheEnabled(true);
+relativeLayout.buildDrawingCache();
+</code></pre><h2 id="获取图片"><a href="#获取图片" class="headerlink" title="获取图片"></a>获取图片</h2><pre><code>final Bitmap bmp = relativeLayout.getDrawingCache(); // 获取图片
+savePicture(bmp, &quot;test.jpg&quot;);// 保存图片
+</code></pre><h2 id="保存图片"><a href="#保存图片" class="headerlink" title="保存图片"></a>保存图片</h2><pre><code>public void savePicture(Bitmap bm, String fileName) {
+    Log.i(&quot;xing&quot;, &quot;savePicture: ------------------------&quot;);
+    if (null == bm) {
+        Log.i(&quot;xing&quot;, &quot;savePicture: ------------------图片为空------&quot;);
+        return;
+    }
+    File foder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + &quot;/test&quot;);
+    if (!foder.exists()) {
+        foder.mkdirs();
+    }
+    File myCaptureFile = new File(foder, fileName);
+    try {
+        if (!myCaptureFile.exists()) {
+            myCaptureFile.createNewFile();
+        }
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(myCaptureFile));
+        //压缩保存到本地
+        bm.compress(Bitmap.CompressFormat.JPEG, 90, bos);
+        bos.flush();
+        bos.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    Toast.makeText(this, &quot;保存成功!&quot;, Toast.LENGTH_SHORT).show();
+
+}
+</code></pre><h2 id="释放资源"><a href="#释放资源" class="headerlink" title="释放资源"></a>释放资源</h2><pre><code>relativeLayout.destroyDrawingCache();
+</code></pre><h2 id="完整代码如下"><a href="#完整代码如下" class="headerlink" title="完整代码如下"></a>完整代码如下</h2><pre><code>package com.adwan.savephototolocal;
+
+import android.graphics.Bitmap;
+import android.os.Environment;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class MainActivity extends AppCompatActivity {
+private RelativeLayout relativeLayout;
+private Handler mHandler = new Handler();
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    relativeLayout = (RelativeLayout) findViewById(R.id.layout_rl);
+
+}
+
+public void save(View view) {
+    initView();
+}
+private void initView() {
+    // 获取图片某布局
+    relativeLayout.setDrawingCacheEnabled(true);
+    relativeLayout.buildDrawingCache();
+
+    mHandler.postDelayed(new Runnable() {
+
+        @Override
+        public void run() {
+            // 要在运行在子线程中
+            final Bitmap bmp = relativeLayout.getDrawingCache(); // 获取图片
+            savePicture(bmp, &quot;test.jpg&quot;);// 保存图片
+            relativeLayout.destroyDrawingCache(); // 保存过后释放资源
+        }
+    },100);
+}
+
+public void savePicture(Bitmap bm, String fileName) {
+    Log.i(&quot;xing&quot;, &quot;savePicture: ------------------------&quot;);
+    if (null == bm) {
+        Log.i(&quot;xing&quot;, &quot;savePicture: ------------------图片为空------&quot;);
+        return;
+    }
+    File foder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + &quot;/test&quot;);
+    if (!foder.exists()) {
+        foder.mkdirs();
+    }
+    File myCaptureFile = new File(foder, fileName);
+    try {
+        if (!myCaptureFile.exists()) {
+            myCaptureFile.createNewFile();
+        }
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(myCaptureFile));
+        //压缩保存到本地
+        bm.compress(Bitmap.CompressFormat.JPEG, 90, bos);
+        bos.flush();
+        bos.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    Toast.makeText(this, &quot;保存成功!&quot;, Toast.LENGTH_SHORT).show();
+
+}
+
+}
+</code></pre><p><strong>参考：</strong></p>
+<p><a href="http://www.jianshu.com/p/72242e612ecb#" target="_blank" rel="external">http://www.jianshu.com/p/72242e612ecb#</a></p>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> Android </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[RecyclerView的万能分割线]]></title>
       <url>http://mutouspace.cn/2017/05/09/RecyclerView%E7%9A%84%E4%B8%87%E8%83%BD%E5%88%86%E5%89%B2%E7%BA%BF/</url>
       <content type="html"><![CDATA[<h1 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h1><h2 id="添加默认分割线：高度为2px，颜色为灰色"><a href="#添加默认分割线：高度为2px，颜色为灰色" class="headerlink" title="添加默认分割线：高度为2px，颜色为灰色"></a>添加默认分割线：高度为2px，颜色为灰色</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));
@@ -3792,6 +3931,23 @@ hexo d -g #生成并上传
     </entry>
     
     <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://mutouspace.cn/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -3809,23 +3965,6 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
             
         </tags>
         

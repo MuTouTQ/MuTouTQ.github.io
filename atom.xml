@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-05-12T09:53:15.704Z</updated>
+  <updated>2017-06-25T09:33:26.203Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>老程序员总结的20+条经验教训</title>
+    <link href="http://mutouspace.cn/2017/06/25/%E8%80%81%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%BB%E7%BB%93%E7%9A%8420-%E6%9D%A1%E7%BB%8F%E9%AA%8C%E6%95%99%E8%AE%AD/"/>
+    <id>http://mutouspace.cn/2017/06/25/老程序员总结的20-条经验教训/</id>
+    <published>2017-06-25T09:23:02.000Z</published>
+    <updated>2017-06-25T09:33:26.203Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;p&gt;&lt;strong&gt;本文转载于：&lt;a href=&quot;http://www.it-home.org/article-2576-1.html&quot;&gt;http://www.it-home.org/article-2576-1.html&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;开发&quot;&gt;&lt;a href=&quot;#开发&quot; class=&quot;headerlink&quot; title=&quot;开发&quot;&gt;&lt;/a&gt;开发&lt;/h1&gt;&lt;h2 id=&quot;1-从小事做起，然后再扩展&quot;&gt;&lt;a href=&quot;#1-从小事做起，然后再扩展&quot; class=&quot;headerlink&quot; title=&quot;1.从小事做起，然后再扩展&quot;&gt;&lt;/a&gt;1.从小事做起，然后再扩展&lt;/h2&gt;&lt;p&gt;无论是创建一个新的系统，还是添加功能到现有的系统中，我总是从一个简单到几乎没有任何所需功能的版本启动，然后再一步一步地解决问题，直到满意为止。我从来没有妄想过能够一步登天。相反，我一边开发一边学习，同时新掌握的信息还可以用于解决方案中。&lt;/p&gt;
+&lt;p&gt;我很喜欢John Gall的这句话：“复杂系统总是源于简单系统的演化。”&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="美文" scheme="http://mutouspace.cn/categories/%E7%BE%8E%E6%96%87/"/>
+    
+    
+      <category term="转载" scheme="http://mutouspace.cn/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Android中布局保存成图片</title>
@@ -531,79 +555,6 @@
     
     
       <category term="分享" scheme="http://mutouspace.cn/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>胡歌为什么会有今天的高度？</title>
-    <link href="http://mutouspace.cn/2017/02/19/%E8%83%A1%E6%AD%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E4%BB%8A%E5%A4%A9%E7%9A%84%E9%AB%98%E5%BA%A6%EF%BC%9F/"/>
-    <id>http://mutouspace.cn/2017/02/19/胡歌为什么会有今天的高度？/</id>
-    <published>2017-02-19T04:31:07.000Z</published>
-    <updated>2017-02-19T04:32:16.015Z</updated>
-    
-    <summary type="html">
-    
-      &lt;style type=&quot;text/css&quot;&gt;
-    strong a {
-        color: #747474;
-    }
-    .player {
-        text-align: center;
-        margin: .5em auto 0;
-        width: 100%;
-        max-width: 22em;
-    }
-    .player br {
-        display: none;
-    }
-    .sign {
-        text-align: right;
-        font-style: italic;
-    }
-    #ds-recent-visitors {
-        margin: 0;
-        padding: 0;
-    }
-    #ds-recent-visitors div img {
-        display: inline-block !important;
-        width: 56px !important;
-        height: 56px !important;
-        border-radius: 50%;
-        border: 1px solid #ddd;
-        padding: 2px;
-        box-shadow: 1px 1px 1px rgba(0,0,0, .15);
-    }
-    .article-entry img:first-child {
-        display: block;
-    }
-    .article-entry span {
-        font-family: Arial;
-    }
-    #ds-hot-posts {
-        display: none;
-    }
-&lt;/style&gt;
-
-&lt;Excerpt in index | 首页摘要&gt;
-
-&lt;p&gt;&lt;strong&gt;本文转载于微信公众号：小林分享&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;藏书如山积，读书如水流。山形有限度，水流无时休。&lt;/strong&gt;&lt;/p&gt;
-&lt;p class=&quot;sign&quot;&gt;&lt;span&gt;——&lt;/span&gt; Terry_Tian, 2017年2月19日&lt;/p&gt;
-
-&lt;p&gt;在娱乐圈里，想通过大荧幕红透半边天的人有很多。&lt;/p&gt;
-&lt;p&gt;但能够沉下心，通过学习和阅读来提升自己的不多。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;胡歌&lt;/strong&gt;算一个。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="美文" scheme="http://mutouspace.cn/categories/%E7%BE%8E%E6%96%87/"/>
-    
-    
-      <category term="美文" scheme="http://mutouspace.cn/tags/%E7%BE%8E%E6%96%87/"/>
-    
-      <category term="杂记" scheme="http://mutouspace.cn/tags/%E6%9D%82%E8%AE%B0/"/>
-    
-      <category term="转载" scheme="http://mutouspace.cn/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   

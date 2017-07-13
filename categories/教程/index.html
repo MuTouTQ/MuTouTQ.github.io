@@ -156,11 +156,7 @@
             ">All</a>
         
 
-            <a href="/categories/Android/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">Android</a>
-
-        
-
-            <a href="/categories/JAVA/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">JAVA</a>
+            <a href="/categories/Android/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">Android</a>
 
         
 
@@ -168,19 +164,19 @@
 
         
 
-            <a href="/categories/数据库/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">数据库</a>
+            <a href="/categories/JAVA/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">JAVA</a>
 
         
 
-            <a href="/categories/工具/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">工具</a>
+            <a href="/categories/数据库/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">数据库</a>
 
         
 
-            <a href="/categories/测试/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">测试</a>
+            <a href="/categories/工具/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">工具</a>
 
         
 
-            <a href="/categories/分享/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">分享</a>
+            <a href="/categories/测试/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">测试</a>
 
         
 
@@ -189,6 +185,10 @@
         
 
             <a href="/categories/美文/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">美文</a>
+
+        
+
+            <a href="/categories/分享/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">分享</a>
 
         
     </nav>
@@ -357,29 +357,33 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
 
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '死鬼去哪里了！';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 

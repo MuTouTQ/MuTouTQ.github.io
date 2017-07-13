@@ -46,7 +46,7 @@ DriverManager:用于注册驱动
 Connection: 表示与数据库创建的连接
 Statement: 操作数据库sql语句的对象
 ResultSet: 结果集或一张虚拟表">
-<meta property="og:updated_time" content="2017-04-15T09:36:46.076Z">
+<meta property="og:updated_time" content="2017-07-13T08:58:14.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA学习之JDBC">
 <meta name="twitter:description" content="JDBC概述
@@ -242,8 +242,8 @@ ResultSet: 结果集或一张虚拟表">
 <h1 id="开发一个JDBC程序（重要）"><a href="#开发一个JDBC程序（重要）" class="headerlink" title="开发一个JDBC程序（重要）"></a>开发一个JDBC程序（重要）</h1><ol>
 <li><p>创建数据库表，并向表中添加测试数据 </p>
 <pre><code>&lt;--创建数据库--&gt;
-create database day06;
-use day06;
+create database mytest1;
+use mytest1;
 &lt;--创建数据库表--&gt;
 create table users(
 id int primary key auto_increment,
@@ -309,12 +309,12 @@ insert into users(name,password,email,birthday) values(&apos;wangwu&apos;,&apos;
 </li>
 </ol>
 <p>   解决办法：</p>
-<pre><code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+<pre><code>用Class.forName(&quot;com.mysql.jdbc.Driver&quot;);代替。
 </code></pre><ol>
 <li><p>与数据库建立连接</p>
 <pre><code>static Connection getConnection(String url, String user, String password) 
 
-getConnection(&quot;jdbc:mysql://localhost:3306/day06&quot;, &quot;root&quot;, &quot;root&quot;);
+getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
 
 URL:SUN公司与数据库厂商之间的一种协议。
 jdbc:mysql://localhost:3306/day06
@@ -332,7 +332,7 @@ getConnection(String url, Properties info)
 
 getConnection(String url) 
 DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&amp;password=root&quot;);
-</code></pre><h1 id="实现一个用户登录的功能"><a href="#实现一个用户登录的功能" class="headerlink" title="实现一个用户登录的功能"></a>实现一个用户登录的功能</h1><p>Demo:<a href="https://github.com/MuTouTQ/login" target="_blank" rel="external">https://github.com/MuTouTQ/login</a></p>
+</code></pre><h1 id="实现一个用户登录的功能"><a href="#实现一个用户登录的功能" class="headerlink" title="实现一个用户登录的功能"></a>实现一个用户登录的功能</h1><p>Demo:<a href="https://github.com/MuTouTQ/JavaExamples" target="_blank" rel="external">https://github.com/MuTouTQ/login</a></p>
 </the></excerpt>
         </div>
 
@@ -340,7 +340,7 @@ DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&am
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-04-15T09:36:46.076Z" itemprop="dateUpdated">2017-04-15 17:36:46</time>
+    Last updated: <time datetime="2017-07-13T08:58:14.783Z" itemprop="dateUpdated">2017-07-13 16:58:14</time>
 </span><br>
 
 
@@ -627,29 +627,33 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
 
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '死鬼去哪里了！';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 

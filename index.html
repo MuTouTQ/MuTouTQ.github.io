@@ -191,11 +191,11 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <Excerpt in index | 首页摘要>
 
-本文转载于：http://www.it-home.org/article-2576-1.html
-开发1.从小事做起，然后再扩展无论是创建一个新的系统，还是添加功能到现有的系统中，我总是从一个简单到几乎没有任何所需功能的版本启动，然后再一步一步地解决问题，直到满意为止。我从来没有妄想过能够一步登天。相反，我一边开发一边学习，同时新掌握的信息还可以用于解决方案中。
-我很喜欢John Gall的这句话：“复杂系统总是源于简单系统的演化。”
+<p><strong>本文转载于：<a href="http://www.it-home.org/article-2576-1.html">http://www.it-home.org/article-2576-1.html</a></strong></p>
+<h1 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h1><h2 id="1-从小事做起，然后再扩展"><a href="#1-从小事做起，然后再扩展" class="headerlink" title="1.从小事做起，然后再扩展"></a>1.从小事做起，然后再扩展</h2><p>无论是创建一个新的系统，还是添加功能到现有的系统中，我总是从一个简单到几乎没有任何所需功能的版本启动，然后再一步一步地解决问题，直到满意为止。我从来没有妄想过能够一步登天。相反，我一边开发一边学习，同时新掌握的信息还可以用于解决方案中。</p>
+<p>我很喜欢John Gall的这句话：“复杂系统总是源于简单系统的演化。”</p>
     
 
         <a href="/2017/06/25/老程序员总结的20-条经验教训/" class="post-more waves-effect waves-button">
@@ -244,9 +244,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <Excerpt in index | 首页摘要>
 
-概述今天做的APP中的一个表单页面需要以后蓝牙连接打印设备后打印出来，当时想过要截屏，但想了一下截屏的话太麻烦，截屏的话是将手机的屏幕截取下来，包含很多无用的信息，所以这个想法就给pass掉了；后来又想到了转化为图片、PDF什么的，在网上搜索了一些相关信息后，发现还是将整个布局变成图片比较简单，并且也找到了一篇不错测教程，文末附有链接。
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>今天做的APP中的一个表单页面需要以后蓝牙连接打印设备后打印出来，当时想过要截屏，但想了一下截屏的话太麻烦，截屏的话是将手机的屏幕截取下来，包含很多无用的信息，所以这个想法就给pass掉了；后来又想到了转化为图片、PDF什么的，在网上搜索了一些相关信息后，发现还是将整个布局变成图片比较简单，并且也找到了一篇不错测教程，文末附有链接。</p>
     
 
         <a href="/2017/05/12/Android中布局保存成图片/" class="post-more waves-effect waves-button">
@@ -295,8 +295,135 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        使用方法：添加默认分割线：高度为2px，颜色为灰色mRecyclerView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));
-添加自定义分割线：可自定义分割线drawablemRecyclerView.addItemDecoration(new RecycleViewDivi...
+        <h1 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h1><h2 id="添加默认分割线：高度为2px，颜色为灰色"><a href="#添加默认分割线：高度为2px，颜色为灰色" class="headerlink" title="添加默认分割线：高度为2px，颜色为灰色"></a>添加默认分割线：高度为2px，颜色为灰色</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));
+</code></pre><h2 id="添加自定义分割线：可自定义分割线drawable"><a href="#添加自定义分割线：可自定义分割线drawable" class="headerlink" title="添加自定义分割线：可自定义分割线drawable"></a>添加自定义分割线：可自定义分割线drawable</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(
+mContext, LinearLayoutManager.VERTICAL, R.drawable.divider_mileage));
+</code></pre><h2 id="添加自定义分割线：可自定义分割线高度和颜色"><a href="#添加自定义分割线：可自定义分割线高度和颜色" class="headerlink" title="添加自定义分割线：可自定义分割线高度和颜色"></a>添加自定义分割线：可自定义分割线高度和颜色</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(
+mContext, LinearLayoutManager.VERTICAL, 10, getResources().getColor(R.color.divide_gray_color)));
+</code></pre><h2 id="万能分割线登场："><a href="#万能分割线登场：" class="headerlink" title="万能分割线登场："></a>万能分割线登场：</h2><pre><code>public class RecycleViewDivider extends RecyclerView.ItemDecoration {
+
+private Paint mPaint;
+private Drawable mDivider;
+private int mDividerHeight = 2;//分割线高度，默认为1px
+private int mOrientation;//列表的方向：LinearLayoutManager.VERTICAL或LinearLayoutManager.HORIZONTAL
+private static final int[] ATTRS = new int[]{android.R.attr.listDivider};
+
+/**
+ * 默认分割线：高度为2px，颜色为灰色
+ *
+ * @param context
+ * @param orientation 列表方向
+ */
+public RecycleViewDivider(Context context, int orientation) {
+    if (orientation != LinearLayoutManager.VERTICAL &amp;&amp; orientation != LinearLayoutManager.HORIZONTAL) {
+        throw new IllegalArgumentException(&quot;请输入正确的参数！&quot;);
+    }
+    mOrientation = orientation;
+
+    final TypedArray a = context.obtainStyledAttributes(ATTRS);
+    mDivider = a.getDrawable(0);
+    a.recycle();
+}
+
+/**
+ * 自定义分割线
+ *
+ * @param context
+ * @param orientation 列表方向
+ * @param drawableId  分割线图片
+ */
+public RecycleViewDivider(Context context, int orientation, int drawableId) {
+    this(context, orientation);
+    mDivider = ContextCompat.getDrawable(context, drawableId);
+    mDividerHeight = mDivider.getIntrinsicHeight();
+}
+
+/**
+ * 自定义分割线
+ *
+ * @param context
+ * @param orientation   列表方向
+ * @param dividerHeight 分割线高度
+ * @param dividerColor  分割线颜色
+ */
+public RecycleViewDivider(Context context, int orientation, int dividerHeight, int dividerColor) {
+    this(context, orientation);
+    mDividerHeight = dividerHeight;
+    mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    mPaint.setColor(dividerColor);
+    mPaint.setStyle(Paint.Style.FILL);
+}
+
+
+//获取分割线尺寸
+@Override
+public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+    super.getItemOffsets(outRect, view, parent, state);
+    outRect.set(0, 0, 0, mDividerHeight);
+}
+
+//绘制分割线
+@Override
+public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
+    super.onDraw(c, parent, state);
+    if (mOrientation == LinearLayoutManager.VERTICAL) {
+        drawVertical(c, parent);
+    } else {
+        drawHorizontal(c, parent);
+    }
+}
+
+//绘制横向 item 分割线
+private void drawHorizontal(Canvas canvas, RecyclerView parent) {
+    final int left = parent.getPaddingLeft();
+    final int right = parent.getMeasuredWidth() - parent.getPaddingRight();
+    final int childSize = parent.getChildCount();
+    for (int i = 0; i &lt; childSize; i++) {
+        final View child = parent.getChildAt(i);
+        RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) child.getLayoutParams();
+        final int top = child.getBottom() + layoutParams.bottomMargin;
+        final int bottom = top + mDividerHeight;
+        if (mDivider != null) {
+            mDivider.setBounds(left, top, right, bottom);
+            mDivider.draw(canvas);
+        }
+        if (mPaint != null) {
+            canvas.drawRect(left, top, right, bottom, mPaint);
+        }
+    }
+}
+
+//绘制纵向 item 分割线
+private void drawVertical(Canvas canvas, RecyclerView parent) {
+    final int top = parent.getPaddingTop();
+    final int bottom = parent.getMeasuredHeight() - parent.getPaddingBottom();
+    final int childSize = parent.getChildCount();
+    for (int i = 0; i &lt; childSize; i++) {
+        final View child = parent.getChildAt(i);
+        RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) child.getLayoutParams();
+        final int left = child.getRight() + layoutParams.rightMargin;
+        final int right = left + mDividerHeight;
+        if (mDivider != null) {
+            mDivider.setBounds(left, top, right, bottom);
+            mDivider.draw(canvas);
+        }
+        if (mPaint != null) {
+            canvas.drawRect(left, top, right, bottom, mPaint);
+        }
+    }
+}
+}
+</code></pre><h2 id="附：自定的drawable文件一份"><a href="#附：自定的drawable文件一份" class="headerlink" title="附：自定的drawable文件一份"></a>附：自定的drawable文件一份</h2><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+android:shape=&quot;rectangle&quot;&gt;
+&lt;size android:height=&quot;20dp&quot; /&gt;
+&lt;solid android:color=&quot;#ff992900&quot; /&gt;
+&lt;/shape&gt;
+</code></pre><p>参考：</p>
+<ol>
+<li><a href="http://blog.csdn.net/pengkv/article/details/50538121" target="_blank" rel="external">RecyclerView的万能分割线</a></li>
+</ol>
+
     
 
         <a href="/2017/05/09/RecyclerView的万能分割线/" class="post-more waves-effect waves-button">
@@ -345,10 +472,10 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <Excerpt in index | 首页摘要>
 
-  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。
-  经过排查，发现问题确实出在volley的一个工具类上 。
+<p>  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。</p>
+<p>  经过排查，发现问题确实出在volley的一个工具类上 。</p>
     
 
         <a href="/2017/05/09/Volley-请求返回数据中文出现乱码/" class="post-more waves-effect waves-button">
@@ -397,13 +524,13 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <excerpt in="" index="" |="" 首页摘要="">
 
-String.format(“%010d”, 25);
-0代表前面要补的字符
-10代表字符串长度
-d表示参数为整数类型
-
+<p><strong>String.format(“%010d”, 25);</strong></p>
+<p>0代表前面要补的字符</p>
+<p>10代表字符串长度</p>
+<p>d表示参数为整数类型</p>
+</excerpt>
     
 
         <a href="/2017/05/09/java-int类型转换成String-不足10位在前面补0/" class="post-more waves-effect waves-button">
@@ -452,15 +579,23 @@ d表示参数为整数类型
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <excerpt in="" index="" |="" 首页摘要="">
 
 
 
- 感谢阅读这篇博文，欢迎关注与评论！大家在做Android开发时，可能碰到这样的情况：把手机上的测试APP卸载后，再次安装就安装不上了。（博主的手机是魅族MX5，以前的时候从未碰到这种情况。）
-解决方法：
-在手机与电脑正常连接的情况下，调出命令行窗口。
-输入：adb uninstall 包名   如：adb uninstall com.hd.soft.tjg
-按 回车键 后   提示...
+<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><p>大家在做Android开发时，可能碰到这样的情况：把手机上的测试APP卸载后，再次安装就安装不上了。（博主的手机是魅族MX5，以前的时候从未碰到这种情况。）</p>
+<p><strong>解决方法：</strong></p>
+<p>在手机与电脑正常连接的情况下，调出命令行窗口。</p>
+<p>输入：<code>adb uninstall 包名</code>   如：<code>adb uninstall com.hd.soft.tjg</code></p>
+<p>按 回车键 后   提示 Success 后，一般就可以正常安装了！</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+</excerpt>
     
 
         <a href="/2017/05/03/Android卸载测试应用后再次安装应用失败/" class="post-more waves-effect waves-button">
@@ -509,7 +644,7 @@ d表示参数为整数类型
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <Excerpt in index | 首页摘要>
     
 
         <a href="/2017/04/20/JAVA学习之Struts2框架-二/" class="post-more waves-effect waves-button">
@@ -558,12 +693,12 @@ d表示参数为整数类型
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <Excerpt in index | 首页摘要>
 
 
 
- 感谢阅读这篇博文，欢迎关注与评论！   连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。
-   ？？？？？此处为ADB的简单定义？？？？？？
+<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><p>   <strong>连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。</strong></p>
+<p>   <strong>？？？？？此处为ADB的简单定义？？？？？？</strong></p>
     
 
         <a href="/2017/04/16/ADB命令简单使用技巧（Android）/" class="post-more waves-effect waves-button">
@@ -612,12 +747,12 @@ d表示参数为整数类型
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <Excerpt in index | 首页摘要>
 
-Struts2简介Struts2概述Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。
-Struts2的来历Struts1：也是apache开发的一套mvc的开源框架。在2005年之前非常流行。
- 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。
-Struts2：在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。
+<h1 id="Struts2简介"><a href="#Struts2简介" class="headerlink" title="Struts2简介"></a>Struts2简介</h1><h2 id="Struts2概述"><a href="#Struts2概述" class="headerlink" title="Struts2概述"></a>Struts2概述</h2><p>Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。</p>
+<h2 id="Struts2的来历"><a href="#Struts2的来历" class="headerlink" title="Struts2的来历"></a>Struts2的来历</h2><p><strong>Struts1：</strong>也是apache开发的一套mvc的开源框架。在2005年之前非常流行。</p>
+<p> 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。</p>
+<p><strong>Struts2：</strong>在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。<em>里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。</em></p>
     
 
         <a href="/2017/04/15/JAVA学习之Struts2框架/" class="post-more waves-effect waves-button">
@@ -666,18 +801,18 @@ Struts2：在long long ago，有一个设计超前的框架XWork，后来推出�
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
+        <Excerpt in index | 首页摘要>
 
-
-本篇文章是对学习框架前的开题篇。
-
-内容为：
-
-框架概述
-三层架构
-控制器：MVC中的控制器
-案例中的问题
-
+<blockquote>
+<p>本篇文章是对学习框架前的开题篇。</p>
+</blockquote>
+<p>内容为：</p>
+<ul>
+<li>框架概述</li>
+<li>三层架构</li>
+<li>控制器：MVC中的控制器</li>
+<li>案例中的问题</li>
+</ul>
     
 
         <a href="/2017/04/15/JAVA学习之框架前述/" class="post-more waves-effect waves-button">
@@ -818,29 +953,33 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
 
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '死鬼去哪里了！';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 

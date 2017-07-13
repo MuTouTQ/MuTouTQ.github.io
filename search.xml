@@ -2287,8 +2287,8 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
 <h1 id="开发一个JDBC程序（重要）"><a href="#开发一个JDBC程序（重要）" class="headerlink" title="开发一个JDBC程序（重要）"></a>开发一个JDBC程序（重要）</h1><ol>
 <li><p>创建数据库表，并向表中添加测试数据 </p>
 <pre><code>&lt;--创建数据库--&gt;
-create database day06;
-use day06;
+create database mytest1;
+use mytest1;
 &lt;--创建数据库表--&gt;
 create table users(
 id int primary key auto_increment,
@@ -2354,12 +2354,12 @@ insert into users(name,password,email,birthday) values(&apos;wangwu&apos;,&apos;
 </li>
 </ol>
 <p>   解决办法：</p>
-<pre><code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+<pre><code>用Class.forName(&quot;com.mysql.jdbc.Driver&quot;);代替。
 </code></pre><ol>
 <li><p>与数据库建立连接</p>
 <pre><code>static Connection getConnection(String url, String user, String password) 
 
-getConnection(&quot;jdbc:mysql://localhost:3306/day06&quot;, &quot;root&quot;, &quot;root&quot;);
+getConnection(&quot;jdbc:mysql://localhost:3306/mytest1&quot;, &quot;root&quot;, &quot;root&quot;);
 
 URL:SUN公司与数据库厂商之间的一种协议。
 jdbc:mysql://localhost:3306/day06
@@ -2377,7 +2377,7 @@ getConnection(String url, Properties info)
 
 getConnection(String url) 
 DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&amp;password=root&quot;);
-</code></pre><h1 id="实现一个用户登录的功能"><a href="#实现一个用户登录的功能" class="headerlink" title="实现一个用户登录的功能"></a>实现一个用户登录的功能</h1><p>Demo:<a href="https://github.com/MuTouTQ/login" target="_blank" rel="external">https://github.com/MuTouTQ/login</a></p>
+</code></pre><h1 id="实现一个用户登录的功能"><a href="#实现一个用户登录的功能" class="headerlink" title="实现一个用户登录的功能"></a>实现一个用户登录的功能</h1><p>Demo:<a href="https://github.com/MuTouTQ/JavaExamples" target="_blank" rel="external">https://github.com/MuTouTQ/login</a></p>
 </the></excerpt>]]></content>
       
         <categories>
@@ -3981,6 +3981,23 @@ hexo d -g #生成并上传
     </entry>
     
     <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://mutouspace.cn/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -3998,23 +4015,6 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
             
         </tags>
         

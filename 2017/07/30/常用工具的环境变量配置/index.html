@@ -12,28 +12,24 @@
     <meta charset="utf-8">
     
     
-    <link rel="canonical" href="http://www.mutouspace.cn/2017/03/24/常用工具的环境变量配置/">
+    <link rel="canonical" href="http://www.mutouspace.cn/2017/07/30/常用工具的环境变量配置/">
     
     
-    <title>常用工具的环境变量配置 | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
+    <title>常用&quot;工具&quot;配置 | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="环境变量配置">
-    <meta name="description" content="本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
-
-转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!
-date: 2017-03-24 17:3">
+    <meta name="keywords" content="工具配置">
+    <meta name="description" content="（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
+（2017-07-30）为了自己记录的方便，本文章不在单独的只对类如JDK、Tomact这样的工具做环境变">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用工具的环境变量配置">
-<meta property="og:url" content="http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/index.html">
+<meta property="og:title" content="常用"工具"配置">
+<meta property="og:url" content="http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/index.html">
 <meta property="og:site_name" content="Terry_Tian's Code日志">
-<meta property="og:description" content="本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
-
-转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!
-date: 2017-03-24 17:3">
+<meta property="og:description" content="（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
+（2017-07-30）为了自己记录的方便，本文章不在单独的只对类如JDK、Tomact这样的工具做环境变">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/01.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/02.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/03.png">
@@ -44,13 +40,20 @@ date: 2017-03-24 17:3">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/09.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/10.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/11.png">
-<meta property="og:updated_time" content="2017-03-25T01:41:48.082Z">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven1.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven2.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven3.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven4.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven5.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven6.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven9.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven7.png">
+<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven8.png">
+<meta property="og:updated_time" content="2017-07-30T08:20:33.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用工具的环境变量配置">
-<meta name="twitter:description" content="本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
-
-转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!
-date: 2017-03-24 17:3">
+<meta name="twitter:title" content="常用"工具"配置">
+<meta name="twitter:description" content="（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
+（2017-07-30）为了自己记录的方便，本文章不在单独的只对类如JDK、Tomact这样的工具做环境变">
 <meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/01.png">
     
         <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
@@ -142,13 +145,13 @@ date: 2017-03-24 17:3">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">常用工具的环境变量配置</div>
+        <div class="flex-col header-title ellipsis">常用&quot;工具&quot;配置</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -164,11 +167,11 @@ date: 2017-03-24 17:3">
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">常用工具的环境变量配置</h1>
+        <h1 class="title">常用&quot;工具&quot;配置</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-03-24T09:34:56.000Z" itemprop="datePublished" class="page-time">
-  2017-03-24
+                <time datetime="2017-07-30T06:44:56.000Z" itemprop="datePublished" class="page-time">
+  2017-07-30
 </time>
 
 
@@ -189,7 +192,7 @@ date: 2017-03-24 17:3">
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JDK的环境变量配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">JDK的环境变量配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tomcat的环境变量配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">Tomcat的环境变量配置</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JDK的环境变量配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">JDK的环境变量配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tomcat的环境变量配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">Tomcat的环境变量配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP-标准标签库（JSTL）"><span class="post-toc-number">3.</span> <span class="post-toc-text">JSP 标准标签库（JSTL）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSTL-库安装"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JSTL 库安装</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Maven安装配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">Maven安装配置</span></a></li></ol>
         </nav>
     </aside>
     
@@ -197,9 +200,9 @@ date: 2017-03-24 17:3">
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">常用工具的环境变量配置</h1>
+        <h1 class="post-card-title">常用"工具"配置</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-03-24 17:34:56" datetime="2017-03-24T09:34:56.000Z"  itemprop="datePublished">2017-03-24</time>
+            <time class="post-time" title="2017-07-30 14:44:56" datetime="2017-07-30T06:44:56.000Z"  itemprop="datePublished">2017-07-30</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/工具/">工具</a></li></ul>
@@ -219,13 +222,15 @@ date: 2017-03-24 17:3">
             <excerpt in="" index="" |="" 首页摘要="">
 
 <blockquote>
-<p>本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！</p>
+<p>（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！</p>
+<p>（2017-07-30）为了自己记录的方便，本文章不在单独的只对类如JDK、Tomact这样的工具做环境变量配置的记录，同时增加对开发学习中遇到的一些方法库的使用如何配置使用做记录。</p>
 </blockquote>
 <p><em><p style="color:red;">转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p></em></p>
 <p>date: 2017-03-24 17:34:56</p>
 <ul>
 <li>JDK的环境变量配置</li>
 <li>Tomcat的环境变量配置</li>
+<li>JSP 标准标签库（JSTL）</li>
 </ul>
 <a id="more"></a> 
 <the rest="" of="" contents="" |="" 余下全文="">
@@ -322,6 +327,109 @@ date: 2017-03-24 17:3">
                 </div>
                 <div class="image-caption"></div>
             </figure>
+<h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。具体详细介绍请各位读者自行Google或者百度，这里不做赘述。</p>
+<h2 id="JSTL-库安装"><a href="#JSTL-库安装" class="headerlink" title="JSTL 库安装"></a>JSTL 库安装</h2><p><strong>安装步骤如下：</strong></p>
+<ol>
+<li><p>从Apache的标准标签库中下载的二进包(jakarta-taglibs-standard-current.zip)。</p>
+<p> 官方下载地址：<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/" target="_blank" rel="external">http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/</a></p>
+</li>
+<li><p>下载jakarta-taglibs-standard-1.1.2.zip 包并解压，将jakarta-taglibs-standard-1.1.2/lib/下的两个jar文件：standard.jar和jstl.jar文件拷贝到/WEB-INF/lib/下。</p>
+</li>
+<li><p>接下来我们在 web.xml 文件中添加以下配置：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app version=&quot;2.4&quot; 
+xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot; 
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/j2ee 
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
+    &lt;jsp-config&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/fmt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/fmt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/fmt-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/fmt-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/core&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/c.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/core-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/c-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/sql&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/sql.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/sql-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/sql-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/x&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/x.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/x-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/x-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;/jsp-config&gt;
+&lt;/web-app&gt;
+</code></pre></li>
+<li><p>接下来就是在JSP文件中具体的使用了，使用方法不做赘述。</p>
+</li>
+</ol>
+<h1 id="Maven安装配置"><a href="#Maven安装配置" class="headerlink" title="Maven安装配置"></a>Maven安装配置</h1><blockquote>
+<p>Maven是基于项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具。<br>Maven是跨平台的项目管理工具。主要服务于基于Java平台的项目构建，依赖管理和项目信息管理。</p>
+</blockquote>
+<pre><code>Maven主要有两个功能：
+1、项目构建
+2、依赖管理
+</code></pre><p><strong>安装配置步骤如下：</strong></p>
+<ol>
+<li><p>下载maven</p>
+<p> 官方网站：<a href="http://maven.apache.org" target="_blank" rel="external">http://maven.apache.org</a></p>
+<p> 具体应该使用那个版本做开发：1.公司中以公司要求选择；2个人开发、学习时依据个人的喜好选择。</p>
+<p> Maven是使用java开发，需要安装jdk1.6以上，推荐使用1.7</p>
+</li>
+<li><p>Maven的安装</p>
+<p>第一步：安装jdk，要求1.6或以上版本。如何安装JDK与配置环境变量请参考本文中的JDK环境变量配置一节。</p>
+<p>第二步：把maven解压缩，解压目录最好不要有中文。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven1.png" alt=""></p>
+<p>第三步：配置环境变量MAVEN_HOME</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven2.png" alt=""></p>
+<p>第四步：配置环境变量PATH，将%MAVEN_HOME%\bin加入Path中，在Windows中一定要注意要用分号；与其他值隔开。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven3.png" alt=""></p>
+<p>第五步：验证是否安装成功，打开cmd窗口，输入mvn –v</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven4.png" alt=""></p>
+</li>
+<li><p>Maven的配置</p>
+<p>Maven有两个settings.xml配置文件，一个是全局配置文件，一个是用户配置文件。</p>
+<p>一、全局配置（默认）<br>%MAVEN_HOME%/conf/settings.xml 是maven全局的配置文件。<br>该配置文件中配置了本地仓库的路径，默认就是：~/.m2/repository。其中~表示当前用户路径C:\Users[UserName]。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven5.png" alt=""></p>
+<p>二、用户配置</p>
+<p>~/.m2/settings.xml是用户的配置文件（默认没有该文件，需要将全局配置文件拷贝过来在进行修改）</p>
+<p>注意：一般本地仓库的地址不使用默认配置，通常情况下需要在用户配置中，配置新的仓库地址。</p>
+<p><strong>配置步骤如下：</strong></p>
+<p>第一步：创建一个本地仓库目录，比如G:\TMavenPro\repository。</p>
+<p>第二步：复制maven的全局配置文件到~/.m2目录下，即创建用户配置文件</p>
+<p>第三步：修改maven的用户配置文件。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven6.png" alt=""></p>
+<blockquote>
+<p>注意：<br>用户级别的仓库在全局配置中一旦设置，全局配置将不再生效，转用用户所设置的仓库，否则使用全局配置文件中的默认路径仓库。</p>
+</blockquote>
+</li>
+<li><p>Maven在eclipse中的使用</p>
+<p>第一步：查看eclipse中是否有maven插件,没有的话可以谷歌一下如何下载安装；</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven9.png" alt=""></p>
+<p>第二步：设置maven安装目录</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven7.png" alt=""></p>
+<p>第三步：设置用户配置</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven8.png" alt=""></p>
+</li>
+</ol>
 </the></excerpt>
         </div>
 
@@ -329,12 +437,12 @@ date: 2017-03-24 17:3">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-03-25T01:41:48.082Z" itemprop="dateUpdated">2017-03-25 09:41:48</time>
+    最後更新時間：<time datetime="2017-07-30T08:20:33.305Z" itemprop="dateUpdated">2017-07-30 16:20:33</time>
 </span><br>
 
 
         
-        转载请注明出处：<a href="/2017/03/24/常用工具的环境变量配置/" target="_blank" rel="external">http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/</a>
+        转载请注明出处：<a href="/2017/07/30/常用工具的环境变量配置/" target="_blank" rel="external">http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/</a>
         
     </div>
     <footer>
@@ -354,7 +462,7 @@ date: 2017-03-24 17:3">
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境变量配置/">环境变量配置</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具配置/">工具配置</a></li></ul>
 
 
             
@@ -364,7 +472,7 @@ date: 2017-03-24 17:3">
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/&title=《常用工具的环境变量配置》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/&title=《常用"工具"配置》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -374,25 +482,25 @@ date: 2017-03-24 17:3">
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/&title=《常用工具的环境变量配置》 — Terry_Tian's Code日志&source=
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/&title=《常用"工具"配置》 — Terry_Tian's Code日志&source=
 
 
-本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，..." data-title=" QQ">
+（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《常用工具的环境变量配置》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/&via=http://mutouspace.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《常用"工具"配置》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/&via=http://mutouspace.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -412,21 +520,14 @@ date: 2017-03-24 17:3">
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/03/25/JAVA之Servlet/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">JAVA学习之Servlet</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/03/24/常用的专业搜索工具（分类/" id="post-next" class="post-nav-link">
+      <a href="/2017/06/25/老程序员总结的20-条经验教训/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">常用的专业搜索工具（分类)</h4>
+        <h4 class="title">老程序员总结的20+条经验教训</h4>
       </a>
     </div>
   
@@ -448,7 +549,7 @@ date: 2017-03-24 17:3">
     <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
     <script>
     var cloudTieConfig = {
-        url: 'http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/index.html',
+        url: 'http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/index.html',
         sourceId: '常用工具的环境变量配置',
         productKey: 'f6d9ed24d81f427788488b6730a34b4b',
         target: 'cloud-tie-wrapper',
@@ -517,7 +618,7 @@ date: 2017-03-24 17:3">
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -537,7 +638,7 @@ date: 2017-03-24 17:3">
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/&title=《常用工具的环境变量配置》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/&title=《常用"工具"配置》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -547,25 +648,25 @@ date: 2017-03-24 17:3">
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/&title=《常用工具的环境变量配置》 — Terry_Tian's Code日志&source=
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/&title=《常用"工具"配置》 — Terry_Tian's Code日志&source=
 
 
-本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，..." data-title=" QQ">
+（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《常用工具的环境变量配置》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/&via=http://mutouspace.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《常用"工具"配置》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/&via=http://mutouspace.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/24/常用工具的环境变量配置/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -576,7 +677,7 @@ date: 2017-03-24 17:3">
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3dQW4bMRAEQP3/0wmQkw/RunvIsRKgdBLWK4q1Bjh0DwG/XvHr15/X8/t393+98vX17vrzPa+NFx4eHt5o6skXJJ96fijPdz4D2oeCh4eHt81rh5sVgIT6vLa3BQkPDw/vs7yWnZeKZCZ4eHh4/yMviRLyjXK0IQ4eNx4eHt6neG2QehJh3C0817IWPDw8vJh3qwH2k+8/0N/Dw8PDC5bXkyLRFp62xRXNFg8PD2+Bl2x8zwPfJKTI22ZtsIuHh4d3l5cv+rPDBCdhRFIkvpkzHh4e3jKvnWh7PY8SZu20v9yDh4eHt8B7nkobIrTHCNrjAm1IgYeHh7fHyzfTdw8KtN/YFhI8PDy8DV67xCcb5TbqPSkS9TlcPDw8vEu8W82nNn7NP9seQcDDw8Pb5p2HqrNFf7ZpzmMOPDw8vD3eLAI4P910EvVG1/Hw8PAWePnQSUQ7a5i12+tZIw0PDw/vLi8BzALZkyW++M2c/E2Ah4eHN4Ldik3zEjI7QNBuzfHw8PD2eO208rKRTDEfof4pHh4e3hrvJJ7IY4iWN4uGi/4eHh4e3jFv1u5KRmi3yyfxcZGa4OHh4Y14ydTzRb8tBsNO3cF2Hw8PD2+bN+so5Y9shmyjDTw8PLy7vJMQoW2VnZSWYTSMh4eHt8ZrW1DngcUsPq4bZnh4eHhbvfjhP4FrI9db0XAe7OLh4eFt8Not7Cy0Te48fzRv6x4eHh7eGm92fCpp4SclZDbON+Pj4eHhLfDacKE9ZNAWlVmInDfw8PDw8G7xTopBvqy3hxWuFQY8PDy8Nd75EatZ3JCPM2yY4eHh4X2UN9vm5uWnDSaigoSHh4f3D/DyRTmfRHveoQ4j8PDw8BZ4SRhxfhwqjy3yjfi1rAUPDw9vrbfeRq75tGaHrmb34+Hh4Y14vwE7qQ5iaPN50QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACpklEQVR42u3aQW4CMQwFUO5/6Vbqql3M8G3HQKU3KwTDNC9IsfuTxyO+vn6u+9dX9/9+5/d19f79PY+NCw8PD6819OQPTL51dU8OqE4KHh4e3jZv/rhT1Pu1vVqQ8PDw8N7Lux9oXgB6g8bDw8P7j7y8JCSNctQQB9ONh4eH9y5eNUg9FSjkhWc9a8HDw8OLeac2wF75+g37e3h4eHjB8tpblHt3VoPj6Ml4eHh4C7z75jj6V78YW1TD32p8/MjPf+Hh4eEd4iWLdW9AZzfVClQ8PDy8NV5voNX3qxlCLybGw8PD2+ZVW+RqAUiW+2Qk1ZACDw8Pb4PXC2Tv2Wfb8VExwMPDw1vjrRxjaqWp1SIRHVTFw8PDW+DNN5968WtSJEY/AB4eHt4arxe/5vdXYcnPkEwrHh4e3h6vGhNMlvVJaSlvkuHh4eEt8M5Gur02ujpZvY00PDw8vFO86vb/JHooL+X5LzNJjvHw8PBavOpy3Ist5gcIytksHh4e3kt4vYc2Y9b4EEBewP58ioeHh/cSXq8w9Caout1VPdyAh4eHt8erhgLVnHhSYJIyUIhx8fDw8Ma8/Gt5iJAv3M2dul4AjYeHh7fA6y3xSaM8b8cn0QYeHh7eWV6vhc0LyUaxKSDx8PDw1njV41l7UezhDTM8PDy8rb345pKdf9o7WZpP65NCgoeHh3eU12tYk6FU49351FzWPTw8PLw1XvWIVTX8Tbb5e0Xo8vl4eHh4C7z8ylvbasGYfzefaDw8PLxTvHkxmCzNeUvdLAx4eHh4a7z5Eate3JA/J58gPDw8vM/h9e7Jy09va+3J0/Dw8PA+gJc339UjCJOy9CSMwMPDw1vg5Uev8sC3R6024seyFjw8PLy1vfVq65wPq3foqnc/Hh4eXov3DeRxLVHejq5/AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

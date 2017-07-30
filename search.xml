@@ -4,6 +4,237 @@
   
     
     <entry>
+      <title><![CDATA[常用"工具"配置]]></title>
+      <url>http://mutouspace.cn/2017/07/30/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<blockquote>
+<p>（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！</p>
+<p>（2017-07-30）为了自己记录的方便，本文章不在单独的只对类如JDK、Tomact这样的工具做环境变量配置的记录，同时增加对开发学习中遇到的一些方法库的使用如何配置使用做记录。</p>
+</blockquote>
+<p><em><p style="color:red;">转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p></em></p>
+<p>date: 2017-03-24 17:34:56</p>
+<ul>
+<li>JDK的环境变量配置</li>
+<li>Tomcat的环境变量配置</li>
+<li>JSP 标准标签库（JSTL）</li>
+</ul>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<p><strong><p style="color:blue;">大家既然想找的是如何配置环境变量，那读者一定知道软件是如何下载、如何安装的，所以本文中就不再过多的介绍下载和安装过程了，重点记录一下环境变量的配置。</p></strong><br><strong>作者环境：Windows 10 X64</strong></p>
+<h1 id="JDK的环境变量配置"><a href="#JDK的环境变量配置" class="headerlink" title="JDK的环境变量配置"></a>JDK的环境变量配置</h1><ul>
+<li>新建JAVA_HOME</li>
+<li>新建CLASSPATH</li>
+<li>编辑PATH</li>
+</ul>
+<p>第一步：“我的电脑” -&gt; 右击 -&gt; “属性” -&gt; “高级系统设置” -&gt; “环境变量”;</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/01.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/02.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第二步：新建JAVA_HOME  里边填入jdk的绝对地址： <strong>E:\JAVA\jdk</strong>   </p><p style="color:red;">注意：最后不要加分号！！！！</p><p></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/03.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/04.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第三步：新建CLASSPATH  内容为： <strong>.;%JAVA_HOME%\lib;</strong>  </p><p style="color:red;">注意：不要忘记前面的“ .; ”！！！！</p><p></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/05.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第四步：编辑PATH       新加入： <strong>%JAVA_HOME%\bin;</strong>   </p><p style="color:red;">注意：每个路径之间都有分号！！！！</p><p></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/06.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>第五步：在控制台页面分别输入 “java” “javac” “java -version” 做测试</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/08.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/09.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/10.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>补充：</p>
+<p><strong>‘JAVAC’ 不是内部或外部命令解决方法</strong></p>
+<p><a href="http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html" target="_blank" rel="external">链接：http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html</a></p>
+<h1 id="Tomcat的环境变量配置"><a href="#Tomcat的环境变量配置" class="headerlink" title="Tomcat的环境变量配置"></a>Tomcat的环境变量配置</h1><ol>
+<li>新建变量名：CATALINA_BASE，变量值：E:\tomcat</li>
+<li>新建变量名：CATALINA_HOME，变量值：E:\tomcat</li>
+<li>打开PATH，添加变量值：%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;</li>
+</ol>
+<p>有了JDK环境变量配置的经验，我相信大家对配置都已经轻车熟路了，这里就不配图了。</p>
+<p>最后一步：</p>
+<p> 在CMD命令下输入命令：<code>startup</code>，出现如下对话框，表明服务启动成功。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://olg3gwtbm.bkt.clouddn.com/11.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。具体详细介绍请各位读者自行Google或者百度，这里不做赘述。</p>
+<h2 id="JSTL-库安装"><a href="#JSTL-库安装" class="headerlink" title="JSTL 库安装"></a>JSTL 库安装</h2><p><strong>安装步骤如下：</strong></p>
+<ol>
+<li><p>从Apache的标准标签库中下载的二进包(jakarta-taglibs-standard-current.zip)。</p>
+<p> 官方下载地址：<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/" target="_blank" rel="external">http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/</a></p>
+</li>
+<li><p>下载jakarta-taglibs-standard-1.1.2.zip 包并解压，将jakarta-taglibs-standard-1.1.2/lib/下的两个jar文件：standard.jar和jstl.jar文件拷贝到/WEB-INF/lib/下。</p>
+</li>
+<li><p>接下来我们在 web.xml 文件中添加以下配置：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app version=&quot;2.4&quot; 
+xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot; 
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/j2ee 
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
+    &lt;jsp-config&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/fmt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/fmt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/fmt-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/fmt-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/core&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/c.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/core-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/c-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/sql&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/sql.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/sql-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/sql-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/x&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/x.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;taglib&gt;
+    &lt;taglib-uri&gt;http://java.sun.com/jstl/x-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/x-rt.tld&lt;/taglib-location&gt;
+    &lt;/taglib&gt;
+    &lt;/jsp-config&gt;
+&lt;/web-app&gt;
+</code></pre></li>
+<li><p>接下来就是在JSP文件中具体的使用了，使用方法不做赘述。</p>
+</li>
+</ol>
+<h1 id="Maven安装配置"><a href="#Maven安装配置" class="headerlink" title="Maven安装配置"></a>Maven安装配置</h1><blockquote>
+<p>Maven是基于项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具。<br>Maven是跨平台的项目管理工具。主要服务于基于Java平台的项目构建，依赖管理和项目信息管理。</p>
+</blockquote>
+<pre><code>Maven主要有两个功能：
+1、项目构建
+2、依赖管理
+</code></pre><p><strong>安装配置步骤如下：</strong></p>
+<ol>
+<li><p>下载maven</p>
+<p> 官方网站：<a href="http://maven.apache.org" target="_blank" rel="external">http://maven.apache.org</a></p>
+<p> 具体应该使用那个版本做开发：1.公司中以公司要求选择；2个人开发、学习时依据个人的喜好选择。</p>
+<p> Maven是使用java开发，需要安装jdk1.6以上，推荐使用1.7</p>
+</li>
+<li><p>Maven的安装</p>
+<p>第一步：安装jdk，要求1.6或以上版本。如何安装JDK与配置环境变量请参考本文中的JDK环境变量配置一节。</p>
+<p>第二步：把maven解压缩，解压目录最好不要有中文。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven1.png" alt=""></p>
+<p>第三步：配置环境变量MAVEN_HOME</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven2.png" alt=""></p>
+<p>第四步：配置环境变量PATH，将%MAVEN_HOME%\bin加入Path中，在Windows中一定要注意要用分号；与其他值隔开。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven3.png" alt=""></p>
+<p>第五步：验证是否安装成功，打开cmd窗口，输入mvn –v</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven4.png" alt=""></p>
+</li>
+<li><p>Maven的配置</p>
+<p>Maven有两个settings.xml配置文件，一个是全局配置文件，一个是用户配置文件。</p>
+<p>一、全局配置（默认）<br>%MAVEN_HOME%/conf/settings.xml 是maven全局的配置文件。<br>该配置文件中配置了本地仓库的路径，默认就是：~/.m2/repository。其中~表示当前用户路径C:\Users[UserName]。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven5.png" alt=""></p>
+<p>二、用户配置</p>
+<p>~/.m2/settings.xml是用户的配置文件（默认没有该文件，需要将全局配置文件拷贝过来在进行修改）</p>
+<p>注意：一般本地仓库的地址不使用默认配置，通常情况下需要在用户配置中，配置新的仓库地址。</p>
+<p><strong>配置步骤如下：</strong></p>
+<p>第一步：创建一个本地仓库目录，比如G:\TMavenPro\repository。</p>
+<p>第二步：复制maven的全局配置文件到~/.m2目录下，即创建用户配置文件</p>
+<p>第三步：修改maven的用户配置文件。</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven6.png" alt=""></p>
+<blockquote>
+<p>注意：<br>用户级别的仓库在全局配置中一旦设置，全局配置将不再生效，转用用户所设置的仓库，否则使用全局配置文件中的默认路径仓库。</p>
+</blockquote>
+</li>
+<li><p>Maven在eclipse中的使用</p>
+<p>第一步：查看eclipse中是否有maven插件,没有的话可以谷歌一下如何下载安装；</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven9.png" alt=""></p>
+<p>第二步：设置maven安装目录</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven7.png" alt=""></p>
+<p>第三步：设置用户配置</p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven8.png" alt=""></p>
+</li>
+</ol>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> 工具 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 工具配置 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[老程序员总结的20+条经验教训]]></title>
       <url>http://mutouspace.cn/2017/06/25/%E8%80%81%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%BB%E7%BB%93%E7%9A%8420-%E6%9D%A1%E7%BB%8F%E9%AA%8C%E6%95%99%E8%AE%AD/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -195,7 +426,19 @@ public void savePicture(Bitmap bm, String fileName) {
     <entry>
       <title><![CDATA[RecyclerView的万能分割线]]></title>
       <url>http://mutouspace.cn/2017/05/09/RecyclerView%E7%9A%84%E4%B8%87%E8%83%BD%E5%88%86%E5%89%B2%E7%BA%BF/</url>
-      <content type="html"><![CDATA[<h1 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h1><h2 id="添加默认分割线：高度为2px，颜色为灰色"><a href="#添加默认分割线：高度为2px，颜色为灰色" class="headerlink" title="添加默认分割线：高度为2px，颜色为灰色"></a>添加默认分割线：高度为2px，颜色为灰色</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<p><strong>使用方法步骤：</strong></p>
+<ol>
+<li>添加默认分割线：高度为2px，颜色为灰色</li>
+<li>添加自定义分割线：可自定义分割线drawable</li>
+<li>添加自定义分割线：可自定义分割线高度和颜色</li>
+<li>万能分割线登场</li>
+</ol>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h1><h2 id="添加默认分割线：高度为2px，颜色为灰色"><a href="#添加默认分割线：高度为2px，颜色为灰色" class="headerlink" title="添加默认分割线：高度为2px，颜色为灰色"></a>添加默认分割线：高度为2px，颜色为灰色</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));
 </code></pre><h2 id="添加自定义分割线：可自定义分割线drawable"><a href="#添加自定义分割线：可自定义分割线drawable" class="headerlink" title="添加自定义分割线：可自定义分割线drawable"></a>添加自定义分割线：可自定义分割线drawable</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(
 mContext, LinearLayoutManager.VERTICAL, R.drawable.divider_mileage));
 </code></pre><h2 id="添加自定义分割线：可自定义分割线高度和颜色"><a href="#添加自定义分割线：可自定义分割线高度和颜色" class="headerlink" title="添加自定义分割线：可自定义分割线高度和颜色"></a>添加自定义分割线：可自定义分割线高度和颜色</h2><pre><code>mRecyclerView.addItemDecoration(new RecycleViewDivider(
@@ -323,7 +566,7 @@ android:shape=&quot;rectangle&quot;&gt;
 <ol>
 <li><a href="http://blog.csdn.net/pengkv/article/details/50538121" target="_blank" rel="external">RecyclerView的万能分割线</a></li>
 </ol>
-]]></content>
+</the></excerpt>]]></content>
       
         <categories>
             
@@ -2015,132 +2258,6 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
             <tag> JAVA </tag>
             
             <tag> Servlet </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[常用工具的环境变量配置]]></title>
-      <url>http://mutouspace.cn/2017/03/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
-      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
-
-<blockquote>
-<p>本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！</p>
-</blockquote>
-<p><em><p style="color:red;">转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p></em></p>
-<p>date: 2017-03-24 17:34:56</p>
-<ul>
-<li>JDK的环境变量配置</li>
-<li>Tomcat的环境变量配置</li>
-</ul>
-<a id="more"></a> 
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<p><strong><p style="color:blue;">大家既然想找的是如何配置环境变量，那读者一定知道软件是如何下载、如何安装的，所以本文中就不再过多的介绍下载和安装过程了，重点记录一下环境变量的配置。</p></strong><br><strong>作者环境：Windows 10 X64</strong></p>
-<h1 id="JDK的环境变量配置"><a href="#JDK的环境变量配置" class="headerlink" title="JDK的环境变量配置"></a>JDK的环境变量配置</h1><ul>
-<li>新建JAVA_HOME</li>
-<li>新建CLASSPATH</li>
-<li>编辑PATH</li>
-</ul>
-<p>第一步：“我的电脑” -&gt; 右击 -&gt; “属性” -&gt; “高级系统设置” -&gt; “环境变量”;</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/01.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/02.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>第二步：新建JAVA_HOME  里边填入jdk的绝对地址： <strong>E:\JAVA\jdk</strong>   </p><p style="color:red;">注意：最后不要加分号！！！！</p><p></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/03.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/04.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>第三步：新建CLASSPATH  内容为： <strong>.;%JAVA_HOME%\lib;</strong>  </p><p style="color:red;">注意：不要忘记前面的“ .; ”！！！！</p><p></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/05.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>第四步：编辑PATH       新加入： <strong>%JAVA_HOME%\bin;</strong>   </p><p style="color:red;">注意：每个路径之间都有分号！！！！</p><p></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/06.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>第五步：在控制台页面分别输入 “java” “javac” “java -version” 做测试</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/08.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/09.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/10.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>补充：</p>
-<p><strong>‘JAVAC’ 不是内部或外部命令解决方法</strong></p>
-<p><a href="http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html" target="_blank" rel="external">链接：http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html</a></p>
-<h1 id="Tomcat的环境变量配置"><a href="#Tomcat的环境变量配置" class="headerlink" title="Tomcat的环境变量配置"></a>Tomcat的环境变量配置</h1><ol>
-<li>新建变量名：CATALINA_BASE，变量值：E:\tomcat</li>
-<li>新建变量名：CATALINA_HOME，变量值：E:\tomcat</li>
-<li>打开PATH，添加变量值：%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;</li>
-</ol>
-<p>有了JDK环境变量配置的经验，我相信大家对配置都已经轻车熟路了，这里就不配图了。</p>
-<p>最后一步：</p>
-<p> 在CMD命令下输入命令：<code>startup</code>，出现如下对话框，表明服务启动成功。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/11.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-</the></excerpt>]]></content>
-      
-        <categories>
-            
-            <category> 工具 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 环境变量配置 </tag>
             
         </tags>
         

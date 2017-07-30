@@ -49,7 +49,7 @@
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven9.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven7.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven8.png">
-<meta property="og:updated_time" content="2017-07-30T08:20:33.305Z">
+<meta property="og:updated_time" content="2017-07-30T14:01:04.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用"工具"配置">
 <meta name="twitter:description" content="（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
@@ -151,7 +151,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -192,7 +192,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JDK的环境变量配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">JDK的环境变量配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tomcat的环境变量配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">Tomcat的环境变量配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP-标准标签库（JSTL）"><span class="post-toc-number">3.</span> <span class="post-toc-text">JSP 标准标签库（JSTL）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSTL-库安装"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JSTL 库安装</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Maven安装配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">Maven安装配置</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JDK的环境变量配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">JDK的环境变量配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tomcat的环境变量配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">Tomcat的环境变量配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP-标准标签库（JSTL）"><span class="post-toc-number">3.</span> <span class="post-toc-text">JSP 标准标签库（JSTL）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Maven安装配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">Maven安装配置</span></a></li></ol>
         </nav>
     </aside>
     
@@ -231,6 +231,7 @@
 <li>JDK的环境变量配置</li>
 <li>Tomcat的环境变量配置</li>
 <li>JSP 标准标签库（JSTL）</li>
+<li>Maven安装配置</li>
 </ul>
 <a id="more"></a> 
 <the rest="" of="" contents="" |="" 余下全文="">
@@ -328,7 +329,8 @@
                 <div class="image-caption"></div>
             </figure>
 <h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。具体详细介绍请各位读者自行Google或者百度，这里不做赘述。</p>
-<h2 id="JSTL-库安装"><a href="#JSTL-库安装" class="headerlink" title="JSTL 库安装"></a>JSTL 库安装</h2><p><strong>安装步骤如下：</strong></p>
+<p><strong>JSTL 库安装</strong> </p>
+<p><strong>安装步骤如下：</strong></p>
 <ol>
 <li><p>从Apache的标准标签库中下载的二进包(jakarta-taglibs-standard-current.zip)。</p>
 <p> 官方下载地址：<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/" target="_blank" rel="external">http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/</a></p>
@@ -437,7 +439,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2017-07-30T08:20:33.305Z" itemprop="dateUpdated">2017-07-30 16:20:33</time>
+    最后更新时间：<time datetime="2017-07-30T14:01:04.076Z" itemprop="dateUpdated">2017-07-30 22:01:04</time>
 </span><br>
 
 
@@ -618,7 +620,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">

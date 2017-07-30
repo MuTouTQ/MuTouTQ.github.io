@@ -18,6 +18,7 @@
 <li>JDK的环境变量配置</li>
 <li>Tomcat的环境变量配置</li>
 <li>JSP 标准标签库（JSTL）</li>
+<li>Maven安装配置</li>
 </ul>
 <a id="more"></a> 
 <the rest="" of="" contents="" |="" 余下全文="">
@@ -115,7 +116,8 @@
                 <div class="image-caption"></div>
             </figure>
 <h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。具体详细介绍请各位读者自行Google或者百度，这里不做赘述。</p>
-<h2 id="JSTL-库安装"><a href="#JSTL-库安装" class="headerlink" title="JSTL 库安装"></a>JSTL 库安装</h2><p><strong>安装步骤如下：</strong></p>
+<p><strong>JSTL 库安装</strong> </p>
+<p><strong>安装步骤如下：</strong></p>
 <ol>
 <li><p>从Apache的标准标签库中下载的二进包(jakarta-taglibs-standard-current.zip)。</p>
 <p> 官方下载地址：<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/" target="_blank" rel="external">http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/</a></p>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-07-30T08:20:33.305Z</updated>
+  <updated>2017-07-30T14:01:04.076Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://mutouspace.cn/2017/07/30/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/"/>
     <id>http://mutouspace.cn/2017/07/30/常用工具的环境变量配置/</id>
     <published>2017-07-30T06:44:56.000Z</published>
-    <updated>2017-07-30T08:20:33.305Z</updated>
+    <updated>2017-07-30T14:01:04.076Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,7 @@
 &lt;li&gt;JDK的环境变量配置&lt;/li&gt;
 &lt;li&gt;Tomcat的环境变量配置&lt;/li&gt;
 &lt;li&gt;JSP 标准标签库（JSTL）&lt;/li&gt;
+&lt;li&gt;Maven安装配置&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>

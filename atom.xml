@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-08-10T00:21:01.655Z</updated>
+  <updated>2017-08-20T08:03:14.653Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>eclipse常用快捷键整理</title>
+    <link href="http://mutouspace.cn/2017/08/20/eclipse%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/"/>
+    <id>http://mutouspace.cn/2017/08/20/eclipse常用快捷键整理/</id>
+    <published>2017-08-20T07:46:26.000Z</published>
+    <updated>2017-08-20T08:03:14.653Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;对从网上搜到的eclipse快捷键做出整理，以方便自己的使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://mutouspace.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
+    
+      <category term="eclipse" scheme="http://mutouspace.cn/tags/eclipse/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Oracle SQL Developer连接mysql数据库</title>
@@ -543,29 +570,6 @@
       <category term="MySQL" scheme="http://mutouspace.cn/tags/MySQL/"/>
     
       <category term="数据库" scheme="http://mutouspace.cn/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git学习笔记系列</title>
-    <link href="http://mutouspace.cn/2017/03/09/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97/"/>
-    <id>http://mutouspace.cn/2017/03/09/Git学习笔记系列/</id>
-    <published>2017-03-09T14:07:37.000Z</published>
-    <updated>2017-03-10T11:37:04.436Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in index | 首页摘要&gt;
-
-&lt;h1 id=&quot;Git简介&quot;&gt;&lt;a href=&quot;#Git简介&quot; class=&quot;headerlink&quot; title=&quot;Git简介&quot;&gt;&lt;/a&gt;Git简介&lt;/h1&gt;&lt;h2 id=&quot;Git是什么？&quot;&gt;&lt;a href=&quot;#Git是什么？&quot; class=&quot;headerlink&quot; title=&quot;Git是什么？&quot;&gt;&lt;/a&gt;Git是什么？&lt;/h2&gt;&lt;p&gt;Git是目前世界上最先进的分布式版本控制系统（没有之一）。&lt;/p&gt;
-&lt;p&gt;Git有什么特点？简单来说就是：高端大气上档次！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://mutouspace.cn/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Git" scheme="http://mutouspace.cn/tags/Git/"/>
     
   </entry>
   

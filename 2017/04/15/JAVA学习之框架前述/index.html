@@ -64,6 +64,10 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
@@ -154,7 +158,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -217,8 +221,6 @@
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
 
-
-            
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
@@ -288,7 +290,7 @@ C：Controller 控制器，控制程序流程。Servlet
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-04-15T10:11:31.293Z" itemprop="dateUpdated">2017-04-15 18:11:31</time>
+    最終更新：<time datetime="2017-04-15T10:11:31.293Z" itemprop="dateUpdated">2017-04-15 18:11:31</time>
 </span><br>
 
 
@@ -412,27 +414,30 @@ C：Controller 控制器，控制程序流程。Servlet
 
 
 
-    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
     <script>
-    var cloudTieConfig = {
-        url: 'http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/index.html',
-        sourceId: 'JAVA学习之框架前述',
-        productKey: 'f6d9ed24d81f427788488b6730a34b4b',
-        target: 'cloud-tie-wrapper',
-        pcFiles: [
-            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
-            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
-        ],
-        mobileFiles: [
-            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
-            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
-        ]
-    };
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PTR9sP0VlUA0kV5pUlQqc8oQ-gzGzoHsz",
+            appKey: "UmKeNqR9enJF1SxBPHAm3RrG",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
     </script>
-    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
-
-
-
+    <!-- Valine Comments end -->
 
 
 
@@ -446,21 +451,23 @@ C：Controller 控制器，控制程序流程。Servlet
         坚持原创技术分享，您的支持将鼓励我继续创作！
         <i class="icon icon-quote-right"></i>
     </h3>
-    <ul class="reward-items">
+    <div class="reward-content">
         
-        <li>
-            <img src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" title="微信打赏二维码" alt="微信打赏二维码">
-            <p>微信</p>
-        </li>
+        <div class="reward-code">
+            <img id="rewardCode" src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" alt="打赏二维码">
+        </div>
         
-
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" data-alipay="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
         
-        <li>
-            <img src="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
-            <p>支付宝</p>
-        </li>
-        
-    </ul>
+    </div>
 </div>
 
 
@@ -484,13 +491,15 @@ C：Controller 控制器，控制程序流程。Servlet
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
-        <p>
-            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>Terry Tian &copy; 2017</span>
+        <p><span>Terry Tian &copy; 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
         </p>
     </div>
 </footer>
@@ -560,7 +569,6 @@ C：Controller 控制器，控制程序流程。Servlet
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
-
 
 
 </script>

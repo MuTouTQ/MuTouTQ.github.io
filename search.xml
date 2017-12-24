@@ -4,41 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[eclipse常用配置]]></title>
-      <url>http://mutouspace.cn/2017/10/31/eclipse%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AEmd/</url>
-      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
-
-<blockquote>
-<p>（2017-10-31）eclipse是非常好用的编程工具，支持很多扩展，笔者现将自己的eclipse配置整理如下。</p>
-</blockquote>
-<p><em><p style="color:red;">转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p></em></p>
-<p>date: 2017-10-31 20:44:56</p>
-<ul>
-<li>Windows 10 X64</li>
-<li>Eclipse Java EE IDE for Web Developers.  Version: Oxygen Release (4.7.0)    Build id: 20170620-1800</li>
-</ul>
-<a id="more"></a> 
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<p># </p>
-</the></excerpt>]]></content>
-      
-        <categories>
-            
-            <category> 工具 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 工具配置 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[eclipse常用快捷键整理]]></title>
       <url>http://mutouspace.cn/2017/08/20/eclipse%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -3752,6 +3717,23 @@ hexo d -g #生成并上传
     </entry>
     
     <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://mutouspace.cn/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -3769,23 +3751,6 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
             
         </tags>
         

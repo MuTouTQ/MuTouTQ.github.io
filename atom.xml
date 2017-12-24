@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-09-29T00:49:09.498Z</updated>
+  <updated>2017-10-31T14:06:49.548Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>eclipse常用配置</title>
+    <link href="http://mutouspace.cn/2017/10/31/eclipse%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AEmd/"/>
+    <id>http://mutouspace.cn/2017/10/31/eclipse常用配置md/</id>
+    <published>2017-10-31T12:44:56.000Z</published>
+    <updated>2017-10-31T14:06:49.548Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;（2017-10-31）eclipse是非常好用的编程工具，支持很多扩展，笔者现将自己的eclipse配置整理如下。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;p style=&quot;color:red;&quot;&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;date: 2017-10-31 20:44:56&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10 X64&lt;/li&gt;
+&lt;li&gt;Eclipse Java EE IDE for Web Developers.  Version: Oxygen Release (4.7.0)    Build id: 20170620-1800&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://mutouspace.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具配置" scheme="http://mutouspace.cn/tags/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>eclipse常用快捷键整理</title>
@@ -97,30 +127,6 @@
     
     
       <category term="工具配置" scheme="http://mutouspace.cn/tags/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>老程序员总结的20+条经验教训</title>
-    <link href="http://mutouspace.cn/2017/06/25/%E8%80%81%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%BB%E7%BB%93%E7%9A%8420-%E6%9D%A1%E7%BB%8F%E9%AA%8C%E6%95%99%E8%AE%AD/"/>
-    <id>http://mutouspace.cn/2017/06/25/老程序员总结的20-条经验教训/</id>
-    <published>2017-06-25T09:23:02.000Z</published>
-    <updated>2017-06-25T09:33:26.203Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in index | 首页摘要&gt;
-
-&lt;p&gt;&lt;strong&gt;本文转载于：&lt;a href=&quot;http://www.it-home.org/article-2576-1.html&quot;&gt;http://www.it-home.org/article-2576-1.html&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&quot;开发&quot;&gt;&lt;a href=&quot;#开发&quot; class=&quot;headerlink&quot; title=&quot;开发&quot;&gt;&lt;/a&gt;开发&lt;/h1&gt;&lt;h2 id=&quot;1-从小事做起，然后再扩展&quot;&gt;&lt;a href=&quot;#1-从小事做起，然后再扩展&quot; class=&quot;headerlink&quot; title=&quot;1.从小事做起，然后再扩展&quot;&gt;&lt;/a&gt;1.从小事做起，然后再扩展&lt;/h2&gt;&lt;p&gt;无论是创建一个新的系统，还是添加功能到现有的系统中，我总是从一个简单到几乎没有任何所需功能的版本启动，然后再一步一步地解决问题，直到满意为止。我从来没有妄想过能够一步登天。相反，我一边开发一边学习，同时新掌握的信息还可以用于解决方案中。&lt;/p&gt;
-&lt;p&gt;我很喜欢John Gall的这句话：“复杂系统总是源于简单系统的演化。”&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="美文" scheme="http://mutouspace.cn/categories/%E7%BE%8E%E6%96%87/"/>
-    
-    
-      <category term="转载" scheme="http://mutouspace.cn/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   
@@ -308,16 +314,16 @@
     <link href="http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6/"/>
     <id>http://mutouspace.cn/2017/04/15/JAVA学习之Struts2框架/</id>
     <published>2017-04-15T12:52:52.000Z</published>
-    <updated>2017-04-16T08:37:10.324Z</updated>
+    <updated>2017-10-11T15:04:09.350Z</updated>
     
     <summary type="html">
     
       &lt;Excerpt in index | 首页摘要&gt;
 
 &lt;h1 id=&quot;Struts2简介&quot;&gt;&lt;a href=&quot;#Struts2简介&quot; class=&quot;headerlink&quot; title=&quot;Struts2简介&quot;&gt;&lt;/a&gt;Struts2简介&lt;/h1&gt;&lt;h2 id=&quot;Struts2概述&quot;&gt;&lt;a href=&quot;#Struts2概述&quot; class=&quot;headerlink&quot; title=&quot;Struts2概述&quot;&gt;&lt;/a&gt;Struts2概述&lt;/h2&gt;&lt;p&gt;Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。&lt;/p&gt;
-&lt;h2 id=&quot;Struts2的来历&quot;&gt;&lt;a href=&quot;#Struts2的来历&quot; class=&quot;headerlink&quot; title=&quot;Struts2的来历&quot;&gt;&lt;/a&gt;Struts2的来历&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Struts1：&lt;/strong&gt;也是apache开发的一套mvc的开源框架。在2005年之前非常流行。&lt;/p&gt;
+&lt;h2 id=&quot;Struts2的来历&quot;&gt;&lt;a href=&quot;#Struts2的来历&quot; class=&quot;headerlink&quot; title=&quot;Struts2的来历&quot;&gt;&lt;/a&gt;Struts2的来历&lt;/h2&gt;&lt;p&gt; &lt;strong&gt; Struts1：&lt;/strong&gt; 也是apache开发的一套mvc的开源框架。在2005年之前非常流行。&lt;/p&gt;
 &lt;p&gt; 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Struts2：&lt;/strong&gt;在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。&lt;em&gt;里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Struts2：&lt;/strong&gt;在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。&lt;em&gt;里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。&lt;/em&gt;&lt;/p&gt;
     
     </summary>
     

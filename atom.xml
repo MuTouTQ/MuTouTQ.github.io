@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2017-09-29T00:49:09.498Z</updated>
+  <updated>2018-04-07T13:15:46.430Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git常用命令汇总</title>
+    <link href="http://mutouspace.cn/2018/04/07/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/"/>
+    <id>http://mutouspace.cn/2018/04/07/Git常用命令汇总/</id>
+    <published>2018-04-07T12:59:24.000Z</published>
+    <updated>2018-04-07T13:15:46.430Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;/p&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文主要记录工作学习中用到的Git常用操作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;教程思路：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2018/4/7 星期六 下午 9:06:06  1. git中常用命令；&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Git" scheme="http://mutouspace.cn/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://mutouspace.cn/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>eclipse常用快捷键整理</title>
@@ -546,31 +571,6 @@
       <category term="MySQL" scheme="http://mutouspace.cn/tags/MySQL/"/>
     
       <category term="数据库" scheme="http://mutouspace.cn/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件分享篇（Windows10）</title>
-    <link href="http://mutouspace.cn/2017/03/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E7%AF%87/"/>
-    <id>http://mutouspace.cn/2017/03/06/软件分享篇/</id>
-    <published>2017-03-06T14:00:41.899Z</published>
-    <updated>2017-03-02T15:28:16.622Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in index | 首页摘要&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="分享" scheme="http://mutouspace.cn/categories/%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="分享" scheme="http://mutouspace.cn/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   

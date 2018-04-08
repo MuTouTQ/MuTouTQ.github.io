@@ -4,6 +4,61 @@
   
     
     <entry>
+      <title><![CDATA[Git常用命令汇总]]></title>
+      <url>http://mutouspace.cn/2018/04/07/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文主要记录工作学习中用到的Git常用操作。</p>
+<p><strong>教程思路：</strong></p>
+<blockquote>
+<p>2018/4/7 星期六 下午 9:06:06  1. git中常用命令；</p>
+</blockquote>
+<a id="more"></a> 
+<ol>
+<li><strong>git init</strong> ：初始化 git 仓库。</li>
+<li><strong>git status</strong> ：查看你当前 git 仓库的一些状态。</li>
+<li><strong>git add</strong> ：先把改动添加到一个「暂存区」，你可以理解成是一个缓存区域，临时保存你的改动。</li>
+<li><p><strong>git commit</strong> ：是最后真正的提交，例：commit 是提交的意思，-m 代表是提交信息，相当于备注。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git commit -m &apos;first commit&apos;</div><div class="line">git commit -a -m &apos;added new benchmarks&apos;  #省略添加到缓存区的操作</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>git log</strong> ： 查看所有产生的 commit 记录。</p>
+</li>
+<li><strong>git branch</strong> ：查看下当前分支情况；git branch a 新建分支a；git checkout a 切换到分支a；git checkout -b a新建一个a分支，并且自动切换到a分支。</li>
+<li><strong>git merge</strong> ：合并分支；合并分支的步骤：第一步是切换到 master 分支，如果你已经在了就不用切换了，第二步执行 git merge a ，意思就是把a分支的代码合并过来；</li>
+<li><strong>git branch -d</strong>：删除分支；git branch -d a 就可以把a分支删除了。</li>
+<li><strong>git branch -D</strong> ：强制删除分支。</li>
+<li><strong>git tag</strong>：查看历史 tag 记录；</li>
+<li><strong>git pull origin master</strong>：意思就是把远程最新的代码更新到本地。</li>
+<li><strong>git push origin master</strong>：意思就是把本地代码推到远程 master 分支。</li>
+<li><strong>git clone</strong>：把项目 clone 到了本地。</li>
+<li><p>提交代码之前先要设置下自己的用户名与邮箱，这些信息会出现在所有的 commit 记录里，执行以下代码就可以设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config —global user.name &quot;TerryTian&quot;</div><div class="line">git config —global user.email &quot;tianqing12989@gmail.com&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>git lg</strong>：先配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global alias.lg &quot;log --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit --date=relative&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>开启给 Git 着色</strong>：git config –global color.ui true</p>
+</li>
+<li><strong>设置显示中文文件名</strong>： git config –global core.quotepath false</li>
+<li><strong>checkout</strong>：git checkout develop：切换到 develop 分支；git checkout v1.0：切换tag.</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Git </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[eclipse常用快捷键整理]]></title>
       <url>http://mutouspace.cn/2017/08/20/eclipse%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -3717,23 +3772,6 @@ hexo d -g #生成并上传
     </entry>
     
     <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://mutouspace.cn/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -3751,6 +3789,23 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
             
         </tags>
         

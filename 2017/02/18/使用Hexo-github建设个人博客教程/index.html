@@ -22,24 +22,26 @@
     
     
     <meta name="keywords" content="Git,Hexo,node,github">
-    <meta name="description" content="前言博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。
-教程思路：
+    <meta name="description" content="前言本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。
+主要内容：
 
 列出博客搭建环境+所需工具；
 环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；
 创建Hexo项目，并本地运行查看效果
-修改项目配置文件（根目录下的">
+修改项目配置文件（根目录下的_config.yml文件）
+安装Hexo框架主题（推荐：Next或yelee主题，本人用的yelee），对主">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Hexo+github建设个人博客教程">
 <meta property="og:url" content="http://mutouspace.cn/2017/02/18/使用Hexo-github建设个人博客教程/index.html">
 <meta property="og:site_name" content="Terry_Tian's Code日志">
-<meta property="og:description" content="前言博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。
-教程思路：
+<meta property="og:description" content="前言本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。
+主要内容：
 
 列出博客搭建环境+所需工具；
 环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；
 创建Hexo项目，并本地运行查看效果
-修改项目配置文件（根目录下的">
+修改项目配置文件（根目录下的_config.yml文件）
+安装Hexo框架主题（推荐：Next或yelee主题，本人用的yelee），对主">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/hexo1.jpg">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/hexos.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/hexo4040.png">
@@ -48,16 +50,17 @@
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/yuming.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/gitset.png">
 <meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/gp.png">
-<meta property="og:updated_time" content="2017-02-19T03:21:32.577Z">
+<meta property="og:updated_time" content="2018-05-26T11:57:16.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo+github建设个人博客教程">
-<meta name="twitter:description" content="前言博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。
-教程思路：
+<meta name="twitter:description" content="前言本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。
+主要内容：
 
 列出博客搭建环境+所需工具；
 环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；
 创建Hexo项目，并本地运行查看效果
-修改项目配置文件（根目录下的">
+修改项目配置文件（根目录下的_config.yml文件）
+安装Hexo框架主题（推荐：Next或yelee主题，本人用的yelee），对主">
 <meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/hexo1.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
@@ -226,8 +229,8 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。</p>
-<p><strong>教程思路：</strong></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。</p>
+<p><strong>主要内容：</strong></p>
 <ol>
 <li>列出博客搭建环境+所需工具；</li>
 <li>环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；</li>
@@ -481,7 +484,7 @@ hexo d -g #生成并上传
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-02-19T03:21:32.577Z" itemprop="dateUpdated">2017-02-19 11:21:32</time>
+    Last updated: <time datetime="2018-05-26T11:57:16.395Z" itemprop="dateUpdated">2018-05-26 19:57:16</time>
 </span><br>
 
 
@@ -527,7 +530,11 @@ hexo d -g #生成并上传
       </li>
       <li>
         <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/02/18/使用Hexo-github建设个人博客教程/&title=《使用Hexo+github建设个人博客教程》 — Terry_Tian's Code日志&source=
-前言博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的..." data-title=" QQ">
+前言本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。
+主要内容：
+
+列出博客搭建环境+所需工具；
+环境的配置与工具的安装简述，..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -705,7 +712,11 @@ hexo d -g #生成并上传
       </li>
       <li>
         <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/02/18/使用Hexo-github建设个人博客教程/&title=《使用Hexo+github建设个人博客教程》 — Terry_Tian's Code日志&source=
-前言博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的..." data-title=" QQ">
+前言本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。
+主要内容：
+
+列出博客搭建环境+所需工具；
+环境的配置与工具的安装简述，..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>

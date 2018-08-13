@@ -308,9 +308,6 @@
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<p>补充：</p>
-<p><strong>‘JAVAC’ 不是内部或外部命令解决方法</strong></p>
-<p><a href="http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html" target="_blank" rel="external">链接：http://jingyan.baidu.com/article/1e5468f924210a484961b7f0.html</a></p>
 <h1 id="Tomcat的环境变量配置"><a href="#Tomcat的环境变量配置" class="headerlink" title="Tomcat的环境变量配置"></a>Tomcat的环境变量配置</h1><ol>
 <li>新建变量名：CATALINA_BASE，变量值：E:\tomcat</li>
 <li>新建变量名：CATALINA_HOME，变量值：E:\tomcat</li>
@@ -3500,8 +3497,8 @@ SELECT * FROM emp LIMIT 3, 10;
       <title><![CDATA[使用Hexo+github建设个人博客教程]]></title>
       <url>http://mutouspace.cn/2017/02/18/%E4%BD%BF%E7%94%A8Hexo-github%E5%BB%BA%E8%AE%BE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博主本来打算在Coding上搭建自己的Ghost博客，由于以前没有搭建博客的经验，就在网上百度教程，但很遗憾，教程很少，写的也比较简单，最终在别人的推荐下，选择了Hexo搭建静态博客。</p>
-<p><strong>教程思路：</strong></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。</p>
+<p><strong>主要内容：</strong></p>
 <ol>
 <li>列出博客搭建环境+所需工具；</li>
 <li>环境的配置与工具的安装简述，以及简单的使用教程，安装Git、Node.js环境以及Hexo框架；</li>

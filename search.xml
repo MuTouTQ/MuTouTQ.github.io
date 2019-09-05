@@ -4,6 +4,97 @@
   
     
     <entry>
+      <title><![CDATA[1.初识RabbitMQ]]></title>
+      <url>http://mutouspace.cn/2019/09/05/1.%E5%88%9D%E8%AF%86RabbitMQ/</url>
+      <content type="html"><![CDATA[<h3 id="1-什么是消息中间件？"><a href="#1-什么是消息中间件？" class="headerlink" title="1.什么是消息中间件？"></a>1.什么是消息中间件？</h3><p>消息队列中间件 (Message Queue Middleware ，简称为 MQ) 是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。</p>
+<h3 id="2-消息中间件的作用"><a href="#2-消息中间件的作用" class="headerlink" title="2.消息中间件的作用"></a>2.消息中间件的作用</h3><ul>
+<li><strong>解辑</strong>:在项目启动之初来预测将来会碰到什么需求是极其困难的。消息中间件在处理过程中间插入了一个隐含的、基于数据的接口层，两边的处理过程都要实现这一接口，这允许你独立地扩展或修改两边的处理过程，只要确保它们遵守同样的接口约束即可。</li>
+<li><strong>冗余〈存储)</strong>： 有些情况下，处理数据的过程会失败。消息中间件可以把数据进行持久化直到它们已经被完全处理，通过这一方式规避了数据丢失风险。在把 个消息从消息中间件中删除之前，需要你的处理系统明确地指出该消息己经被处理完成，从而确保你的数据被安全地保存直到你使用完毕。</li>
+<li><strong>扩展性</strong>: 因为消息中间件解捐了应用的处理过程，所以提高消息入队和处理的效率是很容易的，只要另外增加处理过程即可，不需要改变代码，也不需要调节参数。</li>
+<li><strong>削峰</strong>: 在访问量剧增的情况下，应用仍然需要继续发挥作用，但是这样的突发流 并不常见。如果以能处理这类峰值为标准而投入资源，无疑是巨大的浪费 使用消息中间件能够使关键组件支撑突发访问压力，不会因为突发的超负荷请求而完全崩惯。</li>
+<li><strong>可恢复性</strong>: 当系统一部分组件失效时，不会影响到整个系统 消息中间件降低了进程间的稿合度，所以即使 个处理消息的进程挂掉，加入消息中间件中的消息仍然可以在系统恢复后进行处理。</li>
+<li><strong>顺序保证</strong>: 在大多数使用场景下，数据处理的顺序很重要，大部分消息中间件支持一定程度上的顺序性。</li>
+<li><strong>缓冲</strong>: 在任何重要的系统中，都会存在需要不同处理时间的元素。消息中间件通过 个缓冲层来帮助任务最高效率地执行，写入消息中间件的处理会尽可能快速 该缓冲层有助于控制和优化数据流经过系统的速度。</li>
+<li><strong>异步通信</strong>: 在很多时候应用不想也不需要立即处理消息 消息中间件提供了异步处理机制，允许应用把 些消息放入消息中间件中，但并不立即处理它，在之后需要的时候再慢慢处理。<h3 id="3-RabbitMQ-的安装及简单使用"><a href="#3-RabbitMQ-的安装及简单使用" class="headerlink" title="3.RabbitMQ 的安装及简单使用"></a>3.RabbitMQ 的安装及简单使用</h3><blockquote>
+<p>RabbitMQ 是由 Erlang 语言编写的 也正因如此 在安装 RabbitMQ 之前需要安装 Erlang 。</p>
+<h4 id="1-安装Erlang-依Linux环境下为例"><a href="#1-安装Erlang-依Linux环境下为例" class="headerlink" title="1.安装Erlang(依Linux环境下为例)"></a>1.安装Erlang(依Linux环境下为例)</h4></blockquote>
+</li>
+</ul>
+<ol>
+<li><p>新建文件夹，将 Erlang 与 RabbitMQ 安装到一起，执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/src/ //进入此目录下</div><div class="line">mkdir rabbitmq     //创建文件夹</div><div class="line">cd rabbitmq        //进入新创建的文件夹</div></pre></td></tr></table></figure>
+<ol>
+<li>修改 rabbitmq-erlang.repo 文件中的内容：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/yum.repos.d/rabbitmq-erlang.repo</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<p>内容如下:（可以看出是安装的21x版本的 Erlang）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[rabbitmq-erlang] </div><div class="line">name=rabbitmq-erlang</div><div class="line">baseurl=https://dl.bintray.com/rabbitmq-erlang/rpm/erlang/21/el/7</div><div class="line">gpgcheck=1</div><div class="line">gpgkey=https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc</div><div class="line">repo_gpgcheck=0</div><div class="line">enabled=1</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>安装 Erlang</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install erlang</div></pre></td></tr></table></figure>
+</li>
+<li><p>验证是否安装成功，输入命令：<code>erl</code>。</p>
+<h4 id="2-安装-RabbitMQ-依Linux环境下为例"><a href="#2-安装-RabbitMQ-依Linux环境下为例" class="headerlink" title="2.安装 RabbitMQ(依Linux环境下为例)"></a>2.安装 RabbitMQ(依Linux环境下为例)</h4></li>
+<li><p>将下载的安装包上传到上边创建的rabbitmq目录下，执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rpm --import https://www.rabbitmq.com/rabbitmq-signing-key-public.asc</div><div class="line">yum install rabbitmq-server-3.6.1-1.noarch.rpm//选择自己的包进行安装</div></pre></td></tr></table></figure>
+</li>
+<li><p>常用的 rabbitMQ 命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">启动：systemctl start rabbitmq-server</div><div class="line">停止：service rabbitmq-server stop</div><div class="line">重启：service rabbitmq-server restart</div><div class="line">开机自动启动：systemctl enable rabbitmq-server</div><div class="line">查看 rabbitmq-server 状态：rabbitmqctl status</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /etc/rabbitmq</div><div class="line">cp /usr/share/doc/rabbitmq-server-3.4.1/rabbitmq.config.example /etc/rabbitmq/</div><div class="line">mv rabbitmq.config.example rabbitmq.config</div></pre></td></tr></table></figure>
+</li>
+<li><p>开启用户远程访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/rabbitmq/rabbitmq.config</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">%% Uncomment the following line if you want to allow access to the</div><div class="line">   %% guest user from anywhere on the network.</div><div class="line">   %% &#123;loopback_users, []&#125;  //注意要去掉后面的逗号。</div></pre></td></tr></table></figure>
+<ol>
+<li>开启web界面管理工具<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rabbitmq-plugins enable rabbitmq_management</div><div class="line">service rabbitmq-server restart</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>可以在本机浏览器输入 <code>http://localhost:15672</code> 访问 rabbitmq 主页，账户 <code>guest</code> 密码 <code>guest</code>。</p>
+<ol>
+<li>防火墙开放15672端口<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注：关闭虚拟机centos的防火墙<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">一、.对于centos7自带的防火墙的相关指令 </div><div class="line">systemctl stop firewalld.service #停止firewall </div><div class="line">systemctl disable firewalld.service #禁止firewall开机启动 </div><div class="line">systemctl status firewalld.service #查看firewall的状态</div><div class="line">二、iptables防火墙的相关状态 </div><div class="line">关闭虚拟机防火墙： </div><div class="line">关闭命令： service iptables stop </div><div class="line">永久关闭防火墙：chkconfig iptables off </div><div class="line">两个命令同时运行，运行完成后查看防火墙关闭状态 </div><div class="line">service iptables status </div><div class="line">1 关闭防火墙: service iptables stop </div><div class="line">2 启动防火墙: service iptables start </div><div class="line">3 重启防火墙: service iptables restart </div><div class="line">4 查看防火墙状态: service iptables status </div><div class="line">5 永久关闭防火墙: chkconfig iptables off </div><div class="line">6 永久关闭后启用: chkconfig iptables on</div></pre></td></tr></table></figure></p>
+<ol>
+<li>简单配置 RabbitMQ</li>
+</ol>
+<ul>
+<li>添加自定义用户名为 “admin” 以及密码为 “123456” 的管理员账号： 执行命令 <code>rabbitmqctl add_user admin 123456</code>。</li>
+<li>给 admin 账号设置为管理员：执行命令 <code>rabbitmqctl set_user_tags admin administrator</code>。</li>
+<li>给 admin 账号授权：执行命令 <code>rabbitmqctl set_permissions -p / admin “.“ “.“ “.*”</code>。</li>
+<li>查看 admin 账户的权限： 执行命令 <code>rabbitmqctl list_user_permissions admin</code>。</li>
+</ul>
+<ol>
+<li>日志文件以及配置文件的位置</li>
+</ol>
+<ul>
+<li>日志文件在：<code>$RABBITMQ_LOG_BASE/$RABBITMQ_NODENAME.log</code>下面，一般 <code>$RABBITMQ_LOG_BASE=$RABBITMQ_HOME/var/log/rabbitmq</code>。一般默认日志文件会在<code>/var/log/rabbitmq</code>文件下.</li>
+</ul>
+<p>该日志文件的开始部分记录了rabbitmq 启动时查找相关文件的记录，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">node           : rabbit@macvm</div><div class="line">home dir       : /var/lib/rabbitmq</div><div class="line">config file(s) : (none)</div><div class="line">cookie hash    : jzIB5AXnFFYHzF/o4qC9sw==</div><div class="line">log(s)         : /var/log/rabbitmq/rabbit@macvm.log</div><div class="line">    	       : /var/log/rabbitmq/rabbit@macvm_upgrade.log</div><div class="line">database dir   : /var/lib/rabbitmq/mnesia/rabbit@macvm</div></pre></td></tr></table></figure></p>
+<p>日志记录显示了各个系统文件对应的位置。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> RabbitMQ </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 消息中间件 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Git常用命令汇总]]></title>
       <url>http://mutouspace.cn/2018/04/07/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>

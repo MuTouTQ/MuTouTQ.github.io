@@ -8,9 +8,12 @@
       <url>http://mutouspace.cn/2019/09/05/1.%E5%88%9D%E8%AF%86RabbitMQ/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
-
-
-<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><a id="more"></a> 
+<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><ol>
+<li>什么是消息中间件？</li>
+<li>消息中间件的作用</li>
+<li>RabbitMQ 的安装及简单使用<a id="more"></a> 
+</li>
+</ol>
 <the rest="" of="" contents="" |="" 余下全文=""> 
 
 <h3 id="1-什么是消息中间件？"><a href="#1-什么是消息中间件？" class="headerlink" title="1.什么是消息中间件？"></a>1.什么是消息中间件？</h3><p>消息队列中间件 (Message Queue Middleware ，简称为 MQ) 是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。</p>
@@ -96,6 +99,63 @@
         <tags>
             
             <tag> 消息中间件 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[软件分享篇（Windows10）]]></title>
+      <url>http://mutouspace.cn/2019/05/18/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E7%AF%87/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<blockquote>
+<p>今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！</p>
+</blockquote>
+<p>转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p>
+<a id="more"></a> 
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="安全杀毒："><a href="#安全杀毒：" class="headerlink" title="安全杀毒："></a>安全杀毒：</h1><p>   TT电脑里用的杀毒防护软件是Windows系统自带的<strong>Windows Defender</strong>，说实话，现在Windows自带的杀软已经很好了，具体好到哪，大家可以自行百度、google。软件界面简单、实用，还没有广告，界面如下：</p>
+<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/Windowsdefender.PNG" alt="软件截图"></p>
+<p>   清理软件我用的是口碑很好的 <a href="http://www.piriform.com/ccleaner" target="_blank" rel="external">CCleaner</a>,功能完全足够你使用了！截图如下：</p>
+<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/cc.PNG" alt="CC"></p>
+<p>   对于非一般的用户，特别是计算机专业的学生，真的不是很建议在电脑了安装些安全卫士、管家、毒霸等软件的！</p>
+<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>  <strong>Android Studio</strong>：对于这款软件大家一定都不陌生，特别是对于一位安卓开发人员，Google的亲儿子，好好享受吧！</p>
+<p>  <strong>eclipse</strong>：一款插件丰富的开发工具，java开发者用的挺多，以前也用于开发安卓，可惜Google生了个儿子。</p>
+<p>  <strong>SQLite Expert Personal</strong>：一款可以查看数据表中数据的软件，安卓开发人员都值得拥有！</p>
+<h1 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h1><p>  <strong>chrome：</strong>好用的不能再好用的浏览器。插件丰富，但需要科学上网。<br>             缺点就是在国内没法云备份自己的收藏夹。推荐大家可以在安装一款360极速浏览器、或者QQ浏览器来备份自己的收藏夹。</p>
+<p>  <strong>MarkdownPad 2：</strong>我认为这可能是Windows系统下最好用的markdown书写软件了，可以去<a href="http://markdownpad.com/" target="_blank" rel="external">官网</a>下载。</p>
+<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/md.PNG" alt=""></p>
+<p>  <strong>Seer</strong>:是一款 Windows 下的文件预览工具，可以无需打开图片、音乐、视频、压缩包等文件就能预览到内容，只需点一下空格。<a href="http://www.appinn.com/seer-windows/" target="_blank" rel="external">下载地址：http://www.appinn.com/seer-windows/</a>。</p>
+<p>  <strong>护眼宝：</strong>是一款护眼的工具，<a href="http://www.huyanbao.com/#top" target="_blank" rel="external">下载地址：http://www.huyanbao.com/#top</a>。</p>
+<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/hyb.PNG" alt=""></p>
+<p>  <strong>Clover:</strong><a href="http://cn.ejie.me/" target="_blank" rel="external">Clover</a> 是 Windows Explorer 资源管理器的一个扩展，为其增加类似谷歌 Chrome 浏览器的多标签页功能。</p>
+<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/clover.jpg" alt=""></p>
+<p>  <strong>ADSafe：</strong><a href="http://www.newadblock.com/" target="_blank" rel="external">ADSafe</a>是一款好用的广告屏蔽软件！</p>
+<p>  <strong>HoneyView:</strong><a href="https://www.bandisoft.com/honeyview/cn/" target="_blank" rel="external">HoneyView</a>是一个支持多种格式的极速图像浏览器。<br>  她同时支持不解压浏览ZIP、RAR和7z压缩包中的图片。<br>  她可以显示图片的GPS信息并在Google Maps中查看该地点，同时用户可以储存喜爱的照片。</p>
+<p><strong>影音工具</strong></p>
+<p>  <strong>网易云音乐（UWP）：</strong>逼格漫漫的音乐播放器。</p>
+<p>  <strong>Potplayer：</strong><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="external">PotPlayer</a>诚意满满的视频播放器。</p>
+<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/potp.PNG" alt=""></p>
+<h1 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h1><p>  <strong>IDM：</strong>Internet Download Manager(简称“IDM”)是国外的一款下载工具，提升你的下载速度最多达5倍，安排下载时程，或续传一半的软件。Internet Download Manager的续传功能可以恢复因为断线、网络问题、计算机当机甚至无预警的停电导致下传到一半的软件。</p>
+<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/idm.PNG" alt=""></p>
+<p>  <strong>EagleGet:</strong><a href="http://www.eagleget.com/" target="_blank" rel="external">EagleGet</a>（亦称 EG Download Accelerator）是一个用于 Windows 系统的下载管理器，它是免费软件。EagleGet 使用多线程技术，支持从Youtube、Dailymotion、Facebook、Vimeo等视频网站下载 MP4 和 FLV 格式视频。EagleGet 是一个拥有简洁界面和功能的免费的新下载管理器。</p>
+<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/eg.PNG" alt=""></p>
+<p>  <strong>迅雷：</strong>国内用户电脑中常备的下载软件，大多数网站也都支持迅雷下载。但我真的越来越讨厌迅雷了，不仅下载速度限速，界面也越来越复杂，广告还多，越来越丧失了一款下载软件的本心。</p>
+<p>  <strong><em>分享到这里就结束了，如果大家有什么疑问可以留言，有好的软件推荐给我，也可以留言，谢谢阅读！</em></strong></p>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> 分享 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 分享 </tag>
             
         </tags>
         
@@ -264,37 +324,13 @@
 </ul>
 <p>第一步：下载第三方数据库jar包，并放到规定目录下                                                                   第三方jar包，网上一搜一大把，我这里用的是mysql-connector-java-5.0.8-bin.jar,官方下载地址：<a href="https://www.mysql.com/products/connector/" target="_blank" rel="external">https://www.mysql.com/products/connector/</a>。</p>
 <p>将jar包放入OracleSqlDeveloper的安装目录下的”jlib”目录，比如我的是：D:\sqldeveloper-17.2.0.188.1159-no-jre\sqldeveloper\jlib</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper1.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper1.png" alt=""></p>
 <p>第二步：启动OracleSqlDeveloper，选择”工具”-“首选项”-“数据库”-“第三方jdbc驱动程序”。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper2.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper2.png" alt=""></p>
 <p>选择【添加条目】，找到刚刚添加的jar包，添加后确定。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper.png" alt=""></p>
 <p>第三步：重新启动Oracle之后，创建数据库链接的地方就可以看到MySql的选项：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper4.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/sqldeveloper4.png" alt=""></p>
 </the></excerpt>]]></content>
       
         <categories>
@@ -339,73 +375,19 @@
 <li>编辑PATH</li>
 </ul>
 <p>第一步：“我的电脑” -&gt; 右击 -&gt; “属性” -&gt; “高级系统设置” -&gt; “环境变量”;</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/01.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/02.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/01.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/02.png" alt=""></p>
 <p>第二步：新建JAVA_HOME  里边填入jdk的绝对地址： <strong>E:\JAVA\jdk</strong>   </p><p style="color:red;">注意：最后不要加分号！！！！</p><p></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/03.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/04.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/03.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/04.png" alt=""></p>
 <p>第三步：新建CLASSPATH  内容为： <strong>.;%JAVA_HOME%\lib;</strong>  </p><p style="color:red;">注意：不要忘记前面的“ .; ”！！！！</p><p></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/05.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/05.png" alt=""></p>
 <p>第四步：编辑PATH       新加入： <strong>%JAVA_HOME%\bin;</strong>   </p><p style="color:red;">注意：每个路径之间都有分号！！！！</p><p></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/06.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/06.png" alt=""></p>
 <p>第五步：在控制台页面分别输入 “java” “javac” “java -version” 做测试</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/08.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/09.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/10.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/08.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/09.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/10.png" alt=""></p>
 <h1 id="Tomcat的环境变量配置"><a href="#Tomcat的环境变量配置" class="headerlink" title="Tomcat的环境变量配置"></a>Tomcat的环境变量配置</h1><ol>
 <li>新建变量名：CATALINA_BASE，变量值：E:\tomcat</li>
 <li>新建变量名：CATALINA_HOME，变量值：E:\tomcat</li>
@@ -414,13 +396,7 @@
 <p>有了JDK环境变量配置的经验，我相信大家对配置都已经轻车熟路了，这里就不配图了。</p>
 <p>最后一步：</p>
 <p> 在CMD命令下输入命令：<code>startup</code>，出现如下对话框，表明服务启动成功。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/11.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/11.png" alt=""></p>
 <h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。具体详细介绍请各位读者自行Google或者百度，这里不做赘述。</p>
 <p><strong>JSTL 库安装</strong> </p>
 <p><strong>安装步骤如下：</strong></p>
@@ -966,13 +942,7 @@ return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));
 <p>在手机与电脑正常连接的情况下，调出命令行窗口。</p>
 <p>输入：<code>adb uninstall 包名</code>   如：<code>adb uninstall com.hd.soft.tjg</code></p>
 <p>按 回车键 后   提示 Success 后，一般就可以正常安装了！</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6.png" alt=""></p>
 </excerpt>]]></content>
       
         <categories>
@@ -1143,13 +1113,7 @@ adb shell input touchscreen swipe 18 665 18 350
 
 <h1 id="搭建Struts2开发环境"><a href="#搭建Struts2开发环境" class="headerlink" title="搭建Struts2开发环境"></a>搭建Struts2开发环境</h1><h2 id="下载Struts2开发包"><a href="#下载Struts2开发包" class="headerlink" title="下载Struts2开发包"></a>下载Struts2开发包</h2><p><a href="http://struts.apache.org" target="_blank" rel="external">官网：http://struts.apache.org</a></p>
 <p>由于国内网络比较好，所以说可能有时候打不开，可以百度一下，下载一份。</p>
-<h2 id="开发包目录结构"><a href="#开发包目录结构" class="headerlink" title="开发包目录结构"></a>开发包目录结构</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%BC%80%E5%8F%91%E5%8C%85%E7%9B%AE%E5%BD%951.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<h2 id="开发包目录结构"><a href="#开发包目录结构" class="headerlink" title="开发包目录结构"></a>开发包目录结构</h2><p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%BC%80%E5%8F%91%E5%8C%85%E7%9B%AE%E5%BD%951.png" alt=""></p>
 <h2 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h2><h3 id="拷贝必要jar包到classpath中"><a href="#拷贝必要jar包到classpath中" class="headerlink" title="拷贝必要jar包到classpath中"></a>拷贝必要jar包到classpath中</h3><p>   <img src="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6jar%E5%8C%851.png" alt=""></p>
 <p>   <strong>拷贝哪些jar包？</strong></p>
 <p>   找到Struts2自带的例子中，struts-blank的war包，在它的<code>\WEB-INF\lib</code>目录下的jar包全拷贝。</p>
@@ -1266,28 +1230,10 @@ public String sayHello(){
 <p>解决办法：</p>
 <p><img src="http://olg3gwtbm.bkt.clouddn.com/dtd1.png" alt=""></p>
 <p>在网上找到struts的.dtd包，放到如图目录中，这个包在网上找就可以。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/dtd2.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>    
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/dtd2.png" alt="">    </p>
 <p>ok就可以了。                    </p>
-<h2 id="第一个案例的执行过程"><a href="#第一个案例的执行过程" class="headerlink" title="第一个案例的执行过程"></a>第一个案例的执行过程</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B1.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B2.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<h2 id="第一个案例的执行过程"><a href="#第一个案例的执行过程" class="headerlink" title="第一个案例的执行过程"></a>第一个案例的执行过程</h2><p><img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B1.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/struts2%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B2.png" alt=""></p>
 <h1 id="Struts2的配置文件"><a href="#Struts2的配置文件" class="headerlink" title="Struts2的配置文件"></a>Struts2的配置文件</h1><h2 id="加载时机："><a href="#加载时机：" class="headerlink" title="加载时机："></a>加载时机：</h2><p>当应用被tomcat加载的时候，struts2的配置文件就已经被加载过了。</p>
 <h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><p><strong>加载顺序：</strong>default.properties——struts-default.xml——plugins配置——struts.xml——struts.properties——web.xml</p>
 <table><br><tr><td>顺序</td><td>配置文件名</td><td>所在位置</td><td>说明</td></tr><br><tr><td>1</td><td>default.properties</td><td>struts2-core-2.3.15.3.jar\org\apache\struts2</td><td>    不能修改</td></tr><br><tr><td>2</td><td>struts-default.xml</td><td>struts2-core-2.3.15.3.jar</td><td>    不能修改</td></tr><br><tr><td>3</td><td>strtuts-plugin.xml</td><td>在struts2提供的插件jar包中</td><td>    不能修改</td></tr><br><tr><td>4</td><td>struts.xml</td><td>我们的应用中</td><td>    我们修改的：推荐</td></tr><br><tr><td>5</td><td>struts.properties</td><td>我们的应用中</td><td>    我们修改的</td></tr><br><tr><td>6</td><td>web.xml</td><td>我们的应用中</td><td>    我们修改的，可以给过滤器配置参数</td></tr><br></table>
@@ -1303,21 +1249,9 @@ public String sayHello(){
 <p>例如：</p>
 <pre><code>&lt;!-- 修改struts中默认的后缀名 --&gt;
 &lt;constant name=&quot;struts.action.extension&quot; value=&quot;do&quot;&gt;&lt;/constant&gt;
-</code></pre><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/struts%E8%A6%86%E7%9B%96.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+</code></pre><p><img src="http://olg3gwtbm.bkt.clouddn.com/struts%E8%A6%86%E7%9B%96.png" alt=""></p>
 <h2 id="创建struts-properties文件覆盖"><a href="#创建struts-properties文件覆盖" class="headerlink" title="创建struts.properties文件覆盖"></a>创建struts.properties文件覆盖</h2><p>在应用的构建路径中创建一个struts.properties的文件。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/pro%E8%A6%86%E7%9B%96.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/pro%E8%A6%86%E7%9B%96.png" alt=""></p>
 <h1 id="struts-xml配置文件的主要元素"><a href="#struts-xml配置文件的主要元素" class="headerlink" title="struts.xml配置文件的主要元素"></a>struts.xml配置文件的主要元素</h1><h2 id="package元素"><a href="#package元素" class="headerlink" title="package元素"></a>package元素</h2><ol>
 <li><p>属性：</p>
 <p><strong>name：</strong>包的名称。必须写。且必须唯一。</p>
@@ -1388,13 +1322,7 @@ b.写了该属性，取值是一个&quot;&quot;.注意：默认值不是/
 <p><img src="http://olg3gwtbm.bkt.clouddn.com/action13.png" alt=""></p>
 </li>
 </ol>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/action14.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/action14.png" alt=""></p>
 <h2 id="result元素"><a href="#result元素" class="headerlink" title="result元素"></a>result元素</h2><ol>
 <li><p>属性：</p>
 <p> name：逻辑视图的名称，对应着动作方法的返回值。默认值是success。 </p>
@@ -1470,13 +1398,7 @@ b.写了该属性，取值是一个&quot;&quot;.注意：默认值不是/
 
 <h1 id="框架概述"><a href="#框架概述" class="headerlink" title="框架概述"></a>框架概述</h1><p><strong>框架的意义与作用：</strong></p>
 <p>  所谓<code>框架</code>，就是<strong>把一些繁琐的重复性代码封装起来</strong>，使程序员在编码中把更多的经历放到业务需求的分析和理解上面。<br>  特点：封装了很多细节，程序员在使用的时候会非常简单。</p>
-<h1 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h1><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/01Struts2.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<h1 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h1><p><img src="http://olg3gwtbm.bkt.clouddn.com/01Struts2.png" alt=""></p>
 <pre><code>表现层：M model V view C control
 业务层：service
 持久层：dao  data access object
@@ -1485,24 +1407,12 @@ Struts2在三层架构中的位置是处于表现层。Struts2只是一个表现
 V：view    视图，展示界面。jsp
 C：Controller 控制器，控制程序流程。Servlet
 </code></pre><h2 id="Servlet和Filter"><a href="#Servlet和Filter" class="headerlink" title="Servlet和Filter"></a>Servlet和Filter</h2><p><strong>Servlet:</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/servlet.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/servlet.png" alt=""></p>
 <p><strong>Filter：</strong></p>
 <p><img src="http://olg3gwtbm.bkt.clouddn.com/filter.png" alt=""></p>
 <p><strong>总结：</strong></p>
 <p>Servlet能做的事情，过滤器也可以做到。并且过滤器比Servlet还多了一个放行的功能，因此过滤器比Servlet功能更为强大。<br>结论就是：过滤器同样也适合做控制器。</p>
-<h1 id="案例中的问题"><a href="#案例中的问题" class="headerlink" title="案例中的问题"></a>案例中的问题</h1><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6%E6%A1%88%E4%BE%8B1.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<h1 id="案例中的问题"><a href="#案例中的问题" class="headerlink" title="案例中的问题"></a>案例中的问题</h1><p><img src="http://olg3gwtbm.bkt.clouddn.com/%E6%A1%86%E6%9E%B6%E6%A1%88%E4%BE%8B1.png" alt=""></p>
 <p><strong>规律：</strong></p>
 <pre><code>1. 获取请求正文，用户要做什么事情
 2. 根据不同的请求，做出不同的判断
@@ -1558,13 +1468,7 @@ C：Controller 控制器，控制程序流程。Servlet
 <li>编写数据源工具类</li>
 </ol>
 <p>简例架构：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/DBCP.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/DBCP.png" alt=""></p>
 <p>添加属性资源文件：</p>
 <p>dbcpconfig.properties</p>
 <p>注：这个文件也是去网上搜索，拿来直接用就可以了。</p>
@@ -1706,13 +1610,7 @@ public void test1() {
 }
 </code></pre><h1 id="C3P0"><a href="#C3P0" class="headerlink" title="C3P0"></a>C3P0</h1><p>这个是建立的java项目。</p>
 <p><strong> 简例结构图：</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/C3P0.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/C3P0.png" alt=""></p>
 <p><strong> 使用步骤：</strong></p>
 <p>1、添加jar包 </p>
 <p>   jar包也是去网上搜。</p>
@@ -1926,13 +1824,7 @@ test.testJNDI();
 <a id="more"></a> 
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="jsp的原理"><a href="#jsp的原理" class="headerlink" title="jsp的原理"></a>jsp的原理</h1><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/jsp1.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<h1 id="jsp的原理"><a href="#jsp的原理" class="headerlink" title="jsp的原理"></a>jsp的原理</h1><p><img src="http://olg3gwtbm.bkt.clouddn.com/jsp1.png" alt=""></p>
 <h1 id="JSP-语法-3、6、9"><a href="#JSP-语法-3、6、9" class="headerlink" title="JSP 语法(3、6、9)"></a>JSP 语法(3、6、9)</h1><blockquote>
 <p>接下来就是JSP的3（jsp的3个指令）6（jsp的6个动作）9（jsp的9个内置对象）了，简称：三六九。</p>
 </blockquote>
@@ -2547,13 +2439,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
 <p>3、<a href="http://www.incogna.com/#random" title="incogna：www.incogna.com" target="_blank" rel="external">incogna：www.incogna.com</a></p>
 <p>4、<a href="http://image.baidu.com/?fr=shitu" title="百度识图" target="_blank" rel="external">百度识图</a>  支持一下百度同学，毕竟国产</p>
 <h2 id="三、网盘资源检索："><a href="#三、网盘资源检索：" class="headerlink" title="三、网盘资源检索："></a>三、网盘资源检索：</h2><p>1、<a href="http://www.panc.cc/" title="胖次搜索" target="_blank" rel="external">胖次搜索</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://i.imgur.com/SgbBgny.png" alt="胖次搜索" title="">
-                </div>
-                <div class="image-caption">胖次搜索</div>
-            </figure>
+<p><img src="http://i.imgur.com/SgbBgny.png" alt="胖次搜索"></p>
 <p>胖次搜索是一个很有意思的网盘资源搜索引擎，可以解析被吞的百度云分享链接。</p>
 <p>2、<a href="http://so.baiduyun.me/" title="百度网盘搜索" target="_blank" rel="external">百度网盘搜索</a></p>
 <p>百度网盘是比百度本身更靠谱的搜索工具。</p>
@@ -2573,13 +2459,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
 <p>有什么办法可以找到更丰富的音乐资源，享受更极致的音乐体验呢？</p>
 <p>下面的音乐检索工具，相信你一定不会错过。</p>
 <p>1、<a href="http://listen1.github.io/listen1/" title="Listen 1 音乐播放器" target="_blank" rel="external">Listen 1 音乐播放器</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://i.imgur.com/jLoy1vw.png" alt="Listen 1 音乐播放器" title="">
-                </div>
-                <div class="image-caption">Listen 1 音乐播放器</div>
-            </figure>
+<p><img src="http://i.imgur.com/jLoy1vw.png" alt="Listen 1 音乐播放器"></p>
 <p>Listen 1是一款搜索与播放来自网易云音乐，虾米，QQ音乐三个主流音乐网站的曲库软件。</p>
 <p>这款软件的作用不言而喻，可以帮你减少在不同音乐站点搜索资源的时间花费。</p>
 <p>软件本身支持windows、linux、MAC以及chrome和firefox的插件。</p>
@@ -2991,160 +2871,28 @@ public void test() {
 <blockquote>
 <p>数据库：存储、维护和管理数据的集合。</p>
 </blockquote>
-<h1 id="数据库的安装与配置"><a href="#数据库的安装与配置" class="headerlink" title="数据库的安装与配置"></a>数据库的安装与配置</h1><h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%872.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%873.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%874.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%875.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%876.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%877.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%878.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%879.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8710.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8711.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8712.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8713.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8714.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8715.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8716.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8717.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8718.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8719.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8720.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8721.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8722.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<h1 id="数据库的安装与配置"><a href="#数据库的安装与配置" class="headerlink" title="数据库的安装与配置"></a>数据库的安装与配置</h1><h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%872.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%873.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%874.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%875.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%876.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%877.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%878.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%879.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8710.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8711.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8712.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8713.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8714.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8715.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8716.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8717.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8718.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8719.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8720.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8721.png" alt=""></p>
+<p><img src="http://olg3gwtbm.bkt.clouddn.com/%E5%9B%BE%E7%89%8722.png" alt=""></p>
 <h2 id="卸载与修改密码"><a href="#卸载与修改密码" class="headerlink" title="卸载与修改密码"></a>卸载与修改密码</h2><p><strong>卸载：</strong></p>
 <ol>
 <li><p>停止mysql服务   net stop mysql       启动mysql服务  net start mysql</p>
@@ -3529,63 +3277,6 @@ SELECT * FROM emp LIMIT 3, 10;
             <tag> MySQL </tag>
             
             <tag> 数据库 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[软件分享篇（Windows10）]]></title>
-      <url>http://mutouspace.cn/2017/03/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E7%AF%87/</url>
-      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
-
-<blockquote>
-<p>今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！</p>
-</blockquote>
-<p>转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p>
-<a id="more"></a> 
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<h1 id="安全杀毒："><a href="#安全杀毒：" class="headerlink" title="安全杀毒："></a>安全杀毒：</h1><p>   TT电脑里用的杀毒防护软件是Windows系统自带的<strong>Windows Defender</strong>，说实话，现在Windows自带的杀软已经很好了，具体好到哪，大家可以自行百度、google。软件界面简单、实用，还没有广告，界面如下：</p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/Windowsdefender.PNG" alt="软件截图"></p>
-<p>   清理软件我用的是口碑很好的 <a href="http://www.piriform.com/ccleaner" target="_blank" rel="external">CCleaner</a>,功能完全足够你使用了！截图如下：</p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/cc.PNG" alt="CC"></p>
-<p>   对于非一般的用户，特别是计算机专业的学生，真的不是很建议在电脑了安装些安全卫士、管家、毒霸等软件的！</p>
-<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>  <strong>Android Studio</strong>：对于这款软件大家一定都不陌生，特别是对于一位安卓开发人员，Google的亲儿子，好好享受吧！</p>
-<p>  <strong>eclipse</strong>：一款插件丰富的开发工具，java开发者用的挺多，以前也用于开发安卓，可惜Google生了个儿子。</p>
-<p>  <strong>SQLite Expert Personal</strong>：一款可以查看数据表中数据的软件，安卓开发人员都值得拥有！</p>
-<h1 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h1><p>  <strong>chrome：</strong>好用的不能再好用的浏览器。插件丰富，但需要科学上网。<br>             缺点就是在国内没法云备份自己的收藏夹。推荐大家可以在安装一款360极速浏览器、或者QQ浏览器来备份自己的收藏夹。</p>
-<p>  <strong>MarkdownPad 2：</strong>我认为这可能是Windows系统下最好用的markdown书写软件了，可以去<a href="http://markdownpad.com/" target="_blank" rel="external">官网</a>下载。</p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/md.PNG" alt=""></p>
-<p>  <strong>Seer</strong>:是一款 Windows 下的文件预览工具，可以无需打开图片、音乐、视频、压缩包等文件就能预览到内容，只需点一下空格。<a href="http://www.appinn.com/seer-windows/" target="_blank" rel="external">下载地址：http://www.appinn.com/seer-windows/</a>。</p>
-<p>  <strong>护眼宝：</strong>是一款护眼的工具，<a href="http://www.huyanbao.com/#top" target="_blank" rel="external">下载地址：http://www.huyanbao.com/#top</a>。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/hyb.PNG" alt=""></p>
-<p>  <strong>Clover:</strong><a href="http://cn.ejie.me/" target="_blank" rel="external">Clover</a> 是 Windows Explorer 资源管理器的一个扩展，为其增加类似谷歌 Chrome 浏览器的多标签页功能。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/clover.jpg" alt=""></p>
-<p>  <strong>ADSafe：</strong><a href="http://www.newadblock.com/" target="_blank" rel="external">ADSafe</a>是一款好用的广告屏蔽软件！</p>
-<p>  <strong>HoneyView:</strong><a href="https://www.bandisoft.com/honeyview/cn/" target="_blank" rel="external">HoneyView</a>是一个支持多种格式的极速图像浏览器。<br>  她同时支持不解压浏览ZIP、RAR和7z压缩包中的图片。<br>  她可以显示图片的GPS信息并在Google Maps中查看该地点，同时用户可以储存喜爱的照片。</p>
-<p><strong>影音工具</strong></p>
-<p>  <strong>网易云音乐（UWP）：</strong>逼格漫漫的音乐播放器。</p>
-<p>  <strong>Potplayer：</strong><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="external">PotPlayer</a>诚意满满的视频播放器。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/potp.PNG" alt=""></p>
-<h1 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h1><p>  <strong>IDM：</strong>Internet Download Manager(简称“IDM”)是国外的一款下载工具，提升你的下载速度最多达5倍，安排下载时程，或续传一半的软件。Internet Download Manager的续传功能可以恢复因为断线、网络问题、计算机当机甚至无预警的停电导致下传到一半的软件。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/idm.PNG" alt=""></p>
-<p>  <strong>EagleGet:</strong><a href="http://www.eagleget.com/" target="_blank" rel="external">EagleGet</a>（亦称 EG Download Accelerator）是一个用于 Windows 系统的下载管理器，它是免费软件。EagleGet 使用多线程技术，支持从Youtube、Dailymotion、Facebook、Vimeo等视频网站下载 MP4 和 FLV 格式视频。EagleGet 是一个拥有简洁界面和功能的免费的新下载管理器。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/eg.PNG" alt=""></p>
-<p>  <strong>迅雷：</strong>国内用户电脑中常备的下载软件，大多数网站也都支持迅雷下载。但我真的越来越讨厌迅雷了，不仅下载速度限速，界面也越来越复杂，广告还多，越来越丧失了一款下载软件的本心。</p>
-<p>  <strong><em>分享到这里就结束了，如果大家有什么疑问可以留言，有好的软件推荐给我，也可以留言，谢谢阅读！</em></strong></p>
-</the></excerpt>]]></content>
-      
-        <categories>
-            
-            <category> 分享 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 分享 </tag>
             
         </tags>
         

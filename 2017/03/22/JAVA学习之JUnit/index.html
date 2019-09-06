@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hans">
 <head>
-    
 
-    
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
 
-    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Terry Tian" />
 
 
 
-    <meta charset="utf-8">
-    
-    
-    <link rel="canonical" href="http://www.mutouspace.cn/2017/03/22/JAVA学习之JUnit/">
-    
-    
-    <title>JAVA学习之JUnit | Terry_Tian&#39;s Code日志 | 行是知之始，知是行之成。</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="JAVA,JUnit">
-    <meta name="description" content="JUnit是什么？
+<meta name="description" content="JUnit是什么？
 JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
 JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。">
 <meta property="og:type" content="article">
@@ -32,179 +25,246 @@ JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单�
 <meta property="og:description" content="JUnit是什么？
 JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
 JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。">
-<meta property="og:updated_time" content="2017-03-23T06:04:28.077Z">
+<meta property="og:updated_time" content="2017-03-23T06:04:28.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA学习之JUnit">
 <meta name="twitter:description" content="JUnit是什么？
 JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
 JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。">
-    
-        <link rel="alternate" type="application/atom+xml" title="Terry_Tian&#39;s Code日志" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
-    <script>window.lazyScripts=[]</script>
 
-    <!-- custom head -->
-    
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>JAVA学习之JUnit | Terry_Tian&#39;s Code日志</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
 
 </head>
-
 <body>
-    <div id="loading" class="active"></div>
-
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg">
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/head.jpg" class="animated zoomIn">
         </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">Terry Tian</h5>
-          <a href="mailto:1015236187@qq.com" title="1015236187@qq.com" class="mail">1015236187@qq.com</a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Terry Tian</a></h1>
         </hgroup>
+
+        
+        <p class="header-subtitle">行是知之始，知是行之成。</p>
+        
+
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:1015236187@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于JAVA</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Terry Tian</a></h1>
       </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                归档
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/about"  >
-                <i class="icon icon-lg icon-link"></i>
-                关于我
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/MuTouTQ/MuTouTQ.github.io" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="http://weibo.com/Tianqing1994/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" >
-                <i class="icon icon-lg icon-weibo"></i>
-                Weibo
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
-
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">JAVA学习之JUnit</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/head.jpg" class="animated zoomIn">
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Terry Tian</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">行是知之始，知是行之成。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:1015236187@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
     </div>
-</header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">JAVA学习之JUnit</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2017-03-22T14:33:06.000Z" itemprop="datePublished" class="page-time">
-  2017-03-22
-</time>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-JAVA学习之JUnit" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/22/JAVA学习之JUnit/" class="article-date">
+      <time datetime="2017-03-22T14:33:06.000Z" itemprop="datePublished">2017-03-22</time>
+</a>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JAVA学习之JUnit
+    </h1>
+  
 
-            
-        </h5>
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
     </div>
 
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JUnit/">JUnit</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
     
-
-
-</header>
-
-
-<div class="container body-wrap">
-    
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit是什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">JUnit是什么？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JUnit提供"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">JUnit提供</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JUnit用于测试"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">JUnit用于测试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JUnit的特点"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">JUnit的特点</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit简单示例"><span class="post-toc-number">2.</span> <span class="post-toc-text">JUnit简单示例</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit注解"><span class="post-toc-number">3.</span> <span class="post-toc-text">JUnit注解</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JUnit断言"><span class="post-toc-number">4.</span> <span class="post-toc-text">JUnit断言</span></a></li></ol>
-        </nav>
-    </aside>
-    
-<article id="post-JAVA学习之JUnit"
-  class="post-article article-type-post fade" itemprop="blogPost">
-
-    <div class="post-card">
-        <h1 class="post-card-title">JAVA学习之JUnit</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2017-03-22 22:33:06" datetime="2017-03-22T14:33:06.000Z"  itemprop="datePublished">2017-03-22</time>
-
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
-
-
-
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
-
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <excerpt in="" index="" |="" 首页摘要="">
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <excerpt in="" index="" |="" 首页摘要="">
 
 <h1 id="JUnit是什么？"><a href="#JUnit是什么？" class="headerlink" title="JUnit是什么？"></a>JUnit是什么？</h1><blockquote>
 <p>JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。</p>
@@ -384,308 +444,174 @@ public void test() {
 <p>文章转载自：易百教程 [http:/www.yiibai.com]</p>
 </blockquote>
 </the></excerpt>
-        </div>
-
-        <blockquote class="post-copyright">
-    <div class="content">
-        
-<span class="post-time">
-    Last updated: <time datetime="2017-03-23T06:04:28.077Z" itemprop="dateUpdated">2017-03-23 14:04:28</time>
-</span><br>
-
-
-        
-        转载请注明出处：<a href="/2017/03/22/JAVA学习之JUnit/" target="_blank" rel="external">http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/</a>
-        
+      
     </div>
-    <footer>
-        <a href="http://mutouspace.cn">
-            <img src="http://olg3gwtbm.bkt.clouddn.com/head.jpg" alt="Terry Tian">
-            Terry Tian
-        </a>
-    </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JUnit/">JUnit</a></li></ul>
-
-
-            
-<div class="page-share-wrap">
     
-
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&source=
-
-JUnit是什么？
-JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
-JUnit可广泛用于工业和作为支..." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之JUnit》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&via=http://mutouspace.cn" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
-
-
-        </div>
-    </div>
-
+  </div>
+  
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/03/22/JAVA学习之JDBC/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">JAVA学习之JDBC</h4>
-      </a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/22/JAVA学习之JUnit/">JAVA学习之JUnit</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
+        <p><span>发布时间:</span>2017-03-22, 22:33:06</p>
+        <p><span>最后更新:</span>2017-03-23, 14:04:28</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/22/JAVA学习之JUnit/" title="JAVA学习之JUnit">http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
-  
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/03/22/JAVA学习之JDBC/">
+                    JAVA学习之JDBC
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/03/21/JAVA学习之MySQL/">
+                    JAVA学习之MySQL
+                </a>
+            </div>
+        
+    </nav>
 
   
-    <div class="waves-block waves-effect next">
-      <a href="/2017/03/21/JAVA学习之MySQL/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">JAVA学习之MySQL</h4>
-      </a>
-    </div>
-  
-</nav>
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Valine Comments -->
-    <div class="comments vcomment" id="comments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
-    <!-- Valine Comments script -->
-    <script>
-        var GUEST_INFO = ['nick','mail','link'];
-        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-          return GUEST_INFO.indexOf(item) > -1
-        });
-        new Valine({
-            el: '#comments',
-            notify: 'false' == 'true',
-            verify: 'false' == 'true',
-            appId: "PTR9sP0VlUA0kV5pUlQqc8oQ-gzGzoHsz",
-            appKey: "UmKeNqR9enJF1SxBPHAm3RrG",
-            avatar: "monsterid",
-            placeholder: "Just go go",
-            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
-            pageSize: "10"
-        })
-    </script>
-    <!-- Valine Comments end -->
-
-
-
-
 </article>
 
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        坚持原创技术分享，您的支持将鼓励我继续创作！
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
         
-        <div class="reward-code">
-            <img id="rewardCode" src="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" alt="打赏二维码">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JUnit是什么？"><span class="toc-number">1.</span> <span class="toc-text">JUnit是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JUnit提供"><span class="toc-number">1.1.</span> <span class="toc-text">JUnit提供</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JUnit用于测试"><span class="toc-number">1.2.</span> <span class="toc-text">JUnit用于测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JUnit的特点"><span class="toc-number">1.3.</span> <span class="toc-text">JUnit的特点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JUnit简单示例"><span class="toc-number">2.</span> <span class="toc-text">JUnit简单示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JUnit注解"><span class="toc-number">3.</span> <span class="toc-text">JUnit注解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JUnit断言"><span class="toc-number">4.</span> <span class="toc-text">JUnit断言</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"JAVA学习之JUnit　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/03/22/JAVA学习之JDBC/" title="上一篇: JAVA学习之JDBC">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/03/21/JAVA学习之MySQL/" title="下一篇: JAVA学习之MySQL">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/05/1.初识RabbitMQ/">1.初识RabbitMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/18/软件分享篇/">软件分享篇（Windows10）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/07/Git常用命令汇总/">Git常用命令汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/20/eclipse常用快捷键整理/">eclipse常用快捷键整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/使用Oracle SQL Developer连接mysql数据库/">使用Oracle SQL Developer连接mysql数据库</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/30/常用工具的环境变量配置/">常用"工具"配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/12/Android中布局保存成图片/">Android中布局保存成图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/RecyclerView的万能分割线/">RecyclerView的万能分割线</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/Volley-请求返回数据中文出现乱码/">Volley 请求返回数据中文出现乱码</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/java-int类型转换成String-不足10位在前面补0/">java int类型转换成String,不足10位在前面补0</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/03/Android卸载测试应用后再次安装应用失败/">Android卸载测试应用后再次安装应用失败</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/JAVA学习之Struts2框架-二/">JAVA学习之Struts2框架(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/16/ADB命令简单使用技巧（Android）/">ADB的简单使用技巧（Android）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/JAVA学习之Struts2框架/">JAVA学习之Struts2框架（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/JAVA学习之框架前述/">JAVA学习之框架前述</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/02/JAVA学习之常用的数据源配置/">JAVA学习之常用的数据源配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/29/JAVA学习之Jsp/">JAVA学习之Jsp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/JAVA之Servlet/">JAVA学习之Servlet</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/常用的专业搜索工具（分类/">常用的专业搜索工具（分类)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/JAVA学习之JDBC/">JAVA学习之JDBC</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/JAVA学习之JUnit/">JAVA学习之JUnit</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/JAVA学习之MySQL/">JAVA学习之MySQL</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/使用Hexo-github建设个人博客教程/">使用Hexo+github建设个人博客教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/17/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/17/测试二/">测试二</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/17/测试一/">测试一</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 Terry Tian
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
         </div>
         
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="http://olg3gwtbm.bkt.clouddn.com/wechatpay1.png" data-alipay="http://olg3gwtbm.bkt.clouddn.com/alipay1.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>Terry Tian &copy; 2017 - 2019</span>
-            <span>
+            <div class="visit">
                 
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
 </footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&pic=http://olg3gwtbm.bkt.clouddn.com/head.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&title=《JAVA学习之JUnit》 — Terry_Tian's Code日志&source=
-
-JUnit是什么？
-JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。
-JUnit可广泛用于工业和作为支..." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JAVA学习之JUnit》 — Terry_Tian's Code日志&url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/&via=http://mutouspace.cn" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aS27DMAwFwNz/0i5QdJfGeSTtopFGq6BQHI0XLD96POJ1fK/nz692Pu95/vtxuh53LAwMjI9lJI+rHuJ8Z8IrUzEwMDZgzIPs+aGrLyg/GwYGBkZyiDwo93ZiYGBgzBlJuJyEbwwMDIy8ED1vqFUZ52XtjbU4BgbGBzImg4G7P//RfAMDA+MfM47x6rX+r/r1n2diYGAszbgjaZskiL1SGQMDY23GtU38qCkWJILV14eBgbEno9eg76WM+SXXl9/FwMBYmlEtJicDyKSIzZ+PgYGxD6Oa5M3b/eW0LwFjYGAszeilekmyWG7rx78YDTgxMDAWYvTGkHn4S0rfathtDgYwMDA+lpGngEkS2QuvvVfw5n8IBgbGQow8CeuVlNVUL08Zf6nFMTAwFmX0brDnj8gD9CTHw8DAWJsxHwzkiWM+5mzeGcHAwNiMcQfvqkAc3RbBwMDYgDFp6+er2ox7+YIwMDC2YUyuO1THjdWA/iYcY2BgLM3IL4T1LkxMSlkMDAyMasDtNcWqx+3BMDAw1mZM0rs8gZuMMMsLAwNjOcZRXFGbvtiGy8cSL8+DgYGxNKMa06pHzweZzUQQAwNjG0YSZHtXvnot/mbAxcDA2IBxVejME75qkleYbGBgYGzPmHS9kv298QMGBgbG/GJEdXh5fpkDAwNjT0Ye/vJjVZv+ebutPOXAwMD4cEZ1MFAdKPYC9CRJxcDAWIjxBed9esCXR5VvAAAAAElFTkSuQmCC" alt="微信分享二维码">
-</div>
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
 
 
 
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
-
-</script>
-
-<script src="/js/main.min.js?v=1.7.0"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="/js/search.min.js?v=1.7.0" async></script>
-
-
-
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -697,21 +623,44 @@ MathJax.Hub.Config({
 MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
 });
 </script>
 
-<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
 
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
 </body>
 </html>

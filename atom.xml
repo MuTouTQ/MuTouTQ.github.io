@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mutouspace.cn/"/>
-  <updated>2019-09-05T15:35:50.579Z</updated>
+  <updated>2019-09-06T01:09:49.783Z</updated>
   <id>http://mutouspace.cn/</id>
   
   <author>
@@ -20,15 +20,16 @@
     <link href="http://mutouspace.cn/2019/09/05/1.%E5%88%9D%E8%AF%86RabbitMQ/"/>
     <id>http://mutouspace.cn/2019/09/05/1.初识RabbitMQ/</id>
     <published>2019-09-05T12:52:52.000Z</published>
-    <updated>2019-09-05T15:35:50.579Z</updated>
+    <updated>2019-09-06T01:09:49.783Z</updated>
     
     <summary type="html">
     
       &lt;Excerpt in index | 首页摘要&gt;
 
-
-
-&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;什么是消息中间件？&lt;/li&gt;
+&lt;li&gt;消息中间件的作用&lt;/li&gt;
+&lt;li&gt;RabbitMQ 的安装及简单使用
     
     </summary>
     
@@ -36,6 +37,31 @@
     
     
       <category term="消息中间件" scheme="http://mutouspace.cn/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件分享篇（Windows10）</title>
+    <link href="http://mutouspace.cn/2019/05/18/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E7%AF%87/"/>
+    <id>http://mutouspace.cn/2019/05/18/软件分享篇/</id>
+    <published>2019-05-18T12:27:07.944Z</published>
+    <updated>2017-03-02T15:28:16.622Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in index | 首页摘要&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="分享" scheme="http://mutouspace.cn/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="分享" scheme="http://mutouspace.cn/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -154,7 +180,7 @@
     <link href="http://mutouspace.cn/2017/05/12/Android%E4%B8%AD%E5%B8%83%E5%B1%80%E4%BF%9D%E5%AD%98%E6%88%90%E5%9B%BE%E7%89%87/"/>
     <id>http://mutouspace.cn/2017/05/12/Android中布局保存成图片/</id>
     <published>2017-05-12T09:38:29.000Z</published>
-    <updated>2017-05-12T09:53:15.704Z</updated>
+    <updated>2017-05-12T09:53:15.705Z</updated>
     
     <summary type="html">
     
@@ -206,7 +232,7 @@
     <link href="http://mutouspace.cn/2017/05/09/Volley-%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81/"/>
     <id>http://mutouspace.cn/2017/05/09/Volley-请求返回数据中文出现乱码/</id>
     <published>2017-05-09T13:08:08.000Z</published>
-    <updated>2017-05-09T13:26:40.635Z</updated>
+    <updated>2017-05-09T13:26:40.636Z</updated>
     
     <summary type="html">
     
@@ -258,7 +284,7 @@
     <link href="http://mutouspace.cn/2017/05/03/Android%E5%8D%B8%E8%BD%BD%E6%B5%8B%E8%AF%95%E5%BA%94%E7%94%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E5%A4%B1%E8%B4%A5/"/>
     <id>http://mutouspace.cn/2017/05/03/Android卸载测试应用后再次安装应用失败/</id>
     <published>2017-05-03T04:19:12.000Z</published>
-    <updated>2017-05-03T04:35:35.482Z</updated>
+    <updated>2017-05-03T04:35:35.483Z</updated>
     
     <summary type="html">
     
@@ -362,7 +388,7 @@
     <link href="http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%A1%86%E6%9E%B6%E5%89%8D%E8%BF%B0/"/>
     <id>http://mutouspace.cn/2017/04/15/JAVA学习之框架前述/</id>
     <published>2017-04-15T09:50:03.000Z</published>
-    <updated>2017-04-15T10:11:31.293Z</updated>
+    <updated>2017-04-15T10:11:31.294Z</updated>
     
     <summary type="html">
     
@@ -395,7 +421,7 @@
     <link href="http://mutouspace.cn/2017/04/02/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/"/>
     <id>http://mutouspace.cn/2017/04/02/JAVA学习之常用的数据源配置/</id>
     <published>2017-04-02T12:39:01.000Z</published>
-    <updated>2017-04-15T09:43:46.202Z</updated>
+    <updated>2017-04-15T09:43:46.203Z</updated>
     
     <summary type="html">
     
@@ -454,7 +480,7 @@
     <link href="http://mutouspace.cn/2017/03/25/JAVA%E4%B9%8BServlet/"/>
     <id>http://mutouspace.cn/2017/03/25/JAVA之Servlet/</id>
     <published>2017-03-25T15:31:16.000Z</published>
-    <updated>2017-04-15T09:25:40.638Z</updated>
+    <updated>2017-04-15T09:25:40.639Z</updated>
     
     <summary type="html">
     
@@ -488,7 +514,7 @@
     <link href="http://mutouspace.cn/2017/03/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%93%E4%B8%9A%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7%EF%BC%88%E5%88%86%E7%B1%BB/"/>
     <id>http://mutouspace.cn/2017/03/24/常用的专业搜索工具（分类/</id>
     <published>2017-03-24T09:34:09.000Z</published>
-    <updated>2017-03-24T11:16:24.690Z</updated>
+    <updated>2017-03-24T11:16:24.691Z</updated>
     
     <summary type="html">
     
@@ -513,7 +539,7 @@
     <link href="http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/"/>
     <id>http://mutouspace.cn/2017/03/22/JAVA学习之JDBC/</id>
     <published>2017-03-22T14:33:39.000Z</published>
-    <updated>2017-07-13T08:58:14.783Z</updated>
+    <updated>2017-07-13T08:58:14.784Z</updated>
     
     <summary type="html">
     
@@ -539,33 +565,6 @@
       <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
     
       <category term="JDBC" scheme="http://mutouspace.cn/tags/JDBC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习之JUnit</title>
-    <link href="http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJUnit/"/>
-    <id>http://mutouspace.cn/2017/03/22/JAVA学习之JUnit/</id>
-    <published>2017-03-22T14:33:06.000Z</published>
-    <updated>2017-03-23T06:04:28.077Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in index | 首页摘要&gt;
-
-&lt;h1 id=&quot;JUnit是什么？&quot;&gt;&lt;a href=&quot;#JUnit是什么？&quot; class=&quot;headerlink&quot; title=&quot;JUnit是什么？&quot;&gt;&lt;/a&gt;JUnit是什么？&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;JUnit是用于编写和运行可重复的自动化测试的开源测试框架， 这样可以保证我们的代码按预期工作。&lt;/p&gt;
-&lt;p&gt;JUnit可广泛用于工业和作为支架(从命令行)或IDE(如Eclipse)内单独的Java程序。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://mutouspace.cn/categories/JAVA/"/>
-    
-    
-      <category term="JAVA" scheme="http://mutouspace.cn/tags/JAVA/"/>
-    
-      <category term="JUnit" scheme="http://mutouspace.cn/tags/JUnit/"/>
     
   </entry>
   

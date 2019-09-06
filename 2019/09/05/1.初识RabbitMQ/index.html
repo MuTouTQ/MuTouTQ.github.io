@@ -27,7 +27,7 @@ RabbitMQ 的安装及简单使用">
 什么是消息中间件？
 消息中间件的作用
 RabbitMQ 的安装及简单使用">
-<meta property="og:updated_time" content="2019-09-06T01:09:49.783Z">
+<meta property="og:updated_time" content="2019-09-06T03:14:13.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.初识RabbitMQ">
 <meta name="twitter:description" content="感谢阅读这篇博文，欢迎关注与评论！
@@ -279,16 +279,16 @@ RabbitMQ 的安装及简单使用">
 
 <h3 id="1-什么是消息中间件？"><a href="#1-什么是消息中间件？" class="headerlink" title="1.什么是消息中间件？"></a>1.什么是消息中间件？</h3><p>消息队列中间件 (Message Queue Middleware ，简称为 MQ) 是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。</p>
 <h3 id="2-消息中间件的作用"><a href="#2-消息中间件的作用" class="headerlink" title="2.消息中间件的作用"></a>2.消息中间件的作用</h3><ul>
-<li><strong>解辑</strong>:在项目启动之初来预测将来会碰到什么需求是极其困难的。消息中间件在处理过程中间插入了一个隐含的、基于数据的接口层，两边的处理过程都要实现这一接口，这允许你独立地扩展或修改两边的处理过程，只要确保它们遵守同样的接口约束即可。</li>
+<li><strong>解耦</strong>:在项目启动之初来预测将来会碰到什么需求是极其困难的。消息中间件在处理过程中间插入了一个隐含的、基于数据的接口层，两边的处理过程都要实现这一接口，这允许你独立地扩展或修改两边的处理过程，只要确保它们遵守同样的接口约束即可。</li>
 <li><strong>冗余〈存储)</strong>： 有些情况下，处理数据的过程会失败。消息中间件可以把数据进行持久化直到它们已经被完全处理，通过这一方式规避了数据丢失风险。在把 个消息从消息中间件中删除之前，需要你的处理系统明确地指出该消息己经被处理完成，从而确保你的数据被安全地保存直到你使用完毕。</li>
-<li><strong>扩展性</strong>: 因为消息中间件解捐了应用的处理过程，所以提高消息入队和处理的效率是很容易的，只要另外增加处理过程即可，不需要改变代码，也不需要调节参数。</li>
-<li><strong>削峰</strong>: 在访问量剧增的情况下，应用仍然需要继续发挥作用，但是这样的突发流 并不常见。如果以能处理这类峰值为标准而投入资源，无疑是巨大的浪费 使用消息中间件能够使关键组件支撑突发访问压力，不会因为突发的超负荷请求而完全崩惯。</li>
-<li><strong>可恢复性</strong>: 当系统一部分组件失效时，不会影响到整个系统 消息中间件降低了进程间的稿合度，所以即使 个处理消息的进程挂掉，加入消息中间件中的消息仍然可以在系统恢复后进行处理。</li>
+<li><strong>扩展性</strong>: 因为消息中间件解耦了应用的处理过程，所以提高消息入队和处理的效率是很容易的，只要另外增加处理过程即可，不需要改变代码，也不需要调节参数。</li>
+<li><strong>削峰</strong>: 在访问量剧增的情况下，应用仍然需要继续发挥作用，但是这样的突发流 并不常见。如果以能处理这类峰值为标准而投入资源，无疑是巨大的浪费 使用消息中间件能够使关键组件支撑突发访问压力，不会因为突发的超负荷请求而完全崩潰。</li>
+<li><strong>可恢复性</strong>: 当系统一部分组件失效时，不会影响到整个系统，消息中间件降低了进程间的稿合度，所以即使处理消息的进程挂掉，加入消息中间件中的消息仍然可以在系统恢复后进行处理。</li>
 <li><strong>顺序保证</strong>: 在大多数使用场景下，数据处理的顺序很重要，大部分消息中间件支持一定程度上的顺序性。</li>
-<li><strong>缓冲</strong>: 在任何重要的系统中，都会存在需要不同处理时间的元素。消息中间件通过 个缓冲层来帮助任务最高效率地执行，写入消息中间件的处理会尽可能快速 该缓冲层有助于控制和优化数据流经过系统的速度。</li>
+<li><strong>缓冲</strong>: 在任何重要的系统中，都会存在需要不同处理时间的元素。消息中间件通过 个缓冲层来帮助任务最高效率地执行，写入消息中间件的处理会尽可能快速，该缓冲层有助于控制和优化数据流经过系统的速度。</li>
 <li><strong>异步通信</strong>: 在很多时候应用不想也不需要立即处理消息 消息中间件提供了异步处理机制，允许应用把 些消息放入消息中间件中，但并不立即处理它，在之后需要的时候再慢慢处理。<h3 id="3-RabbitMQ-的安装及简单使用"><a href="#3-RabbitMQ-的安装及简单使用" class="headerlink" title="3.RabbitMQ 的安装及简单使用"></a>3.RabbitMQ 的安装及简单使用</h3><blockquote>
 <p>RabbitMQ 是由 Erlang 语言编写的 也正因如此 在安装 RabbitMQ 之前需要安装 Erlang 。</p>
-<h4 id="1-安装Erlang-依Linux环境下为例"><a href="#1-安装Erlang-依Linux环境下为例" class="headerlink" title="1.安装Erlang(依Linux环境下为例)"></a>1.安装Erlang(依Linux环境下为例)</h4></blockquote>
+<h4 id="1-安装Erlang-以Linux环境下为例"><a href="#1-安装Erlang-以Linux环境下为例" class="headerlink" title="1.安装Erlang(以Linux环境下为例)"></a>1.安装Erlang(以Linux环境下为例)</h4></blockquote>
 </li>
 </ul>
 <ol>
@@ -306,7 +306,7 @@ RabbitMQ 的安装及简单使用">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install erlang</div></pre></td></tr></table></figure>
 </li>
 <li><p>验证是否安装成功，输入命令：<code>erl</code>。</p>
-<h4 id="2-安装-RabbitMQ-依Linux环境下为例"><a href="#2-安装-RabbitMQ-依Linux环境下为例" class="headerlink" title="2.安装 RabbitMQ(依Linux环境下为例)"></a>2.安装 RabbitMQ(依Linux环境下为例)</h4></li>
+<h4 id="2-安装-RabbitMQ-以Linux环境下为例"><a href="#2-安装-RabbitMQ-以Linux环境下为例" class="headerlink" title="2.安装 RabbitMQ(以Linux环境下为例)"></a>2.安装 RabbitMQ(以Linux环境下为例)</h4></li>
 <li><p>将下载的安装包上传到上边创建的rabbitmq目录下，执行如下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rpm --import https://www.rabbitmq.com/rabbitmq-signing-key-public.asc</div><div class="line">yum install rabbitmq-server-3.6.1-1.noarch.rpm//选择自己的包进行安装</div></pre></td></tr></table></figure>
 </li>
@@ -359,7 +359,7 @@ RabbitMQ 的安装及简单使用">
         <p><span>本文标题:</span><a href="/2019/09/05/1.初识RabbitMQ/">1.初识RabbitMQ</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
         <p><span>发布时间:</span>2019-09-05, 20:52:52</p>
-        <p><span>最后更新:</span>2019-09-06, 09:09:49</p>
+        <p><span>最后更新:</span>2019-09-06, 11:14:13</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/09/05/1.初识RabbitMQ/" title="1.初识RabbitMQ">http://mutouspace.cn/2019/09/05/1.初识RabbitMQ/</a>
             <span class="copy-path" data-clipboard-text="原文: http://mutouspace.cn/2019/09/05/1.初识RabbitMQ/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -389,7 +389,7 @@ RabbitMQ 的安装及简单使用">
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢阅读这篇博文，欢迎关注与评论！"><span class="toc-number">1.</span> <span class="toc-text"> 感谢阅读这篇博文，欢迎关注与评论！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-什么是消息中间件？"><span class="toc-number">1.1.</span> <span class="toc-text">1.什么是消息中间件？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-消息中间件的作用"><span class="toc-number">1.2.</span> <span class="toc-text">2.消息中间件的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-RabbitMQ-的安装及简单使用"><span class="toc-number">1.3.</span> <span class="toc-text">3.RabbitMQ 的安装及简单使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-安装Erlang-依Linux环境下为例"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.安装Erlang(依Linux环境下为例)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-安装-RabbitMQ-依Linux环境下为例"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.安装 RabbitMQ(依Linux环境下为例)</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢阅读这篇博文，欢迎关注与评论！"><span class="toc-number">1.</span> <span class="toc-text"> 感谢阅读这篇博文，欢迎关注与评论！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-什么是消息中间件？"><span class="toc-number">1.1.</span> <span class="toc-text">1.什么是消息中间件？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-消息中间件的作用"><span class="toc-number">1.2.</span> <span class="toc-text">2.消息中间件的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-RabbitMQ-的安装及简单使用"><span class="toc-number">1.3.</span> <span class="toc-text">3.RabbitMQ 的安装及简单使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-安装Erlang-以Linux环境下为例"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.安装Erlang(以Linux环境下为例)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-安装-RabbitMQ-以Linux环境下为例"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.安装 RabbitMQ(以Linux环境下为例)</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>

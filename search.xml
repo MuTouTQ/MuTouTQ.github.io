@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[1.初识RabbitMQ]]></title>
-      <url>http://mutouspace.cn/2019/09/05/1.%E5%88%9D%E8%AF%86RabbitMQ/</url>
+      <url>http://tianqing.work/2019/09/05/1.%E5%88%9D%E8%AF%86RabbitMQ/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><ol>
@@ -106,7 +106,7 @@
     
     <entry>
       <title><![CDATA[软件分享篇（Windows10）]]></title>
-      <url>http://mutouspace.cn/2019/05/18/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E7%AF%87/</url>
+      <url>http://tianqing.work/2019/05/18/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E7%AF%87/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <blockquote>
@@ -163,7 +163,7 @@
     
     <entry>
       <title><![CDATA[Git常用命令汇总]]></title>
-      <url>http://mutouspace.cn/2018/04/07/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</url>
+      <url>http://tianqing.work/2018/04/07/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文主要记录工作学习中用到的Git常用操作。</p>
 <p><strong>教程思路：</strong></p>
@@ -218,7 +218,7 @@
     
     <entry>
       <title><![CDATA[eclipse常用快捷键整理]]></title>
-      <url>http://mutouspace.cn/2017/08/20/eclipse%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</url>
+      <url>http://tianqing.work/2017/08/20/eclipse%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 
@@ -306,7 +306,7 @@
     
     <entry>
       <title><![CDATA[使用Oracle SQL Developer连接mysql数据库]]></title>
-      <url>http://mutouspace.cn/2017/08/09/%E4%BD%BF%E7%94%A8Oracle%20SQL%20Developer%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+      <url>http://tianqing.work/2017/08/09/%E4%BD%BF%E7%94%A8Oracle%20SQL%20Developer%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <blockquote>
@@ -350,7 +350,7 @@
     
     <entry>
       <title><![CDATA[常用"工具"配置]]></title>
-      <url>http://mutouspace.cn/2017/07/30/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
+      <url>http://tianqing.work/2017/07/30/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <blockquote>
@@ -520,7 +520,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
     
     <entry>
       <title><![CDATA[Android中布局保存成图片]]></title>
-      <url>http://mutouspace.cn/2017/05/12/Android%E4%B8%AD%E5%B8%83%E5%B1%80%E4%BF%9D%E5%AD%98%E6%88%90%E5%9B%BE%E7%89%87/</url>
+      <url>http://tianqing.work/2017/05/12/Android%E4%B8%AD%E5%B8%83%E5%B1%80%E4%BF%9D%E5%AD%98%E6%88%90%E5%9B%BE%E7%89%87/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>今天做的APP中的一个表单页面需要以后蓝牙连接打印设备后打印出来，当时想过要截屏，但想了一下截屏的话太麻烦，截屏的话是将手机的屏幕截取下来，包含很多无用的信息，所以这个想法就给pass掉了；后来又想到了转化为图片、PDF什么的，在网上搜索了一些相关信息后，发现还是将整个布局变成图片比较简单，并且也找到了一篇不错测教程，文末附有链接。</p>
@@ -659,7 +659,7 @@ public void savePicture(Bitmap bm, String fileName) {
     
     <entry>
       <title><![CDATA[RecyclerView的万能分割线]]></title>
-      <url>http://mutouspace.cn/2017/05/09/RecyclerView%E7%9A%84%E4%B8%87%E8%83%BD%E5%88%86%E5%89%B2%E7%BA%BF/</url>
+      <url>http://tianqing.work/2017/05/09/RecyclerView%E7%9A%84%E4%B8%87%E8%83%BD%E5%88%86%E5%89%B2%E7%BA%BF/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <p><strong>使用方法步骤：</strong></p>
@@ -821,7 +821,7 @@ android:shape=&quot;rectangle&quot;&gt;
     
     <entry>
       <title><![CDATA[Volley 请求返回数据中文出现乱码]]></title>
-      <url>http://mutouspace.cn/2017/05/09/Volley-%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81/</url>
+      <url>http://tianqing.work/2017/05/09/Volley-%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <p>  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。</p>
@@ -904,7 +904,7 @@ return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));
     
     <entry>
       <title><![CDATA[java int类型转换成String,不足10位在前面补0]]></title>
-      <url>http://mutouspace.cn/2017/05/09/java-int%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%88%90String-%E4%B8%8D%E8%B6%B310%E4%BD%8D%E5%9C%A8%E5%89%8D%E9%9D%A2%E8%A1%A50/</url>
+      <url>http://tianqing.work/2017/05/09/java-int%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%88%90String-%E4%B8%8D%E8%B6%B310%E4%BD%8D%E5%9C%A8%E5%89%8D%E9%9D%A2%E8%A1%A50/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <p><strong>String.format(“%010d”, 25);</strong></p>
@@ -932,7 +932,7 @@ return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));
     
     <entry>
       <title><![CDATA[Android卸载测试应用后再次安装应用失败]]></title>
-      <url>http://mutouspace.cn/2017/05/03/Android%E5%8D%B8%E8%BD%BD%E6%B5%8B%E8%AF%95%E5%BA%94%E7%94%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E5%A4%B1%E8%B4%A5/</url>
+      <url>http://tianqing.work/2017/05/03/Android%E5%8D%B8%E8%BD%BD%E6%B5%8B%E8%AF%95%E5%BA%94%E7%94%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E5%A4%B1%E8%B4%A5/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 
@@ -962,7 +962,7 @@ return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));
     
     <entry>
       <title><![CDATA[JAVA学习之Struts2框架(二)]]></title>
-      <url>http://mutouspace.cn/2017/04/20/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6-%E4%BA%8C/</url>
+      <url>http://tianqing.work/2017/04/20/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6-%E4%BA%8C/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 
@@ -991,7 +991,7 @@ return Response.success(parsed, HttpHeaderParser.parseCacheHeaders(response));
     
     <entry>
       <title><![CDATA[ADB的简单使用技巧（Android）]]></title>
-      <url>http://mutouspace.cn/2017/04/16/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%88Android%EF%BC%89/</url>
+      <url>http://tianqing.work/2017/04/16/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%88Android%EF%BC%89/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 
@@ -1101,7 +1101,7 @@ adb shell input touchscreen swipe 18 665 18 350
     
     <entry>
       <title><![CDATA[JAVA学习之Struts2框架（一）]]></title>
-      <url>http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6/</url>
+      <url>http://tianqing.work/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <h1 id="Struts2简介"><a href="#Struts2简介" class="headerlink" title="Struts2简介"></a>Struts2简介</h1><h2 id="Struts2概述"><a href="#Struts2概述" class="headerlink" title="Struts2概述"></a>Struts2概述</h2><p>Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。</p>
@@ -1380,7 +1380,7 @@ b.写了该属性，取值是一个&quot;&quot;.注意：默认值不是/
     
     <entry>
       <title><![CDATA[JAVA学习之框架前述]]></title>
-      <url>http://mutouspace.cn/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%A1%86%E6%9E%B6%E5%89%8D%E8%BF%B0/</url>
+      <url>http://tianqing.work/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%A1%86%E6%9E%B6%E5%89%8D%E8%BF%B0/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <blockquote>
@@ -1443,7 +1443,7 @@ C：Controller 控制器，控制程序流程。Servlet
     
     <entry>
       <title><![CDATA[JAVA学习之常用的数据源配置]]></title>
-      <url>http://mutouspace.cn/2017/04/02/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/</url>
+      <url>http://tianqing.work/2017/04/02/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <p><strong>常用的数据源配置：</strong></p>
@@ -1811,7 +1811,7 @@ test.testJNDI();
     
     <entry>
       <title><![CDATA[JAVA学习之Jsp]]></title>
-      <url>http://mutouspace.cn/2017/03/29/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJsp/</url>
+      <url>http://tianqing.work/2017/03/29/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJsp/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <h1 id="Jsp-简介"><a href="#Jsp-简介" class="headerlink" title="Jsp 简介"></a>Jsp 简介</h1><blockquote>
@@ -2181,7 +2181,7 @@ pageEncoding=&quot;UTF-8&quot;%&gt;
     
     <entry>
       <title><![CDATA[JAVA学习之Servlet]]></title>
-      <url>http://mutouspace.cn/2017/03/25/JAVA%E4%B9%8BServlet/</url>
+      <url>http://tianqing.work/2017/03/25/JAVA%E4%B9%8BServlet/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <h1 id="Servlet-简介"><a href="#Servlet-简介" class="headerlink" title="Servlet 简介"></a>Servlet 简介</h1><blockquote>
@@ -2415,7 +2415,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
     
     <entry>
       <title><![CDATA[常用的专业搜索工具（分类)]]></title>
-      <url>http://mutouspace.cn/2017/03/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%93%E4%B8%9A%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7%EF%BC%88%E5%88%86%E7%B1%BB/</url>
+      <url>http://tianqing.work/2017/03/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%93%E4%B8%9A%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7%EF%BC%88%E5%88%86%E7%B1%BB/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 
@@ -2522,7 +2522,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
     
     <entry>
       <title><![CDATA[JAVA学习之JDBC]]></title>
-      <url>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/</url>
+      <url>http://tianqing.work/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJDBC/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <h1 id="JDBC概述"><a href="#JDBC概述" class="headerlink" title="JDBC概述"></a>JDBC概述</h1><blockquote>
@@ -2654,7 +2654,7 @@ DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day14?user=root&am
     
     <entry>
       <title><![CDATA[JAVA学习之JUnit]]></title>
-      <url>http://mutouspace.cn/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJUnit/</url>
+      <url>http://tianqing.work/2017/03/22/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJUnit/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <h1 id="JUnit是什么？"><a href="#JUnit是什么？" class="headerlink" title="JUnit是什么？"></a>JUnit是什么？</h1><blockquote>
@@ -2855,7 +2855,7 @@ public void test() {
     
     <entry>
       <title><![CDATA[JAVA学习之MySQL]]></title>
-      <url>http://mutouspace.cn/2017/03/21/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BMySQL/</url>
+      <url>http://tianqing.work/2017/03/21/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BMySQL/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <blockquote>
@@ -3284,7 +3284,7 @@ SELECT * FROM emp LIMIT 3, 10;
     
     <entry>
       <title><![CDATA[使用Hexo+github建设个人博客教程]]></title>
-      <url>http://mutouspace.cn/2017/02/18/%E4%BD%BF%E7%94%A8Hexo-github%E5%BB%BA%E8%AE%BE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</url>
+      <url>http://tianqing.work/2017/02/18/%E4%BD%BF%E7%94%A8Hexo-github%E5%BB%BA%E8%AE%BE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本片文章主要用来记录搭建Hexo静态博客的过程，用于以后搭建博客更加方便。</p>
 <p><strong>主要内容：</strong></p>
@@ -3345,12 +3345,10 @@ SELECT * FROM emp LIMIT 3, 10;
 <p> 或者直接在TerryBlog文件夹下，再点击鼠标右键–&gt;Git Bash，打开命令输入框。再输入以下命令：</p>
 <p>  <code>npm install</code></p>
 <p> 安装完成之后，【G:\TerryBlog】目录结构是这样的：</p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/hexo1.jpg" alt=""></p>
+<p><img src="http://m.qpic.cn/psc?/V50ZdBde3aW49D0SlWTq0nVW0a20bXnl/ruAMsa53pVQWN7FLK88i5ufoVaXirB2pb4KqI*ee9PgkwFVL596CG4UtA15pX8hX.JgYHKNbe2jCRpgngL6CWomvbygkb1KlKYJNwNfcdFA!/b&amp;bo=9wKtAQAAAAADB3s!&amp;rf=viewer_4" alt=""></p>
 <p>  到此为止，一个博客就已经搭建好了，现在我们启动 hexo 本地服务，看下默认的博客是怎样的，命令如下：</p>
 <p>  <code>hexo s</code></p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/hexos.png" alt=""></p>
-<p>   <strong><em>在浏览器中输入：<a href="http://localhost:4000/进行访问，效果图如下：" target="_blank" rel="external">http://localhost:4000/进行访问，效果图如下：</a></em></strong></p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/hexo4040.png" alt=""></p>
+<p>   <strong><em>在浏览器中输入：<a href="http://localhost:4000/进行访问" target="_blank" rel="external">http://localhost:4000/进行访问</a></em></strong></p>
 <pre><code>** 如果要停止 hexo 服务：在 Git Bash 下按 Ctrl + C即可**
 </code></pre><p>   到这里我们简单的hexo博客基本就完成一部分了！是不是很开心，如果不进行主题美化的话，我们马上就可以有一个自己的博客了。</p>
 <h1 id="修改项目配置文件"><a href="#修改项目配置文件" class="headerlink" title="修改项目配置文件"></a>修改项目配置文件</h1><p>  在这里我们修改的是【G:\TerryBlog】路径下的 <code>_config.yml</code> <strong>站点主题配置</strong>文件，我的配置如下：</p>
@@ -3449,8 +3447,7 @@ tag_map:
 <p>   <code>hexo s        //重启 hexo 本地服务</code></p>
 <p>  重新访问：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，看一下效果.</p>
 <h2 id="修改Hexo框架主题"><a href="#修改Hexo框架主题" class="headerlink" title="修改Hexo框架主题"></a>修改Hexo框架主题</h2><p>  上一步完成后，看到的是yelee的默认主题，这里我们可以再次配置一下，修改的是【G:\TerryBlog\themes\yelee】路径下的 <code>_config.yml</code>文件。这里我们可以跟着<a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee 主题使用说明</a>来修改。</p>
-<h1 id="发布到Github-Pages上"><a href="#发布到Github-Pages上" class="headerlink" title="发布到Github Pages上"></a>发布到Github Pages上</h1><h2 id="创建Github-Pages并SSH授权"><a href="#创建Github-Pages并SSH授权" class="headerlink" title="创建Github Pages并SSH授权"></a>创建Github Pages并SSH授权</h2><p>  现在假设你已经有一个 Gtihub 账号，你还需要一个<strong>特别</strong>的仓库，特别在仓库名就是你的 Github 账号登录名，比如我的用户名是：MuouTQ，那我要创建的仓库名字完整滴填写是：MuouTQ.github.io，具体效果如下图：</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/github1.png" alt=""></p>
+<h1 id="发布到Github-Pages上"><a href="#发布到Github-Pages上" class="headerlink" title="发布到Github Pages上"></a>发布到Github Pages上</h1><h2 id="创建Github-Pages并SSH授权"><a href="#创建Github-Pages并SSH授权" class="headerlink" title="创建Github Pages并SSH授权"></a>创建Github Pages并SSH授权</h2><p>  现在假设你已经有一个 Gtihub 账号，你还需要一个<strong>特别</strong>的仓库，特别在仓库名就是你的 Github 账号登录名，比如我的用户名是：tiantsing，那我要创建的仓库名字完整滴填写是：tiantsing.github.io ;</p>
 <p>  仔细的人可能看到，你的仓库名根本不和你的用户名一样，由于我之前已经创建了一个这样特别的仓库，再创建一个就会提示错误，为了演示方便，所以删了一个T。</p>
 <p>  创建好仓库之后，要本地生成 SSH 秘钥，方便电脑上的 git 软件好提交内容到 Github 上。</p>
 <p>  【具体可以参考网上的一篇文章：<a href="http://www.jianshu.com/p/a3b4f61d4747" target="_blank" rel="external">Git安装及SSH Key管理之Windows篇</a>】</p>
@@ -3481,37 +3478,29 @@ hexo clean//先清除掉已经生成的旧文件
 hexo g //再生成一次静态文件
 hexo s   //在本地预览下
 hexo d   //本地没问题之后，Ctrl + C 停掉本地预览，使用部署命令部署到 Github 上
-</code></pre><p>   <img src="http://olg3gwtbm.bkt.clouddn.com/github2.png" alt=""></p>
-<p>   访问服务器地址进行检查：<a href="http://MuTouTQ.github.io/，该访问地址是之前在github上的创建的仓库名称，输入你的github用户名" target="_blank" rel="external">http://MuTouTQ.github.io/，该访问地址是之前在github上的创建的仓库名称，输入你的github用户名</a> + .github.io</p>
+</code></pre><p>   访问服务器地址进行检查：<a href="http://MuTouTQ.github.io/，该访问地址是之前在github上的创建的仓库名称，输入你的github用户名" target="_blank" rel="external">http://MuTouTQ.github.io/，该访问地址是之前在github上的创建的仓库名称，输入你的github用户名</a> + .github.io</p>
 <h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><ul>
 <li><p><strong>创建CNAME文件</strong></p>
 <p>我们要一个 CNAME 文件（文件名叫 CNAME，文件没有后缀，里面的内容为你购买的域名，不要以http以及www等前缀，只需域名本身即可，如：mutouspace.cn。这个CNAME可以你先建一个txt文件，把后缀名去掉），把该文件放在 G:\TerryBlog 目录下。</p>
 </li>
 <li><p><strong>获取Github的ip地址</strong></p>
-<p>实际获取的是你github上博客项目的ip（即：MuTouTQ.github.io），打开命令窗口，输入【ping MuTouTQ.github.io】来查看ip地址，并记录下来</p>
+<p>实际获取的是你github上博客项目的ip（即：tiantsing.github.io），打开命令窗口，输入【ping tiantsing.github.io】来查看ip地址，并记录下来;</p>
 </li>
 <li><p><strong>添加DNS Service记录</strong></p>
-<p>我的域名是腾讯云上买的，用的腾讯云的域名解析，将ip地址和你买的域名绑定就好了，域名解析后需要等待几分钟才能被访问</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/yuming.png" alt=""></p>
-<p><strong>补充：</strong></p>
-<p>如果你做完域名解析后，还是没法用你的域名访问，可以这项修改下：</p>
-<p>打开你的Git Hub下的MuTouTQ.github.io仓库，找到Settings，点进去</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/gitset.png" alt=""></p>
-<p>点进去后，找到这里，填入你的域名：mutouspace.cn   点击：SAVE  等一会就可以访问了。</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/gp.png" alt=""></p>
+<p>我的域名是腾讯云上买的，用的腾讯云的域名解析，将ip地址和你买的域名绑定就好了，域名解析后需要等待几分钟才能被访问;</p>
 <p>到此为止，我们的博客就成功配置完了！</p>
 </li>
 </ul>
 <h1 id="发表一篇文章"><a href="#发表一篇文章" class="headerlink" title="发表一篇文章"></a>发表一篇文章</h1><ol>
 <li>在G:\TerryBlog 路径下Git Bash执行命令： <code>hexo new &quot;my new post&quot;</code></li>
-<li><p>在G:\TerryBlog\source_post中打开my-new-post.md，打开方式使用记事本或notepad++（推荐：MarkdownPad）。</p>
+<li><p>在G:\TerryBlog\source_post中打开my-new-post.md，打开方式使用记事本或notepad++（推荐使用Markdown编辑软件）。</p>
 <p>hexo中写文章使用的是Markdown，没接触过的可以看下Markdown语法说明.</p>
 <p>   title: my new post #可以改成中文的，如“新文章”<br>   date: 2015-04-08 22:56:29 #发表日期，一般不改动<br>   categories: blog #文章文类<br>   tags: [博客，文章] #文章标签，多于一项时用这种格式，只有一项时使用tags: blog</p>
 <p>   #这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上</p>
    <!--more-->
 <p>   #在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
 </li>
-<li><p>写完文章后，你可以使用1. hexo g生成静态文件。2. hexo s在本地预览效果。3.hexo d同步到github，然后使用<a href="mutouspace.cn">mutouspace.cn</a>进行访问。</p>
+<li><p>写完文章后，你可以使用1. hexo g生成静态文件。2. hexo s在本地预览效果。3.hexo d同步到github，然后使用<a href="tianqing.work">tianqing.work</a>进行访问。</p>
 </li>
 </ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="常用hexo命令"><a href="#常用hexo命令" class="headerlink" title="常用hexo命令"></a>常用hexo命令</h2><p>常见命令</p>
@@ -3530,7 +3519,7 @@ hexo d == hexo deploy
 </code></pre><p>组合命令：</p>
 <pre><code>hexo s -g #生成并本地预览
 hexo d -g #生成并上传
-</code></pre><h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p>  可以访问我的git博客来查看效果： mutouspace.cn</p>
+</code></pre><h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p>  可以访问我的git博客来查看效果： <a href="https://tiantsing.github.io/" target="_blank" rel="external">https://tiantsing.github.io/</a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>   <a href="http://www.jianshu.com/p/0a3cad3e8cdf" target="_blank" rel="external">基于Hexo+Github Pages的博客搭建</a></p>
 <p>   <a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a></p>
 <p>   <a href="http://blog.liuxianan.com/build-blog-website-by-hexo-github.html#qian-yan" target="_blank" rel="external">使用hexo+github搭建免费个人博客详细教程</a></p>
@@ -3559,7 +3548,7 @@ hexo d -g #生成并上传
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://mutouspace.cn/2017/02/17/hello-world/</url>
+      <url>http://tianqing.work/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
@@ -3582,7 +3571,7 @@ hexo d -g #生成并上传
     
     <entry>
       <title><![CDATA[测试二]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <url>http://tianqing.work/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
       <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
 
 <!-- e.g. -->
@@ -3599,7 +3588,7 @@ hexo d -g #生成并上传
     
     <entry>
       <title><![CDATA[测试一]]></title>
-      <url>http://mutouspace.cn/2017/02/17/%E6%B5%8B%E8%AF%95%E4%B8%80/</url>
+      <url>http://tianqing.work/2017/02/17/%E6%B5%8B%E8%AF%95%E4%B8%80/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <p>#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上</p>
 <a id="more"></a> 

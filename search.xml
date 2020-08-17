@@ -4,6 +4,47 @@
   
     
     <entry>
+      <title><![CDATA[多个maven项目启动顺序]]></title>
+      <url>http://tianqing.work/2020/08/17/%E5%A4%9A%E4%B8%AAmaven%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>多个maven项目启动顺序</strong></excerpt></p>
+<a id="more"></a> 
+<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
+<p>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
+<h1 id="多个maven项目启动顺序"><a href="#多个maven项目启动顺序" class="headerlink" title="多个maven项目启动顺序"></a>多个maven项目启动顺序</h1><h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在公司实际项目中，开发的项目一般都会涉及到多个 maven 项目，比如项目2会依赖项目1。使用 Jenkins 实现自动部署时，除了写一个流水线脚本时，就需要找一个合适的 maven 命令脚本解决。</p>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>现在有两个 Maven 工程，maven1 和 maven2 ，maven2 依赖于 maven1 。maven1 的 pom 文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 </div><div class="line">   http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt; </div><div class="line">   </div><div class="line">   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; </div><div class="line">   &lt;groupId&gt;bus-core-api&lt;/groupId&gt; </div><div class="line">   &lt;artifactId&gt;bus-core-api&lt;/artifactId&gt; </div><div class="line">   &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; </div><div class="line">   &lt;packaging&gt;jar&lt;/packaging&gt; </div><div class="line">   &lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>maven2 的pom文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 </div><div class="line">   http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt; </div><div class="line">   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; </div><div class="line">   &lt;groupId&gt;app-desktop-ui&lt;/groupId&gt; </div><div class="line">   &lt;artifactId&gt;app-desktop-ui&lt;/artifactId&gt; </div><div class="line">   &lt;version&gt;1.0&lt;/version&gt; </div><div class="line">   &lt;packaging&gt;jar&lt;/packaging&gt; </div><div class="line">   &lt;dependencies&gt; </div><div class="line">    &lt;dependency&gt; </div><div class="line">        &lt;groupId&gt;bus-core-api&lt;/groupId&gt; </div><div class="line">        &lt;artifactId&gt;bus-core-api&lt;/artifactId&gt; </div><div class="line">        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; </div><div class="line">    &lt;/dependency&gt; </div><div class="line">  &lt;/dependencies&gt; </div><div class="line">  &lt;/project&gt;</div></pre></td></tr></table></figure>
+<p><strong>在平时我们打包的时候，是对maven1项目先执行 maven install ，然后再对maven2 项目执行 maven clean package。<br>有没有一种方法可以实现：我直接对maven2进行打包操作，它会自动的先对maven2依赖的项目先进行install，然后再对maven2进行打包？</strong></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><p>首先有两个 maven 项目，maven1 和 maven2 。其中 maven2 依赖于 maven1.</p>
+<p>这时，maven1 的 pom.xml 内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;maven1&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">    &lt;packaging&gt;jar&lt;/packaging&gt;</div><div class="line"></div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>maven2 的 pom.xml 内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;maven2&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">    &lt;packaging&gt;jar&lt;/packaging&gt;</div><div class="line"></div><div class="line">    &lt;dependencies&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven1&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">    &lt;/dependencies&gt;</div><div class="line"></div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>然后，我们在 maven2 项目中新建一个 xml 文件，pomAutom.xml 内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;mavenAutom&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">    &lt;packaging&gt;pom&lt;/packaging&gt; // 这里的打包方式必须为 pom</div><div class="line"></div><div class="line">    &lt;modules&gt;</div><div class="line">        &lt;module&gt;../maven1&lt;/module&gt;</div><div class="line">        &lt;module&gt;../maven2&lt;/module&gt;</div><div class="line">    &lt;/modules&gt;</div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>这时，我们通过 cmd 进入到 maven2 项目 pom 文件所在的目录，执行命令 <code>mvn clean package -f pomAutom.xml</code> ,这时就会按照你在 pomAutom.xml 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;modules&gt;</div><div class="line">        &lt;module&gt;../maven1&lt;/module&gt;</div><div class="line">        &lt;module&gt;../maven2&lt;/module&gt;</div><div class="line">    &lt;/modules&gt;</div></pre></td></tr></table></figure>
+<p>配置的顺序启动。</p>
+<p>DEMO路径：<a href="https://gitee.com/tsingtian/MavenDependTemplate.git" target="_blank" rel="external">MavenDependTemplate</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> maven </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> maven </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Java单例模式的5种实现方法]]></title>
       <url>http://tianqing.work/2020/08/17/Java%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%845%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>Java单例模式的5种实现方法</strong></excerpt></p>
@@ -3618,7 +3659,7 @@ hexo d -g #生成并上传
     
     <entry>
       <title><![CDATA[测试二]]></title>
-      <url>http://tianqing.work/2017/02/17/%E6%B5%8B%E8%AF%95%E4%BA%8C/</url>
+      <url>http://tianqing.work/2017/02/17/DEMO1/</url>
       <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
 
 <!-- e.g. -->

@@ -15,34 +15,16 @@
 
 
 
-<meta name="description" content="Java单例模式的5种实现方法
-
-饿汉
-懒汉-（线程安全）
-双重校验锁
-静态内部类
-枚举">
+<meta name="description" content="多个maven项目启动顺序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java单例模式的5种实现方法">
-<meta property="og:url" content="http://tianqing.work/2020/08/17/Java单例模式的5种实现方法/index.html">
+<meta property="og:title" content="多个maven项目启动顺序">
+<meta property="og:url" content="http://tianqing.work/2020/08/17/多个maven项目启动顺序/index.html">
 <meta property="og:site_name" content="Terry_Tian's Code日志">
-<meta property="og:description" content="Java单例模式的5种实现方法
-
-饿汉
-懒汉-（线程安全）
-双重校验锁
-静态内部类
-枚举">
-<meta property="og:updated_time" content="2020-08-17T15:24:57.565Z">
+<meta property="og:description" content="多个maven项目启动顺序">
+<meta property="og:updated_time" content="2020-08-17T15:36:36.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java单例模式的5种实现方法">
-<meta name="twitter:description" content="Java单例模式的5种实现方法
-
-饿汉
-懒汉-（线程安全）
-双重校验锁
-静态内部类
-枚举">
+<meta name="twitter:title" content="多个maven项目启动顺序">
+<meta name="twitter:description" content="多个maven项目启动顺序">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -74,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Java单例模式的5种实现方法 | Terry_Tian&#39;s Code日志</title>
+<title>多个maven项目启动顺序 | Terry_Tian&#39;s Code日志</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -232,11 +214,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Java单例模式的5种实现方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-多个maven项目启动顺序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2020/08/17/Java单例模式的5种实现方法/" class="article-date">
-      <time datetime="2020-08-17T11:44:07.000Z" itemprop="datePublished">2020-08-17</time>
+      <a href="/2020/08/17/多个maven项目启动顺序/" class="article-date">
+      <time datetime="2020-08-17T12:44:07.000Z" itemprop="datePublished">2020-08-17</time>
 </a>
 
 
@@ -251,7 +233,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Java单例模式的5种实现方法
+      多个maven项目启动顺序
     </h1>
   
 
@@ -260,13 +242,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
+    <a class="article-category-link" href="/categories/maven/">maven</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/单例模式/">单例模式</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -276,33 +258,27 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><strong>Java单例模式的5种实现方法</strong></excerpt></p>
-<ol>
-<li>饿汉</li>
-<li>懒汉-（线程安全）</li>
-<li>双重校验锁</li>
-<li>静态内部类</li>
-<li>枚举</li>
-</ol>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><strong>多个maven项目启动顺序</strong></excerpt></p>
 <a id="more"></a> 
 <p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
 <p>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
-<h1 id="Java单例模式的5种实现方法"><a href="#Java单例模式的5种实现方法" class="headerlink" title="Java单例模式的5种实现方法"></a>Java单例模式的5种实现方法</h1><h3 id="饿汉"><a href="#饿汉" class="headerlink" title="饿汉"></a>饿汉</h3><p>类加载的时候就创建了实例</p>
-<ul>
-<li>优点：类加载的时候创建一次实例，避免了多线程同步问题</li>
-<li>缺点：即使单例没被用到也会创建，浪费内存</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static Singleton instance = new Singleton();</div><div class="line">    private Singleton() &#123; &#125;</div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return instance; </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="懒汉-（线程安全）"><a href="#懒汉-（线程安全）" class="headerlink" title="懒汉-（线程安全）"></a>懒汉-（线程安全）</h3><ul>
-<li>缺点：性能问题，添加了synchronized的函数比一般方法慢得多，若多次调用getInstance，则累积的性能损耗特别大。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static Singleton instance = null;</div><div class="line">    private Singleton() &#123; &#125;</div><div class="line">    public static Synchronized Singleton getInstance() &#123;</div><div class="line">          if (instance == null) &#123;</div><div class="line">                instance = new Singleton();</div><div class="line">          &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="双重校验锁"><a href="#双重校验锁" class="headerlink" title="双重校验锁"></a>双重校验锁</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static volatile Singleton instance = null;</div><div class="line">    private Singleton() &#123; &#125;</div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        if (instance == null) &#123;</div><div class="line">            synchronized(Singleton.class) &#123;</div><div class="line">                if (instance == null)&#123;</div><div class="line">                    instance = new Singleton();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">       return instance; </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class StaticSingleton &#123;</div><div class="line">    private StaticSingleton() &#123;&#125;</div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        private static StaticSingleton INSTANCE = new StaticSingleton();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    public static getInstance() &#123;</div><div class="line">        return SingletonHolder.INSTANCE;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><ul>
-<li>调用方式：Singleton.INSTANCE.getInstance()</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">class Resource&#123;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">public enum Singleton &#123;</div><div class="line">    INSTANCE;</div><div class="line">    private Resource instance;</div><div class="line">    Singleton() &#123;</div><div class="line">        instance = new Resource();</div><div class="line">    &#125;</div><div class="line">    public Resource getInstance() &#123;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="多个maven项目启动顺序"><a href="#多个maven项目启动顺序" class="headerlink" title="多个maven项目启动顺序"></a>多个maven项目启动顺序</h1><h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在公司实际项目中，开发的项目一般都会涉及到多个 maven 项目，比如项目2会依赖项目1。使用 Jenkins 实现自动部署时，除了写一个流水线脚本时，就需要找一个合适的 maven 命令脚本解决。</p>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>现在有两个 Maven 工程，maven1 和 maven2 ，maven2 依赖于 maven1 。maven1 的 pom 文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 </div><div class="line">   http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt; </div><div class="line">   </div><div class="line">   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; </div><div class="line">   &lt;groupId&gt;bus-core-api&lt;/groupId&gt; </div><div class="line">   &lt;artifactId&gt;bus-core-api&lt;/artifactId&gt; </div><div class="line">   &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; </div><div class="line">   &lt;packaging&gt;jar&lt;/packaging&gt; </div><div class="line">   &lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>maven2 的pom文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 </div><div class="line">   http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt; </div><div class="line">   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; </div><div class="line">   &lt;groupId&gt;app-desktop-ui&lt;/groupId&gt; </div><div class="line">   &lt;artifactId&gt;app-desktop-ui&lt;/artifactId&gt; </div><div class="line">   &lt;version&gt;1.0&lt;/version&gt; </div><div class="line">   &lt;packaging&gt;jar&lt;/packaging&gt; </div><div class="line">   &lt;dependencies&gt; </div><div class="line">    &lt;dependency&gt; </div><div class="line">        &lt;groupId&gt;bus-core-api&lt;/groupId&gt; </div><div class="line">        &lt;artifactId&gt;bus-core-api&lt;/artifactId&gt; </div><div class="line">        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; </div><div class="line">    &lt;/dependency&gt; </div><div class="line">  &lt;/dependencies&gt; </div><div class="line">  &lt;/project&gt;</div></pre></td></tr></table></figure>
+<p><strong>在平时我们打包的时候，是对maven1项目先执行 maven install ，然后再对maven2 项目执行 maven clean package。<br>有没有一种方法可以实现：我直接对maven2进行打包操作，它会自动的先对maven2依赖的项目先进行install，然后再对maven2进行打包？</strong></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><p>首先有两个 maven 项目，maven1 和 maven2 。其中 maven2 依赖于 maven1.</p>
+<p>这时，maven1 的 pom.xml 内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;maven1&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">    &lt;packaging&gt;jar&lt;/packaging&gt;</div><div class="line"></div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>maven2 的 pom.xml 内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;maven2&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">    &lt;packaging&gt;jar&lt;/packaging&gt;</div><div class="line"></div><div class="line">    &lt;dependencies&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven1&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">    &lt;/dependencies&gt;</div><div class="line"></div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>然后，我们在 maven2 项目中新建一个 xml 文件，pomAutom.xml 内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;space.tiantsing&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;mavenAutom&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line">    &lt;packaging&gt;pom&lt;/packaging&gt; // 这里的打包方式必须为 pom</div><div class="line"></div><div class="line">    &lt;modules&gt;</div><div class="line">        &lt;module&gt;../maven1&lt;/module&gt;</div><div class="line">        &lt;module&gt;../maven2&lt;/module&gt;</div><div class="line">    &lt;/modules&gt;</div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+<p>这时，我们通过 cmd 进入到 maven2 项目 pom 文件所在的目录，执行命令 <code>mvn clean package -f pomAutom.xml</code> ,这时就会按照你在 pomAutom.xml 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;modules&gt;</div><div class="line">        &lt;module&gt;../maven1&lt;/module&gt;</div><div class="line">        &lt;module&gt;../maven2&lt;/module&gt;</div><div class="line">    &lt;/modules&gt;</div></pre></td></tr></table></figure>
+<p>配置的顺序启动。</p>
+<p>DEMO路径：<a href="https://gitee.com/tsingtian/MavenDependTemplate.git" target="_blank" rel="external">MavenDependTemplate</a></p>
 
       
     </div>
@@ -311,13 +287,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2020/08/17/Java单例模式的5种实现方法/">Java单例模式的5种实现方法</a></p>
+        <p><span>本文标题:</span><a href="/2020/08/17/多个maven项目启动顺序/">多个maven项目启动顺序</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
-        <p><span>发布时间:</span>2020-08-17, 19:44:07</p>
-        <p><span>最后更新:</span>2020-08-17, 23:24:57</p>
+        <p><span>发布时间:</span>2020-08-17, 20:44:07</p>
+        <p><span>最后更新:</span>2020-08-17, 23:36:36</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2020/08/17/Java单例模式的5种实现方法/" title="Java单例模式的5种实现方法">http://tianqing.work/2020/08/17/Java单例模式的5种实现方法/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2020/08/17/Java单例模式的5种实现方法/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/08/17/多个maven项目启动顺序/" title="多个maven项目启动顺序">http://tianqing.work/2020/08/17/多个maven项目启动顺序/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2020/08/17/多个maven项目启动顺序/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -329,16 +305,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2020/08/17/多个maven项目启动顺序/">
-                    多个maven项目启动顺序
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/05/1.初识RabbitMQ/">
-                    1.初识RabbitMQ
+                <a href="/2020/08/17/Java单例模式的5种实现方法/">
+                    Java单例模式的5种实现方法
                 </a>
             </div>
         
@@ -350,7 +320,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java单例模式的5种实现方法"><span class="toc-number">1.</span> <span class="toc-text">Java单例模式的5种实现方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#饿汉"><span class="toc-number">1.0.1.</span> <span class="toc-text">饿汉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#懒汉-（线程安全）"><span class="toc-number">1.0.2.</span> <span class="toc-text">懒汉-（线程安全）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#双重校验锁"><span class="toc-number">1.0.3.</span> <span class="toc-text">双重校验锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态内部类"><span class="toc-number">1.0.4.</span> <span class="toc-text">静态内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#枚举"><span class="toc-number">1.0.5.</span> <span class="toc-text">枚举</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#多个maven项目启动顺序"><span class="toc-number">1.</span> <span class="toc-text">多个maven项目启动顺序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题背景"><span class="toc-number">1.1.</span> <span class="toc-text">问题背景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题描述"><span class="toc-number">1.1.1.</span> <span class="toc-text">问题描述</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">1.2.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方案一"><span class="toc-number">1.2.1.</span> <span class="toc-text">方案一</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -386,7 +356,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Java单例模式的5种实现方法　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"多个maven项目启动顺序　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -406,15 +376,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2020/08/17/多个maven项目启动顺序/" title="上一篇: 多个maven项目启动顺序">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/05/1.初识RabbitMQ/" title="下一篇: 1.初识RabbitMQ">
+            <a href="/2020/08/17/Java单例模式的5种实现方法/" title="下一篇: Java单例模式的5种实现方法">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -4,6 +4,53 @@
   
     
     <entry>
+      <title><![CDATA[Java单例模式的5种实现方法]]></title>
+      <url>http://tianqing.work/2020/08/17/Java%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%845%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>Java单例模式的5种实现方法</strong></excerpt></p>
+<ol>
+<li>饿汉</li>
+<li>懒汉-（线程安全）</li>
+<li>双重校验锁</li>
+<li>静态内部类</li>
+<li>枚举</li>
+</ol>
+<a id="more"></a> 
+<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
+<p>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
+<h1 id="Java单例模式的5种实现方法"><a href="#Java单例模式的5种实现方法" class="headerlink" title="Java单例模式的5种实现方法"></a>Java单例模式的5种实现方法</h1><h3 id="饿汉"><a href="#饿汉" class="headerlink" title="饿汉"></a>饿汉</h3><p>类加载的时候就创建了实例</p>
+<ul>
+<li>优点：类加载的时候创建一次实例，避免了多线程同步问题</li>
+<li>缺点：即使单例没被用到也会创建，浪费内存</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static Singleton instance = new Singleton();</div><div class="line">    private Singleton() &#123; &#125;</div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return instance; </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="懒汉-（线程安全）"><a href="#懒汉-（线程安全）" class="headerlink" title="懒汉-（线程安全）"></a>懒汉-（线程安全）</h3><ul>
+<li>缺点：性能问题，添加了synchronized的函数比一般方法慢得多，若多次调用getInstance，则累积的性能损耗特别大。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static Singleton instance = null;</div><div class="line">    private Singleton() &#123; &#125;</div><div class="line">    public static Synchronized Singleton getInstance() &#123;</div><div class="line">          if (instance == null) &#123;</div><div class="line">                instance = new Singleton();</div><div class="line">          &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="双重校验锁"><a href="#双重校验锁" class="headerlink" title="双重校验锁"></a>双重校验锁</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static volatile Singleton instance = null;</div><div class="line">    private Singleton() &#123; &#125;</div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        if (instance == null) &#123;</div><div class="line">            synchronized(Singleton.class) &#123;</div><div class="line">                if (instance == null)&#123;</div><div class="line">                    instance = new Singleton();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">       return instance; </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class StaticSingleton &#123;</div><div class="line">    private StaticSingleton() &#123;&#125;</div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        private static StaticSingleton INSTANCE = new StaticSingleton();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    public static getInstance() &#123;</div><div class="line">        return SingletonHolder.INSTANCE;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><ul>
+<li>调用方式：Singleton.INSTANCE.getInstance()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">class Resource&#123;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">public enum Singleton &#123;</div><div class="line">    INSTANCE;</div><div class="line">    private Resource instance;</div><div class="line">    Singleton() &#123;</div><div class="line">        instance = new Resource();</div><div class="line">    &#125;</div><div class="line">    public Resource getInstance() &#123;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 设计模式 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 单例模式 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[1.初识RabbitMQ]]></title>
       <url>http://tianqing.work/2019/09/05/1.%E5%88%9D%E8%AF%86RabbitMQ/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -3577,31 +3624,6 @@ hexo d -g #生成并上传
 <!-- e.g. -->
 <div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
       
-        
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试一]]></title>
-      <url>http://tianqing.work/2017/02/17/%E6%B5%8B%E8%AF%95%E4%B8%80/</url>
-      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
-<p>#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上</p>
-<a id="more"></a> 
-<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
-<p>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 测试 </category>
-            
-        </categories>
-        
         
         <tags>
             

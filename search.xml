@@ -4,6 +4,15 @@
   
     
     <entry>
+      <title><![CDATA[photo]]></title>
+      <url>http://tianqing.work/2020/08/18/photo/</url>
+      <content type="html"><![CDATA[<p><img src="//tianqing.work/2020/08/18/photo/1.png" alt=""></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[多个maven项目启动顺序]]></title>
       <url>http://tianqing.work/2020/08/17/%E5%A4%9A%E4%B8%AAmaven%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>多个maven项目启动顺序</strong></excerpt></p>
@@ -3434,6 +3443,7 @@ SELECT * FROM emp LIMIT 3, 10;
 <p>  <code>npm install</code></p>
 <p> 安装完成之后，【G:\TerryBlog】目录结构是这样的：</p>
 <p><img src="http://m.qpic.cn/psc?/V50ZdBde3aW49D0SlWTq0nVW0a20bXnl/ruAMsa53pVQWN7FLK88i5ufoVaXirB2pb4KqI*ee9PgkwFVL596CG4UtA15pX8hX.JgYHKNbe2jCRpgngL6CWomvbygkb1KlKYJNwNfcdFA!/b&amp;bo=9wKtAQAAAAADB3s!&amp;rf=viewer_4" alt=""></p>
+<p><img src="//tianqing.work/2017/02/18/使用Hexo-github建设个人博客教程/使用Hexo+github建设个人博客教程1.png" alt=""></p>
 <p>  到此为止，一个博客就已经搭建好了，现在我们启动 hexo 本地服务，看下默认的博客是怎样的，命令如下：</p>
 <p>  <code>hexo s</code></p>
 <p>   <strong><em>在浏览器中输入：<a href="http://localhost:4000/进行访问" target="_blank" rel="external">http://localhost:4000/进行访问</a></em></strong></p>
@@ -3635,6 +3645,23 @@ hexo d -g #生成并上传
     </entry>
     
     <entry>
+      <title><![CDATA[测试二]]></title>
+      <url>http://tianqing.work/2017/02/17/DEMO1/</url>
+      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
+
+<!-- e.g. -->
+<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://tianqing.work/2017/02/17/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -3652,23 +3679,6 @@ hexo d -g #生成并上传
         <tags>
             
             <tag> Hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试二]]></title>
-      <url>http://tianqing.work/2017/02/17/DEMO1/</url>
-      <content type="html"><![CDATA[<div class="github-widget" data-repo="MuTouTQ/MuTouTQ.github.io"></div>
-
-<!-- e.g. -->
-<div class="github-widget" data-repo="MOxFIVE/hexo-theme-yelee"></div>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 测试 </tag>
             
         </tags>
         

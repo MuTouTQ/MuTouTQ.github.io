@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianqing.work/"/>
-  <updated>2020-08-17T15:36:36.859Z</updated>
+  <updated>2020-08-18T14:55:51.247Z</updated>
   <id>http://tianqing.work/</id>
   
   <author>
@@ -16,6 +16,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>photo</title>
+    <link href="http://tianqing.work/2020/08/18/photo/"/>
+    <id>http://tianqing.work/2020/08/18/photo/</id>
+    <published>2020-08-18T14:51:45.000Z</published>
+    <updated>2020-08-18T14:55:51.247Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;//tianqing.work/2020/08/18/photo/1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>多个maven项目启动顺序</title>
     <link href="http://tianqing.work/2020/08/17/%E5%A4%9A%E4%B8%AAmaven%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/"/>
     <id>http://tianqing.work/2020/08/17/多个maven项目启动顺序/</id>
@@ -24,7 +41,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;&lt;strong&gt;多个maven项目启动顺序&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;&lt;strong&gt;多个maven项目启动顺序&lt;/strong&gt;&lt;/Excerpt&gt;&lt;/p&gt;
     
     </summary>
     
@@ -44,7 +61,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;&lt;strong&gt;Java单例模式的5种实现方法&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;&lt;strong&gt;Java单例模式的5种实现方法&lt;/strong&gt;&lt;/Excerpt&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;饿汉&lt;/li&gt;
 &lt;li&gt;懒汉-（线程安全）&lt;/li&gt;
@@ -71,12 +88,12 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;什么是消息中间件？&lt;/li&gt;
 &lt;li&gt;消息中间件的作用&lt;/li&gt;
-&lt;li&gt;RabbitMQ 的安装及简单使用
+&lt;li&gt;RabbitMQ 的安装及简单使用&lt;/li&gt;&lt;/ol&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -96,12 +113,12 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;
+&lt;p&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -121,7 +138,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;/Excerpt&gt;&lt;/p&gt;
 &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文主要记录工作学习中用到的Git常用操作。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;教程思路：&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -146,12 +163,12 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 
 &lt;blockquote&gt;
 &lt;p&gt;对从网上搜到的eclipse快捷键做出整理，以方便自己的使用。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/blockquote&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -173,12 +190,12 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Oracle SQL Developer是Oracle官方提供的数据库连接工具。不仅可以连接自己的数据库（Oracle），而且还可以连接多种其他的数据库。MySql已经成为了Oracle旗下的产品，连接它当然也不在话下。在这里，笔者在实际开发中只进行了MySQL的连接实践，其它的数据库请读者自行研究，但应该也都是可以的。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;p style=&quot;color:red;&quot;&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;&lt;/strong&gt;                    &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;p style=&quot;color:red;&quot;&gt;转载请注明：转载于Terry Tian的博客（&lt;a href=&quot;www.mutouspace.cn&quot;&gt;www.mutouspace.cn&lt;/a&gt;）!&lt;/p&gt;&lt;/strong&gt;                    &lt;/p&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -198,7 +215,7 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！&lt;/p&gt;
@@ -211,7 +228,7 @@
 &lt;li&gt;Tomcat的环境变量配置&lt;/li&gt;
 &lt;li&gt;JSP 标准标签库（JSTL）&lt;/li&gt;
 &lt;li&gt;Maven安装配置&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -231,9 +248,9 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
-&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;今天做的APP中的一个表单页面需要以后蓝牙连接打印设备后打印出来，当时想过要截屏，但想了一下截屏的话太麻烦，截屏的话是将手机的屏幕截取下来，包含很多无用的信息，所以这个想法就给pass掉了；后来又想到了转化为图片、PDF什么的，在网上搜索了一些相关信息后，发现还是将整个布局变成图片比较简单，并且也找到了一篇不错测教程，文末附有链接。&lt;/p&gt;
+&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;今天做的APP中的一个表单页面需要以后蓝牙连接打印设备后打印出来，当时想过要截屏，但想了一下截屏的话太麻烦，截屏的话是将手机的屏幕截取下来，包含很多无用的信息，所以这个想法就给pass掉了；后来又想到了转化为图片、PDF什么的，在网上搜索了一些相关信息后，发现还是将整个布局变成图片比较简单，并且也找到了一篇不错测教程，文末附有链接。&lt;/p&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -253,7 +270,7 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;p&gt;&lt;strong&gt;使用方法步骤：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -261,7 +278,7 @@
 &lt;li&gt;添加自定义分割线：可自定义分割线drawable&lt;/li&gt;
 &lt;li&gt;添加自定义分割线：可自定义分割线高度和颜色&lt;/li&gt;
 &lt;li&gt;万能分割线登场&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ol&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -283,10 +300,10 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;p&gt;  最近遇到一个问题。具体内容是使用Volley联网请求一段json数据，用Postman工具获取返回数据也是正确的，在别人的电脑上也是正常的，返回数据header中编码格式也是utf-8.那么问题就出在volly这个工具类上了。&lt;/p&gt;
-&lt;p&gt;  经过排查，发现问题确实出在volley的一个工具类上 。&lt;/p&gt;
+&lt;p&gt;  经过排查，发现问题确实出在volley的一个工具类上 。&lt;/p&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -359,7 +376,7 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -383,12 +400,12 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 
 
 &lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;   &lt;strong&gt;连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;   &lt;strong&gt;？？？？？此处为ADB的简单定义？？？？？？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;   &lt;strong&gt;？？？？？此处为ADB的简单定义？？？？？？&lt;/strong&gt;&lt;/p&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -410,12 +427,12 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;h1 id=&quot;Struts2简介&quot;&gt;&lt;a href=&quot;#Struts2简介&quot; class=&quot;headerlink&quot; title=&quot;Struts2简介&quot;&gt;&lt;/a&gt;Struts2简介&lt;/h1&gt;&lt;h2 id=&quot;Struts2概述&quot;&gt;&lt;a href=&quot;#Struts2概述&quot; class=&quot;headerlink&quot; title=&quot;Struts2概述&quot;&gt;&lt;/a&gt;Struts2概述&lt;/h2&gt;&lt;p&gt;Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。&lt;/p&gt;
 &lt;h2 id=&quot;Struts2的来历&quot;&gt;&lt;a href=&quot;#Struts2的来历&quot; class=&quot;headerlink&quot; title=&quot;Struts2的来历&quot;&gt;&lt;/a&gt;Struts2的来历&lt;/h2&gt;&lt;p&gt; &lt;strong&gt; Struts1：&lt;/strong&gt; 也是apache开发的一套mvc的开源框架。在2005年之前非常流行。&lt;/p&gt;
 &lt;p&gt; 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; Struts2：&lt;/strong&gt;在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。&lt;em&gt;里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Struts2：&lt;/strong&gt;在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。&lt;em&gt;里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。&lt;/em&gt;&lt;/p&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -439,7 +456,7 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;本篇文章是对学习框架前的开题篇。&lt;/p&gt;
@@ -450,7 +467,7 @@
 &lt;li&gt;三层架构&lt;/li&gt;
 &lt;li&gt;控制器：MVC中的控制器&lt;/li&gt;
 &lt;li&gt;案例中的问题&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -472,14 +489,14 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;p&gt;&lt;strong&gt;常用的数据源配置：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;DBCP&lt;/li&gt;
 &lt;li&gt;C3P0&lt;/li&gt;
 &lt;li&gt;用JavaWeb服务器管理数据源：Tomcat&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -501,7 +518,7 @@
     
     <summary type="html">
     
-      &lt;Excerpt in index | 首页摘要&gt;
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
 
 &lt;h1 id=&quot;Jsp-简介&quot;&gt;&lt;a href=&quot;#Jsp-简介&quot; class=&quot;headerlink&quot; title=&quot;Jsp 简介&quot;&gt;&lt;/a&gt;Jsp 简介&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;JSP全称是Java Server Pages，它和servle技术一样，都是SUN公司定义的一种用于开发动态web资源的技术。&lt;strong&gt;JSP实际上就是Servlet。&lt;/strong&gt;&lt;/p&gt;
@@ -509,7 +526,7 @@
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;jsp = html + java&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;html:&lt;/strong&gt;静态内容&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;servlet：&lt;/strong&gt;服务器端的小应用程序。适合编写java逻辑代码，如果编写网页内容–苦逼。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;jsp:&lt;/strong&gt;适合编写输出动态内容，但不适合编写java逻辑。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;jsp:&lt;/strong&gt;适合编写输出动态内容，但不适合编写java逻辑。&lt;/p&gt;&lt;/Excerpt&gt;
     
     </summary>
     
@@ -519,40 +536,6 @@
       <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
     
       <category term="JSP" scheme="http://tianqing.work/tags/JSP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习之Servlet</title>
-    <link href="http://tianqing.work/2017/03/25/JAVA%E4%B9%8BServlet/"/>
-    <id>http://tianqing.work/2017/03/25/JAVA之Servlet/</id>
-    <published>2017-03-25T15:31:16.000Z</published>
-    <updated>2017-04-15T09:25:40.639Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in index | 首页摘要&gt;
-
-&lt;h1 id=&quot;Servlet-简介&quot;&gt;&lt;a href=&quot;#Servlet-简介&quot; class=&quot;headerlink&quot; title=&quot;Servlet 简介&quot;&gt;&lt;/a&gt;Servlet 简介&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Servlet 任务&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;读取客户端（浏览器）发送的显式的数据。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。&lt;/li&gt;
-&lt;li&gt;读取客户端（浏览器）发送的隐式的 HTTP 请求数据。这包括 cookies、媒体类型和浏览器能理解的压缩格式等等。&lt;/li&gt;
-&lt;li&gt;处理数据并生成结果。这个过程可能需要访问数据库，执行 RMI 或 CORBA 调用，调用 Web 服务，或者直接计算得出对应的响应。&lt;/li&gt;
-&lt;li&gt;发送显式的数据（即文档）到客户端（浏览器）。该文档的格式可以是多种多样的，包括文本文件（HTML 或 XML）、二进制文件（GIF 图像）、Excel 等。&lt;/li&gt;
-&lt;li&gt;发送隐式的 HTTP 响应到客户端（浏览器）。这包括告诉浏览器或其他客户端被返回的文档类型（例如 HTML），设置 cookies 和缓存参数，以及其他类似的任务。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://tianqing.work/categories/JAVA/"/>
-    
-    
-      <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
-    
-      <category term="Servlet" scheme="http://tianqing.work/tags/Servlet/"/>
     
   </entry>
   

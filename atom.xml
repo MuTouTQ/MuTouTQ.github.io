@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianqing.work/"/>
-  <updated>2020-08-18T14:55:51.247Z</updated>
+  <updated>2020-09-13T07:44:54.479Z</updated>
   <id>http://tianqing.work/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人电脑软件备份(Windows10)</title>
+    <link href="http://tianqing.work/2020/09/13/personal-software-pc/"/>
+    <id>http://tianqing.work/2020/09/13/personal-software-pc/</id>
+    <published>2020-09-13T04:31:18.000Z</published>
+    <updated>2020-09-13T07:44:54.479Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
+
+&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt;感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;笔者是一名程序员，为了以后换电脑方便，特写下了这篇文章。&lt;br&gt;&lt;/p&gt;&lt;/Excerpt&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://tianqing.work/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="电脑软件" scheme="http://tianqing.work/tags/%E7%94%B5%E8%84%91%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="windows10" scheme="http://tianqing.work/tags/windows10/"/>
+    
+  </entry>
   
   <entry>
     <title>photo</title>
@@ -506,36 +530,6 @@
       <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
     
       <category term="连接池" scheme="http://tianqing.work/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习之Jsp</title>
-    <link href="http://tianqing.work/2017/03/29/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BJsp/"/>
-    <id>http://tianqing.work/2017/03/29/JAVA学习之Jsp/</id>
-    <published>2017-03-29T12:41:07.000Z</published>
-    <updated>2017-04-15T09:23:31.278Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
-
-&lt;h1 id=&quot;Jsp-简介&quot;&gt;&lt;a href=&quot;#Jsp-简介&quot; class=&quot;headerlink&quot; title=&quot;Jsp 简介&quot;&gt;&lt;/a&gt;Jsp 简介&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;JSP全称是Java Server Pages，它和servle技术一样，都是SUN公司定义的一种用于开发动态web资源的技术。&lt;strong&gt;JSP实际上就是Servlet。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;jsp = html + java&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;html:&lt;/strong&gt;静态内容&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;servlet：&lt;/strong&gt;服务器端的小应用程序。适合编写java逻辑代码，如果编写网页内容–苦逼。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;jsp:&lt;/strong&gt;适合编写输出动态内容，但不适合编写java逻辑。&lt;/p&gt;&lt;/Excerpt&gt;
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://tianqing.work/categories/JAVA/"/>
-    
-    
-      <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
-    
-      <category term="JSP" scheme="http://tianqing.work/tags/JSP/"/>
     
   </entry>
   

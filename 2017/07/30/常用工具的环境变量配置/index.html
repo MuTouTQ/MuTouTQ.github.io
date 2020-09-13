@@ -23,31 +23,11 @@
 <meta property="og:site_name" content="Terry_Tian's Code日志">
 <meta property="og:description" content="（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
 （2017-07-30）为了自己记录的方便，本文章不在单独的只对类如JDK、Tomact这样的工具做环境变">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/01.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/02.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/03.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/04.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/05.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/06.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/08.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/09.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/10.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/11.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven1.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven2.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven3.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven4.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven5.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven6.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven9.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven7.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/maven8.png">
-<meta property="og:updated_time" content="2018-07-01T13:41:32.304Z">
+<meta property="og:updated_time" content="2020-09-13T08:32:08.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用"工具"配置">
 <meta name="twitter:description" content="（2017-03-24）本博文主要介绍一些工具安装后对环境变量的配置，本来不打算写这种博文的，这种博文在网上一搜一大把，但网络资源鱼龙混杂，有的教程可能并不适合自己的环境，所以就写了这样一篇环境配置的博文，既然写了，那以后再遇到环境配置的问题还会继续添加，如有错误，欢迎大家指出，谢谢！
 （2017-07-30）为了自己记录的方便，本文章不在单独的只对类如JDK、Tomact这样的工具做环境变">
-<meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/01.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -305,19 +285,10 @@
 <li>编辑PATH</li>
 </ul>
 <p>第一步：“我的电脑” -&gt; 右击 -&gt; “属性” -&gt; “高级系统设置” -&gt; “环境变量”;</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/01.png" alt=""></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/02.png" alt=""></p>
 <p>第二步：新建JAVA_HOME  里边填入jdk的绝对地址： <strong>E:\JAVA\jdk</strong>   </p><p style="color:red;">注意：最后不要加分号！！！！</p><p></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/03.png" alt=""></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/04.png" alt=""></p>
 <p>第三步：新建CLASSPATH  内容为： <strong>.;%JAVA_HOME%\lib;</strong>  </p><p style="color:red;">注意：不要忘记前面的“ .; ”！！！！</p><p></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/05.png" alt=""></p>
 <p>第四步：编辑PATH       新加入： <strong>%JAVA_HOME%\bin;</strong>   </p><p style="color:red;">注意：每个路径之间都有分号！！！！</p><p></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/06.png" alt=""></p>
 <p>第五步：在控制台页面分别输入 “java” “javac” “java -version” 做测试</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/08.png" alt=""></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/09.png" alt=""></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/10.png" alt=""></p>
 <h1 id="Tomcat的环境变量配置"><a href="#Tomcat的环境变量配置" class="headerlink" title="Tomcat的环境变量配置"></a>Tomcat的环境变量配置</h1><ol>
 <li>新建变量名：CATALINA_BASE，变量值：E:\tomcat</li>
 <li>新建变量名：CATALINA_HOME，变量值：E:\tomcat</li>
@@ -326,7 +297,6 @@
 <p>有了JDK环境变量配置的经验，我相信大家对配置都已经轻车熟路了，这里就不配图了。</p>
 <p>最后一步：</p>
 <p> 在CMD命令下输入命令：<code>startup</code>，出现如下对话框，表明服务启动成功。</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/11.png" alt=""></p>
 <h1 id="JSP-标准标签库（JSTL）"><a href="#JSP-标准标签库（JSTL）" class="headerlink" title="JSP 标准标签库（JSTL）"></a>JSP 标准标签库（JSTL）</h1><p>JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。具体详细介绍请各位读者自行Google或者百度，这里不做赘述。</p>
 <p><strong>JSTL 库安装</strong> </p>
 <p><strong>安装步骤如下：</strong></p>
@@ -398,18 +368,13 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
 <li><p>Maven的安装</p>
 <p>第一步：安装jdk，要求1.6或以上版本。如何安装JDK与配置环境变量请参考本文中的JDK环境变量配置一节。</p>
 <p>第二步：把maven解压缩，解压目录最好不要有中文。</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven1.png" alt=""></p>
 <p>第三步：配置环境变量MAVEN_HOME</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven2.png" alt=""></p>
 <p>第四步：配置环境变量PATH，将%MAVEN_HOME%\bin加入Path中，在Windows中一定要注意要用分号；与其他值隔开。</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven3.png" alt=""></p>
 <p>第五步：验证是否安装成功，打开cmd窗口，输入mvn –v</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven4.png" alt=""></p>
 </li>
 <li><p>Maven的配置</p>
 <p>Maven有两个settings.xml配置文件，一个是全局配置文件，一个是用户配置文件。</p>
 <p>一、全局配置（默认）<br>%MAVEN_HOME%/conf/settings.xml 是maven全局的配置文件。<br>该配置文件中配置了本地仓库的路径，默认就是：~/.m2/repository。其中~表示当前用户路径C:\Users[UserName]。</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven5.png" alt=""></p>
 <p>二、用户配置</p>
 <p>~/.m2/settings.xml是用户的配置文件（默认没有该文件，需要将全局配置文件拷贝过来在进行修改）</p>
 <p>注意：一般本地仓库的地址不使用默认配置，通常情况下需要在用户配置中，配置新的仓库地址。</p>
@@ -417,18 +382,9 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
 <p>第一步：创建一个本地仓库目录，比如G:\TMavenPro\repository。</p>
 <p>第二步：复制maven的全局配置文件到~/.m2目录下，即创建用户配置文件</p>
 <p>第三步：修改maven的用户配置文件。</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven6.png" alt=""></p>
 <blockquote>
 <p>注意：<br>用户级别的仓库在全局配置中一旦设置，全局配置将不再生效，转用用户所设置的仓库，否则使用全局配置文件中的默认路径仓库。</p>
 </blockquote>
-</li>
-<li><p>Maven在eclipse中的使用</p>
-<p>第一步：查看eclipse中是否有maven插件,没有的话可以谷歌一下如何下载安装；</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven9.png" alt=""></p>
-<p>第二步：设置maven安装目录</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven7.png" alt=""></p>
-<p>第三步：设置用户配置</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/maven8.png" alt=""></p>
 </li>
 </ol>
 </the></excerpt>
@@ -442,7 +398,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
         <p><span>本文标题:</span><a href="/2017/07/30/常用工具的环境变量配置/">常用&quot;工具&quot;配置</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
         <p><span>发布时间:</span>2017-07-30, 14:44:56</p>
-        <p><span>最后更新:</span>2018-07-01, 21:41:32</p>
+        <p><span>最后更新:</span>2020-09-13, 16:32:08</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/07/30/常用工具的环境变量配置/" title="常用&quot;工具&quot;配置">http://tianqing.work/2017/07/30/常用工具的环境变量配置/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2017/07/30/常用工具的环境变量配置/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianqing.work/"/>
-  <updated>2020-09-13T07:44:54.479Z</updated>
+  <updated>2020-09-13T09:54:15.244Z</updated>
   <id>http://tianqing.work/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git学习笔记</title>
+    <link href="http://tianqing.work/2020/09/13/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://tianqing.work/2020/09/13/git学习笔记/</id>
+    <published>2020-09-13T08:37:33.000Z</published>
+    <updated>2020-09-13T09:54:15.244Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;/Excerpt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文主要记录git的学习笔记。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Git" scheme="http://tianqing.work/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://tianqing.work/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>个人电脑软件备份(Windows10)</title>
@@ -501,35 +522,6 @@
       <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
     
       <category term="框架" scheme="http://tianqing.work/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习之常用的数据源配置</title>
-    <link href="http://tianqing.work/2017/04/02/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/"/>
-    <id>http://tianqing.work/2017/04/02/JAVA学习之常用的数据源配置/</id>
-    <published>2017-04-02T12:39:01.000Z</published>
-    <updated>2017-04-15T09:43:46.203Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
-
-&lt;p&gt;&lt;strong&gt;常用的数据源配置：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DBCP&lt;/li&gt;
-&lt;li&gt;C3P0&lt;/li&gt;
-&lt;li&gt;用JavaWeb服务器管理数据源：Tomcat&lt;/li&gt;
-&lt;/ul&gt;&lt;/Excerpt&gt;
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://tianqing.work/categories/JAVA/"/>
-    
-    
-      <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
-    
-      <category term="连接池" scheme="http://tianqing.work/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
     
   </entry>
   

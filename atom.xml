@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianqing.work/"/>
-  <updated>2020-10-06T15:22:27.332Z</updated>
+  <updated>2020-10-06T15:37:33.064Z</updated>
   <id>http://tianqing.work/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java.util.stream使用汇总</title>
+    <link href="http://tianqing.work/2020/10/06/java-util-stream%E4%BD%BF%E7%94%A8%E6%B1%87%E6%80%BB/"/>
+    <id>http://tianqing.work/2020/10/06/java-util-stream使用汇总/</id>
+    <published>2020-10-06T15:36:32.000Z</published>
+    <updated>2020-10-06T15:37:33.064Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-List-Part&quot;&gt;&lt;a href=&quot;#1-List-Part&quot; class=&quot;headerlink&quot; title=&quot;1. List Part&quot;&gt;&lt;/a&gt;1. List&lt;object&gt; Part&lt;/object&gt;&lt;/h2&gt;&lt;figure class=&quot;hig
+    
+    </summary>
+    
+    
+      <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
+    
+  </entry>
   
   <entry>
     <title>solr8.5+tomcat8.5环境搭建</title>
@@ -483,35 +501,6 @@
       <category term="Android" scheme="http://tianqing.work/tags/Android/"/>
     
       <category term="ADB" scheme="http://tianqing.work/tags/ADB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习之Struts2框架（一）</title>
-    <link href="http://tianqing.work/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6/"/>
-    <id>http://tianqing.work/2017/04/15/JAVA学习之Struts2框架/</id>
-    <published>2017-04-15T12:52:52.000Z</published>
-    <updated>2017-10-11T15:04:09.350Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
-
-&lt;h1 id=&quot;Struts2简介&quot;&gt;&lt;a href=&quot;#Struts2简介&quot; class=&quot;headerlink&quot; title=&quot;Struts2简介&quot;&gt;&lt;/a&gt;Struts2简介&lt;/h1&gt;&lt;h2 id=&quot;Struts2概述&quot;&gt;&lt;a href=&quot;#Struts2概述&quot; class=&quot;headerlink&quot; title=&quot;Struts2概述&quot;&gt;&lt;/a&gt;Struts2概述&lt;/h2&gt;&lt;p&gt;Struts2是Apache发行的MVC开源框架。注意：它只是表现层（MVC）框架。&lt;/p&gt;
-&lt;h2 id=&quot;Struts2的来历&quot;&gt;&lt;a href=&quot;#Struts2的来历&quot; class=&quot;headerlink&quot; title=&quot;Struts2的来历&quot;&gt;&lt;/a&gt;Struts2的来历&lt;/h2&gt;&lt;p&gt; &lt;strong&gt; Struts1：&lt;/strong&gt; 也是apache开发的一套mvc的开源框架。在2005年之前非常流行。&lt;/p&gt;
-&lt;p&gt; 弊端：Struts1的核心控制器就是一个Servlet。随着使用者的增多，弊端开始出现。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; Struts2：&lt;/strong&gt;在long long ago，有一个设计超前的框架XWork，后来推出了XWork1和WebWork2。Struts2就是apache和OpenSymphony组织合并开发出来。&lt;em&gt;里面包含了WebWork2的核心及Struts的一些特性和功能。除此之外，和Struts1没有任何关系了。&lt;/em&gt;&lt;/p&gt;&lt;/Excerpt&gt;
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://tianqing.work/categories/JAVA/"/>
-    
-    
-      <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
-    
-      <category term="框架" scheme="http://tianqing.work/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="Struts2" scheme="http://tianqing.work/tags/Struts2/"/>
     
   </entry>
   

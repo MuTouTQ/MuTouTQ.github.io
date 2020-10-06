@@ -220,6 +220,65 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-java-util-stream使用汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/10/06/java-util-stream使用汇总/" class="article-date">
+      <time datetime="2020-10-06T15:36:32.000Z" itemprop="datePublished">2020-10-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/06/java-util-stream使用汇总/">java.util.stream使用汇总</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="1-List-Part"><a href="#1-List-Part" class="headerlink" title="1. List Part"></a>1. List<object> Part</object></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">//1.根据对象中的某一字段去重</div><div class="line">List&lt;Milk&gt; uniqueMilk = list.stream().collect(</div><div class="line"> collectingAndThen(</div><div class="line">     toCollection(() -&gt; new TreeSet&lt;&gt;(comparing(n-&gt;n.getKey()))),ArrayList::new)</div><div class="line">);</div><div class="line"></div><div class="line">//2.从list集合中，取出某一字段的列表</div><div class="line">List&lt;P&gt; list = Arrays.asList(new P(1, &quot;哈哈&quot;), new P(2, &quot;嘿嘿&quot;), new P(3, &quot;呵呵&quot;));</div><div class="line">List&lt;String&gt; names = list.stream().map(p -&gt; p.getName()).collect(Collectors.toList());</div><div class="line"></div><div class="line">//3.交集</div><div class="line">List&lt;String&gt; intersection = list1.stream().filter(item -&gt; list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---交集 intersection---&quot;);</div><div class="line">intersection.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//4. 差集 (list1 - list2)</div><div class="line">List&lt;String&gt; reduce1 = list1.stream().filter(item -&gt; !list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce1 (list1 - list2)---&quot;);</div><div class="line">reduce1.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//5. 差集 (list2 - list1)</div><div class="line">List&lt;String&gt; reduce2 = list2.stream().filter(item -&gt; !list1.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce2 (list2 - list1)---&quot;);</div><div class="line">reduce2.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//6. 并集</div><div class="line">List&lt;String&gt; listAll = list1.parallelStream().collect(toList());</div><div class="line">List&lt;String&gt; listAll2 = list2.parallelStream().collect(toList());</div><div class="line">listAll.addAll(listAll2);</div><div class="line">System.out.println(&quot;---并集 listAll---&quot;);</div><div class="line">listAll.parallelStream().forEachOrdered(System.out :: println);</div><div class="line"></div><div class="line">//7. 去重</div><div class="line">List&lt;String&gt; listAllDistinct = listAll.stream().distinct().collect(toList());</div><div class="line"></div><div class="line">//8. list实体对象取交集 相同则取allDimensionLs1的数据</div><div class="line">List&lt;DimensionsTreeNode&gt; filterList = allDimensionLs1.stream()</div><div class="line">        .filter(a1-&gt;allDimensionLs2.stream()</div><div class="line">        .anyMatch(a2-&gt;a1.getDimensionsCode().equals(a2.getDimensionsCode())))</div><div class="line">        .collect(Collectors.toList());</div><div class="line"></div><div class="line">//9.判断某个值是否在list集合中的某个对象中存在</div><div class="line"></div><div class="line">if (list.stream().filter(w-&gt;String.valueOf(w.getProductLibraryId()).equals(&quot;aaa&quot;)).findAny().isPresent())&#123;                      </div><div class="line">                //说明有</div><div class="line">&#125;</div><div class="line">　　判断list中的对象中是否有getProductLibraryId 等于 aaa的 如果有 进入判断条件</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-solr8-5-tomcat8-5环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -828,79 +887,6 @@
       
         <p class="article-more-link">
           <a href="/2018/04/07/Git常用命令汇总/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="eclipse-eclipse常用快捷键整理" class="article article-type-eclipse" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/08/20/eclipse常用快捷键整理/" class="article-date">
-      <time datetime="2017-08-20T07:46:26.000Z" itemprop="datePublished">2017-08-20</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/20/eclipse常用快捷键整理/">eclipse常用快捷键整理</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <Excerpt in="" index="" |="" 首页摘要="">
-
-
-<blockquote>
-<p>对从网上搜到的eclipse快捷键做出整理，以方便自己的使用。</p>
-</blockquote></Excerpt>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/工具/">工具</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eclipse/">eclipse</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/08/20/eclipse常用快捷键整理/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>

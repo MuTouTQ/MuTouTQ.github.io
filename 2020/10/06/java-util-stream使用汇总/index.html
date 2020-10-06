@@ -15,23 +15,16 @@
 
 
 
-<meta name="description" content="感谢阅读这篇博文，欢迎关注与评论！   连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。
-   ？？？？？此处为ADB的简单定义？？？？？？">
+<meta name="description" content="1. List Part1234567891011121314151617181920212223242526272829303132333435363738394041424344454647//1.根据对象中的某一字段去重List&amp;lt;Milk&amp;gt; uniqueMilk = list.stream().collect( collectingAndThen(     toCollectio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ADB的简单使用技巧（Android）">
-<meta property="og:url" content="http://tianqing.work/2017/04/16/ADB命令简单使用技巧（Android）/index.html">
+<meta property="og:title" content="java.util.stream使用汇总">
+<meta property="og:url" content="http://tianqing.work/2020/10/06/java-util-stream使用汇总/index.html">
 <meta property="og:site_name" content="Terry_Tian's Code日志">
-<meta property="og:description" content="感谢阅读这篇博文，欢迎关注与评论！   连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。
-   ？？？？？此处为ADB的简单定义？？？？？？">
-<meta property="og:image" content="http://i.imgur.com/8ToBAAY.png">
-<meta property="og:image" content="http://i.imgur.com/ieZuG7l.png">
-<meta property="og:image" content="http://i.imgur.com/n6D8C6G.png">
-<meta property="og:updated_time" content="2017-04-16T14:26:11.719Z">
+<meta property="og:description" content="1. List Part1234567891011121314151617181920212223242526272829303132333435363738394041424344454647//1.根据对象中的某一字段去重List&amp;lt;Milk&amp;gt; uniqueMilk = list.stream().collect( collectingAndThen(     toCollectio">
+<meta property="og:updated_time" content="2020-10-06T15:37:33.064Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ADB的简单使用技巧（Android）">
-<meta name="twitter:description" content="感谢阅读这篇博文，欢迎关注与评论！   连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。
-   ？？？？？此处为ADB的简单定义？？？？？？">
-<meta name="twitter:image" content="http://i.imgur.com/8ToBAAY.png">
+<meta name="twitter:title" content="java.util.stream使用汇总">
+<meta name="twitter:description" content="1. List Part1234567891011121314151617181920212223242526272829303132333435363738394041424344454647//1.根据对象中的某一字段去重List&amp;lt;Milk&amp;gt; uniqueMilk = list.stream().collect( collectingAndThen(     toCollectio">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -63,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>ADB的简单使用技巧（Android） | Terry_Tian&#39;s Code日志</title>
+<title>java.util.stream使用汇总 | Terry_Tian&#39;s Code日志</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -221,11 +214,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-ADB命令简单使用技巧（Android）" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java-util-stream使用汇总" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/16/ADB命令简单使用技巧（Android）/" class="article-date">
-      <time datetime="2017-04-16T12:52:52.000Z" itemprop="datePublished">2017-04-16</time>
+      <a href="/2020/10/06/java-util-stream使用汇总/" class="article-date">
+      <time datetime="2020-10-06T15:36:32.000Z" itemprop="datePublished">2020-10-06</time>
 </a>
 
 
@@ -240,7 +233,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ADB的简单使用技巧（Android）
+      java.util.stream使用汇总
     </h1>
   
 
@@ -248,14 +241,10 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ADB/">ADB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -265,95 +254,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <excerpt in="" index="" |="" 首页摘要="">
-
-
-
-<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><p>   <strong>连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。</strong></p>
-<p>   <strong>？？？？？此处为ADB的简单定义？？？？？？</strong></p>
-<a id="more"></a> 
-<the rest="" of="" contents="" |="" 余下全文="">  
-
-<h2 id="ADB基础"><a href="#ADB基础" class="headerlink" title="ADB基础"></a>ADB基础</h2><pre><code>ADB工具是位于SDK的`platfrom-tools`目录下，因此在命令行中使用ADB的时候，需要通过cd命令，切换到该目录下，或者将
-platform-tools的路径添加到系统变量中，这样就可以直接使用了。配置好后，在命令行中输入以下命令。
-</code></pre><p>   <img src="http://i.imgur.com/8ToBAAY.png" alt=""></p>
-<pre><code>如果显示如下内容，就说明配置成功了。
-</code></pre><p>   <img src="http://i.imgur.com/ieZuG7l.png" alt=""></p>
-<pre><code>接着，在命令行中输入以下命令。
-</code></pre><p>  <img src="http://i.imgur.com/n6D8C6G.png" alt=""></p>
-<pre><code>接下来就可以使用shell命令了。（不要问我这里Android这里为什么会出现shell，shell不是在Linux中的吗？因为Android就是就是Linux开发的！）
-</code></pre><h2 id="ADB常用命令"><a href="#ADB常用命令" class="headerlink" title="ADB常用命令"></a>ADB常用命令</h2><ul>
-<li><p>显示系统中的全部Android平台</p>
-<pre><code>C：\User\Administrator&gt;android list targets
-</code></pre></li>
-<li><p>安装Apk程序（Install）    </p>
-<pre><code>adb install -r 应用程序.apk
-C：\User\Administrator&gt;adb install -r G:\Test.apk
-</code></pre></li>
-<li><p>安装Apk程序（Push）</p>
-<pre><code>adb push &lt;local&gt;&lt;remote&gt;
-C：\User\Administrator&gt;adb push G:\Test.apk /system/app
-</code></pre></li>
-</ul>
-<pre><code>&gt; **区别:**
-
-  以上两种方法都可以将Apk安装到手机上，但也有不同。
-
-    1. adb Install 是将apk安装到 data/data 下，作为普通的用户应用程序。
-    2. adb push 不是安装命令，它是将一个文件写入到手机存储系统。因此，只要拥有相应的权限，就可以把任何apk放到任何目录下，甚至
-       放到System目录下，成为一个系统应用程序。
-
-&gt; **adb push 补充：**  
-
-
-   1. 向手机写入文件
-
-        adb push &lt;local&gt;&lt;remote&gt;
-        C：\User\Administrator&gt;adb push G:\Test.txt /system/temp/
-   2. 从手机获取文件
-
-        adb push &lt;remote&gt;&lt;local&gt;
-        C：\User\Administrator&gt;adb push /system/temp/ G:\Test.txt 
-</code></pre><ul>
-<li><p>删除应用</p>
-<pre><code>adb remount （重新挂载系统分区，使系统分区重新可写）
-adb shell
-cd system/app
-rm *.apk
-</code></pre></li>
-<li><p>查看系统盘符</p>
-<pre><code>adb shell df
-</code></pre></li>
-<li><p>输出所有已经安装的应用</p>
-<pre><code>adb shell pm list packages -f
-</code></pre></li>
-<li><p>模拟按键输入</p>
-<pre><code>adb shell input keyevent 
-C：\User\Administrator&gt;adb shell input keyevent 3
-
-ps：82 menu   
-    3  home
-   19  up
-   20  down
-   21  left
-   22  right
-   66  enter
-   4   back
-</code></pre></li>
-<li><p>模拟滑动输入</p>
-<pre><code>adb shell input touchscreen &lt;x1&gt;&lt;y1&gt;&lt;x2&gt;&lt;y2&gt;
-adb shell input touchscreen swipe 18 665 18 350
-</code></pre></li>
-<li><p>录制屏幕</p>
-<pre><code>adb shell screenrecord /sdcard/demo.mp4
-</code></pre></li>
-<li><p>重新启动</p>
-<pre><code>adb reboot  
-</code></pre></li>
-</ul>
-<hr>
-<p>更多信息，大家可以去网上去查询！</p>
-</the></excerpt>
+        <h2 id="1-List-Part"><a href="#1-List-Part" class="headerlink" title="1. List Part"></a>1. List<object> Part</object></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">//1.根据对象中的某一字段去重</div><div class="line">List&lt;Milk&gt; uniqueMilk = list.stream().collect(</div><div class="line"> collectingAndThen(</div><div class="line">     toCollection(() -&gt; new TreeSet&lt;&gt;(comparing(n-&gt;n.getKey()))),ArrayList::new)</div><div class="line">);</div><div class="line"></div><div class="line">//2.从list集合中，取出某一字段的列表</div><div class="line">List&lt;P&gt; list = Arrays.asList(new P(1, &quot;哈哈&quot;), new P(2, &quot;嘿嘿&quot;), new P(3, &quot;呵呵&quot;));</div><div class="line">List&lt;String&gt; names = list.stream().map(p -&gt; p.getName()).collect(Collectors.toList());</div><div class="line"></div><div class="line">//3.交集</div><div class="line">List&lt;String&gt; intersection = list1.stream().filter(item -&gt; list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---交集 intersection---&quot;);</div><div class="line">intersection.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//4. 差集 (list1 - list2)</div><div class="line">List&lt;String&gt; reduce1 = list1.stream().filter(item -&gt; !list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce1 (list1 - list2)---&quot;);</div><div class="line">reduce1.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//5. 差集 (list2 - list1)</div><div class="line">List&lt;String&gt; reduce2 = list2.stream().filter(item -&gt; !list1.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce2 (list2 - list1)---&quot;);</div><div class="line">reduce2.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//6. 并集</div><div class="line">List&lt;String&gt; listAll = list1.parallelStream().collect(toList());</div><div class="line">List&lt;String&gt; listAll2 = list2.parallelStream().collect(toList());</div><div class="line">listAll.addAll(listAll2);</div><div class="line">System.out.println(&quot;---并集 listAll---&quot;);</div><div class="line">listAll.parallelStream().forEachOrdered(System.out :: println);</div><div class="line"></div><div class="line">//7. 去重</div><div class="line">List&lt;String&gt; listAllDistinct = listAll.stream().distinct().collect(toList());</div><div class="line"></div><div class="line">//8. list实体对象取交集 相同则取allDimensionLs1的数据</div><div class="line">List&lt;DimensionsTreeNode&gt; filterList = allDimensionLs1.stream()</div><div class="line">        .filter(a1-&gt;allDimensionLs2.stream()</div><div class="line">        .anyMatch(a2-&gt;a1.getDimensionsCode().equals(a2.getDimensionsCode())))</div><div class="line">        .collect(Collectors.toList());</div><div class="line"></div><div class="line">//9.判断某个值是否在list集合中的某个对象中存在</div><div class="line"></div><div class="line">if (list.stream().filter(w-&gt;String.valueOf(w.getProductLibraryId()).equals(&quot;aaa&quot;)).findAny().isPresent())&#123;                      </div><div class="line">                //说明有</div><div class="line">&#125;</div><div class="line">　　判断list中的对象中是否有getProductLibraryId 等于 aaa的 如果有 进入判断条件</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -361,13 +262,13 @@ adb shell input touchscreen swipe 18 665 18 350
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/16/ADB命令简单使用技巧（Android）/">ADB的简单使用技巧（Android）</a></p>
+        <p><span>本文标题:</span><a href="/2020/10/06/java-util-stream使用汇总/">java.util.stream使用汇总</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
-        <p><span>发布时间:</span>2017-04-16, 20:52:52</p>
-        <p><span>最后更新:</span>2017-04-16, 22:26:11</p>
+        <p><span>发布时间:</span>2020-10-06, 23:36:32</p>
+        <p><span>最后更新:</span>2020-10-06, 23:37:33</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/16/ADB命令简单使用技巧（Android）/" title="ADB的简单使用技巧（Android）">http://tianqing.work/2017/04/16/ADB命令简单使用技巧（Android）/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2017/04/16/ADB命令简单使用技巧（Android）/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/10/06/java-util-stream使用汇总/" title="java.util.stream使用汇总">http://tianqing.work/2020/10/06/java-util-stream使用汇总/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2020/10/06/java-util-stream使用汇总/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -379,16 +280,10 @@ adb shell input touchscreen swipe 18 665 18 350
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/04/20/JAVA学习之Struts2框架-二/">
-                    JAVA学习之Struts2框架(二)
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/04/15/JAVA学习之Struts2框架/">
-                    JAVA学习之Struts2框架（一）
+                <a href="/2020/10/06/solr8-5-tomcat8-5环境搭建/">
+                    solr8.5+tomcat8.5环境搭建
                 </a>
             </div>
         
@@ -400,7 +295,7 @@ adb shell input touchscreen swipe 18 665 18 350
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢阅读这篇博文，欢迎关注与评论！"><span class="toc-number">1.</span> <span class="toc-text"> 感谢阅读这篇博文，欢迎关注与评论！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ADB基础"><span class="toc-number">2.</span> <span class="toc-text">ADB基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ADB常用命令"><span class="toc-number">3.</span> <span class="toc-text">ADB常用命令</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-List-Part"><span class="toc-number">1.</span> <span class="toc-text">1. List Part</span></a></li></ol>
         
     </div>
     <style>
@@ -436,7 +331,7 @@ adb shell input touchscreen swipe 18 665 18 350
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"ADB的简单使用技巧（Android）　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"java.util.stream使用汇总　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -456,15 +351,13 @@ adb shell input touchscreen swipe 18 665 18 350
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/20/JAVA学习之Struts2框架-二/" title="上一篇: JAVA学习之Struts2框架(二)">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/04/15/JAVA学习之Struts2框架/" title="下一篇: JAVA学习之Struts2框架（一）">
+            <a href="/2020/10/06/solr8-5-tomcat8-5环境搭建/" title="下一篇: solr8.5+tomcat8.5环境搭建">
                 <i class="fa fa-angle-right"></i>
             </a>
         

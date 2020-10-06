@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianqing.work/"/>
-  <updated>2020-09-13T09:54:15.244Z</updated>
+  <updated>2020-10-06T15:22:27.332Z</updated>
   <id>http://tianqing.work/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>solr8.5+tomcat8.5环境搭建</title>
+    <link href="http://tianqing.work/2020/10/06/solr8-5-tomcat8-5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/</id>
+    <published>2020-10-06T15:02:42.000Z</published>
+    <updated>2020-10-06T15:22:27.332Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
+
+&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;本地环境参数&lt;/li&gt;
+&lt;li&gt;本地环境搭建步骤&lt;/li&gt;
+&lt;li&gt;索引的创建&lt;/li&gt;&lt;/ol&gt;&lt;/Excerpt&gt;
+    
+    </summary>
+    
+    
+      <category term="SOLR" scheme="http://tianqing.work/tags/SOLR/"/>
+    
+  </entry>
   
   <entry>
     <title>git学习笔记</title>
@@ -489,39 +512,6 @@
       <category term="框架" scheme="http://tianqing.work/tags/%E6%A1%86%E6%9E%B6/"/>
     
       <category term="Struts2" scheme="http://tianqing.work/tags/Struts2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习之框架前述</title>
-    <link href="http://tianqing.work/2017/04/15/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%A1%86%E6%9E%B6%E5%89%8D%E8%BF%B0/"/>
-    <id>http://tianqing.work/2017/04/15/JAVA学习之框架前述/</id>
-    <published>2017-04-15T09:50:03.000Z</published>
-    <updated>2017-04-15T10:11:31.294Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;本篇文章是对学习框架前的开题篇。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;内容为：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;框架概述&lt;/li&gt;
-&lt;li&gt;三层架构&lt;/li&gt;
-&lt;li&gt;控制器：MVC中的控制器&lt;/li&gt;
-&lt;li&gt;案例中的问题&lt;/li&gt;
-&lt;/ul&gt;&lt;/Excerpt&gt;
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://tianqing.work/categories/JAVA/"/>
-    
-    
-      <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
-    
-      <category term="框架" scheme="http://tianqing.work/tags/%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   

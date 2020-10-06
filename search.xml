@@ -4,6 +4,94 @@
   
     
     <entry>
+      <title><![CDATA[solr8.5+tomcat8.5环境搭建]]></title>
+      <url>http://tianqing.work/2020/10/06/solr8-5-tomcat8-5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><ol>
+<li>本地环境参数</li>
+<li>本地环境搭建步骤</li>
+<li>索引的创建<a id="more"></a> 
+</li>
+</ol>
+<the rest="" of="" contents="" |="" 余下全文=""> 
+
+<h2 id="1-本地环境参数"><a href="#1-本地环境参数" class="headerlink" title="1.本地环境参数"></a>1.本地环境参数</h2><ul>
+<li>系统：windows 10</li>
+<li>tomcat 容器：tomcat 8.5.55</li>
+<li>jdk：jdk 1.8</li>
+<li>solr：8.5.1</li>
+</ul>
+<h2 id="2-本地环境搭建步骤"><a href="#2-本地环境搭建步骤" class="headerlink" title="2.本地环境搭建步骤"></a>2.本地环境搭建步骤</h2><blockquote>
+<p>推荐与博主环境保持一致！</p>
+</blockquote>
+<ol>
+<li>本机下载并配置好 jdk，请自行搜索；</li>
+<li>本机下载并配置好 tomcat 环境，请自行搜索；</li>
+<li><a href="https://lucene.apache.org/solr/" target="_blank" rel="external">官网</a>下载 solr，并解压到本地，如下图：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231757100_2152.png" alt="2.1"></p>
+<ol>
+<li>把<code>solr-8.x</code>的<code>server/solr-webapp</code>目录下边的<code>webapp</code>文件夹复制到<code>tomcat/webapps</code>的目录下，并重命名为<code>solr</code>。</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231826137_26300.png" alt="2.2"></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231847291_21675.png" alt="2.3"></p>
+<ol>
+<li>将<code>solr-8.x\server\lib\ext</code>下的<code>jar</code>包拷贝到<code>tomcat</code>里的<code>webapps\solr\WEB-INF\lib</code>下,如下图：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231907686_29583.png" alt="2.4"></p>
+<ol>
+<li>将<code>solr-8.x\server\lib</code>下 <code>metrics</code>开头的5个jar包也拷贝到tomcat里的<code>webapps\solr\WEB-INF\lib</code>下:</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231929648_4734.png" alt="2.5"></p>
+<ol>
+<li>在solr调试的过程中，如果提示jar包的缺失，可以去图中两个文件夹下找到相应的jar包，也拷贝到tomcat里的<code>webapps\solr\WEB-INF\lib</code>下</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231950128_25039.png" alt="2.6"></p>
+<ol>
+<li>在tomcat里的<code>webapps\solr\WEB-INF</code>下创建<code>classes</code>文件夹，将<code>solr/server/resources</code>下的文件拷贝到新建的classes文件夹下，如图：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232013853_21168.png" alt="2.7"></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232031604_31235.png" alt="2.8"></p>
+<blockquote>
+<p>这里的配置主要与日志的配置有关，可以稍后再调试。</p>
+</blockquote>
+<ol>
+<li>在磁盘任意目录创建<code>solr_home</code>文件夹，把solr-8.x 里面的solr文件夹下的内容放入<code>solr_home</code>中，博主如下：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232048609_4819.png" alt="2.9"></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232105590_26103.png" alt="2.10"></p>
+<ol>
+<li>修改<code>webapps\solr\WEB-INF\web.xml</code>里的<code>solr\home</code>路径,其中value的值为你创建的<code>solr_home</code>的绝对路径。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;env-entry&gt;</div><div class="line">     &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</div><div class="line">     &lt;env-entry-value&gt;E:/JAVA/solr/solr_home&lt;/env-entry-value&gt;</div><div class="line">     &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</div><div class="line">&lt;/env-entry&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>web.xml里这段内容是是打开的，将其注释掉:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;security-constraint&gt;</div><div class="line">    &lt;web-resource-collection&gt;</div><div class="line">      &lt;web-resource-name&gt;Disable TRACE&lt;/web-resource-name&gt;</div><div class="line">      &lt;url-pattern&gt;/&lt;/url-pattern&gt;</div><div class="line">      &lt;http-method&gt;TRACE&lt;/http-method&gt;</div><div class="line">    &lt;/web-resource-collection&gt;</div><div class="line">    &lt;auth-constraint/&gt;</div><div class="line">  &lt;/security-constraint&gt;</div><div class="line">  &lt;security-constraint&gt;</div><div class="line">    &lt;web-resource-collection&gt;</div><div class="line">      &lt;web-resource-name&gt;Enable everything but TRACE&lt;/web-resource-name&gt;</div><div class="line">      &lt;url-pattern&gt;/&lt;/url-pattern&gt;</div><div class="line">      &lt;http-method-omission&gt;TRACE&lt;/http-method-omission&gt;</div><div class="line">    &lt;/web-resource-collection&gt;</div><div class="line">  &lt;/security-constraint&gt;</div></pre></td></tr></table></figure>
+<p>12 .启动tomcat测试 <a href="http://localhost:8080/solr/index.html#/" target="_blank" rel="external">http://localhost:8080/solr/index.html#/</a></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232131881_30212.png" alt="2.11"></p>
+<h2 id="3-索引的创建"><a href="#3-索引的创建" class="headerlink" title="3.索引的创建"></a>3.索引的创建</h2><h3 id="3-1-core的创建"><a href="#3-1-core的创建" class="headerlink" title="3.1 core的创建"></a>3.1 core的创建</h3><ol>
+<li>在<code>solr_home</code> 文件夹下新建一个文件夹，文件夹名字自己定，这里取文件夹名为<code>testCore</code>，这个名字就是core的名字；</li>
+<li>将<code>D:\JAVA\solr\solr_home\configsets\_default\</code>下的<code>conf</code>文件夹拷贝到<code>testCore</code>下；</li>
+<li>启动 tomcat， <a href="http://localhost:8080/solr/index.html#/" target="_blank" rel="external">http://localhost:8080/solr/index.html#/</a>进入 solr Admin 管理页面；</li>
+<li>在solr的图形页面中添加core即可， <strong>名字和刚才新增名字</strong>相同，新增页面如下：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232147264_17125.png" alt="3.1"></p>
+<p>增加后：</p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232208276_22743.png" alt="3.2"></p>
+</the></excerpt>]]></content>
+      
+        
+        <tags>
+            
+            <tag> SOLR </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[git学习笔记]]></title>
       <url>http://tianqing.work/2020/09/13/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>

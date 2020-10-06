@@ -15,31 +15,39 @@
 
 
 
-<meta name="description" content="今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！
-
-转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!">
+<meta name="description" content="感谢阅读这篇博文，欢迎关注与评论！
+本地环境参数
+本地环境搭建步骤
+索引的创建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软件分享篇（Windows10）">
-<meta property="og:url" content="http://tianqing.work/2019/05/18/软件分享篇/index.html">
+<meta property="og:title" content="solr8.5+tomcat8.5环境搭建">
+<meta property="og:url" content="http://tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/index.html">
 <meta property="og:site_name" content="Terry_Tian's Code日志">
-<meta property="og:description" content="今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！
-
-转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/Windowsdefender.PNG">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/cc.PNG">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/md.PNG">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/hyb.PNG">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/clover.jpg">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/potp.PNG">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/idm.PNG">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/eg.PNG">
-<meta property="og:updated_time" content="2017-03-02T15:28:16.622Z">
+<meta property="og:description" content="感谢阅读这篇博文，欢迎关注与评论！
+本地环境参数
+本地环境搭建步骤
+索引的创建">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231757100_2152.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231826137_26300.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231847291_21675.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231907686_29583.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231929648_4734.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231950128_25039.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232013853_21168.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232031604_31235.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232048609_4819.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232105590_26103.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232131881_30212.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232147264_17125.png">
+<meta property="og:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232208276_22743.png">
+<meta property="og:updated_time" content="2020-10-06T15:22:27.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="软件分享篇（Windows10）">
-<meta name="twitter:description" content="今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！
-
-转载请注明：转载于Terry Tian的博客（www.mutouspace.cn）!">
-<meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/Windowsdefender.PNG">
+<meta name="twitter:title" content="solr8.5+tomcat8.5环境搭建">
+<meta name="twitter:description" content="感谢阅读这篇博文，欢迎关注与评论！
+本地环境参数
+本地环境搭建步骤
+索引的创建">
+<meta name="twitter:image" content="http://tianqing.work//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231757100_2152.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -71,7 +79,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>软件分享篇（Windows10） | Terry_Tian&#39;s Code日志</title>
+<title>solr8.5+tomcat8.5环境搭建 | Terry_Tian&#39;s Code日志</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -229,11 +237,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-软件分享篇" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-solr8-5-tomcat8-5环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/05/18/软件分享篇/" class="article-date">
-      <time datetime="2019-05-18T12:27:07.944Z" itemprop="datePublished">2019-05-18</time>
+      <a href="/2020/10/06/solr8-5-tomcat8-5环境搭建/" class="article-date">
+      <time datetime="2020-10-06T15:02:42.000Z" itemprop="datePublished">2020-10-06</time>
 </a>
 
 
@@ -248,7 +256,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      软件分享篇（Windows10）
+      solr8.5+tomcat8.5环境搭建
     </h1>
   
 
@@ -256,14 +264,10 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/分享/">分享</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SOLR/">SOLR</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -275,41 +279,78 @@
           
         <excerpt in="" index="" |="" 首页摘要="">
 
-<blockquote>
-<p>今晚有点晚了，就不撸代码了，决定把我电脑里常用的软件、工具分享给大家，这些软件真的很好用，不信你可以试一试！</p>
-</blockquote>
-<p>转载请注明：转载于Terry Tian的博客（<a href="www.mutouspace.cn">www.mutouspace.cn</a>）!</p>
-<a id="more"></a> 
-<the rest="" of="" contents="" |="" 余下全文="">
+<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><ol>
+<li>本地环境参数</li>
+<li>本地环境搭建步骤</li>
+<li>索引的创建<a id="more"></a> 
+</li>
+</ol>
+<the rest="" of="" contents="" |="" 余下全文=""> 
 
-<h1 id="安全杀毒："><a href="#安全杀毒：" class="headerlink" title="安全杀毒："></a>安全杀毒：</h1><p>   TT电脑里用的杀毒防护软件是Windows系统自带的<strong>Windows Defender</strong>，说实话，现在Windows自带的杀软已经很好了，具体好到哪，大家可以自行百度、google。软件界面简单、实用，还没有广告，界面如下：</p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/Windowsdefender.PNG" alt="软件截图"></p>
-<p>   清理软件我用的是口碑很好的 <a href="http://www.piriform.com/ccleaner" target="_blank" rel="external">CCleaner</a>,功能完全足够你使用了！截图如下：</p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/cc.PNG" alt="CC"></p>
-<p>   对于非一般的用户，特别是计算机专业的学生，真的不是很建议在电脑了安装些安全卫士、管家、毒霸等软件的！</p>
-<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>  <strong>Android Studio</strong>：对于这款软件大家一定都不陌生，特别是对于一位安卓开发人员，Google的亲儿子，好好享受吧！</p>
-<p>  <strong>eclipse</strong>：一款插件丰富的开发工具，java开发者用的挺多，以前也用于开发安卓，可惜Google生了个儿子。</p>
-<p>  <strong>SQLite Expert Personal</strong>：一款可以查看数据表中数据的软件，安卓开发人员都值得拥有！</p>
-<h1 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h1><p>  <strong>chrome：</strong>好用的不能再好用的浏览器。插件丰富，但需要科学上网。<br>             缺点就是在国内没法云备份自己的收藏夹。推荐大家可以在安装一款360极速浏览器、或者QQ浏览器来备份自己的收藏夹。</p>
-<p>  <strong>MarkdownPad 2：</strong>我认为这可能是Windows系统下最好用的markdown书写软件了，可以去<a href="http://markdownpad.com/" target="_blank" rel="external">官网</a>下载。</p>
-<p>   <img src="http://olg3gwtbm.bkt.clouddn.com/md.PNG" alt=""></p>
-<p>  <strong>Seer</strong>:是一款 Windows 下的文件预览工具，可以无需打开图片、音乐、视频、压缩包等文件就能预览到内容，只需点一下空格。<a href="http://www.appinn.com/seer-windows/" target="_blank" rel="external">下载地址：http://www.appinn.com/seer-windows/</a>。</p>
-<p>  <strong>护眼宝：</strong>是一款护眼的工具，<a href="http://www.huyanbao.com/#top" target="_blank" rel="external">下载地址：http://www.huyanbao.com/#top</a>。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/hyb.PNG" alt=""></p>
-<p>  <strong>Clover:</strong><a href="http://cn.ejie.me/" target="_blank" rel="external">Clover</a> 是 Windows Explorer 资源管理器的一个扩展，为其增加类似谷歌 Chrome 浏览器的多标签页功能。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/clover.jpg" alt=""></p>
-<p>  <strong>ADSafe：</strong><a href="http://www.newadblock.com/" target="_blank" rel="external">ADSafe</a>是一款好用的广告屏蔽软件！</p>
-<p>  <strong>HoneyView:</strong><a href="https://www.bandisoft.com/honeyview/cn/" target="_blank" rel="external">HoneyView</a>是一个支持多种格式的极速图像浏览器。<br>  她同时支持不解压浏览ZIP、RAR和7z压缩包中的图片。<br>  她可以显示图片的GPS信息并在Google Maps中查看该地点，同时用户可以储存喜爱的照片。</p>
-<p><strong>影音工具</strong></p>
-<p>  <strong>网易云音乐（UWP）：</strong>逼格漫漫的音乐播放器。</p>
-<p>  <strong>Potplayer：</strong><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="external">PotPlayer</a>诚意满满的视频播放器。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/potp.PNG" alt=""></p>
-<h1 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h1><p>  <strong>IDM：</strong>Internet Download Manager(简称“IDM”)是国外的一款下载工具，提升你的下载速度最多达5倍，安排下载时程，或续传一半的软件。Internet Download Manager的续传功能可以恢复因为断线、网络问题、计算机当机甚至无预警的停电导致下传到一半的软件。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/idm.PNG" alt=""></p>
-<p>  <strong>EagleGet:</strong><a href="http://www.eagleget.com/" target="_blank" rel="external">EagleGet</a>（亦称 EG Download Accelerator）是一个用于 Windows 系统的下载管理器，它是免费软件。EagleGet 使用多线程技术，支持从Youtube、Dailymotion、Facebook、Vimeo等视频网站下载 MP4 和 FLV 格式视频。EagleGet 是一个拥有简洁界面和功能的免费的新下载管理器。</p>
-<p>  <img src="http://olg3gwtbm.bkt.clouddn.com/eg.PNG" alt=""></p>
-<p>  <strong>迅雷：</strong>国内用户电脑中常备的下载软件，大多数网站也都支持迅雷下载。但我真的越来越讨厌迅雷了，不仅下载速度限速，界面也越来越复杂，广告还多，越来越丧失了一款下载软件的本心。</p>
-<p>  <strong><em>分享到这里就结束了，如果大家有什么疑问可以留言，有好的软件推荐给我，也可以留言，谢谢阅读！</em></strong></p>
+<h2 id="1-本地环境参数"><a href="#1-本地环境参数" class="headerlink" title="1.本地环境参数"></a>1.本地环境参数</h2><ul>
+<li>系统：windows 10</li>
+<li>tomcat 容器：tomcat 8.5.55</li>
+<li>jdk：jdk 1.8</li>
+<li>solr：8.5.1</li>
+</ul>
+<h2 id="2-本地环境搭建步骤"><a href="#2-本地环境搭建步骤" class="headerlink" title="2.本地环境搭建步骤"></a>2.本地环境搭建步骤</h2><blockquote>
+<p>推荐与博主环境保持一致！</p>
+</blockquote>
+<ol>
+<li>本机下载并配置好 jdk，请自行搜索；</li>
+<li>本机下载并配置好 tomcat 环境，请自行搜索；</li>
+<li><a href="https://lucene.apache.org/solr/" target="_blank" rel="external">官网</a>下载 solr，并解压到本地，如下图：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231757100_2152.png" alt="2.1"></p>
+<ol>
+<li>把<code>solr-8.x</code>的<code>server/solr-webapp</code>目录下边的<code>webapp</code>文件夹复制到<code>tomcat/webapps</code>的目录下，并重命名为<code>solr</code>。</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231826137_26300.png" alt="2.2"></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231847291_21675.png" alt="2.3"></p>
+<ol>
+<li>将<code>solr-8.x\server\lib\ext</code>下的<code>jar</code>包拷贝到<code>tomcat</code>里的<code>webapps\solr\WEB-INF\lib</code>下,如下图：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231907686_29583.png" alt="2.4"></p>
+<ol>
+<li>将<code>solr-8.x\server\lib</code>下 <code>metrics</code>开头的5个jar包也拷贝到tomcat里的<code>webapps\solr\WEB-INF\lib</code>下:</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231929648_4734.png" alt="2.5"></p>
+<ol>
+<li>在solr调试的过程中，如果提示jar包的缺失，可以去图中两个文件夹下找到相应的jar包，也拷贝到tomcat里的<code>webapps\solr\WEB-INF\lib</code>下</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006231950128_25039.png" alt="2.6"></p>
+<ol>
+<li>在tomcat里的<code>webapps\solr\WEB-INF</code>下创建<code>classes</code>文件夹，将<code>solr/server/resources</code>下的文件拷贝到新建的classes文件夹下，如图：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232013853_21168.png" alt="2.7"></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232031604_31235.png" alt="2.8"></p>
+<blockquote>
+<p>这里的配置主要与日志的配置有关，可以稍后再调试。</p>
+</blockquote>
+<ol>
+<li>在磁盘任意目录创建<code>solr_home</code>文件夹，把solr-8.x 里面的solr文件夹下的内容放入<code>solr_home</code>中，博主如下：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232048609_4819.png" alt="2.9"></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232105590_26103.png" alt="2.10"></p>
+<ol>
+<li>修改<code>webapps\solr\WEB-INF\web.xml</code>里的<code>solr\home</code>路径,其中value的值为你创建的<code>solr_home</code>的绝对路径。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;env-entry&gt;</div><div class="line">     &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</div><div class="line">     &lt;env-entry-value&gt;E:/JAVA/solr/solr_home&lt;/env-entry-value&gt;</div><div class="line">     &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</div><div class="line">&lt;/env-entry&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>web.xml里这段内容是是打开的，将其注释掉:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;security-constraint&gt;</div><div class="line">    &lt;web-resource-collection&gt;</div><div class="line">      &lt;web-resource-name&gt;Disable TRACE&lt;/web-resource-name&gt;</div><div class="line">      &lt;url-pattern&gt;/&lt;/url-pattern&gt;</div><div class="line">      &lt;http-method&gt;TRACE&lt;/http-method&gt;</div><div class="line">    &lt;/web-resource-collection&gt;</div><div class="line">    &lt;auth-constraint/&gt;</div><div class="line">  &lt;/security-constraint&gt;</div><div class="line">  &lt;security-constraint&gt;</div><div class="line">    &lt;web-resource-collection&gt;</div><div class="line">      &lt;web-resource-name&gt;Enable everything but TRACE&lt;/web-resource-name&gt;</div><div class="line">      &lt;url-pattern&gt;/&lt;/url-pattern&gt;</div><div class="line">      &lt;http-method-omission&gt;TRACE&lt;/http-method-omission&gt;</div><div class="line">    &lt;/web-resource-collection&gt;</div><div class="line">  &lt;/security-constraint&gt;</div></pre></td></tr></table></figure>
+<p>12 .启动tomcat测试 <a href="http://localhost:8080/solr/index.html#/" target="_blank" rel="external">http://localhost:8080/solr/index.html#/</a></p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232131881_30212.png" alt="2.11"></p>
+<h2 id="3-索引的创建"><a href="#3-索引的创建" class="headerlink" title="3.索引的创建"></a>3.索引的创建</h2><h3 id="3-1-core的创建"><a href="#3-1-core的创建" class="headerlink" title="3.1 core的创建"></a>3.1 core的创建</h3><ol>
+<li>在<code>solr_home</code> 文件夹下新建一个文件夹，文件夹名字自己定，这里取文件夹名为<code>testCore</code>，这个名字就是core的名字；</li>
+<li>将<code>D:\JAVA\solr\solr_home\configsets\_default\</code>下的<code>conf</code>文件夹拷贝到<code>testCore</code>下；</li>
+<li>启动 tomcat， <a href="http://localhost:8080/solr/index.html#/" target="_blank" rel="external">http://localhost:8080/solr/index.html#/</a>进入 solr Admin 管理页面；</li>
+<li>在solr的图形页面中添加core即可， <strong>名字和刚才新增名字</strong>相同，新增页面如下：</li>
+</ol>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232147264_17125.png" alt="3.1"></p>
+<p>增加后：</p>
+<p><img src="//tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/20201006232208276_22743.png" alt="3.2"></p>
 </the></excerpt>
       
     </div>
@@ -318,13 +359,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/05/18/软件分享篇/">软件分享篇（Windows10）</a></p>
+        <p><span>本文标题:</span><a href="/2020/10/06/solr8-5-tomcat8-5环境搭建/">solr8.5+tomcat8.5环境搭建</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
-        <p><span>发布时间:</span>2019-05-18, 20:27:07</p>
-        <p><span>最后更新:</span>2017-03-02, 23:28:16</p>
+        <p><span>发布时间:</span>2020-10-06, 23:02:42</p>
+        <p><span>最后更新:</span>2020-10-06, 23:22:27</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/05/18/软件分享篇/" title="软件分享篇（Windows10）">http://tianqing.work/2019/05/18/软件分享篇/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2019/05/18/软件分享篇/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/10/06/solr8-5-tomcat8-5环境搭建/" title="solr8.5+tomcat8.5环境搭建">http://tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2020/10/06/solr8-5-tomcat8-5环境搭建/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -336,16 +377,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/05/1.初识RabbitMQ/">
-                    1.初识RabbitMQ
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/04/07/Git常用命令汇总/">
-                    Git常用命令汇总
+                <a href="/2020/09/13/git学习笔记/">
+                    git学习笔记
                 </a>
             </div>
         
@@ -357,7 +392,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安全杀毒："><span class="toc-number">1.</span> <span class="toc-text">安全杀毒：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发工具"><span class="toc-number">2.</span> <span class="toc-text">开发工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#系统工具"><span class="toc-number">3.</span> <span class="toc-text">系统工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下载工具"><span class="toc-number">4.</span> <span class="toc-text">下载工具</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢阅读这篇博文，欢迎关注与评论！"><span class="toc-number">1.</span> <span class="toc-text"> 感谢阅读这篇博文，欢迎关注与评论！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-本地环境参数"><span class="toc-number">2.</span> <span class="toc-text">1.本地环境参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-本地环境搭建步骤"><span class="toc-number">3.</span> <span class="toc-text">2.本地环境搭建步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-索引的创建"><span class="toc-number">4.</span> <span class="toc-text">3.索引的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-core的创建"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 core的创建</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -393,7 +428,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"软件分享篇（Windows10）　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"solr8.5+tomcat8.5环境搭建　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -413,15 +448,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/05/1.初识RabbitMQ/" title="上一篇: 1.初识RabbitMQ">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/04/07/Git常用命令汇总/" title="下一篇: Git常用命令汇总">
+            <a href="/2020/09/13/git学习笔记/" title="下一篇: git学习笔记">
                 <i class="fa fa-angle-right"></i>
             </a>
         

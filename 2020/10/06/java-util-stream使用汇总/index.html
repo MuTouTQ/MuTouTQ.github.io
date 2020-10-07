@@ -15,16 +15,22 @@
 
 
 
-<meta name="description" content="1. List Part1234567891011121314151617181920212223242526272829303132333435363738394041424344454647//1.根据对象中的某一字段去重List&amp;lt;Milk&amp;gt; uniqueMilk = list.stream().collect( collectingAndThen(     toCollectio">
+<meta name="description" content="感谢阅读这篇博文，欢迎关注与评论！
+
+List Part">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java.util.stream使用汇总">
 <meta property="og:url" content="http://tianqing.work/2020/10/06/java-util-stream使用汇总/index.html">
 <meta property="og:site_name" content="Terry_Tian's Code日志">
-<meta property="og:description" content="1. List Part1234567891011121314151617181920212223242526272829303132333435363738394041424344454647//1.根据对象中的某一字段去重List&amp;lt;Milk&amp;gt; uniqueMilk = list.stream().collect( collectingAndThen(     toCollectio">
-<meta property="og:updated_time" content="2020-10-06T15:37:33.064Z">
+<meta property="og:description" content="感谢阅读这篇博文，欢迎关注与评论！
+
+List Part">
+<meta property="og:updated_time" content="2020-10-07T05:36:48.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java.util.stream使用汇总">
-<meta name="twitter:description" content="1. List Part1234567891011121314151617181920212223242526272829303132333435363738394041424344454647//1.根据对象中的某一字段去重List&amp;lt;Milk&amp;gt; uniqueMilk = list.stream().collect( collectingAndThen(     toCollectio">
+<meta name="twitter:description" content="感谢阅读这篇博文，欢迎关注与评论！
+
+List Part">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -254,7 +260,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="1-List-Part"><a href="#1-List-Part" class="headerlink" title="1. List Part"></a>1. List<object> Part</object></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">//1.根据对象中的某一字段去重</div><div class="line">List&lt;Milk&gt; uniqueMilk = list.stream().collect(</div><div class="line"> collectingAndThen(</div><div class="line">     toCollection(() -&gt; new TreeSet&lt;&gt;(comparing(n-&gt;n.getKey()))),ArrayList::new)</div><div class="line">);</div><div class="line"></div><div class="line">//2.从list集合中，取出某一字段的列表</div><div class="line">List&lt;P&gt; list = Arrays.asList(new P(1, &quot;哈哈&quot;), new P(2, &quot;嘿嘿&quot;), new P(3, &quot;呵呵&quot;));</div><div class="line">List&lt;String&gt; names = list.stream().map(p -&gt; p.getName()).collect(Collectors.toList());</div><div class="line"></div><div class="line">//3.交集</div><div class="line">List&lt;String&gt; intersection = list1.stream().filter(item -&gt; list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---交集 intersection---&quot;);</div><div class="line">intersection.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//4. 差集 (list1 - list2)</div><div class="line">List&lt;String&gt; reduce1 = list1.stream().filter(item -&gt; !list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce1 (list1 - list2)---&quot;);</div><div class="line">reduce1.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//5. 差集 (list2 - list1)</div><div class="line">List&lt;String&gt; reduce2 = list2.stream().filter(item -&gt; !list1.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce2 (list2 - list1)---&quot;);</div><div class="line">reduce2.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//6. 并集</div><div class="line">List&lt;String&gt; listAll = list1.parallelStream().collect(toList());</div><div class="line">List&lt;String&gt; listAll2 = list2.parallelStream().collect(toList());</div><div class="line">listAll.addAll(listAll2);</div><div class="line">System.out.println(&quot;---并集 listAll---&quot;);</div><div class="line">listAll.parallelStream().forEachOrdered(System.out :: println);</div><div class="line"></div><div class="line">//7. 去重</div><div class="line">List&lt;String&gt; listAllDistinct = listAll.stream().distinct().collect(toList());</div><div class="line"></div><div class="line">//8. list实体对象取交集 相同则取allDimensionLs1的数据</div><div class="line">List&lt;DimensionsTreeNode&gt; filterList = allDimensionLs1.stream()</div><div class="line">        .filter(a1-&gt;allDimensionLs2.stream()</div><div class="line">        .anyMatch(a2-&gt;a1.getDimensionsCode().equals(a2.getDimensionsCode())))</div><div class="line">        .collect(Collectors.toList());</div><div class="line"></div><div class="line">//9.判断某个值是否在list集合中的某个对象中存在</div><div class="line"></div><div class="line">if (list.stream().filter(w-&gt;String.valueOf(w.getProductLibraryId()).equals(&quot;aaa&quot;)).findAny().isPresent())&#123;                      </div><div class="line">                //说明有</div><div class="line">&#125;</div><div class="line">　　判断list中的对象中是否有getProductLibraryId 等于 aaa的 如果有 进入判断条件</div></pre></td></tr></table></figure>
+        <excerpt in="" index="" |="" 首页摘要="">
+
+<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title=" 感谢阅读这篇博文，欢迎关注与评论！"></a><strong><em> 感谢阅读这篇博文，欢迎关注与评论！</em></strong></h2><ol>
+<li><ol>
+<li>List<object> Part<a id="more"></a> 
+</object></li>
+</ol>
+</li>
+</ol>
+<the rest="" of="" contents="" |="" 余下全文=""> 
+
+<h2 id="1-List-Part"><a href="#1-List-Part" class="headerlink" title="1. List Part"></a>1. List<object> Part</object></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">//1.根据对象中的某一字段去重</div><div class="line">List&lt;Milk&gt; uniqueMilk = list.stream().collect(</div><div class="line"> collectingAndThen(</div><div class="line">     toCollection(() -&gt; new TreeSet&lt;&gt;(comparing(n-&gt;n.getKey()))),ArrayList::new)</div><div class="line">);</div><div class="line"></div><div class="line">//2.从list集合中，取出某一字段的列表</div><div class="line">List&lt;P&gt; list = Arrays.asList(new P(1, &quot;哈哈&quot;), new P(2, &quot;嘿嘿&quot;), new P(3, &quot;呵呵&quot;));</div><div class="line">List&lt;String&gt; names = list.stream().map(p -&gt; p.getName()).collect(Collectors.toList());</div><div class="line"></div><div class="line">//3.交集</div><div class="line">List&lt;String&gt; intersection = list1.stream().filter(item -&gt; list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---交集 intersection---&quot;);</div><div class="line">intersection.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//4. 差集 (list1 - list2)</div><div class="line">List&lt;String&gt; reduce1 = list1.stream().filter(item -&gt; !list2.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce1 (list1 - list2)---&quot;);</div><div class="line">reduce1.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//5. 差集 (list2 - list1)</div><div class="line">List&lt;String&gt; reduce2 = list2.stream().filter(item -&gt; !list1.contains(item)).collect(toList());</div><div class="line">System.out.println(&quot;---差集 reduce2 (list2 - list1)---&quot;);</div><div class="line">reduce2.parallelStream().forEach(System.out :: println);</div><div class="line"></div><div class="line">//6. 并集</div><div class="line">List&lt;String&gt; listAll = list1.parallelStream().collect(toList());</div><div class="line">List&lt;String&gt; listAll2 = list2.parallelStream().collect(toList());</div><div class="line">listAll.addAll(listAll2);</div><div class="line">System.out.println(&quot;---并集 listAll---&quot;);</div><div class="line">listAll.parallelStream().forEachOrdered(System.out :: println);</div><div class="line"></div><div class="line">//7. 去重</div><div class="line">List&lt;String&gt; listAllDistinct = listAll.stream().distinct().collect(toList());</div><div class="line"></div><div class="line">//8. list实体对象取交集 相同则取allDimensionLs1的数据</div><div class="line">List&lt;DimensionsTreeNode&gt; filterList = allDimensionLs1.stream()</div><div class="line">        .filter(a1-&gt;allDimensionLs2.stream()</div><div class="line">        .anyMatch(a2-&gt;a1.getDimensionsCode().equals(a2.getDimensionsCode())))</div><div class="line">        .collect(Collectors.toList());</div><div class="line"></div><div class="line">//9.判断某个值是否在list集合中的某个对象中存在</div><div class="line"></div><div class="line">if (list.stream().filter(w-&gt;String.valueOf(w.getProductLibraryId()).equals(&quot;aaa&quot;)).findAny().isPresent())&#123;                      </div><div class="line">                //说明有</div><div class="line">&#125;</div><div class="line">　　判断list中的对象中是否有getProductLibraryId 等于 aaa的 如果有 进入判断条件</div></pre></td></tr></table></figure></the></excerpt>
       
     </div>
     
@@ -265,7 +282,7 @@
         <p><span>本文标题:</span><a href="/2020/10/06/java-util-stream使用汇总/">java.util.stream使用汇总</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
         <p><span>发布时间:</span>2020-10-06, 23:36:32</p>
-        <p><span>最后更新:</span>2020-10-06, 23:37:33</p>
+        <p><span>最后更新:</span>2020-10-07, 13:36:48</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2020/10/06/java-util-stream使用汇总/" title="java.util.stream使用汇总">http://tianqing.work/2020/10/06/java-util-stream使用汇总/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2020/10/06/java-util-stream使用汇总/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -295,7 +312,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-List-Part"><span class="toc-number">1.</span> <span class="toc-text">1. List Part</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢阅读这篇博文，欢迎关注与评论！"><span class="toc-number">1.</span> <span class="toc-text"> 感谢阅读这篇博文，欢迎关注与评论！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-List-Part"><span class="toc-number">2.</span> <span class="toc-text">1. List Part</span></a></li></ol>
         
     </div>
     <style>

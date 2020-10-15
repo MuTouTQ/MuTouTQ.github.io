@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Terry Tian" />
+
+
+
+<meta name="description" content="感谢阅读这篇博文，欢迎关注与评论！
+本文转载翻译来源 https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/
+
+Sizing Hardware in the Abstract: Why We Don’t Have a Definitive Answer
+估">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer">
+<meta property="og:url" content="http://tianqing.work/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/index.html">
+<meta property="og:site_name" content="Terry_Tian's Code日志">
+<meta property="og:description" content="感谢阅读这篇博文，欢迎关注与评论！
+本文转载翻译来源 https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/
+
+Sizing Hardware in the Abstract: Why We Don’t Have a Definitive Answer
+估">
+<meta property="og:updated_time" content="2020-10-15T15:17:16.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer">
+<meta name="twitter:description" content="感谢阅读这篇博文，欢迎关注与评论！
+本文转载翻译来源 https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/
+
+Sizing Hardware in the Abstract: Why We Don’t Have a Definitive Answer
+估">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Terry_Tian&#39;s Code日志" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer | Terry_Tian&#39;s Code日志</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/head.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Terry Tian</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">行是知之始，知是行之成。</p>
+        
+
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:1015236187@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于JAVA</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Terry Tian</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/head.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Terry Tian</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">行是知之始，知是行之成。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:1015236187@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/" class="article-date">
+      <time datetime="2020-10-14T14:34:47.000Z" itemprop="datePublished">2020-10-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      [翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SOLR/">SOLR</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <excerpt in="" index="" |="" 首页摘要="">
+
+<h2 id="感谢阅读这篇博文，欢迎关注与评论！"><a href="#感谢阅读这篇博文，欢迎关注与评论！" class="headerlink" title="感谢阅读这篇博文，欢迎关注与评论！"></a><strong>感谢阅读这篇博文，欢迎关注与评论！</strong></h2><blockquote>
+<p>本文转载翻译来源 <a href="https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/" target="_blank" rel="external">https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/</a></p>
+</blockquote>
+<p><strong>Sizing Hardware in the Abstract: Why We Don’t Have a Definitive Answer</strong></p>
+<p><strong>估计硬件规模：为什么我们没有一个明确的答案？</strong><br><a id="more"></a> </p>
+<the rest="" of="" contents="" |="" 余下全文=""> 
+
+<h3 id="Or-“Why-can-39-t-you-answer-a-simple-question-”"><a href="#Or-“Why-can-39-t-you-answer-a-simple-question-”" class="headerlink" title="Or “Why can&#39;t you answer a simple question?”"></a><code>Or “Why can&#39;t you answer a simple question?”</code></h3><p><strong>或者“为什么你不能回答一个简单的问题? ”</strong></p>
+<p>Client after client and user after user (on the user’s list) ask the perfectly reasonable question: “Given documents of size X, what kind of hardware do we need to run Solr?”. I shudder whenever that question is asked because our answer is inevitably “It Depends ™”. This is like asking “how big a machine will I need to run a C program?”. You have to know what the program is trying to do as well as how much data there is. The number of documents you can put on a single instance of Solr is most often limited by Java’s heap. To give you an idea how wide the range is, we at Lucidworks have seen:</p>
+<ul>
+<li>10M docs require 64G of Java heap. Zing was used to keep GC under control </li>
+<li>300M docs fit in 12G of Java heap. </li>
+</ul>
+<p>一个客户接着一个客户，一个用户接着一个用户(在用户列表中)询问这个完全合理的问题: “给定 <code>X</code> 大小的文档，我们需要运行 <code>Solr</code> 的硬件是什么样的? “。每当我们被问到这个问题时，我都会不寒而栗，因为我们的回答不可避免地是“这要看情况”。这就像是在问“运行 <code>C</code> 程序我们需要多大的机器? ”。你必须知道程序正在尝试做什么，以及有多少数据。你可以放在 单个<code>Solr</code> 实例上的文档数量通常受到 <code>Java</code> 堆的限制。为了让你了解这个范围有多广，我们在 <code>Lucidworks（*一家人工智能搜索公司*）</code> 看到:</p>
+<ul>
+<li>10M 文档需要64G 的 Java 堆，而 Zing 用于控制 GC</li>
+<li>3亿文档适用于12G 的 Java 堆</li>
+</ul>
+<p>We usually reply “We can’t say in the abstract, you have to prototype”. This isn’t laziness on our part, we reply this way because there are a number of factors that go into answering this question, and clients rarely know ahead of time what the actual characteristics of the data and search patterns will be. Answering that question usually involves prototyping anyway. I’ve personally tried at least three times to create a matrix to help answer this question and given up after a while because the answers even for the same set of documents vary so widely!</p>
+<p>我们通常回答：”我们不能做出预估，你必须先做原型”。这并不是我们懒惰，我们这样回答是因为回答这个问题需要考虑很多因素，而且客户很少提前知道数据和搜索模式的实际特征是什么。无论如何，回答这个问题通常涉及到原型设计。我个人至少三次尝试创建一个矩阵来帮助回答这个问题，但是一段时间后就放弃了，因为即使是同一组文档，得出的答案也差异很大！</p>
+<p>This last is somewhat counter-intuitive. To use a simplified example; say I have a corpus of 11M documents indexed. I have two fields, both string fields “type” and “id”. Type has 11 unique values, and id has 11M unique values (it’s a <uniquekey>). For simplicity’s sake, each unique value in these fields is exactly 32 characters long. There is a certain amount of overhead for storing a string in Java, plus there is some extra information kept by Solr to, say, sort. The total memory needed by Solr to store a value for sorting is 56 bytes + (2 * characters_in_string) as I remember. So, in the 3.x code line, the RAM needed to sort by:</uniquekey></p>
+<ul>
+<li>The “type” field is trivial (11 * (56 + 64) = 1,320) bytes. </li>
+<li>The “id” field is, well, 1 million times that (11,000,000 * (56 + 64) = 1,320,000,000) bytes.</li>
+</ul>
+<p>最后这一点有点违反直觉。使用一个简化的例子：比如我有一个<code>11M</code> 文档索引的语料库。我有两个字符串字段，比如：“ type”和“ id”。Type 有11个惟一值，id 有11M 个惟一值(它是 &lt; uniquekey &gt;)。为了简单起见，这些字段中的每个唯一值正好是32个字符长。在 Java 中存储字符串有一定的开销，此外 Solr 还保留了一些额外的信息，比如排序。Solr 存储排序值所需的总内存为：56字节 + (2 * characters <em> in </em> string)。因此，在3. x 代码行中，RAM 需要按以下方式排序:</p>
+<p><em>characters <em> in </em> string，笔者猜测是32</em></p>
+<ul>
+<li>“ type”字段很简单(11 * (56 + 64) = 1,320)字节。</li>
+<li>“ id”字段是(11,000,000 * (56 + 64) = 1,320,000,000)字节，是“type”字段的100万倍。</li>
+</ul>
+<p>Now you see why there’s no simple answer. The size of the source document is almost totally irrelevant to the memory requirements in the example above, each document could be very short, 32 bytes for the “id” and 32 bytes for “type”. Of course you also have resources required for the inverted index, faceting, document caching, filter query caching, etc, etc, etc….. Each and every one of these features may require widely varying resources depending on how they’re used. “It Depends ™”.</p>
+<p>现在你明白为什么没有简单的答案了吧。源文档的大小与上面例子中的内存需求几乎完全无关，每个文档可以非常短，像“ id”为32字节，“ type”为32字节。当然，你也有资源需要的倒排索引，构面，文档缓存，过滤查询缓存，等等，等等..。这些特性中的每一个都可能需要大量不同的资源，这取决于它们的使用方式。“视情况而定”。</p>
+<h3 id="But-what-about-an-“average”-document"><a href="#But-what-about-an-“average”-document" class="headerlink" title="But what about an “average” document?"></a>But what about an “average” document?</h3><p><strong>但是一份“普通”的文件怎么样呢？</strong></p>
+<p>Which leads to the question “OK, you can’t say specifically. But don’t you at least have some averages? Given that our documents average ### bytes, can’t you make an estimate?” Unfortunately, there’s no such thing as an “average” document. Here are a couple of examples:</p>
+<ul>
+<li>MS Word documents. The directory listing says our Word documents average 16K. Can’t you use that number? Unfortunately not unless you can tell us how much text is in each. That 16K may be the world’s simplest Word document with 1K of formatting information, the rest text. It may be a Word document with 1K of text and the rest graphics, and Solr doesn’t index non-textual data. </li>
+<li>Videos. This is even worse. We practically guarantee that 99.9% of a video will be thrown away, it’s non-textual data that isn’t indexed in Solr. And notice the subtlety here. Even though we’ll throw away almost all of the bytes, the sorting could still be as above and take a surprising amount of memory!</li>
+<li>RDBMS. This is my favorite. It usually goes along the lines of “We have 7 tables, table 1 has 25M rows, 3 numeric columns and 3 text columns averaging 120 bytes, table 2 has 1M rows, 4 columns, 2 numeric and 2 textual columns averaging 64 bytes each. Table 3 has…”. Well, often in Solr, you have to denormalize the data for optimal user experience. Depending upon the database structure, each row in table 1 could be joined to 100 rows of table 2 and denormalizing the data could require that you have (25,000,000 <em> 100 </em> 64 * 2) bytes of raw data for just the two tables! Then again, table 1 and table 2 could have no join relationship at all. So trying to predict what that means for Solr in the abstract is just a good way to go mad.<ul>
+<li>And if you want to truly go mad, consider what it means if it turns out that some of the rows in table 1 have BLOBs that are associated text.</li>
+</ul>
+</li>
+<li>I once worked at a place where, honest, one of the “documents” was (I wouldn’t lie to you), a 23 volume specialized encyclopedia.</li>
+</ul>
+<p>这就引出了这样一个问题: “好吧，你不能明确地说。但是你不是至少有一些平均值吗？鉴于我们的文件平均 # # # 字节数，你不能估算一下吗? ”不幸的是，没有所谓的“平均”文档。这里有几个例子:</p>
+<ul>
+<li>微软 Word 文件。目录列表显示我们的 Word 文档平均为16K。你不能用那个号码吗？不幸的是，除非你能告诉我们每个文本有多少。16K 可能是世界上最简单的 Word 文档，包含1K 格式化信息，其余文本。它可能是包含1K 文本和其余图形的 Word 文档，Solr 不索引非文本数据。</li>
+<li>视频。这更糟糕。我们几乎可以保证99.9% 的视频会被丢弃，这些非文本数据在 Solr 没有被索引。注意这里的微妙之处。即使我们将丢弃几乎所有的字节，排序仍然可以像上面一样，并占用惊人的内存量！</li>
+<li>关系数据库管理系统。这是我的最爱。它通常是这样的: “我们有7个表，表1有25M 行，3个数字列和3个平均120字节的文本列，表2有1M 行，4列，2个数字列和2个文本列，平均每列64字节。表3有… … ”。在 Solr，为了获得最佳的用户体验，你必须对数据进行非规范化处理。根据数据库结构的不同，表1中的每一行都可以连接到表2的100行，而要使数据非规范化，仅仅为这两个表就需要(25,000,000 <em> 100 </em> 64 * 2)字节的原始数据！同样，表1和表2可能完全没有连接关系。因此，试图从理论上预测这对 Solr 意味着什么只是一种疯狂的好方法。<ul>
+<li>如果你真的想发疯，那么考虑一下，如果表1中的一些行包含与文本相关联的 blob，这意味着什么。</li>
+</ul>
+</li>
+<li>我曾经在一个地方工作，诚实地说，其中一个“文件”是(我不会对你撒谎) ，一个23卷的专业百科全书。</li>
+</ul>
+<p>And this doesn’t even address how the data in these documents are used. As the example above illustrated, how the data is used is as important as its raw size.</p>
+<p>这甚至没有解决如何使用这些文档中的数据。如上面的例子所示，数据的使用方式与其原始大小同样重要。</p>
+<h3 id="Other-factors-in-sizing-a-machine"><a href="#Other-factors-in-sizing-a-machine" class="headerlink" title="Other factors in sizing a machine"></a>Other factors in sizing a machine</h3><p><strong>影响机器规模的其他因素</strong></p>
+<p>The first example above only deals with sorting on a couple of fields. Here is a list of questions that help at least determine whether the hardware needs to be commodity PCs or supercomputers:</p>
+<p>上面的第一个示例只涉及对几个字段进行排序。下面这些问题至少可以帮助我们确定硬件是否需要成为普通的 pc 机或者超级计算机:</p>
+<ul>
+<li>For each field you will use for sorting        对于将用于排序的每个字段<ul>
+<li>How many unique values will there be?        这将要有多少唯一值？</li>
+<li>What kind of values for each? (String? Date? Numeric?)       每个值的类型是什么? (字符串? 日期? 数字?)</li>
+</ul>
+</li>
+<li>For each field you will use for faceting      对于每个域，您将使用构面<ul>
+<li>How many unique values will there be?   这将要有多少唯一值？</li>
+<li>What kinds of values?    值的类型是什么? </li>
+</ul>
+</li>
+<li>How many filter queries need to be kept in the cache?     缓存中需要保留多少筛选器查询？</li>
+<li>How many documents will you have in your corpus?         你的语料库中有多少文件？</li>
+<li>How big are your returned pages (i.e. how many results do you want to display at once)?          返回的页面有多大(即一次要显示多少个结果) ？</li>
+<li>Will the search results be created entirely from Solr content or are you going to fetch part of the information from some other source (e.g. RDBMS, filesystem)?        搜索结果将完全从 Solr 内容创建，还是从其他来源(例如 RDBMS、文件系统)获取部分信息？</li>
+<li>How many documents, on average, do you expect to be deleted in each segment? (<em>)     平均而言，您希望在每个段中删除多少个文档？(</em>)</li>
+<li>Do you intend to have any custom caches? (<em>)      您打算有一些自定义缓存吗? (</em>)</li>
+<li>How many fields do you expect to store term vectors for and how many terms in each? (<em>*)      您希望为多少个字段存储项向量，每个字段存储多少项? (</em>  *)</li>
+<li>How many fields do you expect to store norms for and how many terms in each? (<em> </em>)        您希望为多少个字段存储规范，每个字段存储多少个术语？ (<em> </em>) </li>
+<li>How will your users structure their queries? (<em> </em> *)    你的用户将如何组织他们的查询？</li>
+<li>What is the query load you need to support?    您需要支持的查询加载是什么？</li>
+<li>What are acceptable response times (max/median/99th percentile)?     可接受的最大回应时间(最高/中位数/99百分位数) ？</li>
+</ul>
+<p>I’ve thrown a curve ball here with the entries marked (<em>) and (*</em>). Asking a client to answer these questions, assuming they’re not already Solr/search experts, is just cruel. They’re gibberish unless and until you understand the end product (and Solr) thoroughly. Yet they’ll affect your hardware (mostly memory) requirements!</p>
+<p>我已经抛出了一个曲线球，这里的条目标记为(<em>)和(</em> *)。假设客户还不是 solr/搜索 专家，让他们回答这些问题实在是太残忍了。除非您彻底理解最终产品(和 Solr) ，否则它们都是胡言乱语。然而，它们会影响您的硬件(主要是内存)要求！</p>
+<p>The entries marked (**) can actually be answered early in the process if and only if a client can answer questions like “Do you require phrase queries to be supported?” and “Do you require length normalization to be taken into account?”. This last is also gibberish unless you understand how Solr/Lucene scoring works.</p>
+<p>标记为(<em> </em>)的条目实际上可以在流程的早期回答或者仅能回答诸如“您需要支持短语查询吗? ”和“您是否需要将长度正常化考虑在内? ”这样的问题时。除非您了解 Solr/Lucene 评分是如何工作的，否则最后一项也是胡言乱语。</p>
+<p>And the entry marked (<em>*</em>) is just impossible to answer unless you’re either strictly forming the queries programmatically or have an existing application you can mine for queries. And even if you do have queries from an existing application, when users get on a new system the usage patterns very often change.</p>
+<p>而且标记为(<em> </em> *)的条目是不可能回答的，除非您要么严格地以编程方式形成查询，要么有一个现有的应用程序可以挖掘查询。即使您确实有来自现有应用程序的查询，当用户使用新系统时，使用模式也经常发生变化。</p>
+<p>Another problem is that answers to these questions often aren’t forthcoming until the product managers see the effects of, say, omitting norms. Which they can’t see until a prototype is available. So one can make the “best guess” as to the answers, create a prototype and measure.</p>
+<p>另一个问题是，这些问题的答案往往是无法给出的，直到产品经理看到忽略规范的影响。在原型出现之前他们是看不到的。因此，人们可以做出“最佳猜测”的答案就是 ，创建一个原型并进行测量。</p>
+<h3 id="Take-pity-on-the-operations-people"><a href="#Take-pity-on-the-operations-people" class="headerlink" title="Take pity on the operations people"></a>Take pity on the operations people</h3><p><strong>可怜可怜那些操作人员吧</strong></p>
+<p>Somewhere in your organization is a group responsible for ordering hardware and keeping it running smoothly. I have complete sympathy when the person responsible for coordinating with this group doesn’t like the answer “We can’t tell you what hardware you need until after we prototype”. They have to buy the hardware, provision it and wake up in the middle of the night if the system slows to a crawl and try to get it back running before all the traffic hits in the morning. Asking the operations people to wait before ordering their hardware until you have a prototype running and can measure justifiably causes them to break out in hives. The (valid) fear is that they won’t get the information they need to do their job until a week before go-live. Be nice to your ops people and get the prototype going first thing.</p>
+<p>组织中的某个部门有一个负责订购硬件并保持其顺利运行的小组。我会非常同情负责协调这个团队的人不喜欢“我们不能告诉你你需要什么硬件，直到我们做出原型”这样的答案。他们必须购买并准备好硬件，如果系统速度慢得像爬行一样，他们必须在半夜醒来，并试图在早上的流量高峰到来之前让硬件恢复运行。要求操作人员在订购他们的硬件之前一直等待，直到你有一个可运行的原型，并且可以合理地测量，这会导致他们浑身沸腾。真正要命的是，直到上线前一周，他们才会得到完成工作所需的信息。对你的ops人员好一点且早早的做出原型。</p>
+<h3 id="Take-pity-on-the-project-sponsors"><a href="#Take-pity-on-the-project-sponsors" class="headerlink" title="Take pity on the project sponsors"></a>Take pity on the project sponsors</h3><p><strong>同情一下项目发起人吧</strong></p>
+<p>The executives who are responsible for a Lucidworks or Solr project also break out in hives when they’re told “We won’t know what kind of machine we will need for a month or two”, and justifiably so. They have to go ask for money to pay your salary and buy hardware after all. And you’re telling them “We don’t know how much hardware we’ll need, but get the budget approved anyway”.</p>
+<p>负责Lucidworks或Solr项目的主管们在被告知“我们不知道在一两个月里需要哪种机器”时，也会爆发，而且这样说也不无道理。毕竟，他们得要钱来支付你的薪水和购买硬件。你告诉他们“我们不知道需要多少硬件，但无论如何要让预算通过”。</p>
+<p>The best advice I can give is to offer to create a prototype as below. Fortunately, you can use Velocity Response Writer or the Lucidworks UI to see what the search results look like to get a very good idea of the kinds of searches you’ll want to support very quickly. It won’t be the UI for your product, but it will let you see what search results look like. And you can often use some piece of hardware you have lying around (or rent a Cloud machine) to run some stress tests on. Offer your sponsor a defined go/no-go prototyping project; at least the risk is known.</p>
+<p>我能给出的最好建议是创建一个如下所示的原型。幸运的是，您可以使用Velocity Response Writer或Lucidworks UI来查看搜索结果，从而非常清楚地了解您希望快速支持的搜索类型。它不会是你产品的UI，但它会让你看到搜索结果是什么样子的。您通常可以使用现有的一些硬件(或租用云计算机)在其上运行一些压力测试。向你的赞助商提供一个确定可行/不可行的原型项目;至少风险是已知的。</p>
+<p>And the work won’t be wasted if you continue the project. The stress-test harness will be required in my opinion before go-live. The UI prototyping will be required before you have a decent user experience.</p>
+<p>如果你继续这个项目，工作就不会白费。在我看来，在投入使用之前，压力测试是必需的。在拥有良好的用户体验之前，UI原型设计是必需的。</p>
+<p>The other thing to offer your sponsor is that “Solr rocks”. We can tell you that we have clients indexing and searching billions of documents, and getting sub-second response times. To be sure, they have something other than commodity PCs running their apps, and they’ve had to shard….</p>
+<p>另一件要提供给你的赞助商的事情是“ Solr 棒极了”。我们可以告诉您，我们的客户创建索引和搜索数十亿的文档，并获得亚秒级的响应时间。可以肯定的是，除了运行sorl外，他们还要运行他们的其它应用程序，他们不得不共享… ..。</p>
+<h3 id="Prototyping-how-to-get-a-handle-on-this-problem"><a href="#Prototyping-how-to-get-a-handle-on-this-problem" class="headerlink" title="Prototyping: how to get a handle on this problem"></a>Prototyping: how to get a handle on this problem</h3><p><strong>原型: 如何处理这个问题</strong></p>
+<p>Of course it’s unacceptable to say “just put it all together and go live, you’ll figure it out then”. Fortunately, one can make reliable estimates, but this involves prototyping. Here’s what we recommend.</p>
+<p>当然，说“把所有的东西都做完并上线，到时候你就会明白的”是不可接受的。幸运的是，我们可以做出可靠的估计，但这涉及到原型设计。以下是我们的建议。</p>
+<p>Take a machine you think is close to what you want to use for production and make your best guess as to how it will be used. Making a “best guess” may involve:</p>
+<p>拿一台你认为与你想要用于生产的机器相近的机器，并对它将如何使用做出最好的猜测。作出“最佳猜测”可能包括:</p>
+<ul>
+<li>Mining any current applications for usage patterns    挖掘任何当前应用程序的使用模式</li>
+<li>Working with your product managers to create realistic scenarios    与你的产品经理一起创造现实的场景</li>
+<li>Getting data, either synthesizing them or using your real documents    获取数据，不管是合成数据还是使用真正的文档</li>
+<li>Getting queries, either synthesizing them or mining existing applications    获取查询，综合它们或挖掘现有的应用程序</li>
+</ul>
+<p>Once this has been done, you need two numbers for your target hardware: how many queries per second you can run and how many documents you can put on that machine.</p>
+<p>完成这一步后，您需要为目标硬件提供两个数字: 每秒可以运行多少个查询以及可以在该计算机上放置多少个文档。</p>
+<p>To get the first number, pick some “reasonable” number of docs. Personally I choose something on the order of 10M. Now use one of the load-testing tools (jMeter, SolrMeter) to fire off enough queries (you have to have generated sample queries!) to saturate that machine. Solr usually shows a flattening QPS rate. By that I mean you’ll hit, say, 10 (or 50 or 100) QPS and stay there. Firing off more queries will change the average response time, but the QPS rate will stay relatively constant.</p>
+<p>要得到第一个数字，选择一些“合理大小”的文档。就我个人而言，我会选择10M 左右的东西。现在使用其中一个负载测试工具(jMeter、SolrMeter)启动足够多的查询(必须生成示例查询!)，以使该机器饱和。Solr通常显示一个平坦的QPS率。我的意思是，你会打出10(或50或100)个QPS，然后一直保持在那个位置。触发更多的查询将改变平均响应时间，但是 QPS 速率将保持相对恒定。</p>
+<p>Now, take say 80% of the QPS rate above and start adding documents to the Solr instance in increments of, say, 1M until the machine falls over. This can be less graceful than saturating the machine with queries, you can reach a tipping point where the response rises dramatically.</p>
+<p>现在，假设 QPS 速率高于80% ，并开始向 Solr 实例添加文档，增量为1 m，直到计算机崩溃。这可能不如用查询占满机器那么优雅—- 你可能会到达一个临界点，响应急剧上升。</p>
+<p>Now you have two numbers, the maximum QPS rate you can expect and the number of documents your target hardware can handle. Various monitoring tools can be used to alert you when you start getting close to either number so you can take some kind of preventative action.</p>
+<p>现在您有了两个数字，您可以期望的最大 QPS 速率和目标硬件可以处理的文档数。当你开始接近任何一个数字时，可以使用各种监控工具来提醒你，这样你就可以采取某种预防措施。</p>
+<p>Do note that there are a significant number of tuning parameters that can influence these numbers, and the exercise of understanding these early in the process will be invaluable for ongoing maintenance. And having a test harness for testing out changes you want to make for release N + 1 will be more valuable yet. Not to mention the interesting tricks that can be played with multi-core machines.</p>
+<p>请注意，有大量的调优参数会影响这些数字，在过程的早期理解这些参数对于正在进行的维护是非常宝贵的。并且拥有一个测试工具来测试您想要为发行版N + 1所做的更改将更有价值。更不用说可以在多核机器上玩的有趣的把戏了。</p>
+<h3 id="Scaling"><a href="#Scaling" class="headerlink" title="Scaling"></a>Scaling</h3><p><strong>扩展</strong></p>
+<p>OK, you have these magic numbers of query rates and number of documents per machine. What happens when you approach these? Then you will implement the standard Solr scaling process.</p>
+<p>好的，你有这些神奇的数字，查询速率和每台机器的文档数量。当你接近它们时会发生什么?然后您将实现标准的Solr扩展过程。</p>
+<p>As long as the entire index fits on a single machine with reasonable performance, you can scale as necessary by simply adding more slave machines to achieve whatever QPS rate you need.</p>
+<p>只要整个索引适合一台性能合理的机器，您就可以根据需要进行扩展，只需添加更多的从机来实现您需要的任何QPS速率。</p>
+<p>When you get near the number of documents you can host on a single machine, you need to either move to a bigger machine or shard. If you anticipate growth that will require sharding, you can start out with multiple shards (perhaps hosted on a single machine) with the intent of distributing these out to separate hardware as necessary later.</p>
+<p>当您的文档数量接近您可以在一台机器上托管的数量时，您需要移动到更大的机器或碎片。如果您预期增长将需要分片，您可以从多个分片开始(可能驻留在一台机器上)，以便在以后必要时将这些分片分发到单独的硬件上。</p>
+<p>These topics are covered elsewhere, so I’ll not repeat them in any more detail here, but these are standard Solr use-cases, see:</p>
+<p>这些主题已经在其他地方讨论过了，所以我不会在这里更详细地重复它们，但是这些都是标准的 Solr 用例，请参阅:</p>
+<ul>
+<li><a href="http://wiki.apache.org/solr/CollectionDistribution" target="_blank" rel="external">http://wiki.apache.org/solr/CollectionDistribution</a></li>
+<li><a href="http://wiki.apache.org/solr/DistributedSearch/" target="_blank" rel="external">http://wiki.apache.org/solr/DistributedSearch/</a></li>
+</ul>
+<h3 id="And-it-gets-worse"><a href="#And-it-gets-worse" class="headerlink" title="And it gets worse"></a>And it gets worse</h3><p><strong>情况还会变得更糟</strong></p>
+<p>Say you have created a model for your usage patterns and managed to fit it into a nice spreadsheet. Now you want to take advantage of some of the nifty features in Solr 4.x. Your model is now almost, but not quite totally, useless.</p>
+<p>假设您已经为您的使用模式创建了一个模型，并设法将其放入一个漂亮的电子表格中。现在，您希望利用Solr 4.x中的一些漂亮特性。您的模型现在几乎(但不是完全)无用了。</p>
+<p>There have been some remarkable improvements in Solr/Lucene memory usage with the FST-based structures in the 4.x code line (now in alpha). Here are some useful blogs:</p>
+<p>使用4.x 代码行(现在是 alpha 代码)中基于 fst 的结构，Solr/Lucene 内存使用有了一些显著的改进。以下是一些有用的博客:</p>
+<ul>
+<li>For more background, see Mike McCandless’ blog posts <a href="http://blog.mikemccandless.com/2010/12/using-finite-state-transducers-in.html" target="_blank" rel="external">http://blog.mikemccandless.com/2010/12/using-finite-state-transducers-in.html</a> and <a href="http://blog.mikemccandless.com/2011/01/finite-state-transducers-part-2.html" target="_blank" rel="external">http://blog.mikemccandless.com/2011/01/finite-state-transducers-part-2.html</a>.</li>
+<li>If you want to see what kind of work goes into something like this, <a href="http://blog.mikemccandless.com/2011/03/lucenes-fuzzyquery-is-100-times-faster.html" target="_blank" rel="external">http://blog.mikemccandless.com/2011/03/lucenes-fuzzyquery-is-100-times-faster.html</a>.</li>
+<li>In case you can’t tell, I’m a fan of Mike’s blogs…. </li>
+<li>I blogged about this here: <a href="http://www.lucidimagination.com/blog/2012/04/06/memory-comparisons-between-solr-3x-and-trunk/" target="_blank" rel="external">http://www.lucidimagination.com/blog/2012/04/06/memory-comparisons-between-solr-3x-and-trunk/</a>.</li>
+</ul>
+<p>Why do I digress with this? Because, on some tests I ran the memory requirements for the same operations shrank by 2/3 between 3.x and trunk/4.0 (4.0-ALPHA is out). So even if you have the right formula for calculating all this in the abstract for 3.x Solr, that information may now be misleading. Admittedly, I used a worst-case test, but this is another illustration why having a prototype-and-stress-test setup will serve you well.</p>
+<p>我为什么要离题呢?因为，在我运行的一些测试中，相同操作的内存需求在3之间减少了2/3。x和trunk/4.0 (4.0- alpha已经发布)。即使你有正确的公式来计算3的抽象形式。Solr，这些信息现在可能是误导。诚然，我使用了最坏情况测试，但这是为什么拥有一个原型和压力测试设置会很好地为您服务的另一个例子。</p>
+<p>And SolrCloud (Solr running with ZooKeeper for automatic distributed indexing, searching, and near-real-time) also changes the game considerably. Sometimes I just wish the developers would hold still for a while and let me catch up!</p>
+<p>另外，SolrCloud (Solr 与 ZooKeeper 一起运行，用于自动分布式索引、搜索和近实时操作)也极大地改变了游戏。有时候我真希望开发人员能停一停，让我赶上来!</p>
+<h3 id="Personal-rant"><a href="#Personal-rant" class="headerlink" title="Personal rant"></a>Personal rant</h3><p><strong>个人感受</strong></p>
+<p>I spent more years than I want to admit to programming. It took me a long time to stop telling people what they wanted to hear, even if that answer was nonsense! The problem with trying to answer the sizing question is exactly the problem developers face when being asked “How long will you take to write this program?”; anything you say will be so inaccurate that it’s worse than no answer at all. The whole Agile Programming methodology explicitly rejects being able to give accurate, far-off estimates, and I’m a convert.</p>
+<p>我花在编程上的时间比我想承认的要多。我花了很长时间才停止说人们想听的话，即使那个回答是废话!试图回答规模问题的问题正是开发人员在被问到“编写这个程序需要多长时间”时所面临的问题;你说的任何话都是不准确的，比没有回音还糟。整个敏捷编程方法明确拒绝给出准确的、不切实际的估计，而我就是一个转换者。</p>
+<p>I think it’s far kinder to tell people up-front “I can’t give you a number, here’s the process we’ll have to go through to find a reasonable estimate” and force the work to happen than give a glib, inaccurate response that results in one or more of the following guaranteed (almost).</p>
+<p>我认为这是更预先告诉人们“我不能给你一个数字,这是这个过程我们必须通过找到一个合理的估计”,迫使工作发生比给一个油嘴滑舌的,不准确的反应,结果在一个或多个以下的保证(几乎)。</p>
+<ul>
+<li>Cost inaccuracies because the hardware specified was too large or too small    成本不准确，因为指定的硬件太大或太小</li>
+<li>“Go live” that fails the first day because of inadequate hardware     第一天因为硬件不足而失败的“上线”</li>
+<li>“Go live” that’s delayed because the stress testing the week before the target date showed that lots of new hardware would be required      由于在目标日期前一周进行的压力测试表明需要大量新硬件，“上线”计划被推迟了</li>
+<li>Delay and expense because the requirements change as soon as the Product Manager sees what the developers have implemented (I didn’t think it would look like that)… and the PM demands changes that require more hardware  延迟和花费是因为一旦产品经理看到开发人员实现了什么，需求就会发生变化(我不认为它会是这样的)……而PM要求需要更多硬件的变化</li>
+<li>Ulcers in the Operations department 崩溃在操作部门</li>
+<li>Ulcers for the project sponsor 项目发起人的崩溃</li>
+</ul>
+<p>I’ll bend a bit if you’re following a strict waterfall model. But if you’re following a strict waterfall model, you can also answer all the questions outlined above and you can get a reasonable estimate up-front.</p>
+<p>如果你遵循的是严格的瀑布模型，我就会有点弯。但是如果您遵循严格的瀑布模型，您也可以回答上面列出的所有问题，并且您可以预先得到一个合理的估计。</p>
+<h3 id="Other-resources"><a href="#Other-resources" class="headerlink" title="Other resources"></a>Other resources</h3><p><strong>其他资源</strong></p>
+<p>Grant Ingersoll has also blogged on this topic, see: <a href="http://www.lucidimagination.com/blog/2011/09/14/estimating-memory-and-storage-for-lucenesolr/" target="_blank" rel="external">http://www.lucidimagination.com/blog/2011/09/14/estimating-memory-and-storage-for-lucenesolr/</a></p>
+<p>Solr Wiki “Powered By”, see: <a href="http://wiki.apache.org/solr/PublicServers" target="_blank" rel="external">http://wiki.apache.org/solr/PublicServers</a>. Some of the people who added information to this page were kind enough to include hardware and throughput figures.</p>
+</the></excerpt>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/">[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
+        <p><span>发布时间:</span>2020-10-14, 22:34:47</p>
+        <p><span>最后更新:</span>2020-10-15, 23:17:16</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/" title="[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer">http://tianqing.work/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/10/14/Solr-8-6-Started/">
+                    Solr 8.6 Started
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢阅读这篇博文，欢迎关注与评论！"><span class="toc-number">1.</span> <span class="toc-text">感谢阅读这篇博文，欢迎关注与评论！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Or-“Why-can-39-t-you-answer-a-simple-question-”"><span class="toc-number">1.1.</span> <span class="toc-text">Or “Why can't you answer a simple question?”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#But-what-about-an-“average”-document"><span class="toc-number">1.2.</span> <span class="toc-text">But what about an “average” document?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-factors-in-sizing-a-machine"><span class="toc-number">1.3.</span> <span class="toc-text">Other factors in sizing a machine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Take-pity-on-the-operations-people"><span class="toc-number">1.4.</span> <span class="toc-text">Take pity on the operations people</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Take-pity-on-the-project-sponsors"><span class="toc-number">1.5.</span> <span class="toc-text">Take pity on the project sponsors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prototyping-how-to-get-a-handle-on-this-problem"><span class="toc-number">1.6.</span> <span class="toc-text">Prototyping: how to get a handle on this problem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scaling"><span class="toc-number">1.7.</span> <span class="toc-text">Scaling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#And-it-gets-worse"><span class="toc-number">1.8.</span> <span class="toc-text">And it gets worse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Personal-rant"><span class="toc-number">1.9.</span> <span class="toc-text">Personal rant</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-resources"><span class="toc-number">1.10.</span> <span class="toc-text">Other resources</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/10/14/Solr-8-6-Started/" title="下一篇: Solr 8.6 Started">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/">[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/14/Solr-8-6-Started/">Solr 8.6 Started</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/06/java-util-stream使用汇总/">java.util.stream使用汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/06/solr8-5-tomcat8-5环境搭建/">solr8.5+tomcat8.5环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/13/git学习笔记/">git学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/13/personal-software-pc/">个人电脑软件备份(Windows10)</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/18/photo/">photo</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/17/多个maven项目启动顺序/">多个maven项目启动顺序</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/17/Java单例模式的5种实现方法/">Java单例模式的5种实现方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/05/1.初识RabbitMQ/">1.初识RabbitMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/18/软件分享篇/">软件分享篇（Windows10）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/07/Git常用命令汇总/">Git常用命令汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/20/eclipse常用快捷键整理/">eclipse常用快捷键整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/使用Oracle SQL Developer连接mysql数据库/">使用Oracle SQL Developer连接mysql数据库</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/30/常用工具的环境变量配置/">常用"工具"配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/12/Android中布局保存成图片/">Android中布局保存成图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/RecyclerView的万能分割线/">RecyclerView的万能分割线</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/Volley-请求返回数据中文出现乱码/">Volley 请求返回数据中文出现乱码</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/java-int类型转换成String-不足10位在前面补0/">java int类型转换成String,不足10位在前面补0</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/03/Android卸载测试应用后再次安装应用失败/">Android卸载测试应用后再次安装应用失败</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/JAVA学习之Struts2框架-二/">JAVA学习之Struts2框架(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/16/ADB命令简单使用技巧（Android）/">ADB的简单使用技巧（Android）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/JAVA学习之Struts2框架/">JAVA学习之Struts2框架（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/JAVA学习之框架前述/">JAVA学习之框架前述</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/02/JAVA学习之常用的数据源配置/">JAVA学习之常用的数据源配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/29/JAVA学习之Jsp/">JAVA学习之Jsp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/JAVA之Servlet/">JAVA学习之Servlet</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/常用的专业搜索工具（分类/">常用的专业搜索工具（分类)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/JAVA学习之JDBC/">JAVA学习之JDBC</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/JAVA学习之JUnit/">JAVA学习之JUnit</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/JAVA学习之MySQL/">JAVA学习之MySQL</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/使用Hexo-github建设个人博客教程/">使用Hexo+github建设个人博客教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/17/DEMO1/">测试二</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/17/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2020 Terry Tian
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

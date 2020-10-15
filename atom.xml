@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianqing.work/"/>
-  <updated>2020-10-14T14:33:53.761Z</updated>
+  <updated>2020-10-15T15:17:16.677Z</updated>
   <id>http://tianqing.work/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[翻译]Sizing Hardware in the Abstract: Why We Do not Have a Definitive Answer</title>
+    <link href="http://tianqing.work/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don%E2%80%99t-Have-a-Definitive-Answer/"/>
+    <id>http://tianqing.work/2020/10/14/Sizing-Hardware-in-the-Abstract-Why-We-Don’t-Have-a-Definitive-Answer/</id>
+    <published>2020-10-14T14:34:47.000Z</published>
+    <updated>2020-10-15T15:17:16.677Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
+
+&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;感谢阅读这篇博文，欢迎关注与评论！&lt;/strong&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;本文转载翻译来源 &lt;a href=&quot;https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/&quot;&gt;https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Sizing Hardware in the Abstract: Why We Don’t Have a Definitive Answer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;估计硬件规模：为什么我们没有一个明确的答案？&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/Excerpt&gt;
+    
+    </summary>
+    
+    
+      <category term="SOLR" scheme="http://tianqing.work/tags/SOLR/"/>
+    
+  </entry>
   
   <entry>
     <title>Solr 8.6 Started</title>
@@ -472,30 +496,6 @@
     
     
       <category term="Android" scheme="http://tianqing.work/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习之Struts2框架(二)</title>
-    <link href="http://tianqing.work/2017/04/20/JAVA%E5%AD%A6%E4%B9%A0%E4%B9%8BStruts2%E6%A1%86%E6%9E%B6-%E4%BA%8C/"/>
-    <id>http://tianqing.work/2017/04/20/JAVA学习之Struts2框架-二/</id>
-    <published>2017-04-20T13:41:17.000Z</published>
-    <updated>2017-04-20T13:56:25.710Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;/Excerpt&gt;
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://tianqing.work/categories/JAVA/"/>
-    
-    
-      <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
-    
-      <category term="框架" scheme="http://tianqing.work/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="Struts2" scheme="http://tianqing.work/tags/Struts2/"/>
     
   </entry>
   

@@ -40,6 +40,30 @@
   </entry>
   
   <entry>
+    <title>[翻译]估计硬件规模：为什么我们没有一个明确的答案？</title>
+    <link href="http://tianqing.work/2020/10/14/%E4%BC%B0%E8%AE%A1%E7%A1%AC%E4%BB%B6%E8%A7%84%E6%A8%A1%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E6%B2%A1%E6%9C%89%E4%B8%80%E4%B8%AA%E6%98%8E%E7%A1%AE%E7%9A%84%E7%AD%94%E6%A1%88/"/>
+    <id>http://tianqing.work/2020/10/14/估计硬件规模：为什么我们没有一个明确的答案/</id>
+    <published>2020-10-14T14:34:47.000Z</published>
+    <updated>2020-10-15T15:18:49.082Z</updated>
+    
+    <summary type="html">
+    
+      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
+
+&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;本文转载翻译来源 &lt;a href=&quot;https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/&quot;&gt;https://lucidworks.com/post/sizing-hardware-in-the-abstract-why-we-dont-have-a-definitive-answer/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Sizing Hardware in the Abstract: Why We Don’t Have a Definitive Answer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;估计硬件规模：为什么我们没有一个明确的答案？&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/Excerpt&gt;
+    
+    </summary>
+    
+    
+      <category term="SOLR" scheme="http://tianqing.work/tags/SOLR/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Solr 8.6 Started</title>
     <link href="http://tianqing.work/2020/10/14/Solr-8-6-Started/"/>
     <id>http://tianqing.work/2020/10/14/Solr-8-6-Started/</id>
@@ -472,30 +496,6 @@
       <category term="JAVA" scheme="http://tianqing.work/tags/JAVA/"/>
     
       <category term="基础" scheme="http://tianqing.work/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android卸载测试应用后再次安装应用失败</title>
-    <link href="http://tianqing.work/2017/05/03/Android%E5%8D%B8%E8%BD%BD%E6%B5%8B%E8%AF%95%E5%BA%94%E7%94%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E5%A4%B1%E8%B4%A5/"/>
-    <id>http://tianqing.work/2017/05/03/Android卸载测试应用后再次安装应用失败/</id>
-    <published>2017-05-03T04:19:12.000Z</published>
-    <updated>2017-05-03T04:35:35.483Z</updated>
-    
-    <summary type="html">
-    
-      &lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
-
-
-
-&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论
-    
-    </summary>
-    
-      <category term="Android" scheme="http://tianqing.work/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://tianqing.work/tags/Android/"/>
     
   </entry>
   

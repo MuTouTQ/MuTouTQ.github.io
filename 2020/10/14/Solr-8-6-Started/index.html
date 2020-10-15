@@ -15,31 +15,19 @@
 
 
 
-<meta name="description" content="常用的数据源配置：
-
-DBCP
-C3P0
-用JavaWeb服务器管理数据源：Tomcat">
+<meta name="description" content="1. Solr System RequirementsYou will need the Java Runtime Environment (JRE) version 1.8 or higher.你需要使用 JRE JRE 1.8或更高版本。
+2.Installing Solr可以在 Solr 网站上找到 Solr，下载最新版本的 Solr https://lucene.apache.org/So">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA学习之常用的数据源配置">
-<meta property="og:url" content="http://tianqing.work/2017/04/02/JAVA学习之常用的数据源配置/index.html">
+<meta property="og:title" content="Solr 8.6 Started">
+<meta property="og:url" content="http://tianqing.work/2020/10/14/Solr-8-6-Started/index.html">
 <meta property="og:site_name" content="Terry_Tian's Code日志">
-<meta property="og:description" content="常用的数据源配置：
-
-DBCP
-C3P0
-用JavaWeb服务器管理数据源：Tomcat">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/DBCP.png">
-<meta property="og:image" content="http://olg3gwtbm.bkt.clouddn.com/C3P0.png">
-<meta property="og:updated_time" content="2017-04-15T09:43:46.203Z">
+<meta property="og:description" content="1. Solr System RequirementsYou will need the Java Runtime Environment (JRE) version 1.8 or higher.你需要使用 JRE JRE 1.8或更高版本。
+2.Installing Solr可以在 Solr 网站上找到 Solr，下载最新版本的 Solr https://lucene.apache.org/So">
+<meta property="og:updated_time" content="2020-10-14T14:33:53.761Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JAVA学习之常用的数据源配置">
-<meta name="twitter:description" content="常用的数据源配置：
-
-DBCP
-C3P0
-用JavaWeb服务器管理数据源：Tomcat">
-<meta name="twitter:image" content="http://olg3gwtbm.bkt.clouddn.com/DBCP.png">
+<meta name="twitter:title" content="Solr 8.6 Started">
+<meta name="twitter:description" content="1. Solr System RequirementsYou will need the Java Runtime Environment (JRE) version 1.8 or higher.你需要使用 JRE JRE 1.8或更高版本。
+2.Installing Solr可以在 Solr 网站上找到 Solr，下载最新版本的 Solr https://lucene.apache.org/So">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -71,7 +59,7 @@ C3P0
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JAVA学习之常用的数据源配置 | Terry_Tian&#39;s Code日志</title>
+<title>Solr 8.6 Started | Terry_Tian&#39;s Code日志</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -229,11 +217,11 @@ C3P0
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-JAVA学习之常用的数据源配置" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Solr-8-6-Started" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/02/JAVA学习之常用的数据源配置/" class="article-date">
-      <time datetime="2017-04-02T12:39:01.000Z" itemprop="datePublished">2017-04-02</time>
+      <a href="/2020/10/14/Solr-8-6-Started/" class="article-date">
+      <time datetime="2020-10-14T14:19:23.000Z" itemprop="datePublished">2020-10-14</time>
 </a>
 
 
@@ -248,7 +236,7 @@ C3P0
         
   
     <h1 class="article-title" itemprop="name">
-      JAVA学习之常用的数据源配置
+      Solr 8.6 Started
     </h1>
   
 
@@ -256,14 +244,10 @@ C3P0
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/连接池/">连接池</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SOLR/">SOLR</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -273,353 +257,15 @@ C3P0
     <div class="article-entry" itemprop="articleBody">
       
           
-        <excerpt in="" index="" |="" 首页摘要="">
-
-<p><strong>常用的数据源配置：</strong></p>
+        <h2 id="1-Solr-System-Requirements"><a href="#1-Solr-System-Requirements" class="headerlink" title="1. Solr System Requirements"></a>1. Solr System Requirements</h2><p><code>You will need the Java Runtime Environment (JRE) version 1.8 or higher.</code><br>你需要使用 JRE JRE 1.8或更高版本。</p>
+<h2 id="2-Installing-Solr"><a href="#2-Installing-Solr" class="headerlink" title="2.Installing Solr"></a>2.Installing Solr</h2><p>可以在 Solr 网站上找到 Solr，下载最新版本的 Solr <a href="https://lucene.apache.org/Solr/downloads.html" target="_blank" rel="external">https://lucene.apache.org/Solr/downloads.html</a>。</p>
+<p>这里有3个独立的包：</p>
 <ul>
-<li>DBCP</li>
-<li>C3P0</li>
-<li>用JavaWeb服务器管理数据源：Tomcat</li>
+<li><code>solr-8.6.0.tgz for Linux/Unix/OSX systems。</code>适用于 Linux/Unix/OSX 系统的 solr-8.6.0. tgz</li>
+<li><code>solr-8.6.0.zip for Microsoft Windows systems。</code>适用于 Windows 系统的 solr-8.6.0.zip</li>
+<li><code>solr-8.6.0-src.tgz the package Solr source code. This is useful if you want to develop on Solr without using the official Git repository.</code> Solr-8.6.0-src.tgz 包 Solr 源代码。如果您想在 Solr 上开发而不使用正式的 Git 存储库，这是非常有用的。</li>
 </ul>
-<a id="more"></a> 
-<the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="DBCP"><a href="#DBCP" class="headerlink" title="DBCP"></a>DBCP</h1><blockquote>
-<p>DBCP：Apache推出的Database Connection Pool</p>
-</blockquote>
-<p><strong>使用步骤：</strong></p>
-<ol>
-<li><p>添加jar包:</p>
-<p>  commons-dbcp-1.4.jar<br>  commons-pool-1.5.6.jar</p>
-<p> (这两个jar包网上一搜有很多，如果找不到合适的，读者可以email我，我发给大家！)</p>
-</li>
-<li>添加属性资源文件</li>
-<li>编写数据源工具类</li>
-</ol>
-<p>简例架构：</p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/DBCP.png" alt=""></p>
-<p>添加属性资源文件：</p>
-<p>dbcpconfig.properties</p>
-<p>注：这个文件也是去网上搜索，拿来直接用就可以了。</p>
-<p><em>dbcpconfig.properties</em></p>
-<pre><code>连接设置
-driverClassName=com.mysql.jdbc.Driver
-url=jdbc:mysql://localhost:3306/day16
-username=root
-password=
-
-&lt;!-- 初始化连接 --&gt;
-initialSize=10
-
-最大连接数量
-maxActive=50
-
-&lt;!-- 最大空闲连接 --&gt;
-maxIdle=20
-
-&lt;!-- 最小空闲连接 --&gt;
-minIdle=5
-
-&lt;!-- 超时等待时间以毫秒为单位 6000毫秒/1000等于60秒 --&gt;
-maxWait=60000
-
-JDBC驱动建立连接时附带的连接属性属性的格式必须为这样：[属性名=property;] 
-注意：&quot;user&quot; 与 &quot;password&quot; 两个属性会被明确地传递，因此这里不需要包含他们。
-connectionProperties=useUnicode=true;characterEncoding=utf8
-
-指定由连接池所创建的连接的自动提交（auto-commit）状态。
-defaultAutoCommit=true
-
-driver default 指定由连接池所创建的连接的只读（read-only）状态。
-如果没有设置该值，则“setReadOnly”方法将不被调用。（某些驱动并不支持只读模式，如：Informix）
-defaultReadOnly=
-
-driver default 指定由连接池所创建的连接的事务级别（TransactionIsolation）。
-可用值为下列之一：（详情可见javadoc。）NONE,READ_UNCOMMITTED, READ_COMMITTED, REPEATABLE_READ, SERIALIZABLE
-defaultTransactionIsolation=REPEATABLE_READ
-</code></pre><p>编写数据源工具类</p>
-<p><em>DBCPUtil.java</em></p>
-<pre><code>package cn.terry.utils;
-
-import java.io.IOException;
-import java.security.spec.DSAGenParameterSpec;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Properties;
-
-import javax.sql.DataSource;
-
-import org.apache.commons.dbcp.BasicDataSourceFactory;
-
-public class DBCPUtil {
-
-private static DataSource ds = null;
-
-static{
-    Properties prop = new Properties();
-    //根据DBCPUtil的classes的路径，加载配置文件
-    try {
-        prop.load(DBCPUtil.class.getClassLoader().getResourceAsStream(&quot;dbcpconfig.properties&quot;));
-        ds = BasicDataSourceFactory.createDataSource(prop);//得到一个数据源
-    } catch (Exception e) {
-        throw new ExceptionInInitializerError(&quot;初始化错误，请检查配置文件&quot;);
-    }        
-}
-
-public static Connection getConnection() {
-    try {
-        return ds.getConnection();
-    } catch (SQLException e) {
-        throw new RuntimeException(&quot;服务器忙。。。&quot;);
-    }
-    }
-public static void release(Connection conn,Statement stmt,ResultSet rs){
-    //关闭资源
-            if(rs!=null){
-                try {
-                    rs.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                rs = null;
-            }
-            if(stmt!=null){
-                try {
-                    stmt.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                stmt = null;
-            }
-            if(conn!=null){
-                try {
-                    conn.close();//关闭
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                conn = null;
-            }
-}
-
-}
-</code></pre><p>testJDBC.java</p>
-<pre><code>package cn.terry.test;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import org.junit.Test;
-
-
-import cn.terry.utils.DBCPUtil;
-
-public class testJDBC {
-
-@Test
-public void test1() {
-    Connection conn = null;
-    PreparedStatement ps = null;
-
-
-    try {
-        conn = DBCPUtil.getConnection();
-        ps = conn.prepareStatement(&quot;..&quot;);
-    } catch (SQLException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-    }finally {
-        DBCPUtil.release(conn, ps, null);
-    }
-
-}
-
-}
-</code></pre><h1 id="C3P0"><a href="#C3P0" class="headerlink" title="C3P0"></a>C3P0</h1><p>这个是建立的java项目。</p>
-<p><strong> 简例结构图：</strong></p>
-<p><img src="http://olg3gwtbm.bkt.clouddn.com/C3P0.png" alt=""></p>
-<p><strong> 使用步骤：</strong></p>
-<p>1、添加jar包 </p>
-<p>   jar包也是去网上搜。</p>
-<p>2、编写配置文件</p>
-<p>c3p0-config.xml，放在classpath中，或classes目录中</p>
-<p><em>c3p0-config.xml</em></p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;c3p0-config&gt;
-  &lt;default-config&gt;
-&lt;property name=&quot;driverClass&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;
-&lt;property name=&quot;jdbcUrl&quot;&gt;jdbc:mysql://localhost:3306/mytest&lt;/property&gt;
-&lt;property name=&quot;user&quot;&gt;root&lt;/property&gt;
-&lt;property name=&quot;password&quot;&gt;root&lt;/property&gt;
-&lt;property name=&quot;initialPoolSize&quot;&gt;10&lt;/property&gt;
-&lt;property name=&quot;maxIdleTime&quot;&gt;30&lt;/property&gt;
-&lt;property name=&quot;maxPoolSize&quot;&gt;100&lt;/property&gt;
-&lt;property name=&quot;minPoolSize&quot;&gt;10&lt;/property&gt;
-
-  &lt;/default-config&gt;
-
-&lt;/c3p0-config&gt;
-</code></pre><p>3、编写工具类：</p>
-<p><em>C3P0Util.java</em></p>
-<pre><code>package cn.terry.utils;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-import javax.sql.DataSource;
-
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-
-public class C3P0Util {
-
-//得到一个数据源
-    private static DataSource dataSource = new ComboPooledDataSource();
-
-    //从数据源中得到一个连接对象
-    public static Connection getConnection(){
-        try {
-            return dataSource.getConnection();
-        } catch (SQLException e) {
-            throw new RuntimeException(&quot;服务器错误&quot;);
-        }
-    }
-
-    public static void release(Connection conn,Statement stmt,ResultSet rs){
-        //关闭资源
-                if(rs!=null){
-                    try {
-                        rs.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    rs = null;
-                }
-                if(stmt!=null){
-                    try {
-                        stmt.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    stmt = null;
-                }
-                if(conn!=null){
-                    try {
-                        conn.close();//关闭
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    conn = null;
-                }
-    }
-}
-</code></pre><p><em>TestCRUD.java</em></p>
-<pre><code>package cn.terry.utils;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-import org.junit.Test;
-
-public class TestCRUD {
-@Test
-public void testInsert(){
-    Connection conn = null;
-    PreparedStatement ps = null;
-
-    try {
-        conn = C3P0Util.getConnection();
-        ps = conn.prepareStatement(&quot;insert into account(name,money) values(&apos;ggg&apos;,2000)&quot;);
-        ps.executeUpdate();
-    } catch (Exception e) {
-        e.printStackTrace();
-    }finally{
-        C3P0Util.release(conn, ps, null);
-
-    }
-
-
-    System.out.println(conn.getClass().getName());
-}
-
-}
-</code></pre><h1 id="用JavaWeb服务器管理数据源：Tomcat"><a href="#用JavaWeb服务器管理数据源：Tomcat" class="headerlink" title="用JavaWeb服务器管理数据源：Tomcat"></a>用JavaWeb服务器管理数据源：Tomcat</h1><p>开发JavaWeb应用，必须使用一个JavaWeb服务器，JavaWeb服务器都内置数据源。</p>
-<p>Tomcat：（DBCP）</p>
-<p>数据源只需要配置服务器即可。</p>
-<p> 配置数据源的步骤：</p>
-<p> 1、拷贝数据库连接的jar到tomcatlib目录下</p>
-<p> 2、配置数据源XML文件</p>
-<ul>
-<li><p>(<strong>全局配置</strong>)如果把配置信息写在tomcat下的conf目录的context.xml中，那么所有应用都能使用此数据源。</p>
-<p>1）在tomcat的conf文件夹下的context.xml配置文件中加入：</p>
-<pre><code>&lt;Resource name=&quot;jndi/mybatis&quot;   
- auth=&quot;Container&quot;   
- type=&quot;javax.sql.DataSource&quot;   
- driverClassName=&quot;com.mysql.jdbc.Driver&quot;   
- url=&quot;jdbc:mysql://localhost:3306/appdb&quot;   
- username=&quot;root&quot;   
- password=&quot;123456&quot;   
- maxActive=&quot;20&quot;   
- maxIdle=&quot;10&quot;   
- maxWait=&quot;10000&quot;/&gt;      
-</code></pre><p>2)在项目的web.xml中加入资源引用：</p>
-<pre><code>&lt;resource-ref&gt;  
-&lt;description&gt;JNDI DataSource&lt;/description&gt;  
-&lt;res-ref-name&gt;jndi/mybatis&lt;/res-ref-name&gt;  
-&lt;res-ref-type&gt;javax.sql.DataSource&lt;/res-ref-type&gt;  
-&lt;res-auth&gt;Container&lt;/res-auth&gt;  
-&lt;/resource-ref&gt;  
-</code></pre><p><em>其中res-ref-name值要和context.xml的name值一致。</em></p>
-<p>3）jndi测试方法：</p>
-<pre><code>public void testJNDI() throws NamingException, SQLException{  
-   Context ctx = new InitialContext();  
-   DataSource ds = (DataSource) ctx.lookup(&quot;java:comp/env/jndi/mybatis&quot;);  
-   Connection conn = ds.getConnection();  
-   System.out.println(conn.isClosed());  
-   }  
-</code></pre><p>4）在jsp中调用加载jndi方式，不可以直接用main方法测试，必须通过启动容器从jsp中调用：</p>
-<pre><code>TestPageAccessURL test = new TestPageAccessURL();  
-test.testJNDI();  
-</code></pre></li>
-</ul>
-<ul>
-<li><p>（<strong>局部配置1</strong>）如果是在当前应用的META-INF中创建context.xml, 编写数据源，那么只有当前应用可以使用。</p>
-<p>1）在项目的META-INFO下面新建context.xml。加入：</p>
-<pre><code> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;  
-  &lt;Context&gt;  
-   &lt;Resource name=&quot;jndi/mybatis&quot;   
- auth=&quot;Container&quot;   
- type=&quot;javax.sql.DataSource&quot;   
- driverClassName=&quot;com.mysql.jdbc.Driver&quot;   
- url=&quot;jdbc:mysql://localhost:3306/appdb&quot;   
- username=&quot;root&quot;   
- password=&quot;123456&quot;   
- maxActive=&quot;20&quot;   
- maxIdle=&quot;10&quot;   
- maxWait=&quot;10000&quot;/&gt;      
-&lt;/Context&gt;  
-</code></pre><p>其他配置同第一种方式。</p>
-</li>
-</ul>
-<p><strong>局部配置2</strong>（不推荐）。</p>
-<p>1）在tomcat的server.xml的<host>标签内，添加：</host></p>
-<pre><code>&lt;Context path=&quot;/demo_jndi&quot; docBase=&quot;/demo_jndi&quot;&gt;  
-&lt;Resource  
- name=&quot;jndi/mybatis&quot;  
- type=&quot;javax.sql.DataSource&quot;  
- driverClassName=&quot;com.mysql.jdbc.Driver&quot;  
- maxIdle=&quot;2&quot;  
- maxWait=&quot;5000&quot;  
- username=&quot;root&quot;  
- password=&quot;123456&quot;  
- url=&quot;jdbc:mysql://localhost:3306/appdb&quot;  
- maxActive=&quot;4&quot;/&gt;  
- &lt;/Context&gt;  
-</code></pre><p>其他配置同第一种方式。</p>
-</the></excerpt>
       
     </div>
     
@@ -627,13 +273,13 @@ test.testJNDI();
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/02/JAVA学习之常用的数据源配置/">JAVA学习之常用的数据源配置</a></p>
+        <p><span>本文标题:</span><a href="/2020/10/14/Solr-8-6-Started/">Solr 8.6 Started</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Terry Tian</a></p>
-        <p><span>发布时间:</span>2017-04-02, 20:39:01</p>
-        <p><span>最后更新:</span>2017-04-15, 17:43:46</p>
+        <p><span>发布时间:</span>2020-10-14, 22:19:23</p>
+        <p><span>最后更新:</span>2020-10-14, 22:33:53</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/02/JAVA学习之常用的数据源配置/" title="JAVA学习之常用的数据源配置">http://tianqing.work/2017/04/02/JAVA学习之常用的数据源配置/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2017/04/02/JAVA学习之常用的数据源配置/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/10/14/Solr-8-6-Started/" title="Solr 8.6 Started">http://tianqing.work/2020/10/14/Solr-8-6-Started/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tianqing.work/2020/10/14/Solr-8-6-Started/　　作者: Terry Tian" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -645,16 +291,10 @@ test.testJNDI();
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/04/15/JAVA学习之框架前述/">
-                    JAVA学习之框架前述
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/03/29/JAVA学习之Jsp/">
-                    JAVA学习之Jsp
+                <a href="/2020/10/06/java-util-stream使用汇总/">
+                    java.util.stream使用汇总
                 </a>
             </div>
         
@@ -666,7 +306,7 @@ test.testJNDI();
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DBCP"><span class="toc-number">1.</span> <span class="toc-text">DBCP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C3P0"><span class="toc-number">2.</span> <span class="toc-text">C3P0</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用JavaWeb服务器管理数据源：Tomcat"><span class="toc-number">3.</span> <span class="toc-text">用JavaWeb服务器管理数据源：Tomcat</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Solr-System-Requirements"><span class="toc-number">1.</span> <span class="toc-text">1. Solr System Requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Installing-Solr"><span class="toc-number">2.</span> <span class="toc-text">2.Installing Solr</span></a></li></ol>
         
     </div>
     <style>
@@ -702,7 +342,7 @@ test.testJNDI();
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JAVA学习之常用的数据源配置　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Solr 8.6 Started　| Terry_Tian's Code日志　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -722,15 +362,13 @@ test.testJNDI();
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/15/JAVA学习之框架前述/" title="上一篇: JAVA学习之框架前述">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/03/29/JAVA学习之Jsp/" title="下一篇: JAVA学习之Jsp">
+            <a href="/2020/10/06/java-util-stream使用汇总/" title="下一篇: java.util.stream使用汇总">
                 <i class="fa fa-angle-right"></i>
             </a>
         

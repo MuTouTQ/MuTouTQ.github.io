@@ -4,6 +4,28 @@
   
     
     <entry>
+      <title><![CDATA[Solr 8.6 Started]]></title>
+      <url>http://tianqing.work/2020/10/14/Solr-8-6-Started/</url>
+      <content type="html"><![CDATA[<h2 id="1-Solr-System-Requirements"><a href="#1-Solr-System-Requirements" class="headerlink" title="1. Solr System Requirements"></a>1. Solr System Requirements</h2><p><code>You will need the Java Runtime Environment (JRE) version 1.8 or higher.</code><br>你需要使用 JRE JRE 1.8或更高版本。</p>
+<h2 id="2-Installing-Solr"><a href="#2-Installing-Solr" class="headerlink" title="2.Installing Solr"></a>2.Installing Solr</h2><p>可以在 Solr 网站上找到 Solr，下载最新版本的 Solr <a href="https://lucene.apache.org/Solr/downloads.html" target="_blank" rel="external">https://lucene.apache.org/Solr/downloads.html</a>。</p>
+<p>这里有3个独立的包：</p>
+<ul>
+<li><code>solr-8.6.0.tgz for Linux/Unix/OSX systems。</code>适用于 Linux/Unix/OSX 系统的 solr-8.6.0. tgz</li>
+<li><code>solr-8.6.0.zip for Microsoft Windows systems。</code>适用于 Windows 系统的 solr-8.6.0.zip</li>
+<li><code>solr-8.6.0-src.tgz the package Solr source code. This is useful if you want to develop on Solr without using the official Git repository.</code> Solr-8.6.0-src.tgz 包 Solr 源代码。如果您想在 Solr 上开发而不使用正式的 Git 存储库，这是非常有用的。</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> SOLR </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[java.util.stream使用汇总]]></title>
       <url>http://tianqing.work/2020/10/06/java-util-stream%E4%BD%BF%E7%94%A8%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -3681,7 +3703,6 @@ SELECT * FROM emp LIMIT 3, 10;
 <p> 或者直接在TerryBlog文件夹下，再点击鼠标右键–&gt;Git Bash，打开命令输入框。再输入以下命令：</p>
 <p>  <code>npm install</code></p>
 <p> 安装完成之后，【G:\TerryBlog】目录结构是这样的：</p>
-<p><img src="/使用Hexo+github建设个人博客教程/使用Hexo+github建设个人博客教程1.png" alt=""></p>
 <img src="/2017/02/18/使用Hexo-github建设个人博客教程/使用Hexo+github建设个人博客教程1.png" alt="This is an image" title="This is an image">
 <p>  到此为止，一个博客就已经搭建好了，现在我们启动 hexo 本地服务，看下默认的博客是怎样的，命令如下：</p>
 <p>  <code>hexo s</code></p>

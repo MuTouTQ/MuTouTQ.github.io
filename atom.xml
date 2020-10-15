@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianqing.work/"/>
-  <updated>2020-10-07T05:36:48.049Z</updated>
+  <updated>2020-10-14T14:33:53.761Z</updated>
   <id>http://tianqing.work/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Solr 8.6 Started</title>
+    <link href="http://tianqing.work/2020/10/14/Solr-8-6-Started/"/>
+    <id>http://tianqing.work/2020/10/14/Solr-8-6-Started/</id>
+    <published>2020-10-14T14:19:23.000Z</published>
+    <updated>2020-10-14T14:33:53.761Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-Solr-System-Requirements&quot;&gt;&lt;a href=&quot;#1-Solr-System-Requirements&quot; class=&quot;headerlink&quot; title=&quot;1. Solr System Requirements&quot;&gt;&lt;/a&gt;1. Solr
+    
+    </summary>
+    
+    
+      <category term="SOLR" scheme="http://tianqing.work/tags/SOLR/"/>
+    
+  </entry>
   
   <entry>
     <title>java.util.stream使用汇总</title>
@@ -478,33 +496,6 @@
       <category term="框架" scheme="http://tianqing.work/tags/%E6%A1%86%E6%9E%B6/"/>
     
       <category term="Struts2" scheme="http://tianqing.work/tags/Struts2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ADB的简单使用技巧（Android）</title>
-    <link href="http://tianqing.work/2017/04/16/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%88Android%EF%BC%89/"/>
-    <id>http://tianqing.work/2017/04/16/ADB命令简单使用技巧（Android）/</id>
-    <published>2017-04-16T12:52:52.000Z</published>
-    <updated>2017-04-16T14:26:11.719Z</updated>
-    
-    <summary type="html">
-    
-      &lt;Excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;
-
-
-
-&lt;h2 id=&quot;感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;a href=&quot;#感谢阅读这篇博文，欢迎关注与评论！&quot; class=&quot;headerlink&quot; title=&quot; 感谢阅读这篇博文，欢迎关注与评论！&quot;&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt; 感谢阅读这篇博文，欢迎关注与评论！&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;   &lt;strong&gt;连接手机和电脑的“脐带”，就是ADB——Android Debug Bridge。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;   &lt;strong&gt;？？？？？此处为ADB的简单定义？？？？？？&lt;/strong&gt;&lt;/p&gt;&lt;/Excerpt&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://tianqing.work/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://tianqing.work/tags/Android/"/>
-    
-      <category term="ADB" scheme="http://tianqing.work/tags/ADB/"/>
     
   </entry>
   
